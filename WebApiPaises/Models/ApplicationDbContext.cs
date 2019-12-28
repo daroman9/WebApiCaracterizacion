@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using caracterizacion.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 namespace WebApiPaises.Models
@@ -13,7 +14,8 @@ namespace WebApiPaises.Models
         {
             
         }
-        public DbSet<Pais> Paises { get; set; }
-        public DbSet<Provincia> Provincias { get; set; }
+        public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Campo> Campos { get; set; }
+        public DbSet<Formato> Formatos { get; set; }
     }
 }

@@ -74,24 +74,6 @@ namespace WebApiPaises
             app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseMvc();
-
-            if(!context.Paises.Any())
-            {
-                context.Paises.AddRange(new List<Pais>()
-                    {
-                    new Pais(){Nombre = "Republica Dominicana", Provincias = new List<Provincia>()
-                    {
-                        new Provincia(){Nombre="Azua"}
-                    } },
-                    new Pais(){Nombre = "Mexico", Provincias = new List<Provincia>()
-                    {
-                        new Provincia(){Nombre="Puebla"},
-                        new Provincia(){Nombre="Queretaro"}
-                    } },
-                    new Pais(){Nombre = "Argentina"}
-                });
-                context.SaveChanges();
-            }
         }
     }
 }
