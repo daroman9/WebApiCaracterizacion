@@ -12692,11 +12692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\15cx0001\\source\\repos\\WebApiPaises\\WebApiPaises\\WebApiPaises.csproj",
-      "projectName": "WebApiPaises",
-      "projectPath": "C:\\Users\\15cx0001\\source\\repos\\WebApiPaises\\WebApiPaises\\WebApiPaises.csproj",
+      "projectUniqueName": "C:\\Users\\15cx0001\\source\\repos\\WebApiCaracterizacion\\WebApiPaises\\WebApiCaracterizacion.csproj",
+      "projectName": "WebApiCaracterizacion",
+      "projectPath": "C:\\Users\\15cx0001\\source\\repos\\WebApiCaracterizacion\\WebApiPaises\\WebApiCaracterizacion.csproj",
       "packagesPath": "C:\\Users\\15cx0001\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\15cx0001\\source\\repos\\WebApiPaises\\WebApiPaises\\obj\\",
+      "outputPath": "C:\\Users\\15cx0001\\source\\repos\\WebApiCaracterizacion\\WebApiPaises\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

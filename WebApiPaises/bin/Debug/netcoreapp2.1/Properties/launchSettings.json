@@ -19,7 +19,7 @@
         "Clave": "Valor"
       }
     },
-    "WebApiPaises": {
+    "WebApiCaracterizacion": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/values",

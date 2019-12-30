@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
-using WebApiPaises.Models;
 using System.Security.Claims;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.Extensions.Configuration;
+using WebApiCaracterizacion.Models;
 
 namespace WebApiPaises.Controllers
 {
@@ -34,7 +34,7 @@ namespace WebApiPaises.Controllers
 
         [Route("Create")]
         [HttpPost]
-        public async Task<IActionResult> CreateUser([FromBody] UserInfo model)
+        public async Task<IActionResult> CreateUser([FromBody] Usuario model)
         {
             if (ModelState.IsValid)
             {
@@ -58,7 +58,7 @@ namespace WebApiPaises.Controllers
 
         [HttpPost]
         [Route("Login")]
-        public async Task<IActionResult> Login([FromBody] UserInfo userInfo)
+        public async Task<IActionResult> Login([FromBody] Usuario userInfo)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace WebApiPaises.Controllers
             }
         }
 
-        private IActionResult BuildToken(UserInfo userInfo)
+        private IActionResult BuildToken(Usuario userInfo)
         {
             var claims = new[]
             {

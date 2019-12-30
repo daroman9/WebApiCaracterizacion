@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApiCaracterizacion.Models;
 
 namespace WebApiCaracterizacion.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191230195051_Unica")]
+    partial class Unica
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -309,7 +311,7 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.Property<int>("ID_Formulario");
 
-                    b.Property<int>("ID_Tablas_Campo");
+                    b.Property<int?>("Tablas_CampoID");
 
                     b.Property<string>("Value");
 
@@ -317,7 +319,7 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.HasIndex("ID_Formulario");
 
-                    b.HasIndex("ID_Tablas_Campo");
+                    b.HasIndex("Tablas_CampoID");
 
                     b.ToTable("Registros_Tablas");
                 });
@@ -452,8 +454,7 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.HasOne("WebApiCaracterizacion.Models.Tablas_Campo", "Tablas_Campo")
                         .WithMany()
-                        .HasForeignKey("ID_Tablas_Campo")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("Tablas_CampoID");
                 });
 
             modelBuilder.Entity("WebApiCaracterizacion.Models.Selector", b =>

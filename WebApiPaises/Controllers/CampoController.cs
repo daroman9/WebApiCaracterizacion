@@ -2,79 +2,45 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using caracterizacion.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using WebApiPaises.Models;
 
-namespace caracterizacion.Controllers
+namespace WebApiCaracterizacion.Controllers
 {
-    [Route("api/Categoria/{CategoriaId}/Campo")]
+    [Route("api/[controller]")]
     [ApiController]
     public class CampoController : ControllerBase
     {
-        private readonly ApplicationDbContext context;
-        public CampoController(ApplicationDbContext context)
-        {
-            this.context = context;
-        }
-
-
+        // GET: api/Campo
         [HttpGet]
-        public IEnumerable<Campo> GetAll(int CategoriaId)
+        public IEnumerable<string> Get()
         {
-            return context.Campos.Where(x => x.CategoriaId == CategoriaId).ToList();
+            return new string[] { "value1", "value2" };
         }
 
-        [HttpGet("{id}", Name = "CampoCreado")]
-        public IActionResult GetById(int id)
+        // GET: api/Campo/5
+        [HttpGet("{id}", Name = "Get")]
+        public string Get(int id)
         {
-            var campo = context.Campos.FirstOrDefault(x => x.Id == id);
-
-            if (campo == null)
-            {
-                return NotFound();
-            }
-            return Ok(campo);
+            return "value";
         }
 
+        // POST: api/Campo
         [HttpPost]
-        public IActionResult Post([FromBody] Campo campo)
+        public void Post([FromBody] string value)
         {
-            if (ModelState.IsValid)
-            {
-                context.Campos.Add(campo);
-                context.SaveChanges();
-                return new CreatedAtRouteResult("CampoCreado", new { id = campo.Id }, campo);
-
-            }
-            return BadRequest(ModelState);
         }
 
+        // PUT: api/Campo/5
         [HttpPut("{id}")]
-        public IActionResult Put([FromBody] Campo campo, int id)
+        public void Put(int id, [FromBody] string value)
         {
-            if (campo.Id != id)
-            {
-                return BadRequest();
-            }
-            context.Entry(campo).State = EntityState.Modified;
-            context.SaveChanges();
-            return Ok();
         }
 
+        // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public void Delete(int id)
         {
-            var campo = context.Campos.FirstOrDefault(x => x.Id == id);
-            if (campo == null)
-            {
-                return NotFound();
-            }
-            context.Campos.Remove(campo);
-            context.SaveChanges();
-            return Ok();
         }
     }
 }
