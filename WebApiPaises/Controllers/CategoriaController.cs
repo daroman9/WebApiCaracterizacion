@@ -12,7 +12,7 @@ using WebApiPaises.Models;
 
 namespace caracterizacion.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/categoria")]
     [ApiController]
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class CategoriaController : ControllerBase
@@ -39,7 +39,7 @@ namespace caracterizacion.Controllers
             }
             return Ok(categoria);
         }
-
+        //Metodo para crear las categorias
         [HttpPost]
         public IActionResult Post([FromBody] Categoria categoria)
         {

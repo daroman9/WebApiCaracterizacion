@@ -13,9 +13,6 @@ namespace caracterizacion.Models
         }
         public int Id { get; set; }
         public string Nombre { get; set; }
-        public int ParentId { get; set; }
-        public int Order { get; set; }
-        public int Visible { get; set; }
         //Indicar que a cada categoria le corresponden un listado de campos
         public List<Campo> Campos { get; set; }
 

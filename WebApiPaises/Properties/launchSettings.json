@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/pais",
+      "launchUrl": "api/categoria",
       "environmentVariables": {
         "Llave_super_secreta": "ASDFGHJKLPOIUYTREWQASDGHTGHFGHDGHGFHDGHDGHGHGGHHG",
         "ASPNETCORE_ENVIRONMENT": "Development",
