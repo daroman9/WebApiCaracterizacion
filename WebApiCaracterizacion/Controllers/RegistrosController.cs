@@ -13,7 +13,7 @@ namespace WebApiCaracterizacion.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class RegistrosController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -51,39 +51,16 @@ namespace WebApiCaracterizacion.Controllers
 
         // PUT: api/Registros/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutRegistro([FromRoute] int id, [FromBody] Registro registro)
+        public IActionResult Put([FromBody] Registro registro, int id)
         {
-            if (!ModelState.IsValid)
+            if (registro.id != id)
             {
-                return BadRequest(ModelState);
+                return BadRequest("Ocurrio un error al modificar");
             }
-
-            if (id != registro.id)
-            {
-                return BadRequest();
-            }
-
             _context.Entry(registro).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!RegistroExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
+            _context.SaveChanges();
+            return Ok();
         }
-
         // POST: api/Registros
         [HttpPost]
         public async Task<IActionResult> PostRegistro([FromBody] Registro registro)

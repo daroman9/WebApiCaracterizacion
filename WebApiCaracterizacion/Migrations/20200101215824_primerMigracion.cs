@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WebApiCaracterizacion.Migrations
 {
-    public partial class initialMigration : Migration
+    public partial class primerMigracion : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -48,22 +48,61 @@ namespace WebApiCaracterizacion.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Campos",
+                columns: table => new
+                {
+                    id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    nombre = table.Column<string>(maxLength: 80, nullable: true),
+                    descripcion = table.Column<string>(maxLength: 250, nullable: true),
+                    valor_maximo = table.Column<int>(nullable: false),
+                    valor_minimo = table.Column<int>(nullable: false),
+                    valor_defecto = table.Column<int>(nullable: false),
+                    orden = table.Column<int>(nullable: false),
+                    visible = table.Column<int>(nullable: false),
+                    type = table.Column<int>(maxLength: 90, nullable: false),
+                    disabled = table.Column<bool>(nullable: false),
+                    id_categoria = table.Column<int>(nullable: false),
+                    id_plantilla = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Campos", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Categorias",
                 columns: table => new
                 {
                     id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     id_padre = table.Column<int>(nullable: false),
-                    id_formulario = table.Column<int>(nullable: false),
                     nombre = table.Column<string>(maxLength: 80, nullable: true),
                     orden = table.Column<int>(nullable: false),
                     visible = table.Column<int>(nullable: false),
                     color = table.Column<string>(maxLength: 7, nullable: true),
-                    image = table.Column<string>(nullable: true)
+                    image = table.Column<string>(nullable: true),
+                    id_formulario = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Categorias", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Formularios",
+                columns: table => new
+                {
+                    id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    fecha_inicio = table.Column<DateTime>(nullable: false),
+                    fecha_fin = table.Column<DateTime>(nullable: false),
+                    id_plantilla = table.Column<int>(nullable: false),
+                    id_usuario = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Formularios", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
@@ -77,6 +116,71 @@ namespace WebApiCaracterizacion.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Plantillas", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Registros",
+                columns: table => new
+                {
+                    id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    valor_string = table.Column<string>(nullable: true),
+                    valor_float = table.Column<float>(nullable: false),
+                    valor_integer = table.Column<int>(nullable: false),
+                    valor_date = table.Column<DateTime>(nullable: false),
+                    fecha = table.Column<DateTime>(nullable: false),
+                    id_campo = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Registros", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Registros_Tablas",
+                columns: table => new
+                {
+                    id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    value = table.Column<string>(nullable: true),
+                    id_formulario = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Registros_Tablas", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Selectores",
+                columns: table => new
+                {
+                    id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    id_padre = table.Column<int>(nullable: false),
+                    nombre = table.Column<string>(maxLength: 80, nullable: true),
+                    value = table.Column<int>(nullable: false),
+                    orden = table.Column<int>(nullable: false),
+                    visible = table.Column<bool>(nullable: false),
+                    id_campo = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Selectores", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Tablas_Campos",
+                columns: table => new
+                {
+                    id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    nombre = table.Column<string>(maxLength: 80, nullable: true),
+                    tipo = table.Column<string>(maxLength: 80, nullable: true),
+                    id_campo = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Tablas_Campos", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
@@ -185,152 +289,6 @@ namespace WebApiCaracterizacion.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "Campos",
-                columns: table => new
-                {
-                    id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    nombre = table.Column<string>(maxLength: 80, nullable: true),
-                    descripcion = table.Column<string>(maxLength: 250, nullable: true),
-                    valor_maximo = table.Column<int>(nullable: false),
-                    valor_minimo = table.Column<int>(nullable: false),
-                    valor_defecto = table.Column<int>(nullable: false),
-                    orden = table.Column<int>(nullable: false),
-                    visible = table.Column<int>(nullable: false),
-                    type = table.Column<int>(maxLength: 90, nullable: false),
-                    disabled = table.Column<bool>(nullable: false),
-                    id_categoria = table.Column<int>(nullable: false),
-                    id_plantilla = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Campos", x => x.id);
-                    table.ForeignKey(
-                        name: "FK_Campos_Categorias_id_categoria",
-                        column: x => x.id_categoria,
-                        principalTable: "Categorias",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Campos_Plantillas_id_plantilla",
-                        column: x => x.id_plantilla,
-                        principalTable: "Plantillas",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Formularios",
-                columns: table => new
-                {
-                    id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    id_usuario = table.Column<int>(nullable: false),
-                    fecha_inicio = table.Column<DateTime>(nullable: false),
-                    fecha_fin = table.Column<DateTime>(nullable: false),
-                    id_plantilla = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Formularios", x => x.id);
-                    table.ForeignKey(
-                        name: "FK_Formularios_Plantillas_id_plantilla",
-                        column: x => x.id_plantilla,
-                        principalTable: "Plantillas",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Registros",
-                columns: table => new
-                {
-                    id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    valor_string = table.Column<string>(nullable: true),
-                    valor_float = table.Column<float>(nullable: false),
-                    valor_integer = table.Column<int>(nullable: false),
-                    valor_date = table.Column<DateTime>(nullable: false),
-                    fecha = table.Column<DateTime>(nullable: false),
-                    id_campo = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Registros", x => x.id);
-                    table.ForeignKey(
-                        name: "FK_Registros_Campos_id_campo",
-                        column: x => x.id_campo,
-                        principalTable: "Campos",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Selectores",
-                columns: table => new
-                {
-                    id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    id_padre = table.Column<int>(nullable: false),
-                    nombre = table.Column<string>(maxLength: 80, nullable: true),
-                    value = table.Column<int>(nullable: false),
-                    orden = table.Column<int>(nullable: false),
-                    visible = table.Column<bool>(nullable: false),
-                    id_campo = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Selectores", x => x.id);
-                    table.ForeignKey(
-                        name: "FK_Selectores_Campos_id_campo",
-                        column: x => x.id_campo,
-                        principalTable: "Campos",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Tablas_Campos",
-                columns: table => new
-                {
-                    id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    nombre = table.Column<string>(maxLength: 80, nullable: true),
-                    tipo = table.Column<string>(maxLength: 80, nullable: true),
-                    id_campo = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Tablas_Campos", x => x.id);
-                    table.ForeignKey(
-                        name: "FK_Tablas_Campos_Campos_id_campo",
-                        column: x => x.id_campo,
-                        principalTable: "Campos",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Registros_Tablas",
-                columns: table => new
-                {
-                    id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    value = table.Column<string>(nullable: true),
-                    id_formulario = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Registros_Tablas", x => x.id);
-                    table.ForeignKey(
-                        name: "FK_Registros_Tablas_Formularios_id_formulario",
-                        column: x => x.id_formulario,
-                        principalTable: "Formularios",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -369,41 +327,6 @@ namespace WebApiCaracterizacion.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Campos_id_categoria",
-                table: "Campos",
-                column: "id_categoria");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Campos_id_plantilla",
-                table: "Campos",
-                column: "id_plantilla");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Formularios_id_plantilla",
-                table: "Formularios",
-                column: "id_plantilla");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Registros_id_campo",
-                table: "Registros",
-                column: "id_campo");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Registros_Tablas_id_formulario",
-                table: "Registros_Tablas",
-                column: "id_formulario");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Selectores_id_campo",
-                table: "Selectores",
-                column: "id_campo");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Tablas_Campos_id_campo",
-                table: "Tablas_Campos",
-                column: "id_campo");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -424,6 +347,18 @@ namespace WebApiCaracterizacion.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "Campos");
+
+            migrationBuilder.DropTable(
+                name: "Categorias");
+
+            migrationBuilder.DropTable(
+                name: "Formularios");
+
+            migrationBuilder.DropTable(
+                name: "Plantillas");
+
+            migrationBuilder.DropTable(
                 name: "Registros");
 
             migrationBuilder.DropTable(
@@ -440,18 +375,6 @@ namespace WebApiCaracterizacion.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
-
-            migrationBuilder.DropTable(
-                name: "Formularios");
-
-            migrationBuilder.DropTable(
-                name: "Campos");
-
-            migrationBuilder.DropTable(
-                name: "Categorias");
-
-            migrationBuilder.DropTable(
-                name: "Plantillas");
         }
     }
 }

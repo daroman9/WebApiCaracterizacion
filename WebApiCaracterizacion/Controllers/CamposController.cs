@@ -15,7 +15,7 @@ namespace WebApiCaracterizacion.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class CamposController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -53,39 +53,16 @@ namespace WebApiCaracterizacion.Controllers
 
         // PUT: api/Campos/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutCampo([FromRoute] int id, [FromBody] Campo campo)
+        public IActionResult Put([FromBody] Campo campo, int id)
         {
-            if (!ModelState.IsValid)
+            if (campo.id != id)
             {
-                return BadRequest(ModelState);
+                return BadRequest("Ocurrio un error al modificar");
             }
-
-            if (id != campo.id)
-            {
-                return BadRequest();
-            }
-
             _context.Entry(campo).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!CampoExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
+            _context.SaveChanges();
+            return Ok();
         }
-
         // POST: api/Campos
         [HttpPost]
         public async Task<IActionResult> PostCampo([FromBody] Campo campo)

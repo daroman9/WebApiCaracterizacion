@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApiCaracterizacion.Models;
 
 namespace WebApiCaracterizacion.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200101222529_quintaMigracion")]
+    partial class quintaMigracion
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -28,7 +30,7 @@ namespace WebApiCaracterizacion.Migrations
                     b.Property<string>("descripcion")
                         .HasMaxLength(250);
 
-                    b.Property<bool>("disabled");
+                    b.Property<int>("disabled");
 
                     b.Property<int>("id_categoria");
 
@@ -39,7 +41,8 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.Property<int>("orden");
 
-                    b.Property<int>("tipo");
+                    b.Property<int>("tipo")
+                        .HasMaxLength(90);
 
                     b.Property<int>("valor_defecto");
 
@@ -50,10 +53,6 @@ namespace WebApiCaracterizacion.Migrations
                     b.Property<int>("visible");
 
                     b.HasKey("id");
-
-                    b.HasIndex("id_categoria");
-
-                    b.HasIndex("id_plantilla");
 
                     b.ToTable("Campos");
                 });
@@ -280,11 +279,11 @@ namespace WebApiCaracterizacion.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("fecha");
+                    b.Property<string>("fecha");
 
                     b.Property<int>("id_campo");
 
-                    b.Property<DateTime>("valor_date");
+                    b.Property<string>("valor_date");
 
                     b.Property<float>("valor_float");
 
@@ -293,8 +292,6 @@ namespace WebApiCaracterizacion.Migrations
                     b.Property<string>("valor_string");
 
                     b.HasKey("id");
-
-                    b.HasIndex("id_campo");
 
                     b.ToTable("Registros");
                 });
@@ -310,8 +307,6 @@ namespace WebApiCaracterizacion.Migrations
                     b.Property<string>("value");
 
                     b.HasKey("id");
-
-                    b.HasIndex("id_formulario");
 
                     b.ToTable("Registros_Tablas");
                 });
@@ -337,8 +332,6 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.HasKey("id");
 
-                    b.HasIndex("id_campo");
-
                     b.ToTable("Selectores");
                 });
 
@@ -358,22 +351,7 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.HasKey("id");
 
-                    b.HasIndex("id_campo");
-
                     b.ToTable("Tablas_Campos");
-                });
-
-            modelBuilder.Entity("caracterizacion.Models.Campo", b =>
-                {
-                    b.HasOne("caracterizacion.Models.Categoria", "Categoria")
-                        .WithMany()
-                        .HasForeignKey("id_categoria")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("WebApiCaracterizacion.Models.Plantilla", "Plantilla")
-                        .WithMany()
-                        .HasForeignKey("id_plantilla")
-                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -418,38 +396,6 @@ namespace WebApiCaracterizacion.Migrations
                     b.HasOne("WebApiCaracterizacion.Models.ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("WebApiCaracterizacion.Models.Registro", b =>
-                {
-                    b.HasOne("caracterizacion.Models.Campo", "Campo")
-                        .WithMany()
-                        .HasForeignKey("id_campo")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("WebApiCaracterizacion.Models.Registro_Tabla", b =>
-                {
-                    b.HasOne("caracterizacion.Models.Formulario", "Formulario")
-                        .WithMany()
-                        .HasForeignKey("id_formulario")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("WebApiCaracterizacion.Models.Selector", b =>
-                {
-                    b.HasOne("caracterizacion.Models.Campo", "Campo")
-                        .WithMany()
-                        .HasForeignKey("id_campo")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("WebApiCaracterizacion.Models.Tablas_Campo", b =>
-                {
-                    b.HasOne("caracterizacion.Models.Campo", "Campo")
-                        .WithMany()
-                        .HasForeignKey("id_campo")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

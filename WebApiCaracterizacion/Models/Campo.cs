@@ -22,17 +22,18 @@ namespace caracterizacion.Models
         public int valor_defecto { get; set; }
         public int orden { get; set; }
         public int visible { get; set; }
-        [StringLength(90)]
-        public int type { get; set; }
+        public int tipo { get; set; }
         public bool disabled { get; set; }
 
         //Clave foranea para relacionar la tabla categoria con la tabla campo
         [ForeignKey("Categoria")]
         public int id_categoria { get; set; }
+        [JsonIgnore]
         public Categoria Categoria { get; set; }
         //Clave foranea para relacionar la tabla plantilla con la tabla campo
         [ForeignKey("Plantilla")]
         public int id_plantilla { get; set; }
+        [JsonIgnore]
         public Plantilla Plantilla { get; set; }
 
     }

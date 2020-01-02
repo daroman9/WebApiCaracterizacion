@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApiCaracterizacion.Models;
 
 namespace WebApiCaracterizacion.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200101223133_octavaMigracion")]
+    partial class octavaMigracion
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -28,7 +30,7 @@ namespace WebApiCaracterizacion.Migrations
                     b.Property<string>("descripcion")
                         .HasMaxLength(250);
 
-                    b.Property<bool>("disabled");
+                    b.Property<int>("disabled");
 
                     b.Property<int>("id_categoria");
 
@@ -39,7 +41,8 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.Property<int>("orden");
 
-                    b.Property<int>("tipo");
+                    b.Property<int>("tipo")
+                        .HasMaxLength(90);
 
                     b.Property<int>("valor_defecto");
 
@@ -280,11 +283,11 @@ namespace WebApiCaracterizacion.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("fecha");
+                    b.Property<string>("fecha");
 
                     b.Property<int>("id_campo");
 
-                    b.Property<DateTime>("valor_date");
+                    b.Property<string>("valor_date");
 
                     b.Property<float>("valor_float");
 

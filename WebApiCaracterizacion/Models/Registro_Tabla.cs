@@ -17,6 +17,6 @@ namespace WebApiCaracterizacion.Models
         [ForeignKey("Formulario")]
         public int id_formulario { get; set; }
         [JsonIgnore]
-        public Formulario Formulario { get; set; }
+       public Formulario Formulario { get; set; }
     }
 }

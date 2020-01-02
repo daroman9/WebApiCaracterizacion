@@ -14,7 +14,7 @@ namespace WebApiCaracterizacion.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class FormulariosController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -52,13 +52,13 @@ namespace WebApiCaracterizacion.Controllers
 
         // PUT: api/Formularios/5
         [HttpPut("{id}")]
-        public IActionResult Put([FromBody] Plantilla plantilla, int id)
+        public IActionResult Put([FromBody] Formulario formulario, int id)
         {
-            if (plantilla.id != id)
+            if (formulario.id != id)
             {
                 return BadRequest();
             }
-            _context.Entry(plantilla).State = EntityState.Modified;
+            _context.Entry(formulario).State = EntityState.Modified;
             _context.SaveChanges();
             return Ok();
         }

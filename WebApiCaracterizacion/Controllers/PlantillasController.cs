@@ -13,7 +13,7 @@ namespace WebApiCaracterizacion.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class PlantillasController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -51,37 +51,15 @@ namespace WebApiCaracterizacion.Controllers
 
         // PUT: api/Plantillas/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutPlantilla([FromRoute] int id, [FromBody] Plantilla plantilla)
+        public IActionResult Put([FromBody] Plantilla plantilla, int id)
         {
-            if (!ModelState.IsValid)
+            if (plantilla.id != id)
             {
-                return BadRequest("Falla del modelo");
+                return BadRequest("Ocurrio un error al modificar");
             }
-
-            if (id != plantilla.id)
-            {
-                return BadRequest("Falla del id");
-            }
-
             _context.Entry(plantilla).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!PlantillaExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
+            _context.SaveChanges();
+            return Ok();
         }
 
         // POST: api/Plantillas

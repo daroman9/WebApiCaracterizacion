@@ -13,7 +13,7 @@ namespace WebApiCaracterizacion.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class SelectorsController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -51,37 +51,15 @@ namespace WebApiCaracterizacion.Controllers
 
         // PUT: api/Selectors/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutSelector([FromRoute] int id, [FromBody] Selector selector)
+        public IActionResult Put([FromBody] Selector selector, int id)
         {
-            if (!ModelState.IsValid)
+            if (selector.id != id)
             {
-                return BadRequest(ModelState);
+                return BadRequest("Ocurrio un error al modificar");
             }
-
-            if (id != selector.id)
-            {
-                return BadRequest();
-            }
-
             _context.Entry(selector).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!SelectorExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
+            _context.SaveChanges();
+            return Ok();
         }
 
         // POST: api/Selectors

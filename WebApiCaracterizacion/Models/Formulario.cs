@@ -12,14 +12,16 @@ namespace caracterizacion.Models
     {
         //Campos que comforman la tabla
         public int id { get; set; }
-        public int id_usuario { get; set; }
         public DateTime fecha_inicio { get; set; }
         public DateTime fecha_fin { get; set; }
 
         //Clave foranea para relacionar la tabla plantilla con la tabla formulario
         [ForeignKey("Plantilla")]
         public int id_plantilla { get; set; }
-        [JsonIgnore]
-        public Plantilla Plantilla { get; set; }
+        //Clave foranea para relacionar la tabla plantilla con la tabla formulario
+        //[ForeignKey("Usuario")]
+        //public int id_usuario { get; set; }
+        //[JsonIgnore]
+        // public Plantilla Plantilla { get; set; }
     }
 }

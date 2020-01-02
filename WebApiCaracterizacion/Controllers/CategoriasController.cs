@@ -14,7 +14,7 @@ namespace WebApiCaracterizacion.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class CategoriasController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -52,39 +52,16 @@ namespace WebApiCaracterizacion.Controllers
 
         // PUT: api/Categorias/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutCategoria([FromRoute] int id, [FromBody] Categoria categoria)
+        public IActionResult Put([FromBody] Categoria categoria, int id)
         {
-            if (!ModelState.IsValid)
+            if (categoria.id != id)
             {
-                return BadRequest(ModelState);
+                return BadRequest("Ocurrio un error al modificar");
             }
-
-            if (id != categoria.id)
-            {
-                return BadRequest();
-            }
-
             _context.Entry(categoria).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!CategoriaExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
+            _context.SaveChanges();
+            return Ok();
         }
-
         // POST: api/Categorias
         [HttpPost]
         public async Task<IActionResult> PostCategoria([FromBody] Categoria categoria)

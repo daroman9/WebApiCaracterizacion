@@ -13,7 +13,7 @@ namespace WebApiCaracterizacion.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class Registro_TablaController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -51,39 +51,16 @@ namespace WebApiCaracterizacion.Controllers
 
         // PUT: api/Registro_Tabla/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutRegistro_Tabla([FromRoute] int id, [FromBody] Registro_Tabla registro_Tabla)
+        public IActionResult Put([FromBody] Registro_Tabla registro_Tabla, int id)
         {
-            if (!ModelState.IsValid)
+            if (registro_Tabla.id != id)
             {
-                return BadRequest(ModelState);
+                return BadRequest("Ocurrio un error al modificar");
             }
-
-            if (id != registro_Tabla.id)
-            {
-                return BadRequest();
-            }
-
             _context.Entry(registro_Tabla).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!Registro_TablaExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
+            _context.SaveChanges();
+            return Ok();
         }
-
         // POST: api/Registro_Tabla
         [HttpPost]
         public async Task<IActionResult> PostRegistro_Tabla([FromBody] Registro_Tabla registro_Tabla)
