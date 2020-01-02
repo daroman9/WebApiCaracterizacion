@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApiCaracterizacion.Models;
 
 namespace WebApiCaracterizacion.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200102183643_PrimerMigracion")]
+    partial class PrimerMigracion
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -97,11 +99,13 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.Property<string>("id_usuario");
 
+                    b.Property<int?>("plantillaid");
+
                     b.Property<string>("usuarioid");
 
                     b.HasKey("id");
 
-                    b.HasIndex("id_plantilla");
+                    b.HasIndex("plantillaid");
 
                     b.HasIndex("usuarioid");
 
@@ -412,10 +416,9 @@ namespace WebApiCaracterizacion.Migrations
 
             modelBuilder.Entity("caracterizacion.Models.Formulario", b =>
                 {
-                    b.HasOne("WebApiCaracterizacion.Models.Plantilla", "Plantilla")
+                    b.HasOne("WebApiCaracterizacion.Models.Plantilla", "plantilla")
                         .WithMany()
-                        .HasForeignKey("id_plantilla")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("plantillaid");
 
                     b.HasOne("WebApiCaracterizacion.Models.Usuario", "usuario")
                         .WithMany()

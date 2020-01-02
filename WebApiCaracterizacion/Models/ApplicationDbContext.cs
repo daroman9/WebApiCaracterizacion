@@ -23,6 +23,7 @@ namespace WebApiCaracterizacion.Models
         public DbSet<Registro_Tabla> Registros_Tablas { get; set; }
         public DbSet<Selector> Selectores { get; set; }
         public DbSet<Tablas_Campo> Tablas_Campos { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
 
     }
 }

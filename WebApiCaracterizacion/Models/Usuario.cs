@@ -8,7 +8,7 @@ namespace WebApiCaracterizacion.Models
 {
     public class Usuario
     {
-        public int id { get; set; }
+        public string id { get; set; }
         [StringLength(80)]
         public string nombre { get; set; }
         [StringLength(80)]

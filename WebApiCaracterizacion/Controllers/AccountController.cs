@@ -12,7 +12,7 @@ using System.Text;
 using Microsoft.Extensions.Configuration;
 using WebApiCaracterizacion.Models;
 
-namespace WebApiPaises.Controllers
+namespace WebApiCaracterizacion.Controllers
 {
     [Produces("application/json")]
     [Route("api/Account")]
@@ -38,7 +38,8 @@ namespace WebApiPaises.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.email, Email = model.email };
+                var user = new ApplicationUser { UserName = model.email, Email = model.email, Nombre = model.nombre, Apellido = model.apellido };
+
                 var result = await _userManager.CreateAsync(user, model.password);
                 if (result.Succeeded)
                 {
@@ -84,7 +85,6 @@ namespace WebApiPaises.Controllers
             var claims = new[]
             {
                 new Claim(JwtRegisteredClaimNames.UniqueName, userInfo.email),
-                new Claim("miValor", "Lo que yo quiera"),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
 
