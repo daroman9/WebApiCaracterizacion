@@ -44,7 +44,7 @@ namespace WebApiCaracterizacion
                     ValidIssuer = "yourdomain.com",
                     ValidAudience = "yourdomain.com",
                     IssuerSigningKey = new SymmetricSecurityKey(
-                    Encoding.UTF8.GetBytes(Configuration["Llave_super_secreta"])),
+                    Encoding.UTF8.GetBytes(Configuration.Get("SignKey"))),
                     ClockSkew = TimeSpan.Zero
                 });
             services.AddMvc().AddJsonOptions(ConfigureJson);

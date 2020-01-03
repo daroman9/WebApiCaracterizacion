@@ -9,6 +9,7 @@ using WebApiCaracterizacion.Models;
 using caracterizacion.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.Data.SqlClient;
 
 namespace WebApiCaracterizacion.Controllers
 {
@@ -50,6 +51,22 @@ namespace WebApiCaracterizacion.Controllers
             return Ok(categoria);
         }
 
+        // GET: api/Categorias/5 Filtrar por id de plantilla
+        [HttpGet("byPlantilla/{id_plantilla}")]
+        public IActionResult GetCategoriaByPlantilla([FromRoute] int id_plantilla)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var categoria =  _context.Categorias.Where(x => x.id_plantilla == id_plantilla).ToList();
+            if (categoria == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(categoria);
+        }
         // PUT: api/Categorias/5
         [HttpPut("{id}")]
         public IActionResult Put([FromBody] Categoria categoria, int id)

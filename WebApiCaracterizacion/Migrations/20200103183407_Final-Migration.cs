@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WebApiCaracterizacion.Migrations
 {
-    public partial class PrimerMigracion : Migration
+    public partial class FinalMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -50,24 +50,6 @@ namespace WebApiCaracterizacion.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Categorias",
-                columns: table => new
-                {
-                    id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    id_padre = table.Column<int>(nullable: false),
-                    nombre = table.Column<string>(maxLength: 80, nullable: true),
-                    orden = table.Column<int>(nullable: false),
-                    visible = table.Column<int>(nullable: false),
-                    color = table.Column<string>(maxLength: 7, nullable: true),
-                    image = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Categorias", x => x.id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Plantillas",
                 columns: table => new
                 {
@@ -81,7 +63,7 @@ namespace WebApiCaracterizacion.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Usuarios",
+                name: "Usuario",
                 columns: table => new
                 {
                     id = table.Column<string>(nullable: false),
@@ -92,7 +74,7 @@ namespace WebApiCaracterizacion.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Usuarios", x => x.id);
+                    table.PrimaryKey("PK_Usuario", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
@@ -202,6 +184,61 @@ namespace WebApiCaracterizacion.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Categorias",
+                columns: table => new
+                {
+                    id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    id_padre = table.Column<int>(nullable: false),
+                    nombre = table.Column<string>(maxLength: 80, nullable: true),
+                    orden = table.Column<int>(nullable: false),
+                    visible = table.Column<int>(nullable: false),
+                    color = table.Column<string>(maxLength: 7, nullable: true),
+                    image = table.Column<string>(nullable: true),
+                    id_plantilla = table.Column<int>(nullable: false),
+                    plantillaid = table.Column<int>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Categorias", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_Categorias_Plantillas_plantillaid",
+                        column: x => x.plantillaid,
+                        principalTable: "Plantillas",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Formularios",
+                columns: table => new
+                {
+                    id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    fecha_inicio = table.Column<DateTime>(nullable: false),
+                    fecha_fin = table.Column<DateTime>(nullable: false),
+                    id_plantilla = table.Column<int>(nullable: false),
+                    id_usuario = table.Column<string>(nullable: true),
+                    usuarioid = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Formularios", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_Formularios_Plantillas_id_plantilla",
+                        column: x => x.id_plantilla,
+                        principalTable: "Plantillas",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Formularios_Usuario_usuarioid",
+                        column: x => x.usuarioid,
+                        principalTable: "Usuario",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Campos",
                 columns: table => new
                 {
@@ -237,33 +274,23 @@ namespace WebApiCaracterizacion.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Formularios",
+                name: "Registros_Tablas",
                 columns: table => new
                 {
                     id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    fecha_inicio = table.Column<DateTime>(nullable: false),
-                    fecha_fin = table.Column<DateTime>(nullable: false),
-                    id_plantilla = table.Column<int>(nullable: false),
-                    plantillaid = table.Column<int>(nullable: true),
-                    id_usuario = table.Column<string>(nullable: true),
-                    usuarioid = table.Column<string>(nullable: true)
+                    value = table.Column<string>(nullable: true),
+                    id_formulario = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Formularios", x => x.id);
+                    table.PrimaryKey("PK_Registros_Tablas", x => x.id);
                     table.ForeignKey(
-                        name: "FK_Formularios_Plantillas_plantillaid",
-                        column: x => x.plantillaid,
-                        principalTable: "Plantillas",
+                        name: "FK_Registros_Tablas_Formularios_id_formulario",
+                        column: x => x.id_formulario,
+                        principalTable: "Formularios",
                         principalColumn: "id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Formularios_Usuarios_usuarioid",
-                        column: x => x.usuarioid,
-                        principalTable: "Usuarios",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -335,26 +362,6 @@ namespace WebApiCaracterizacion.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "Registros_Tablas",
-                columns: table => new
-                {
-                    id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    value = table.Column<string>(nullable: true),
-                    id_formulario = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Registros_Tablas", x => x.id);
-                    table.ForeignKey(
-                        name: "FK_Registros_Tablas_Formularios_id_formulario",
-                        column: x => x.id_formulario,
-                        principalTable: "Formularios",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -405,9 +412,14 @@ namespace WebApiCaracterizacion.Migrations
                 column: "id_plantilla");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Formularios_plantillaid",
-                table: "Formularios",
+                name: "IX_Categorias_plantillaid",
+                table: "Categorias",
                 column: "plantillaid");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Formularios_id_plantilla",
+                table: "Formularios",
+                column: "id_plantilla");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Formularios_usuarioid",
@@ -477,7 +489,7 @@ namespace WebApiCaracterizacion.Migrations
                 name: "Campos");
 
             migrationBuilder.DropTable(
-                name: "Usuarios");
+                name: "Usuario");
 
             migrationBuilder.DropTable(
                 name: "Categorias");

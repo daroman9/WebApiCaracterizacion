@@ -88,7 +88,7 @@ namespace WebApiCaracterizacion.Controllers
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Llave_super_secreta"]));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.Get("SignKey")));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var expiration = DateTime.UtcNow.AddHours(24);

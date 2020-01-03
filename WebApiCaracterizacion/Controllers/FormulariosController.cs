@@ -49,7 +49,22 @@ namespace WebApiCaracterizacion.Controllers
 
             return Ok(formulario);
         }
+        // GET: api/Formularios/byUsuario/5 obtener los formularios por el id usuario
+        [HttpGet("byUsuario/{id_usuario}")]
+        public IActionResult GetCategoriaByPlantilla([FromRoute] string id_usuario)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var formulario = _context.Formularios.Where(x => x.id_usuario == id_usuario).ToList();
+            if (formulario == null)
+            {
+                return NotFound();
+            }
 
+            return Ok(formulario);
+        }
         // PUT: api/Formularios/5
         [HttpPut("{id}")]
         public IActionResult Put([FromBody] Formulario formulario, int id)

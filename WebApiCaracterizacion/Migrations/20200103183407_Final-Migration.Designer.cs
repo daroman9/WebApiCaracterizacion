@@ -10,8 +10,8 @@ using WebApiCaracterizacion.Models;
 namespace WebApiCaracterizacion.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200102183643_PrimerMigracion")]
-    partial class PrimerMigracion
+    [Migration("20200103183407_Final-Migration")]
+    partial class FinalMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -71,6 +71,8 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.Property<int>("id_padre");
 
+                    b.Property<int>("id_plantilla");
+
                     b.Property<string>("image");
 
                     b.Property<string>("nombre")
@@ -78,9 +80,13 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.Property<int>("orden");
 
+                    b.Property<int?>("plantillaid");
+
                     b.Property<int>("visible");
 
                     b.HasKey("id");
+
+                    b.HasIndex("plantillaid");
 
                     b.ToTable("Categorias");
                 });
@@ -99,13 +105,11 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.Property<string>("id_usuario");
 
-                    b.Property<int?>("plantillaid");
-
                     b.Property<string>("usuarioid");
 
                     b.HasKey("id");
 
-                    b.HasIndex("plantillaid");
+                    b.HasIndex("id_plantilla");
 
                     b.HasIndex("usuarioid");
 
@@ -398,7 +402,7 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("Usuarios");
+                    b.ToTable("Usuario");
                 });
 
             modelBuilder.Entity("caracterizacion.Models.Campo", b =>
@@ -414,11 +418,19 @@ namespace WebApiCaracterizacion.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("caracterizacion.Models.Formulario", b =>
+            modelBuilder.Entity("caracterizacion.Models.Categoria", b =>
                 {
                     b.HasOne("WebApiCaracterizacion.Models.Plantilla", "plantilla")
                         .WithMany()
                         .HasForeignKey("plantillaid");
+                });
+
+            modelBuilder.Entity("caracterizacion.Models.Formulario", b =>
+                {
+                    b.HasOne("WebApiCaracterizacion.Models.Plantilla", "Plantilla")
+                        .WithMany()
+                        .HasForeignKey("id_plantilla")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("WebApiCaracterizacion.Models.Usuario", "usuario")
                         .WithMany()
