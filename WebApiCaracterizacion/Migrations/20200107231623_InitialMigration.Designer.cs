@@ -10,8 +10,8 @@ using WebApiCaracterizacion.Models;
 namespace WebApiCaracterizacion.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200107195453_new2Migration")]
-    partial class new2Migration
+    [Migration("20200107231623_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,7 +30,7 @@ namespace WebApiCaracterizacion.Migrations
                     b.Property<string>("descripcion")
                         .HasMaxLength(250);
 
-                    b.Property<int>("disabled");
+                    b.Property<int?>("disabled");
 
                     b.Property<int>("id_categoria");
 
@@ -39,23 +39,23 @@ namespace WebApiCaracterizacion.Migrations
                     b.Property<string>("nombre")
                         .HasMaxLength(80);
 
-                    b.Property<int>("orden");
+                    b.Property<int?>("orden");
 
                     b.Property<string>("rangos");
 
-                    b.Property<int>("required");
+                    b.Property<int?>("required");
 
                     b.Property<string>("tipo");
 
                     b.Property<string>("unidad");
 
-                    b.Property<int>("valor_defecto");
+                    b.Property<int?>("valor_defecto");
 
-                    b.Property<int>("valor_maximo");
+                    b.Property<int?>("valor_maximo");
 
-                    b.Property<int>("valor_minimo");
+                    b.Property<int?>("valor_minimo");
 
-                    b.Property<int>("visible");
+                    b.Property<int?>("visible");
 
                     b.HasKey("id");
 
@@ -75,7 +75,7 @@ namespace WebApiCaracterizacion.Migrations
                     b.Property<string>("color")
                         .HasMaxLength(7);
 
-                    b.Property<int>("id_padre");
+                    b.Property<int?>("id_padre");
 
                     b.Property<int>("id_plantilla");
 
@@ -84,11 +84,11 @@ namespace WebApiCaracterizacion.Migrations
                     b.Property<string>("nombre")
                         .HasMaxLength(80);
 
-                    b.Property<int>("orden");
+                    b.Property<int?>("orden");
 
                     b.Property<int?>("plantillaid");
 
-                    b.Property<int>("visible");
+                    b.Property<int?>("visible");
 
                     b.HasKey("id");
 
@@ -305,7 +305,7 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.Property<string>("latitud");
 
-                    b.Property<float>("longitud");
+                    b.Property<string>("longitud");
 
                     b.Property<string>("usuarioid");
 
@@ -347,7 +347,7 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.Property<float>("valor_float");
 
-                    b.Property<int>("valor_integer");
+                    b.Property<int?>("valor_integer");
 
                     b.Property<string>("valor_string");
 
@@ -383,16 +383,16 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.Property<int>("id_campo");
 
-                    b.Property<int>("id_padre");
+                    b.Property<int?>("id_padre");
 
                     b.Property<string>("nombre")
                         .HasMaxLength(80);
 
-                    b.Property<int>("orden");
+                    b.Property<int?>("orden");
 
-                    b.Property<int>("value");
+                    b.Property<int?>("value");
 
-                    b.Property<bool>("visible");
+                    b.Property<int?>("visible");
 
                     b.HasKey("id");
 

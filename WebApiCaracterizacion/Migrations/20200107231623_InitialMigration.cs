@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WebApiCaracterizacion.Migrations
 {
-    public partial class newMigration : Migration
+    public partial class InitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -250,7 +250,7 @@ namespace WebApiCaracterizacion.Migrations
                     valor_minimo = table.Column<int>(nullable: true),
                     valor_defecto = table.Column<int>(nullable: true),
                     rangos = table.Column<string>(nullable: true),
-                    order = table.Column<int>(nullable: true),
+                    orden = table.Column<int>(nullable: true),
                     visible = table.Column<int>(nullable: true),
                     tipo = table.Column<string>(nullable: true),
                     required = table.Column<int>(nullable: true),
@@ -282,7 +282,7 @@ namespace WebApiCaracterizacion.Migrations
                 {
                     id = table.Column<string>(maxLength: 20, nullable: false),
                     latitud = table.Column<string>(nullable: true),
-                    longitud = table.Column<float>(nullable: true),
+                    longitud = table.Column<string>(nullable: true),
                     date = table.Column<DateTime>(nullable: true),
                     id_usuario = table.Column<string>(nullable: true),
                     usuarioid = table.Column<string>(nullable: true),
@@ -339,10 +339,10 @@ namespace WebApiCaracterizacion.Migrations
                     id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     valor_string = table.Column<string>(nullable: true),
-                    valor_float = table.Column<float>(nullable: true),
+                    valor_float = table.Column<float>(nullable: false),
                     valor_integer = table.Column<int>(nullable: true),
                     valor_date = table.Column<DateTime>(nullable: true),
-                    fecha = table.Column<DateTime>(nullable: true),
+                    fecha = table.Column<DateTime>(nullable: false),
                     id_campo = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -366,7 +366,7 @@ namespace WebApiCaracterizacion.Migrations
                     nombre = table.Column<string>(maxLength: 80, nullable: true),
                     value = table.Column<int>(nullable: true),
                     orden = table.Column<int>(nullable: true),
-                    visible = table.Column<bool>(nullable: true),
+                    visible = table.Column<int>(nullable: true),
                     id_campo = table.Column<int>(nullable: false)
                 },
                 constraints: table =>

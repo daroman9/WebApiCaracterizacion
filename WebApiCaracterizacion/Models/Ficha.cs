@@ -14,7 +14,7 @@ namespace WebApiCaracterizacion.Models
         [StringLength(20)]
         public string id { get; set; }
         public string latitud { get; set; }
-        public float longitud { get; set; }
+        public string longitud { get; set; }
         public DateTime date { get; set; }
 
         //Claves foraneas

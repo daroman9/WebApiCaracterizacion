@@ -12,11 +12,11 @@ namespace caracterizacion.Models
     public class Categoria
     {
         public int id { get; set; }
-        public int id_padre { get; set; }
+        public int? id_padre { get; set; }
         [StringLength(80)]
         public string nombre { get; set; }
-        public int orden { get; set; }
-        public int visible { get; set; }
+        public int? orden { get; set; }
+        public int? visible { get; set; }
         [StringLength(7)]
         public string color { get; set; }
         public string image { get; set; }
