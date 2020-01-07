@@ -47,7 +47,7 @@ namespace WebApiCaracterizacion.Controllers
                 }
                 else
                 {
-                    return BadRequest("Username or password invalid");
+                    return BadRequest("Ocurrio un error, email o password invalidos");
                 }
             }
             else
@@ -85,13 +85,14 @@ namespace WebApiCaracterizacion.Controllers
             var claims = new[]
             {
                 new Claim(JwtRegisteredClaimNames.UniqueName, userInfo.email),
+                new Claim("miValor", "Lo que yo quiera"),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.Get("SignKey")));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:SigningKey"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-            var expiration = DateTime.UtcNow.AddHours(24);
+            var expiration = DateTime.UtcNow.AddHours(1);
 
             JwtSecurityToken token = new JwtSecurityToken(
                issuer: "yourdomain.com",

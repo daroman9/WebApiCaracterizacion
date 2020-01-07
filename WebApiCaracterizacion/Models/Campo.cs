@@ -20,10 +20,13 @@ namespace caracterizacion.Models
         public int valor_maximo { get; set; }
         public int valor_minimo { get; set; }
         public int valor_defecto { get; set; }
+        public string rangos { get; set; }
         public int orden { get; set; }
         public int visible { get; set; }
-        public int tipo { get; set; }
-        public bool disabled { get; set; }
+        public string tipo { get; set; }
+        public int required { get; set; }
+        public string unidad { get; set; }
+        public int disabled { get; set; }
 
         //Clave foranea para relacionar la tabla categoria con la tabla campo
         [ForeignKey("Categoria")]

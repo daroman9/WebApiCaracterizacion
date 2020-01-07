@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WebApiCaracterizacion.Migrations
 {
-    public partial class FinalMigration : Migration
+    public partial class newMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -189,10 +189,10 @@ namespace WebApiCaracterizacion.Migrations
                 {
                     id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    id_padre = table.Column<int>(nullable: false),
+                    id_padre = table.Column<int>(nullable: true),
                     nombre = table.Column<string>(maxLength: 80, nullable: true),
-                    orden = table.Column<int>(nullable: false),
-                    visible = table.Column<int>(nullable: false),
+                    orden = table.Column<int>(nullable: true),
+                    visible = table.Column<int>(nullable: true),
                     color = table.Column<string>(maxLength: 7, nullable: true),
                     image = table.Column<string>(nullable: true),
                     id_plantilla = table.Column<int>(nullable: false),
@@ -215,8 +215,8 @@ namespace WebApiCaracterizacion.Migrations
                 {
                     id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    fecha_inicio = table.Column<DateTime>(nullable: false),
-                    fecha_fin = table.Column<DateTime>(nullable: false),
+                    fecha_inicio = table.Column<DateTime>(nullable: true),
+                    fecha_fin = table.Column<DateTime>(nullable: true),
                     id_plantilla = table.Column<int>(nullable: false),
                     id_usuario = table.Column<string>(nullable: true),
                     usuarioid = table.Column<string>(nullable: true)
@@ -246,13 +246,16 @@ namespace WebApiCaracterizacion.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     nombre = table.Column<string>(maxLength: 80, nullable: true),
                     descripcion = table.Column<string>(maxLength: 250, nullable: true),
-                    valor_maximo = table.Column<int>(nullable: false),
-                    valor_minimo = table.Column<int>(nullable: false),
-                    valor_defecto = table.Column<int>(nullable: false),
-                    orden = table.Column<int>(nullable: false),
-                    visible = table.Column<int>(nullable: false),
-                    tipo = table.Column<int>(nullable: false),
-                    disabled = table.Column<bool>(nullable: false),
+                    valor_maximo = table.Column<int>(nullable: true),
+                    valor_minimo = table.Column<int>(nullable: true),
+                    valor_defecto = table.Column<int>(nullable: true),
+                    rangos = table.Column<string>(nullable: true),
+                    order = table.Column<int>(nullable: true),
+                    visible = table.Column<int>(nullable: true),
+                    tipo = table.Column<string>(nullable: true),
+                    required = table.Column<int>(nullable: true),
+                    unidad = table.Column<string>(nullable: true),
+                    disabled = table.Column<int>(nullable: true),
                     id_categoria = table.Column<int>(nullable: false),
                     id_plantilla = table.Column<int>(nullable: false)
                 },
@@ -271,6 +274,42 @@ namespace WebApiCaracterizacion.Migrations
                         principalTable: "Plantillas",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Ficha",
+                columns: table => new
+                {
+                    id = table.Column<string>(maxLength: 20, nullable: false),
+                    latitud = table.Column<string>(nullable: true),
+                    longitud = table.Column<float>(nullable: true),
+                    date = table.Column<DateTime>(nullable: true),
+                    id_usuario = table.Column<string>(nullable: true),
+                    usuarioid = table.Column<string>(nullable: true),
+                    id_formulario = table.Column<int>(nullable: false),
+                    id_plantilla = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Ficha", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_Ficha_Formularios_id_formulario",
+                        column: x => x.id_formulario,
+                        principalTable: "Formularios",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.NoAction);
+                    table.ForeignKey(
+                        name: "FK_Ficha_Plantillas_id_plantilla",
+                        column: x => x.id_plantilla,
+                        principalTable: "Plantillas",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Ficha_Usuario_usuarioid",
+                        column: x => x.usuarioid,
+                        principalTable: "Usuario",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -300,10 +339,10 @@ namespace WebApiCaracterizacion.Migrations
                     id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     valor_string = table.Column<string>(nullable: true),
-                    valor_float = table.Column<float>(nullable: false),
-                    valor_integer = table.Column<int>(nullable: false),
-                    valor_date = table.Column<DateTime>(nullable: false),
-                    fecha = table.Column<DateTime>(nullable: false),
+                    valor_float = table.Column<float>(nullable: true),
+                    valor_integer = table.Column<int>(nullable: true),
+                    valor_date = table.Column<DateTime>(nullable: true),
+                    fecha = table.Column<DateTime>(nullable: true),
                     id_campo = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -323,11 +362,11 @@ namespace WebApiCaracterizacion.Migrations
                 {
                     id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    id_padre = table.Column<int>(nullable: false),
+                    id_padre = table.Column<int>(nullable: true),
                     nombre = table.Column<string>(maxLength: 80, nullable: true),
-                    value = table.Column<int>(nullable: false),
-                    orden = table.Column<int>(nullable: false),
-                    visible = table.Column<bool>(nullable: false),
+                    value = table.Column<int>(nullable: true),
+                    orden = table.Column<int>(nullable: true),
+                    visible = table.Column<bool>(nullable: true),
                     id_campo = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -417,6 +456,21 @@ namespace WebApiCaracterizacion.Migrations
                 column: "plantillaid");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Ficha_id_formulario",
+                table: "Ficha",
+                column: "id_formulario");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Ficha_id_plantilla",
+                table: "Ficha",
+                column: "id_plantilla");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Ficha_usuarioid",
+                table: "Ficha",
+                column: "usuarioid");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Formularios_id_plantilla",
                 table: "Formularios",
                 column: "id_plantilla");
@@ -463,6 +517,9 @@ namespace WebApiCaracterizacion.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "Ficha");
 
             migrationBuilder.DropTable(
                 name: "Registros");

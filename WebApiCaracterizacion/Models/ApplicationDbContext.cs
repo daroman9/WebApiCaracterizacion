@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApiCaracterizacion.Models;
 
 namespace WebApiCaracterizacion.Models
 {
@@ -23,6 +24,7 @@ namespace WebApiCaracterizacion.Models
         public DbSet<Registro_Tabla> Registros_Tablas { get; set; }
         public DbSet<Selector> Selectores { get; set; }
         public DbSet<Tablas_Campo> Tablas_Campos { get; set; }
+        public DbSet<Ficha> Ficha { get; set; }
 
     }
 }

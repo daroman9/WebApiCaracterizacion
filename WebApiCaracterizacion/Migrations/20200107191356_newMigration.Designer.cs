@@ -10,8 +10,8 @@ using WebApiCaracterizacion.Models;
 namespace WebApiCaracterizacion.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200103183407_Final-Migration")]
-    partial class FinalMigration
+    [Migration("20200107191356_newMigration")]
+    partial class newMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,7 +30,7 @@ namespace WebApiCaracterizacion.Migrations
                     b.Property<string>("descripcion")
                         .HasMaxLength(250);
 
-                    b.Property<bool>("disabled");
+                    b.Property<int>("disabled");
 
                     b.Property<int>("id_categoria");
 
@@ -39,9 +39,15 @@ namespace WebApiCaracterizacion.Migrations
                     b.Property<string>("nombre")
                         .HasMaxLength(80);
 
-                    b.Property<int>("orden");
+                    b.Property<int>("order");
 
-                    b.Property<int>("tipo");
+                    b.Property<string>("rangos");
+
+                    b.Property<int>("required");
+
+                    b.Property<string>("tipo");
+
+                    b.Property<string>("unidad");
 
                     b.Property<int>("valor_defecto");
 
@@ -283,6 +289,37 @@ namespace WebApiCaracterizacion.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("WebApiCaracterizacion.Models.Ficha", b =>
+                {
+                    b.Property<string>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(20);
+
+                    b.Property<DateTime>("date");
+
+                    b.Property<int>("id_formulario");
+
+                    b.Property<int>("id_plantilla");
+
+                    b.Property<string>("id_usuario");
+
+                    b.Property<string>("latitud");
+
+                    b.Property<float>("longitud");
+
+                    b.Property<string>("usuarioid");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("id_formulario");
+
+                    b.HasIndex("id_plantilla");
+
+                    b.HasIndex("usuarioid");
+
+                    b.ToTable("Ficha");
+                });
+
             modelBuilder.Entity("WebApiCaracterizacion.Models.Plantilla", b =>
                 {
                     b.Property<int>("id")
@@ -480,6 +517,23 @@ namespace WebApiCaracterizacion.Migrations
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("WebApiCaracterizacion.Models.Ficha", b =>
+                {
+                    b.HasOne("caracterizacion.Models.Formulario", "Formulario")
+                        .WithMany()
+                        .HasForeignKey("id_formulario")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("WebApiCaracterizacion.Models.Plantilla", "Plantilla")
+                        .WithMany()
+                        .HasForeignKey("id_plantilla")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("WebApiCaracterizacion.Models.Usuario", "usuario")
+                        .WithMany()
+                        .HasForeignKey("usuarioid");
                 });
 
             modelBuilder.Entity("WebApiCaracterizacion.Models.Registro", b =>

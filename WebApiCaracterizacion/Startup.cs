@@ -19,17 +19,27 @@ namespace WebApiCaracterizacion
         {
             Configuration = configuration;
         }
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
 
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-           
 
-            services.AddDbContext<ApplicationDbContext>(options => 
+
+            services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
-            services.AddIdentity<ApplicationUser, IdentityRole>()
+            services.AddIdentity<ApplicationUser, IdentityRole>(
+                option =>
+                {
+                    option.Password.RequireDigit = false;
+                    option.Password.RequireNonAlphanumeric = false;
+                    option.Password.RequireUppercase = false;
+                    option.Password.RequireLowercase = false;
+                }
+                )
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
@@ -44,16 +54,25 @@ namespace WebApiCaracterizacion
                     ValidIssuer = "yourdomain.com",
                     ValidAudience = "yourdomain.com",
                     IssuerSigningKey = new SymmetricSecurityKey(
-                    Encoding.UTF8.GetBytes(Configuration.Get("SignKey"))),
+                    Encoding.UTF8.GetBytes(Configuration["Jwt:SigningKey"])),
                     ClockSkew = TimeSpan.Zero
                 });
+            services.AddCors(options =>
+            {
+                options.AddPolicy(MyAllowSpecificOrigins,
+                builder =>
+                {
+                    builder.WithOrigins("http://localhost:3000");
+                });
+            });
+
             services.AddMvc().AddJsonOptions(ConfigureJson);
 
         }
         private void ConfigureJson(MvcJsonOptions obj)
         {
             obj.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
-                
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -67,6 +86,7 @@ namespace WebApiCaracterizacion
             {
                 app.UseHsts();
             }
+            app.UseCors(MyAllowSpecificOrigins);
             app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseMvc();
