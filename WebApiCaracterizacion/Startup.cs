@@ -59,11 +59,10 @@ namespace WebApiCaracterizacion
                 });
             services.AddCors(options =>
             {
-                options.AddPolicy(MyAllowSpecificOrigins,
-                builder =>
-                {
-                    builder.WithOrigins("http://localhost:3000");
-                });
+                options.AddPolicy("AllowOrigin",
+
+               builder => builder.AllowAnyOrigin());
+              
             });
 
             services.AddMvc().AddJsonOptions(ConfigureJson);
