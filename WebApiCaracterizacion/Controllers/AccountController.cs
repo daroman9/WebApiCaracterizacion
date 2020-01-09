@@ -43,7 +43,7 @@ namespace WebApiCaracterizacion.Controllers
                 var result = await _userManager.CreateAsync(user, model.password);
                 if (result.Succeeded)
                 {
-                    return BuildToken(model);
+                    return Ok("Usuario creado correctamente");
                 }
                 else
                 {
@@ -63,10 +63,14 @@ namespace WebApiCaracterizacion.Controllers
         {
             if (ModelState.IsValid)
             {
+                
+                var datos = await _userManager.FindByEmailAsync(userInfo.email);
+                
                 var result = await _signInManager.PasswordSignInAsync(userInfo.email, userInfo.password, isPersistent: false, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
-                    return BuildToken(userInfo);
+
+                    return BuildToken(userInfo, datos.Nombre, datos.Apellido, datos.Id);
                 }
                 else
                 {
@@ -78,9 +82,10 @@ namespace WebApiCaracterizacion.Controllers
             {
                 return BadRequest(ModelState);
             }
+   
         }
 
-        private IActionResult BuildToken(Usuario userInfo)
+        private IActionResult BuildToken(Usuario userInfo, string Nombre, string Apellido, string Id)
         {
             var claims = new[]
             {
@@ -104,7 +109,12 @@ namespace WebApiCaracterizacion.Controllers
             return Ok(new
             {
                 token = new JwtSecurityTokenHandler().WriteToken(token),
-                expiration = expiration
+                expiration = expiration, 
+                nombre = Nombre,
+                apellido = Apellido,
+                email = userInfo.email,
+                id_user= Id
+       
             });
 
         }

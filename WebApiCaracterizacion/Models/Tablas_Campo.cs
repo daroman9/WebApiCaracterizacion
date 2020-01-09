@@ -12,7 +12,7 @@ namespace WebApiCaracterizacion.Models
     public class Tablas_Campo
     {
         public int id { get; set; }
-        [StringLength(80)]
+        [StringLength(250)]
         public string nombre { get; set; }
         [StringLength(80)]
         public string tipo { get; set; }

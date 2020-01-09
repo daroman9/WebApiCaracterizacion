@@ -13,7 +13,7 @@ namespace WebApiCaracterizacion.Models
         public int id { get; set; }
         public string value { get; set; }
 
-        //Clave foranea para relacionar la tabla Formulario con la tabla Registro_Tablas
+        //Clave foranea para relacionar la tabla Registro_Tablas con la tabla formularios
         [ForeignKey("Formulario")]
         public int id_formulario { get; set; }
         [JsonIgnore]

@@ -10,8 +10,8 @@ using WebApiCaracterizacion.Models;
 namespace WebApiCaracterizacion.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200107231623_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20200109191119_MigracionFicha")]
+    partial class MigracionFicha
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,20 +30,32 @@ namespace WebApiCaracterizacion.Migrations
                     b.Property<string>("descripcion")
                         .HasMaxLength(250);
 
-                    b.Property<int?>("disabled");
+                    b.Property<string>("disableCategories");
+
+                    b.Property<string>("disableFields");
+
+                    b.Property<bool?>("disabled");
+
+                    b.Property<string>("enableCategories");
+
+                    b.Property<string>("enableFields");
 
                     b.Property<int>("id_categoria");
 
                     b.Property<int>("id_plantilla");
 
+                    b.Property<int?>("id_selector");
+
                     b.Property<string>("nombre")
-                        .HasMaxLength(80);
+                        .HasMaxLength(250);
 
                     b.Property<int?>("orden");
 
                     b.Property<string>("rangos");
 
-                    b.Property<int?>("required");
+                    b.Property<bool?>("required");
+
+                    b.Property<int?>("selectorid");
 
                     b.Property<string>("tipo");
 
@@ -55,13 +67,15 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.Property<int?>("valor_minimo");
 
-                    b.Property<int?>("visible");
+                    b.Property<bool?>("visible");
 
                     b.HasKey("id");
 
                     b.HasIndex("id_categoria");
 
                     b.HasIndex("id_plantilla");
+
+                    b.HasIndex("selectorid");
 
                     b.ToTable("Campos");
                 });
@@ -73,7 +87,7 @@ namespace WebApiCaracterizacion.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("color")
-                        .HasMaxLength(7);
+                        .HasMaxLength(20);
 
                     b.Property<int?>("id_padre");
 
@@ -82,13 +96,13 @@ namespace WebApiCaracterizacion.Migrations
                     b.Property<string>("image");
 
                     b.Property<string>("nombre")
-                        .HasMaxLength(80);
+                        .HasMaxLength(250);
 
                     b.Property<int?>("orden");
 
                     b.Property<int?>("plantillaid");
 
-                    b.Property<int?>("visible");
+                    b.Property<bool?>("visible");
 
                     b.HasKey("id");
 
@@ -326,6 +340,10 @@ namespace WebApiCaracterizacion.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("ImageUrl");
+
+                    b.Property<string>("color");
+
                     b.Property<string>("nombre");
 
                     b.HasKey("id");
@@ -343,9 +361,11 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.Property<int>("id_campo");
 
+                    b.Property<string>("id_ficha");
+
                     b.Property<DateTime>("valor_date");
 
-                    b.Property<float>("valor_float");
+                    b.Property<float?>("valor_float");
 
                     b.Property<int?>("valor_integer");
 
@@ -354,6 +374,8 @@ namespace WebApiCaracterizacion.Migrations
                     b.HasKey("id");
 
                     b.HasIndex("id_campo");
+
+                    b.HasIndex("id_ficha");
 
                     b.ToTable("Registros");
                 });
@@ -381,24 +403,30 @@ namespace WebApiCaracterizacion.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("id_campo");
-
-                    b.Property<int?>("id_padre");
-
-                    b.Property<string>("nombre")
-                        .HasMaxLength(80);
-
-                    b.Property<int?>("orden");
-
-                    b.Property<int?>("value");
-
-                    b.Property<int?>("visible");
+                    b.Property<string>("nombre");
 
                     b.HasKey("id");
 
-                    b.HasIndex("id_campo");
-
                     b.ToTable("Selectores");
+                });
+
+            modelBuilder.Entity("WebApiCaracterizacion.Models.Selector_Detail", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("etiqueta");
+
+                    b.Property<int>("id_selector");
+
+                    b.Property<string>("valor");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("id_selector");
+
+                    b.ToTable("Selector_Detail");
                 });
 
             modelBuilder.Entity("WebApiCaracterizacion.Models.Tablas_Campo", b =>
@@ -410,7 +438,7 @@ namespace WebApiCaracterizacion.Migrations
                     b.Property<int>("id_campo");
 
                     b.Property<string>("nombre")
-                        .HasMaxLength(80);
+                        .HasMaxLength(250);
 
                     b.Property<string>("tipo")
                         .HasMaxLength(80);
@@ -428,12 +456,12 @@ namespace WebApiCaracterizacion.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("apellido")
-                        .HasMaxLength(80);
+                        .HasMaxLength(250);
 
                     b.Property<string>("email");
 
                     b.Property<string>("nombre")
-                        .HasMaxLength(80);
+                        .HasMaxLength(250);
 
                     b.Property<string>("password");
 
@@ -453,6 +481,10 @@ namespace WebApiCaracterizacion.Migrations
                         .WithMany()
                         .HasForeignKey("id_plantilla")
                         .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("WebApiCaracterizacion.Models.Selector", "selector")
+                        .WithMany()
+                        .HasForeignKey("selectorid");
                 });
 
             modelBuilder.Entity("caracterizacion.Models.Categoria", b =>
@@ -542,6 +574,10 @@ namespace WebApiCaracterizacion.Migrations
                         .WithMany()
                         .HasForeignKey("id_campo")
                         .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("WebApiCaracterizacion.Models.Ficha", "Ficha")
+                        .WithMany()
+                        .HasForeignKey("id_ficha");
                 });
 
             modelBuilder.Entity("WebApiCaracterizacion.Models.Registro_Tabla", b =>
@@ -552,11 +588,11 @@ namespace WebApiCaracterizacion.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("WebApiCaracterizacion.Models.Selector", b =>
+            modelBuilder.Entity("WebApiCaracterizacion.Models.Selector_Detail", b =>
                 {
-                    b.HasOne("caracterizacion.Models.Campo", "Campo")
+                    b.HasOne("WebApiCaracterizacion.Models.Selector", "Selector")
                         .WithMany()
-                        .HasForeignKey("id_campo")
+                        .HasForeignKey("id_selector")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

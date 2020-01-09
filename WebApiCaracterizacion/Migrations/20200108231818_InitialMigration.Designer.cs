@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApiCaracterizacion.Models;
 
 namespace WebApiCaracterizacion.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200108231818_InitialMigration")]
+    partial class InitialMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -359,8 +361,6 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.Property<int>("id_campo");
 
-                    b.Property<string>("id_ficha");
-
                     b.Property<DateTime>("valor_date");
 
                     b.Property<float?>("valor_float");
@@ -372,8 +372,6 @@ namespace WebApiCaracterizacion.Migrations
                     b.HasKey("id");
 
                     b.HasIndex("id_campo");
-
-                    b.HasIndex("id_ficha");
 
                     b.ToTable("Registros");
                 });
@@ -406,25 +404,6 @@ namespace WebApiCaracterizacion.Migrations
                     b.HasKey("id");
 
                     b.ToTable("Selectores");
-                });
-
-            modelBuilder.Entity("WebApiCaracterizacion.Models.Selector_Detail", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("etiqueta");
-
-                    b.Property<int>("id_selector");
-
-                    b.Property<string>("valor");
-
-                    b.HasKey("id");
-
-                    b.HasIndex("id_selector");
-
-                    b.ToTable("Selector_Detail");
                 });
 
             modelBuilder.Entity("WebApiCaracterizacion.Models.Tablas_Campo", b =>
@@ -572,10 +551,6 @@ namespace WebApiCaracterizacion.Migrations
                         .WithMany()
                         .HasForeignKey("id_campo")
                         .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("WebApiCaracterizacion.Models.Ficha", "Ficha")
-                        .WithMany()
-                        .HasForeignKey("id_ficha");
                 });
 
             modelBuilder.Entity("WebApiCaracterizacion.Models.Registro_Tabla", b =>
@@ -583,14 +558,6 @@ namespace WebApiCaracterizacion.Migrations
                     b.HasOne("caracterizacion.Models.Formulario", "Formulario")
                         .WithMany()
                         .HasForeignKey("id_formulario")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("WebApiCaracterizacion.Models.Selector_Detail", b =>
-                {
-                    b.HasOne("WebApiCaracterizacion.Models.Selector", "Selector")
-                        .WithMany()
-                        .HasForeignKey("id_selector")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
