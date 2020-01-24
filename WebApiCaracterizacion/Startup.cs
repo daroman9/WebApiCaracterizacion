@@ -62,7 +62,7 @@ namespace WebApiCaracterizacion
                 options.AddPolicy("AllowOrigin",
 
                builder => builder.AllowAnyOrigin());
-              
+
             });
 
             services.AddMvc().AddJsonOptions(ConfigureJson);

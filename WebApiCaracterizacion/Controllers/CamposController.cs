@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -91,7 +90,7 @@ namespace WebApiCaracterizacion.Controllers
             _context.Campos.Add(campo);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetCampo", new { id = campo.id}, campo);
+            return CreatedAtAction("GetCampo", new { id = campo.id }, campo);
         }
 
         // DELETE: api/Campos/5

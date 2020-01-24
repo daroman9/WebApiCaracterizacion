@@ -11,12 +11,25 @@ namespace WebApiCaracterizacion.Models
     public class Registro_Tabla
     {
         public int id { get; set; }
-        public string value { get; set; }
+        public string valor_string{ get; set; }
+        public float valor_float { get; set; }
+        public int valor_integer { get; set; }
+        public DateTime valor_date { get; set; }
+        public int id_column { get; set; }
+        public int row { get; set; }
 
-        //Clave foranea para relacionar la tabla Registro_Tablas con la tabla formularios
-        [ForeignKey("Formulario")]
-        public int id_formulario { get; set; }
+
+        [ForeignKey("Tablas_Campo")]
+        public int id_registro_tabla_campo { get; set; }
         [JsonIgnore]
-       public Formulario Formulario { get; set; }
+        public Tablas_Campo Tablas_Campo { get; set; }
+        [ForeignKey("Campo")]
+        public int id_campo { get; set; }
+        [JsonIgnore]
+        public Campo Campo { get; set; }
+        [ForeignKey("Ficha")]
+        public string id_ficha { get; set; }
+        [JsonIgnore]
+        public Ficha Ficha { get; set; }
     }
 }

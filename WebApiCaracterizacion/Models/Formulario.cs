@@ -12,8 +12,8 @@ namespace caracterizacion.Models
     {
         //Campos que comforman la tabla
         public int id { get; set; }
-        public DateTime fecha_inicio { get; set; }
-        public DateTime fecha_fin { get; set; }
+        public DateTime? fecha_inicio { get; set; }
+        public DateTime? fecha_fin { get; set; }
 
         //Clave foranea para relacionar la tabla formularios con la tabla plantillas
         [ForeignKey("Plantilla")]
@@ -21,9 +21,9 @@ namespace caracterizacion.Models
         [JsonIgnore]
         public Plantilla Plantilla { get; set; }
         //Clave foranea para relacionar la tabla formularios con la tabla usuarios
-        [ForeignKey("Usuario")]
+        [ForeignKey("ApplicationUser")]
         public string id_usuario { get; set; }
         [JsonIgnore]
-        public Usuario usuario { get; set; }
+        public ApplicationUser applicationUser { get; set; }
     }
 }

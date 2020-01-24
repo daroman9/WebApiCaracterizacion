@@ -59,7 +59,7 @@ namespace WebApiCaracterizacion.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var categoria =  _context.Categorias.Where(x => x.id_plantilla == id_plantilla).ToList();
+            var categoria = _context.Categorias.Where(x => x.id_plantilla == id_plantilla).ToList();
             if (categoria == null)
             {
                 return NotFound();

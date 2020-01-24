@@ -10,9 +10,12 @@ namespace WebApiCaracterizacion.Models
 {
     public class ApplicationUser : IdentityUser
     {
-        [StringLength(80)]
+        [StringLength(250)]
         public string Nombre { get; set; }
-        [StringLength(80)]
+        [StringLength(250)]
         public string Apellido { get; set; }
+        public int Documento { get; set; }
+        public string Password { get; set; }
+        public int Rol { get; set; }
     }
 }

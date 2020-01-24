@@ -31,7 +31,7 @@ namespace caracterizacion.Models
         public string enableFields { get; set; }
         public string disableCategories { get; set; }
         public string disableFields { get; set; }
-      
+
         //Clave foranea para relacionar la tabla campos con la tabla categorias
         [ForeignKey("Categoria")]
         public int id_categoria { get; set; }

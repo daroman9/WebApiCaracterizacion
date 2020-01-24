@@ -11,17 +11,16 @@ namespace WebApiCaracterizacion.Models
 {
     public class Ficha
     {
-        [StringLength(20)]
         public string id { get; set; }
         public string latitud { get; set; }
         public string longitud { get; set; }
-        public DateTime date { get; set; }
+        public DateTime? date { get; set; }
 
         //Claves foraneas
-        [ForeignKey("Usuario")]
+        [ForeignKey("ApplicationUser")]
         public string id_usuario { get; set; }
         [JsonIgnore]
-        public Usuario usuario { get; set; }
+        public ApplicationUser applicationUser { get; set; }
         [ForeignKey("Formulario")]
         public int id_formulario { get; set; }
         [JsonIgnore]
@@ -30,6 +29,6 @@ namespace WebApiCaracterizacion.Models
         public int id_plantilla { get; set; }
         [JsonIgnore]
         public Plantilla Plantilla { get; set; }
-        
+
     }
 }

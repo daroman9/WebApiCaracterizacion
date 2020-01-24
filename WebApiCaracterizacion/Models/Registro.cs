@@ -14,8 +14,8 @@ namespace WebApiCaracterizacion.Models
         public string valor_string { get; set; }
         public float? valor_float { get; set; }
         public int? valor_integer { get; set; }
-        public DateTime  valor_date { get; set; }
-        public DateTime fecha { get; set; }
+        public DateTime? valor_date { get; set; }
+        public DateTime? fecha { get; set; }
 
         //Clave foranea para relacionar la tabla registros con la tabla campos
         [ForeignKey("Campo")]
