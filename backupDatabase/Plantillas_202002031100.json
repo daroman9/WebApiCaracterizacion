@@ -1,0 +1,27 @@
+{
+"Plantillas": [
+	{
+		"id" : 1,
+		"nombre" : "Agricultura",
+		"ImageUrl" : "santuario.jpg",
+		"color" : "#000000"
+	},
+	{
+		"id" : 2,
+		"nombre" : "Ganaderia",
+		"ImageUrl" : "santuario.jpg",
+		"color" : "#000000"
+	},
+	{
+		"id" : 3,
+		"nombre" : "Transporte",
+		"ImageUrl" : "santuario.jpg",
+		"color" : "#fafafa"
+	},
+	{
+		"id" : 4,
+		"nombre" : "Mineria",
+		"ImageUrl" : "santuario.jpg",
+		"color" : "#fafafa"
+	}
+]}

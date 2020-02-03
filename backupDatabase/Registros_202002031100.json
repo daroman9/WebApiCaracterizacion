@@ -1,0 +1,5593 @@
+{
+"Registros": [
+	{
+		"id" : 137,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : "2020-01-17T10:00:00Z",
+		"fecha" : null,
+		"id_campo" : 538,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579312678883"
+	},
+	{
+		"id" : 138,
+		"valor_string" : "10:38 AM",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 539,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579361932874"
+	},
+	{
+		"id" : 139,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : "2020-01-18T10:00:00Z",
+		"fecha" : null,
+		"id_campo" : 538,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579361932874"
+	},
+	{
+		"id" : 140,
+		"valor_string" : "-75.5611",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 541,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579361932874"
+	},
+	{
+		"id" : 141,
+		"valor_string" : "6.151841",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 540,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579361932874"
+	},
+	{
+		"id" : 142,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 5120,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 542,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579361932874"
+	},
+	{
+		"id" : 143,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 549,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579371193589"
+	},
+	{
+		"id" : 144,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 556,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579371193589"
+	},
+	{
+		"id" : 145,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 13430,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 542,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579371193589"
+	},
+	{
+		"id" : 146,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 558,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579371193589"
+	},
+	{
+		"id" : 147,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 9,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 547,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579371193589"
+	},
+	{
+		"id" : 148,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 557,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579371193589"
+	},
+	{
+		"id" : 149,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 559,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579371193589"
+	},
+	{
+		"id" : 150,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 560,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579371193589"
+	},
+	{
+		"id" : 151,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 66,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 565,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579371193589"
+	},
+	{
+		"id" : 152,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 66,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 566,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579371193589"
+	},
+	{
+		"id" : 153,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 74,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 571,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579371193589"
+	},
+	{
+		"id" : 154,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 77,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 573,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579371193589"
+	},
+	{
+		"id" : 155,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 82,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 574,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579371193589"
+	},
+	{
+		"id" : 156,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 89,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 575,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579371193589"
+	},
+	{
+		"id" : 157,
+		"valor_string" : "6.2173447",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 540,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382417359"
+	},
+	{
+		"id" : 158,
+		"valor_string" : "-75.5689763",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 541,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382417359"
+	},
+	{
+		"id" : 159,
+		"valor_string" : "-75.5689763",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 541,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382417359"
+	},
+	{
+		"id" : 160,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : "2020-01-18T10:00:00Z",
+		"fecha" : null,
+		"id_campo" : 538,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382417359"
+	},
+	{
+		"id" : 161,
+		"valor_string" : "04:18 PM",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 539,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382417359"
+	},
+	{
+		"id" : 162,
+		"valor_string" : "-75.5689763",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 541,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382417359"
+	},
+	{
+		"id" : 163,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 13006,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 542,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382417359"
+	},
+	{
+		"id" : 164,
+		"valor_string" : "Sector 1",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 543,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382417359"
+	},
+	{
+		"id" : 165,
+		"valor_string" : "Sector 1",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 543,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382417359"
+	},
+	{
+		"id" : 166,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 13006003,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 544,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382417359"
+	},
+	{
+		"id" : 167,
+		"valor_string" : "José cuervo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 545,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382417359"
+	},
+	{
+		"id" : 168,
+		"valor_string" : "José cuervo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 545,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382417359"
+	},
+	{
+		"id" : 169,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 3,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 546,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382417359"
+	},
+	{
+		"id" : 170,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 3566,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 546,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382417359"
+	},
+	{
+		"id" : 171,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 6,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 548,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382417359"
+	},
+	{
+		"id" : 172,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 65,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 548,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382417359"
+	},
+	{
+		"id" : 173,
+		"valor_string" : null,
+		"valor_float" : 14.0,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 568,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382417359"
+	},
+	{
+		"id" : 174,
+		"valor_string" : null,
+		"valor_float" : 1.0,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 568,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382417359"
+	},
+	{
+		"id" : 175,
+		"valor_string" : null,
+		"valor_float" : 2.0,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 567,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382417359"
+	},
+	{
+		"id" : 176,
+		"valor_string" : null,
+		"valor_float" : 25.0,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 567,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382417359"
+	},
+	{
+		"id" : 177,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 5,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 569,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382417359"
+	},
+	{
+		"id" : 178,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 10,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 547,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384102621"
+	},
+	{
+		"id" : 179,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 13549012,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 544,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384102621"
+	},
+	{
+		"id" : 180,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 13549,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 542,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384102621"
+	},
+	{
+		"id" : 181,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 4,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 549,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384102621"
+	},
+	{
+		"id" : 182,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 180,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 552,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384102621"
+	},
+	{
+		"id" : 183,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 16,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 554,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384102621"
+	},
+	{
+		"id" : 184,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 65,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 566,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384102621"
+	},
+	{
+		"id" : 185,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 66,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 565,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384102621"
+	},
+	{
+		"id" : 186,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 78,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 573,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384102621"
+	},
+	{
+		"id" : 187,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 75,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 571,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384102621"
+	},
+	{
+		"id" : 188,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 82,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 574,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384102621"
+	},
+	{
+		"id" : 189,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 91,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 577,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384102621"
+	},
+	{
+		"id" : 190,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 88,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 575,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384102621"
+	},
+	{
+		"id" : 191,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 91,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 578,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384102621"
+	},
+	{
+		"id" : 192,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 96,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 579,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384102621"
+	},
+	{
+		"id" : 193,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 100,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 583,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384102621"
+	},
+	{
+		"id" : 194,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 106,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 585,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384102621"
+	},
+	{
+		"id" : 195,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 0,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 584,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384102621"
+	},
+	{
+		"id" : 196,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : "2020-01-18T10:00:00Z",
+		"fecha" : null,
+		"id_campo" : 538,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 197,
+		"valor_string" : "02:56 PM",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 539,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 198,
+		"valor_string" : "6.2172778",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 540,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 199,
+		"valor_string" : "-75.5689881",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 541,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 200,
+		"valor_string" : "-75.5689881",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 541,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 201,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 5120002,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 544,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 202,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 5120,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 542,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 203,
+		"valor_string" : "Bruno a mejia c",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 545,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 204,
+		"valor_string" : "Sector 1",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 543,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 205,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 45,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 548,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 206,
+		"valor_string" : "Bruno a mejia c",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 545,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 207,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : "2019-12-11T10:00:00Z",
+		"fecha" : null,
+		"id_campo" : 550,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 208,
+		"valor_string" : "Rionegro",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 551,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 209,
+		"valor_string" : "Rionegro",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 551,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 210,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 555,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 211,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 589856,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 553,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 212,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 589856,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 553,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 213,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 556,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 214,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 560,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 215,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 562,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 216,
+		"valor_string" : "Asociación de agricultores asocul",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 563,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 217,
+		"valor_string" : "Asociación de agricultores asocul",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 563,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 218,
+		"valor_string" : "Su subsidios para el agro",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 564,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 219,
+		"valor_string" : "Su subsidios para el agro",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 564,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 220,
+		"valor_string" : null,
+		"valor_float" : 2.0,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 567,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 221,
+		"valor_string" : null,
+		"valor_float" : 10.0,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 568,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 222,
+		"valor_string" : null,
+		"valor_float" : 10.0,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 568,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 223,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 569,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 224,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 250000,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 570,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 225,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 250000,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 570,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 226,
+		"valor_string" : "La golosa",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 572,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 227,
+		"valor_string" : "La golosa",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 572,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 228,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 576,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 229,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 25,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 576,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 230,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 580,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 231,
+		"valor_string" : "Mucho",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 581,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 232,
+		"valor_string" : "Mucho",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 581,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 233,
+		"valor_string" : "La suba del agua de la represa",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 582,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 234,
+		"valor_string" : "La suba del agua de la represa",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 582,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 235,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 584,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 236,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 586,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 237,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 587,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 238,
+		"valor_string" : "Bpa especial",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 588,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 239,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 25,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 591,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 240,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 4,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 592,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 241,
+		"valor_string" : "Quincenal",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 633,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 242,
+		"valor_string" : "Quincenal",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 633,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 243,
+		"valor_string" : "Quita hierba",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 634,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 244,
+		"valor_string" : "Quita hierba",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 634,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 245,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 4500,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 635,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 246,
+		"valor_string" : null,
+		"valor_float" : 2.0,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 637,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 247,
+		"valor_string" : null,
+		"valor_float" : 25.0,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 637,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 248,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 638,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 249,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 25,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 638,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 250,
+		"valor_string" : "2345",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 640,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 251,
+		"valor_string" : "2345",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 640,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 252,
+		"valor_string" : "Fin de mes",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 641,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 253,
+		"valor_string" : "Fin de mes",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 641,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 254,
+		"valor_string" : "Machete",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 642,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 255,
+		"valor_string" : "Machete",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 642,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 256,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 643,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 257,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 14,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 643,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 258,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 644,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 259,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 25000,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 645,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 260,
+		"valor_string" : "Medio dia",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 646,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 261,
+		"valor_string" : "Medio dia",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 646,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 262,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 15,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 648,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 263,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 9565,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 649,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 264,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 650,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 265,
+		"valor_string" : "Enero ",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 652,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 266,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 8,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 655,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 267,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 8,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 656,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 268,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2589,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 657,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 269,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2589,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 657,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 270,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 8896,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 658,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 271,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 8896,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 658,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 272,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 3,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 594,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 273,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 36,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 594,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 274,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 6,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 595,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 275,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 69,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 595,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 276,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 6,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 596,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 277,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 69,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 596,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 278,
+		"valor_string" : "Monocultivo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 597,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 279,
+		"valor_string" : "Monocultivo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 597,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 280,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 117,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 599,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 281,
+		"valor_string" : "Zunchos",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 600,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 282,
+		"valor_string" : "Zunchos",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 600,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 283,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 601,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 284,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 122,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 602,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 285,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 126,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 603,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 286,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2580,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 604,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 287,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2580,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 604,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 288,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 6,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 605,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 289,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 36589,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 606,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 290,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 36589,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 606,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 291,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 131,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 607,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 292,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 3,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 608,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 293,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 36,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 608,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 294,
+		"valor_string" : "Yuquita",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 609,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 295,
+		"valor_string" : "Yuquita",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 609,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 296,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 610,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 297,
+		"valor_string" : "Marzo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 611,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 298,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 612,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 299,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 613,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 300,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 6,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 664,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 301,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2589,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 665,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 302,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2589,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 665,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 303,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 6598,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 666,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 304,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 6598,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 666,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 305,
+		"valor_string" : "Pueblo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 667,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 306,
+		"valor_string" : "Pueblo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 667,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 307,
+		"valor_string" : "2",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 668,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 308,
+		"valor_string" : "Plagaco troll",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 669,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 309,
+		"valor_string" : "Plagaco troll",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 669,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 310,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 65988,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 670,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 311,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 65988,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 670,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 312,
+		"valor_string" : null,
+		"valor_float" : 6.0,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 672,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 313,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 6,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 673,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 314,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 9856,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 674,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 315,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 9856,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 674,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 316,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 5742,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 675,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 317,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 5742,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 675,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 318,
+		"valor_string" : "Plagacol",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 676,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 319,
+		"valor_string" : "Plagacol",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 676,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 320,
+		"valor_string" : "Enero",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 677,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 321,
+		"valor_string" : "Enero",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 677,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 322,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 5689,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 678,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 323,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 5689,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 678,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 324,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 3,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 679,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 325,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 36,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 679,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 326,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 6,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 682,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 327,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 9995,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 683,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 328,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 9995,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 683,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 329,
+		"valor_string" : "Efectivo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 685,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 330,
+		"valor_string" : "Efectivo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 685,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 331,
+		"valor_string" : "Pesos",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 686,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 332,
+		"valor_string" : "Pesos",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 686,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 333,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 3,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 687,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 334,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 66589,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 688,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 335,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 66589,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 688,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 336,
+		"valor_string" : "Agro dianas",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 690,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 337,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 6598,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 692,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 338,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 6598,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 692,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 339,
+		"valor_string" : "Machete",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 694,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 340,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 175,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 695,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 341,
+		"valor_string" : "Hub23",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 696,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 342,
+		"valor_string" : "Corte",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 697,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 343,
+		"valor_string" : "Corte",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 697,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 344,
+		"valor_string" : "83",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 698,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 345,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 69,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 699,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 346,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 6,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 700,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 347,
+		"valor_string" : "Permanente",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 701,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 348,
+		"valor_string" : "Permanente",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 701,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 349,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 36985,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 702,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 350,
+		"valor_string" : "24",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 703,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 351,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 6,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 704,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 352,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 69999,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 705,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 353,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 69999,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 705,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 354,
+		"valor_string" : "Pueblo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 706,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 355,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 707,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 356,
+		"valor_string" : "Marzo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 708,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 357,
+		"valor_string" : "Marzo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 708,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579378542072"
+	},
+	{
+		"id" : 358,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 610,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 359,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 613,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 360,
+		"valor_string" : "Manual",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 615,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 361,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 612,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 362,
+		"valor_string" : "2",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 611,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 363,
+		"valor_string" : "Hipo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 616,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 364,
+		"valor_string" : "Hipo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 616,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 365,
+		"valor_string" : null,
+		"valor_float" : 5.0,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 619,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 366,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 89585,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 617,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 367,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 89585,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 617,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 368,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 985623,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 622,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 369,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 985623,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 622,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 370,
+		"valor_string" : null,
+		"valor_float" : 52.0,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 619,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 371,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 5,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 621,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 372,
+		"valor_string" : "Pueblo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 623,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 373,
+		"valor_string" : "Pueblo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 623,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 374,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 85745,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 626,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 375,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 85745,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 626,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 376,
+		"valor_string" : "Manual",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 627,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 377,
+		"valor_string" : "Manual",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 627,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 378,
+		"valor_string" : null,
+		"valor_float" : 5.0,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 628,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 379,
+		"valor_string" : null,
+		"valor_float" : 58.0,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 628,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 380,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 9,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 629,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 381,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 98,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 629,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 382,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 8,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 630,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 383,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 85745,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 631,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 384,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 85745,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 631,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 385,
+		"valor_string" : "Pueblo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 632,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 386,
+		"valor_string" : "Hipo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 625,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 387,
+		"valor_string" : "Pueblo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 632,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 388,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 6,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 620,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 389,
+		"valor_string" : "Hipo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 625,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 390,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 895,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 635,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 391,
+		"valor_string" : null,
+		"valor_float" : 8.0,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 637,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 392,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 5,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 638,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 393,
+		"valor_string" : "564",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 640,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 394,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 146,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 639,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 395,
+		"valor_string" : "Jipo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 634,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 396,
+		"valor_string" : "Enero",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 633,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 397,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 5,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 648,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 398,
+		"valor_string" : "Jipo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 634,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 399,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 9856,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 649,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 400,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 895,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 635,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 401,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 9856,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 649,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 402,
+		"valor_string" : "Enero",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 646,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 403,
+		"valor_string" : "Juan Gómez",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 690,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 404,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 58986,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 692,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 405,
+		"valor_string" : "Juan Gómez",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 690,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 406,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 58986,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 692,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 407,
+		"valor_string" : "Contrato",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 701,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 408,
+		"valor_string" : "Contrato",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 701,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 409,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 25896,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 702,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 410,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 25896,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 702,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 411,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 5,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 704,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 412,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 54742,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 705,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 413,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 54742,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 705,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 414,
+		"valor_string" : "Pueblo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 706,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 415,
+		"valor_string" : "Pueblo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 706,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 416,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 707,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 417,
+		"valor_string" : "Junio, agosto",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 708,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 418,
+		"valor_string" : "Junio, agosto",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 708,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 419,
+		"valor_string" : "3",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 703,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 420,
+		"valor_string" : "34",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 703,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 421,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 6,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 700,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 422,
+		"valor_string" : "Hipo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 694,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 423,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 175,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 695,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 424,
+		"valor_string" : "45",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 698,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 425,
+		"valor_string" : "5",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 697,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 426,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 789654,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 699,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 427,
+		"valor_string" : "Jipo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 696,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579382580477"
+	},
+	{
+		"id" : 428,
+		"valor_string" : "6.2266776",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 540,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579397190450"
+	},
+	{
+		"id" : 429,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : "2020-01-18T10:00:00Z",
+		"fecha" : null,
+		"id_campo" : 538,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579397190450"
+	},
+	{
+		"id" : 430,
+		"valor_string" : "08:48 PM",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 539,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579397190450"
+	},
+	{
+		"id" : 431,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 11,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 547,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579397190450"
+	},
+	{
+		"id" : 432,
+		"valor_string" : "-75.5616586",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 541,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579397190450"
+	},
+	{
+		"id" : 433,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 13549,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 542,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579397190450"
+	},
+	{
+		"id" : 434,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 13549004,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 544,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579397190450"
+	},
+	{
+		"id" : 435,
+		"valor_string" : "Prheba",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 543,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579397190450"
+	},
+	{
+		"id" : 436,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 700,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 437,
+		"valor_string" : "JORNAL",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 701,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 438,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 120000,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 702,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 439,
+		"valor_string" : "Hdjdjd",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 694,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 440,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 120000,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 702,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 441,
+		"valor_string" : "1",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 703,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 442,
+		"valor_string" : "12",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 703,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 443,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 704,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 444,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 12,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 704,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 445,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 569,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 705,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 446,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 569,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 705,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 447,
+		"valor_string" : "Pueblo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 706,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 448,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 707,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 449,
+		"valor_string" : "Diciembre",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 708,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 450,
+		"valor_string" : "Diciembre",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 708,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 451,
+		"valor_string" : "Yhh",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 690,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 452,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 56,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 692,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 453,
+		"valor_string" : "1",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 677,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 454,
+		"valor_string" : "12",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 677,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 455,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 59,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 678,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 456,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 5988,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 679,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 457,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 5988,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 679,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 458,
+		"valor_string" : "Jjd",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 681,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 459,
+		"valor_string" : "Jjd",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 681,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 460,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 49454,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 682,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 461,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 6464,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 683,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 462,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 49454,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 682,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 463,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 6464,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 683,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 464,
+		"valor_string" : "Hdkd",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 685,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 465,
+		"valor_string" : "Hdkd",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 685,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579384441820"
+	},
+	{
+		"id" : 466,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 650,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579540873649"
+	},
+	{
+		"id" : 467,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 159,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 654,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579540873649"
+	},
+	{
+		"id" : 468,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 156,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 653,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579540873649"
+	},
+	{
+		"id" : 469,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 163,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 684,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579540873649"
+	},
+	{
+		"id" : 470,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 169,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 689,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579540873649"
+	},
+	{
+		"id" : 471,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 173,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 693,
+		"id_ficha" : "U5901605d-7707-4851-a3dd-840f000fb9f9F1D1579540873649"
+	},
+	{
+		"id" : 472,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : "2020-01-21T10:00:00Z",
+		"fecha" : null,
+		"id_campo" : 538,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 473,
+		"valor_string" : "12:00 PM",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 539,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 474,
+		"valor_string" : "-75.5757914",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 541,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 475,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 5120,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 542,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 476,
+		"valor_string" : "6.2243463",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 540,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 477,
+		"valor_string" : "La sonsa",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 543,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 478,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 5120006,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 544,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 479,
+		"valor_string" : "Angela",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 545,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 480,
+		"valor_string" : "Angela",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 545,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 481,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 9,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 547,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 482,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 47,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 548,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 483,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 47,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 548,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 484,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 549,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 485,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : "1975-01-07T10:00:00Z",
+		"fecha" : null,
+		"id_campo" : 550,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 486,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 178,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 552,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 487,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 15472741,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 553,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 488,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 15472741,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 553,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 489,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 12,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 554,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 490,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 555,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 491,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 556,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 492,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 557,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 493,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 558,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 494,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 559,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 495,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 560,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 496,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 57,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 561,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 497,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 562,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 498,
+		"valor_string" : "Asoganado",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 563,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 499,
+		"valor_string" : "Subsidios",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 564,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 500,
+		"valor_string" : "Subsidios",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 564,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 501,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 63,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 565,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 502,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 65,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 566,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 503,
+		"valor_string" : null,
+		"valor_float" : 3.0,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 567,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 504,
+		"valor_string" : null,
+		"valor_float" : 10.0,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 568,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 505,
+		"valor_string" : null,
+		"valor_float" : 10.0,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 568,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 506,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 5,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 569,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 507,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 350000,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 570,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 508,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 76,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 571,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 509,
+		"valor_string" : "rionegro",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 551,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 510,
+		"valor_string" : "rionegro",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 551,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 511,
+		"valor_string" : "La tremenda",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 572,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 512,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 79,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 573,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 513,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 86,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 574,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 514,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 87,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 575,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 515,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 91,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 578,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 516,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 91,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 577,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 517,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2000,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 576,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 518,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 580,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 519,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 95,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 579,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 520,
+		"valor_string" : "Mucho",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 581,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 521,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 97,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 583,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 522,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 584,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 523,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 587,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 524,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 104,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 585,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 525,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 586,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 526,
+		"valor_string" : "Bpa ica",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 588,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 527,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 592,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 528,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 116,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 590,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 529,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 25,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 591,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 530,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 109,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 589,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 531,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 594,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 532,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 25,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 594,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 533,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 58,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 595,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 534,
+		"valor_string" : "Enero, julio",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 593,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 535,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 5,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 596,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 536,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 58,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 596,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 537,
+		"valor_string" : "Policultivo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 597,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 538,
+		"valor_string" : "Policultivo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 597,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 539,
+		"valor_string" : "Pasto, palmeras, frijol",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 598,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 540,
+		"valor_string" : "Pasto, palmeras, frijol",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 598,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 541,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 118,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 599,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 542,
+		"valor_string" : "Tractor",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 600,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 543,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 123,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 602,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 544,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 127,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 603,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 545,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 601,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 546,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 36000,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 604,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 547,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 36000,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 604,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 548,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 605,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 549,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 36000,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 606,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 550,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 36000,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 606,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 551,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 131,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 607,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 552,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 608,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 553,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 25,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 608,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 554,
+		"valor_string" : "Pirogente",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 609,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 555,
+		"valor_string" : "Pirogente",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 609,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 556,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 610,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 557,
+		"valor_string" : "2019\/03",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 611,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 558,
+		"valor_string" : "2019\/03",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 611,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 559,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 612,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 560,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 613,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 561,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 134,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 614,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 562,
+		"valor_string" : "Enero, febrero, marzo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 615,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 563,
+		"valor_string" : "Enero, febrero, marzo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 615,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 564,
+		"valor_string" : "Picotin",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 616,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 565,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 350000,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 617,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 566,
+		"valor_string" : null,
+		"valor_float" : 69.0,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 619,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 567,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 138,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 618,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 568,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 621,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 569,
+		"valor_string" : null,
+		"valor_float" : 6.0,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 619,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 570,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 36588,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 622,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 571,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 36588,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 622,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 572,
+		"valor_string" : "Pueblo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 623,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 573,
+		"valor_string" : "Pueblo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 623,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 574,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 6,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 620,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 575,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 139,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 624,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 576,
+		"valor_string" : "Picotin",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 625,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 577,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 300000,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 626,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 578,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 300000,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 626,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 579,
+		"valor_string" : "Picotin",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 625,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 580,
+		"valor_string" : "Manual",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 627,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 581,
+		"valor_string" : "Manual",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 627,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 582,
+		"valor_string" : null,
+		"valor_float" : 3.0,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 628,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 583,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 3,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 629,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 584,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 36,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 629,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 585,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 6,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 631,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 586,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 9,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 630,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 587,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 69,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 631,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 588,
+		"valor_string" : "Puebla",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 632,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 589,
+		"valor_string" : "Enero, julio",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 633,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 590,
+		"valor_string" : "Enero, julio",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 633,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 591,
+		"valor_string" : "Picotib 200",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 634,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 592,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 365000,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 635,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 593,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 365000,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 635,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 594,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 144,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 636,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 595,
+		"valor_string" : null,
+		"valor_float" : 3.0,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 637,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 596,
+		"valor_string" : null,
+		"valor_float" : 36.0,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 637,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 597,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 9,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 638,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 598,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 9,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 638,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 599,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 146,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 639,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 600,
+		"valor_string" : "13500",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 640,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 601,
+		"valor_string" : "13500",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 640,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 602,
+		"valor_string" : "Julio, agosto",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 641,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 603,
+		"valor_string" : "Julio, agosto",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 641,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 604,
+		"valor_string" : "Machete",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 642,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 605,
+		"valor_string" : "Machete",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 642,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 606,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 5,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 643,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 607,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 644,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 608,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 25000,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 645,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 609,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 149,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 647,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 610,
+		"valor_string" : "Julio, agosto",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 646,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 611,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 25000,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 645,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 612,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 650,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 613,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 3,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 648,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 614,
+		"valor_string" : "Junio",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 652,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 615,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 154,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 651,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 616,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 9685,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 649,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 617,
+		"valor_string" : "Junio",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 652,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 618,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 156,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 653,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 619,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 158,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 654,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 620,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 5,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 656,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 621,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 58,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 655,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 622,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 657,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 623,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 25,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 657,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 624,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 588,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 658,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 625,
+		"valor_string" : "Enero",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 659,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 626,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 588,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 658,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 627,
+		"valor_string" : "Enero",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 659,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 628,
+		"valor_string" : "Picoton 500",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 660,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 629,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 3333,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 661,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 630,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 3333,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 661,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 631,
+		"valor_string" : null,
+		"valor_float" : 369.0,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 663,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 632,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 3,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 664,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 633,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2580,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 665,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 634,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2580,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 665,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 635,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 36589,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 666,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 636,
+		"valor_string" : "Enero",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 668,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 637,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 36589,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 666,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 638,
+		"valor_string" : "Pueblo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 667,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 639,
+		"valor_string" : "Povity768",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 669,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 640,
+		"valor_string" : "Povity768",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 669,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 641,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 161,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 671,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 642,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 369,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 670,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 643,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 369,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 670,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 644,
+		"valor_string" : null,
+		"valor_float" : 6.96,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 672,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 645,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 673,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 646,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2580,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 674,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 647,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 3698,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 675,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 648,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2580,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 674,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 649,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 3698,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 675,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 650,
+		"valor_string" : "Julio, marzo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 677,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 651,
+		"valor_string" : "Julio, marzo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 677,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 652,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 369,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 678,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 653,
+		"valor_string" : "Pueblo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 676,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 654,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 369,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 678,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 655,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 3698,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 679,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 656,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 3698,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 679,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 657,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 161,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 680,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 658,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 682,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 659,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 36589,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 683,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 660,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 165,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 684,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 661,
+		"valor_string" : "Efectivo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 685,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 662,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 36589,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 683,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 663,
+		"valor_string" : "Efectivo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 685,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 664,
+		"valor_string" : "Pesos",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 686,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 665,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 687,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 666,
+		"valor_string" : "Pesos",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 686,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 667,
+		"valor_string" : "Tractor tipo R3",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 681,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 668,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 369000,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 688,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 669,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 369000,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 688,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 670,
+		"valor_string" : "Tractor tipo R3",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 681,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 671,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 170,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 691,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 672,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 321654,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 692,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 673,
+		"valor_string" : "Asoplatano",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 690,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 674,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 167,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 689,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 675,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 174,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 693,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 676,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 176,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 695,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 677,
+		"valor_string" : "Equipo 1",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 694,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 678,
+		"valor_string" : "Hitachi",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 696,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 679,
+		"valor_string" : "838",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 697,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 680,
+		"valor_string" : "56",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 698,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 681,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 80,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 700,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 682,
+		"valor_string" : "",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 701,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 683,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 80,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 700,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 684,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 36589,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 699,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 685,
+		"valor_string" : "",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 701,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 686,
+		"valor_string" : "1-20%. 2-80%",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 703,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 687,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1200000,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 702,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 688,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 704,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 689,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1200000,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 702,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 690,
+		"valor_string" : "Pueblo",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 706,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 691,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 2,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 705,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 692,
+		"valor_string" : "Marzo - abril",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 708,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 693,
+		"valor_string" : "Marzo - abril",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 708,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 694,
+		"valor_string" : "15d",
+		"valor_float" : null,
+		"valor_integer" : null,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 537,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	},
+	{
+		"id" : 695,
+		"valor_string" : null,
+		"valor_float" : null,
+		"valor_integer" : 1,
+		"valor_date" : null,
+		"fecha" : null,
+		"id_campo" : 707,
+		"id_ficha" : "Ube31e276-8275-4413-adef-566e22f75ec9F1D1579626125424"
+	}
+]}

@@ -46,6 +46,21 @@ namespace WebApiCaracterizacion.Controllers
             return Ok(selector_Detail);
         }
 
+        [HttpGet("bySelector/{id_selector}")]
+        public IActionResult GetDetailBySelector([FromRoute] int id_selector)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var detail = _context.Selector_Detail.Where(x => x.id_selector == id_selector).ToList();
+            if (detail == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(detail);
+        }
         // PUT: api/Fichas/5
         [HttpPut("{id}")]
         public IActionResult Put([FromBody] Selector_Detail selector_Detail, int id)

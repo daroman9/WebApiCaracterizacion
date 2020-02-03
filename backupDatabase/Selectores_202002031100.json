@@ -1,0 +1,211 @@
+{
+"Selectores": [
+	{
+		"id" : 1,
+		"nombre" : "municipio"
+	},
+	{
+		"id" : 2,
+		"nombre" : "vereda"
+	},
+	{
+		"id" : 3,
+		"nombre" : "Estado Civil"
+	},
+	{
+		"id" : 4,
+		"nombre" : "Genero"
+	},
+	{
+		"id" : 5,
+		"nombre" : "Maestro de escolaridades"
+	},
+	{
+		"id" : 6,
+		"nombre" : "Maestro de EPSs"
+	},
+	{
+		"id" : 7,
+		"nombre" : "Grupos Etnicos"
+	},
+	{
+		"id" : 8,
+		"nombre" : "Maestro de actividades primarias"
+	},
+	{
+		"id" : 9,
+		"nombre" : "Maestro de tipos de contratacion"
+	},
+	{
+		"id" : 10,
+		"nombre" : "AgroTenencia"
+	},
+	{
+		"id" : 11,
+		"nombre" : "AgroInfraestructura"
+	},
+	{
+		"id" : 12,
+		"nombre" : "UsosHistoricos"
+	},
+	{
+		"id" : 13,
+		"nombre" : "ActividadSecundariaCentroCostos2"
+	},
+	{
+		"id" : 14,
+		"nombre" : "OtrasActividadesCentroCostos3-4"
+	},
+	{
+		"id" : 15,
+		"nombre" : "ServiciosPublicos"
+	},
+	{
+		"id" : 16,
+		"nombre" : "FuentesHidricas"
+	},
+	{
+		"id" : 17,
+		"nombre" : "CultivosPrincipales"
+	},
+	{
+		"id" : 18,
+		"nombre" : "MaquinariaPreparaTerreno"
+	},
+	{
+		"id" : 19,
+		"nombre" : "OrigenSemilla"
+	},
+	{
+		"id" : 20,
+		"nombre" : "TipoSemilla"
+	},
+	{
+		"id" : 21,
+		"nombre" : "MetodoDeLaSiembra"
+	},
+	{
+		"id" : 22,
+		"nombre" : "TipoDeAsistencia"
+	},
+	{
+		"id" : 23,
+		"nombre" : "MetodoAplicacionEnmienda"
+	},
+	{
+		"id" : 24,
+		"nombre" : "MetodoAplicacionFeertilizante"
+	},
+	{
+		"id" : 25,
+		"nombre" : "MetodoAplicacionHerbicida"
+	},
+	{
+		"id" : 26,
+		"nombre" : "EquipoAspercionHerbicida"
+	},
+	{
+		"id" : 27,
+		"nombre" : "HerramientaUsaMecanica"
+	},
+	{
+		"id" : 28,
+		"nombre" : "AgroOtraLaborCultural"
+	},
+	{
+		"id" : 29,
+		"nombre" : "AgroMedodoOtraLaborCultural"
+	},
+	{
+		"id" : 30,
+		"nombre" : "HerramientaUsoEnOtraLabor"
+	},
+	{
+		"id" : 31,
+		"nombre" : "MetodoAplicacionEnfermedad"
+	},
+	{
+		"id" : 32,
+		"nombre" : "TipoDeCosecha"
+	},
+	{
+		"id" : 33,
+		"nombre" : "DestinaciónCosecha"
+	},
+	{
+		"id" : 34,
+		"nombre" : "TipoDeVenta"
+	},
+	{
+		"id" : 35,
+		"nombre" : "TipoTransporteCosecha"
+	},
+	{
+		"id" : 36,
+		"nombre" : "ResponsableCostoTransporte"
+	},
+	{
+		"id" : 37,
+		"nombre" : "PoseeAlquilaEquipo"
+	},
+	{
+		"id" : 38,
+		"nombre" : "Tipos de IDs de personas"
+	},
+	{
+		"id" : 39,
+		"nombre" : "Tipos de unidades para transporte fluvial"
+	},
+	{
+		"id" : 40,
+		"nombre" : "Lugar"
+	},
+	{
+		"id" : 41,
+		"nombre" : "Herramientas Empleadas 1 (para oro aluvial)"
+	},
+	{
+		"id" : 42,
+		"nombre" : "Produccion de Oro"
+	},
+	{
+		"id" : 43,
+		"nombre" : "NivelSisben"
+	},
+	{
+		"id" : 44,
+		"nombre" : "TipoVivienda"
+	},
+	{
+		"id" : 45,
+		"nombre" : "Enfermedades"
+	},
+	{
+		"id" : 46,
+		"nombre" : "Maestro de tipos de contratacion"
+	},
+	{
+		"id" : 48,
+		"nombre" : "Actividad primaria (Centro de costos 1)"
+	},
+	{
+		"id" : 49,
+		"nombre" : "Material de la unidad"
+	},
+	{
+		"id" : 50,
+		"nombre" : "Actividad minera"
+	},
+	{
+		"id" : 51,
+		"nombre" : "Tipo de mineros"
+	},
+	{
+		"id" : 52,
+		"nombre" : "Preparacion del terreno"
+	},
+	{
+		"id" : 53,
+		"nombre" : "Lava, Clasifica, Empaca"
+	}
+]}
