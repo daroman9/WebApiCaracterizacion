@@ -172,10 +172,13 @@ namespace WebApiCaracterizacion.Controllers
             try
             {
                 var user = await _userManager.FindByEmailAsync(model.Email);
-                var Nombre = model.Nombre;
-                var Apellido = model.Apellido;
-                var Documento = model.Documento;
-                var Email = model.Email;
+                user.Nombre = model.Nombre;
+                user.Apellido = model.Apellido;
+                user.Documento = model.Documento;
+                user.Email = model.Email;
+                var code = model.Password;
+                var newPass = HashPassword(code);
+                user.PasswordHash = newPass;
                 var result = await _userManager.UpdateAsync(user);
 
                 return Ok("Los datos del usuario se han modificado con exito");
@@ -187,6 +190,7 @@ namespace WebApiCaracterizacion.Controllers
             }
 
         }
+      
         //Funcion para el cambio de password
         [HttpPut("changePassword")]
         public async Task<IActionResult> changePassword([FromBody] ApplicationUser model)

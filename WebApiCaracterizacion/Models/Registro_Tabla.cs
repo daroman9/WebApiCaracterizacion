@@ -27,6 +27,7 @@ namespace WebApiCaracterizacion.Models
         public int id_campo { get; set; }
         [JsonIgnore]
         public Campo Campo { get; set; }
+        //Clave foranea para relacionar la tabla registros con la tabla fichas
         [ForeignKey("Ficha")]
         public string id_ficha { get; set; }
         [JsonIgnore]

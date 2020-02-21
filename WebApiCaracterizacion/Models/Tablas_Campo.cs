@@ -31,5 +31,11 @@ namespace WebApiCaracterizacion.Models
         public int id_campo { get; set; }
         [JsonIgnore]
         public Campo Campo { get; set; }
+
+        //Clave foranea para relacionar la tabla campos con la tabla selectores
+        [ForeignKey("Selector")]
+        public int? id_selector { get; set; }
+        [JsonIgnore]
+        public Selector Selector { get; set; }
     }
 }
