@@ -347,7 +347,7 @@ namespace WebApiCaracterizacion.Migrations
                         column: x => x.id_plantilla,
                         principalTable: "Plantillas",
                         principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(

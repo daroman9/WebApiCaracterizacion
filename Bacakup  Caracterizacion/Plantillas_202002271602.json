@@ -3,25 +3,25 @@
 	{
 		"id" : 1,
 		"nombre" : "Agricultura",
-		"ImageUrl" : "santuario.jpg",
+		"ImageUrl" : "agricultura.png",
 		"color" : "#000000"
 	},
 	{
 		"id" : 2,
 		"nombre" : "Ganaderia",
-		"ImageUrl" : "santuario.jpg",
+		"ImageUrl" : "reino-animal.png",
 		"color" : "#000000"
 	},
 	{
 		"id" : 3,
 		"nombre" : "Transporte",
-		"ImageUrl" : "santuario.jpg",
+		"ImageUrl" : "canoa.png",
 		"color" : "#fafafa"
 	},
 	{
 		"id" : 4,
 		"nombre" : "Mineria",
-		"ImageUrl" : "santuario.jpg",
+		"ImageUrl" : "minero.png",
 		"color" : "#fafafa"
 	}
 ]}

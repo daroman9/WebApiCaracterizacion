@@ -82,8 +82,7 @@ namespace WebApiCaracterizacion.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Nombre = model.Nombre, Apellido = model.Apellido, Documento = model.Documento, Password = model.Password, Rol = model.Rol };
-
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Nombre = model.Nombre, Apellido = model.Apellido, Documento = model.Documento, Rol = model.Rol };
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -246,8 +245,9 @@ namespace WebApiCaracterizacion.Controllers
             string Pass = "cangr3j0pr0s3ctus";
 
             MailMessage oMailMessage = new MailMessage(EmailOrigen, EmailDestino, "Recuperación de contraseña",
-                "<p>Correo para recuperación de contraseña</p><br>" +
-                "<p>Nueva Contraseña </p>" + newPass);
+               "<p>Hola,</p><br>" +
+               "<p>Hemos procesado tu solicitud de cambio de clave.</p><br>" +
+               "<p>La nueva contrase&ntilde;</p>" + newPass);
 
             oMailMessage.IsBodyHtml = true;
 

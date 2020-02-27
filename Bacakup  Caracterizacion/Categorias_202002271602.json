@@ -1726,5 +1726,16 @@
 		"image" : null,
 		"id_plantilla" : 0,
 		"plantillaid" : null
+	},
+	{
+		"id" : 161,
+		"id_padre" : null,
+		"nombre" : "Pruebas campos",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 1,
+		"plantillaid" : null
 	}
 ]}

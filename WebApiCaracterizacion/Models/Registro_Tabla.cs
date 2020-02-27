@@ -15,14 +15,10 @@ namespace WebApiCaracterizacion.Models
         public float valor_float { get; set; }
         public int valor_integer { get; set; }
         public DateTime valor_date { get; set; }
-        public int id_column { get; set; }
-        public int row { get; set; }
+        public string id_column { get; set; }
+        public string row { get; set; }
 
 
-        [ForeignKey("Tablas_Campo")]
-        public int id_registro_tabla_campo { get; set; }
-        [JsonIgnore]
-        public Tablas_Campo Tablas_Campo { get; set; }
         [ForeignKey("Campo")]
         public int id_campo { get; set; }
         [JsonIgnore]
