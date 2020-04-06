@@ -24,6 +24,8 @@ namespace WebApiCaracterizacion.Models
         public int orden { get; set; }
         public bool visible { get; set; }
         public string unidad { get; set; }
+        public string enableFields { get; set; }
+        public string disableFields { get; set; }
         public bool disabled { get; set; }
 
         //Clave foranea para relacionar la tabla Campo con la tabla Tablas_Campo

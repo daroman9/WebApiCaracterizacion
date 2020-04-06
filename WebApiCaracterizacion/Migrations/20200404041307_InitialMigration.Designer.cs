@@ -10,8 +10,8 @@ using WebApiCaracterizacion.Models;
 namespace WebApiCaracterizacion.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200120200810_TablasCampos")]
-    partial class TablasCampos
+    [Migration("20200404041307_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -391,13 +391,27 @@ namespace WebApiCaracterizacion.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("id_formulario");
+                    b.Property<int>("id_campo");
 
-                    b.Property<string>("value");
+                    b.Property<string>("id_column");
+
+                    b.Property<string>("id_ficha");
+
+                    b.Property<string>("row");
+
+                    b.Property<DateTime>("valor_date");
+
+                    b.Property<float>("valor_float");
+
+                    b.Property<int>("valor_integer");
+
+                    b.Property<string>("valor_string");
 
                     b.HasKey("id");
 
-                    b.HasIndex("id_formulario");
+                    b.HasIndex("id_campo");
+
+                    b.HasIndex("id_ficha");
 
                     b.ToTable("Registros_Tablas");
                 });
@@ -444,7 +458,13 @@ namespace WebApiCaracterizacion.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<bool>("disabled");
+
+                    b.Property<string>("enableFields");
+
                     b.Property<int>("id_campo");
+
+                    b.Property<int?>("id_selector");
 
                     b.Property<string>("nombre")
                         .HasMaxLength(250);
@@ -470,6 +490,8 @@ namespace WebApiCaracterizacion.Migrations
                     b.HasKey("id");
 
                     b.HasIndex("id_campo");
+
+                    b.HasIndex("id_selector");
 
                     b.ToTable("Tablas_Campos");
                 });
@@ -586,10 +608,14 @@ namespace WebApiCaracterizacion.Migrations
 
             modelBuilder.Entity("WebApiCaracterizacion.Models.Registro_Tabla", b =>
                 {
-                    b.HasOne("caracterizacion.Models.Formulario", "Formulario")
+                    b.HasOne("caracterizacion.Models.Campo", "Campo")
                         .WithMany()
-                        .HasForeignKey("id_formulario")
+                        .HasForeignKey("id_campo")
                         .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("WebApiCaracterizacion.Models.Ficha", "Ficha")
+                        .WithMany()
+                        .HasForeignKey("id_ficha");
                 });
 
             modelBuilder.Entity("WebApiCaracterizacion.Models.Selector_Detail", b =>
@@ -605,7 +631,11 @@ namespace WebApiCaracterizacion.Migrations
                     b.HasOne("caracterizacion.Models.Campo", "Campo")
                         .WithMany()
                         .HasForeignKey("id_campo")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("WebApiCaracterizacion.Models.Selector", "Selector")
+                        .WithMany()
+                        .HasForeignKey("id_selector");
                 });
 #pragma warning restore 612, 618
         }

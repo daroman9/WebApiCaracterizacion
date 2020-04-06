@@ -10,8 +10,8 @@ using WebApiCaracterizacion.Models;
 namespace WebApiCaracterizacion.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200120213954_TablaCampo2")]
-    partial class TablaCampo2
+    [Migration("20200406164644_SecondMigration")]
+    partial class SecondMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -126,6 +126,8 @@ namespace WebApiCaracterizacion.Migrations
                     b.Property<int>("id_plantilla");
 
                     b.Property<string>("id_usuario");
+
+                    b.Property<string>("nombreCampaña");
 
                     b.HasKey("id");
 
@@ -393,7 +395,11 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.Property<int>("id_campo");
 
+                    b.Property<string>("id_column");
+
                     b.Property<string>("id_ficha");
+
+                    b.Property<string>("row");
 
                     b.Property<DateTime>("valor_date");
 
@@ -454,9 +460,15 @@ namespace WebApiCaracterizacion.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("disableFields");
+
                     b.Property<bool>("disabled");
 
+                    b.Property<string>("enableFields");
+
                     b.Property<int>("id_campo");
+
+                    b.Property<int?>("id_selector");
 
                     b.Property<string>("nombre")
                         .HasMaxLength(250);
@@ -482,6 +494,8 @@ namespace WebApiCaracterizacion.Migrations
                     b.HasKey("id");
 
                     b.HasIndex("id_campo");
+
+                    b.HasIndex("id_selector");
 
                     b.ToTable("Tablas_Campos");
                 });
@@ -622,6 +636,10 @@ namespace WebApiCaracterizacion.Migrations
                         .WithMany()
                         .HasForeignKey("id_campo")
                         .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("WebApiCaracterizacion.Models.Selector", "Selector")
+                        .WithMany()
+                        .HasForeignKey("id_selector");
                 });
 #pragma warning restore 612, 618
         }

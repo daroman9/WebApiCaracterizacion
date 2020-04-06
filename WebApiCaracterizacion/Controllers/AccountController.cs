@@ -12,12 +12,15 @@ using Microsoft.Extensions.Configuration;
 using WebApiCaracterizacion.Models;
 using System.Security.Cryptography;
 using System.Net.Mail;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 
 namespace WebApiCaracterizacion.Controllers
 {
     [Produces("application/json")]
     [Route("api/Account")]
+    
     public class AccountController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
@@ -36,6 +39,7 @@ namespace WebApiCaracterizacion.Controllers
 
         //Obtener todos los usuarios
         [HttpGet]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public IEnumerable<ApplicationUser> ListUsers()
         {
 
@@ -44,6 +48,7 @@ namespace WebApiCaracterizacion.Controllers
 
         //Obtener un usuario por su documento
         [HttpGet("byDocumento/{documento}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public IActionResult GetUsuario([FromRoute] int documento)
         {
             if (!ModelState.IsValid)
@@ -61,6 +66,7 @@ namespace WebApiCaracterizacion.Controllers
 
         //Obtener un usuario por su id
         [HttpGet("byId/{id}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public IActionResult GetUsuarioById([FromRoute] string id)
         {
             if (!ModelState.IsValid)
@@ -78,6 +84,7 @@ namespace WebApiCaracterizacion.Controllers
         //Crear usuarios nuevos
         [Route("Create")]
         [HttpPost]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> CreateUser([FromBody] ApplicationUser model)
         {
             if (ModelState.IsValid)
@@ -102,7 +109,9 @@ namespace WebApiCaracterizacion.Controllers
 
         //Login de los usuarios registrados, esta funcion devuelve el token para la autenticacion
         [HttpPost]
+        
         [Route("Login")]
+
         public async Task<IActionResult> Login([FromBody] ApplicationUser userInfo)
         {
             if (ModelState.IsValid)
@@ -166,6 +175,7 @@ namespace WebApiCaracterizacion.Controllers
         //Funcion para modificar los datos del usuario.
 
         [HttpPut("updateUser")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> updateUser([FromBody] ApplicationUser model)
         {
             try
@@ -192,6 +202,7 @@ namespace WebApiCaracterizacion.Controllers
       
         //Funcion para el cambio de password
         [HttpPut("changePassword")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> changePassword([FromBody] ApplicationUser model)
         {
             try

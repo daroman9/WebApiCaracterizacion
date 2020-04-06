@@ -14,6 +14,7 @@ namespace caracterizacion.Models
         public int id { get; set; }
         public DateTime? fecha_inicio { get; set; }
         public DateTime? fecha_fin { get; set; }
+        public string nombreCampaña { get; set;}
 
         //Clave foranea para relacionar la tabla formularios con la tabla plantillas
         [ForeignKey("Plantilla")]
