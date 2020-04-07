@@ -61,6 +61,22 @@ namespace WebApiCaracterizacion.Controllers
             _context.SaveChanges();
             return Ok();
         }
+
+        [HttpGet("byFicha/{id_ficha}")]
+        public IActionResult GetRegistrosByPlantilla([FromRoute] string id_ficha)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var registro = _context.Registros_Tablas.Where(x => x.id_ficha == id_ficha).ToList();
+            if (registro == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(registro);
+        }
         // POST: api/Registro_Tabla
         [HttpPost]
         public async Task<IActionResult> PostRegistro_Tabla([FromBody] Registro_Tabla registro_Tabla)

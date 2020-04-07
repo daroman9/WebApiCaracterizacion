@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using WebApiCaracterizacion.Models;
+using WebApiCaracterizacion.Data;
 
 namespace WebApiCaracterizacion
 {
@@ -28,7 +29,7 @@ namespace WebApiCaracterizacion
         public void ConfigureServices(IServiceCollection services)
         {
 
-
+            services.AddScoped<ValuesRepository>();
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
             services.AddIdentity<ApplicationUser, IdentityRole>(

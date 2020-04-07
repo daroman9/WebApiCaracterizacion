@@ -49,6 +49,23 @@ namespace WebApiCaracterizacion.Controllers
             return Ok(registro);
         }
 
+        [HttpGet("byFicha/{id_ficha}")]
+        public IActionResult GetRegistrosByPlantilla([FromRoute] string id_ficha)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var registro = _context.Registros.Where(x => x.id_ficha == id_ficha).ToList();
+            if (registro == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(registro);
+        }
+
+
         // PUT: api/Registros/5
         [HttpPut("{id}")]
         public IActionResult Put([FromBody] Registro registro, int id)
