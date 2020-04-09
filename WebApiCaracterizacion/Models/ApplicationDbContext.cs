@@ -26,7 +26,7 @@ namespace WebApiCaracterizacion.Models
         public DbSet<Tablas_Campo> Tablas_Campos { get; set; }
         public DbSet<Ficha> Ficha { get; set; }
         public DbSet<WebApiCaracterizacion.Models.Selector_Detail> Selector_Detail { get; set; }
-        public DbSet<WebApiCaracterizacion.Models.Value> Value { get; set; }
+      
 
     }
 }
