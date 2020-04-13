@@ -16,7 +16,9 @@ namespace WebApiCaracterizacion.Data
         {
             _connectionString = configuration.GetConnectionString("defaultConnection");
         }
-        //Funcion asincrona que se usa para llamar el stored procedure para promedio de generos de agro
+
+
+        //Funcion asincrona que se usa para llamar el stored procedure para promedio de generos de agricultura
         public async Task<List<PromediosGeneros>> GetPromedioAgricultura(string fechaInicio, string fechaFin)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
@@ -34,7 +36,7 @@ namespace WebApiCaracterizacion.Data
                     {
                         while (await reader.ReadAsync())
                         {
-                            response.Add(MapToValueAgro(reader));
+                            response.Add(MapToValueAgricultura(reader));
                         }
                     }
 
@@ -42,7 +44,7 @@ namespace WebApiCaracterizacion.Data
                 }
             }
         }
-        private PromediosGeneros MapToValueAgro(SqlDataReader reader)
+        private PromediosGeneros MapToValueAgricultura(SqlDataReader reader)
         {
             return new PromediosGeneros()
             {
@@ -50,9 +52,11 @@ namespace WebApiCaracterizacion.Data
                 municipio = (string)reader["municipio"],
                 total = (int)reader["total"],
                 cantidad = (int)reader["cantidad"],
+
+
             };
         }
-        //Termina la funcion asincrona para agro
+        //Termina la funcion asincrona para agricultura
 
         //Funcion asincrona que se usa para llamar el stored procedure para promedio de generos de ganaderia
         public async Task<List<PromediosGeneros>> GetPromedioGanaderia(string fechaInicio, string fechaFin)

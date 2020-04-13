@@ -21,7 +21,7 @@ namespace WebApiCaracterizacion.Controllers
             this._repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
 
-        // Petición http para traer el promedio de generos de agricultura
+        // Petición httpA para traer el promedio de generos de agricultura
         [HttpGet("agricultura")]
         public async Task<ActionResult<IEnumerable<PromediosGeneros>>> GetAgro([FromQuery]string fechaInicio, [FromQuery]string fechaFin)
         {

@@ -9,25 +9,25 @@ using WebApiCaracterizacion.Models;
 
 namespace WebApiCaracterizacion.Data
 {
-    public class PromedioEscolaridadRepository
+    public class PromedioBeneficiariosRepository
     {
         private readonly string _connectionString;
-        public PromedioEscolaridadRepository(IConfiguration configuration)
+        public PromedioBeneficiariosRepository(IConfiguration configuration)
         {
             _connectionString = configuration.GetConnectionString("defaultConnection");
         }
         //Funcion asincrona que se usa para llamar el stored procedure para promedio de generos de agro
-        public async Task<List<PromediosEscolaridad>> GetPromedioAgricultura(string fechaInicio, string fechaFin)
+        public async Task<List<PromediosBeneficiarios>> GetPromedioAgricultura(string fechaInicio, string fechaFin)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("EscolaridadAgro", sql))
+                using (SqlCommand cmd = new SqlCommand("BeneficiariosAgro", sql))
                 {
                     cmd.Parameters.Add("@fechaInicio", SqlDbType.VarChar).Value = (object)fechaInicio ?? DBNull.Value;
 
                     cmd.Parameters.Add("@fechaFin", SqlDbType.VarChar).Value = (object)fechaFin ?? DBNull.Value;
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    var response = new List<PromediosEscolaridad>();
+                    var response = new List<PromediosBeneficiarios>();
                     await sql.OpenAsync();
 
                     using (var reader = await cmd.ExecuteReaderAsync())
@@ -42,17 +42,17 @@ namespace WebApiCaracterizacion.Data
                 }
             }
         }
-        private PromediosEscolaridad MapToValueAgro(SqlDataReader reader)
+        private PromediosBeneficiarios MapToValueAgro(SqlDataReader reader)
         {
-            return new PromediosEscolaridad()
+            return new PromediosBeneficiarios()
             {
-                escolaridad = (string)reader["escolaridad"],
+                beneficiarios = (int)reader["beneficiarios"],
                 municipio = (string)reader["municipio"],
                 total = (int)reader["total"],
                 cantidad = (int)reader["cantidad"],
             };
         }
-    
-
+        //Termina la funcion para agricultura
+      
     }
 }
