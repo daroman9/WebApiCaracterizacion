@@ -29,6 +29,7 @@ namespace WebApiCaracterizacion
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<PromedioGenerosRepository>();
+            services.AddScoped<PromedioEscolaridadRepository>();
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
             services.AddIdentity<ApplicationUser, IdentityRole>(
