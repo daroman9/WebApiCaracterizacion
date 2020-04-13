@@ -28,11 +28,14 @@ namespace WebApiCaracterizacion
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+           //Servicios para acceder a los controladores que ejecutan los procedimientos almacenados
             services.AddScoped<PromedioGenerosRepository>();
             services.AddScoped<PromedioEscolaridadRepository>();
             services.AddScoped<PromedioBeneficiariosRepository>();
+            services.AddScoped<PromedioViviendasRepository>();
 
 
+            //Fin seccion controladores
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
             services.AddIdentity<ApplicationUser, IdentityRole>(
