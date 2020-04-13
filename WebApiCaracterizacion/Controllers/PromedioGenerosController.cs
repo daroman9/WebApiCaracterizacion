@@ -23,16 +23,25 @@ namespace WebApiCaracterizacion.Controllers
 
         // Petición http para traer el promedio de generos de agricultura
         [HttpGet("agricultura")]
-        public async Task<ActionResult<IEnumerable<PromediosGeneros>>> GetAgro()
+        public async Task<ActionResult<IEnumerable<PromediosGeneros>>> GetAgro([FromQuery]string fechaInicio, [FromQuery]string fechaFin)
         {
-            return await _repository.GetPromedioAgricultura();
+            return await _repository.GetPromedioAgricultura(fechaInicio, fechaFin);
         }
 
         // Petición http para traer el promedio de generos de agricultura
         [HttpGet("ganaderia")]
-        public async Task<ActionResult<IEnumerable<PromediosGeneros>>> GetGanaderia()
+        public async Task<ActionResult<IEnumerable<PromediosGeneros>>> GetGanaderia([FromQuery]string fechaInicio, [FromQuery]string fechaFin)
         {
-            return await _repository.GetPromedioGanaderia();
+
+            return await _repository.GetPromedioGanaderia(fechaInicio, fechaFin);
+        }
+
+        // Petición http para traer el promedio de generos de transporte fluvial
+        [HttpGet("transporte")]
+        public async Task<ActionResult<IEnumerable<PromediosGeneros>>> GetTransporte([FromQuery]string fechaInicio, [FromQuery]string fechaFin)
+        {
+
+            return await _repository.GetPromedioTransporte(fechaInicio, fechaFin);
         }
     }
 }
