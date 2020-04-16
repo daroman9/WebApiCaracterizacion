@@ -9,30 +9,31 @@ using WebApiCaracterizacion.Models;
 
 namespace WebApiCaracterizacion.Data
 {
-    public class PromedioEscolaridadRepository
+    public class PromedioEstadosRespository
     {
         private readonly string _connectionString;
-        public PromedioEscolaridadRepository(IConfiguration configuration)
+        public PromedioEstadosRespository(IConfiguration configuration)
         {
             _connectionString = configuration.GetConnectionString("defaultConnection");
         }
-        //Funcion asincrona que se usa para llamar el stored procedure para promedio de generos de agro
-        public async Task<List<PromediosEscolaridad>> GetPromedio(string tipoConsulta, string fechaInicio, string fechaFin)
+
+
+        //Funcion asincrona que se usa para llamar el stored procedure para promedio de generos de agricultura
+        public async Task<List<PromediosEstados>> GetPromedio(string tipoConsulta, string fechaInicio, string fechaFin)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("PromediosEscolaridad", sql))
+                using (SqlCommand cmd = new SqlCommand("PromediosEstados", sql))
                 {
                     cmd.Parameters.Add("@tipoConsulta", SqlDbType.VarChar).Value = (object)tipoConsulta ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaInicio", SqlDbType.VarChar).Value = (object)fechaInicio ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaFin", SqlDbType.VarChar).Value = (object)fechaFin ?? DBNull.Value;
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    var response = new List<PromediosEscolaridad>();
+                    var response = new List<PromediosEstados>();
                     await sql.OpenAsync();
 
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
-
                         while (await reader.ReadAsync())
                         {
                             if (tipoConsulta == "general")
@@ -50,25 +51,26 @@ namespace WebApiCaracterizacion.Data
                 }
             }
         }
-        private PromediosEscolaridad MapToValue(SqlDataReader reader)
+        private PromediosEstados MapToValue(SqlDataReader reader)
         {
-            return new PromediosEscolaridad()
+            return new PromediosEstados()
             {
-                escolaridad = (string)reader["escolaridad"],
+                estado = (string)reader["estado"],
                 cantidad = (int)reader["cantidad"],
                 aspecto = (string)reader["aspecto"],
                 municipio = (string)reader["municipio"]
-            };
-        }
-        private PromediosEscolaridad MapToValueGeneral(SqlDataReader reader)
-        {
-            return new PromediosEscolaridad()
-            {
-                escolaridad = (string)reader["escolaridad"],
-                cantidad = (int)reader["cantidad"]
+
             };
         }
 
+        private PromediosEstados MapToValueGeneral(SqlDataReader reader)
+        {
+            return new PromediosEstados()
+            {
+                estado = (string)reader["estado"],
+                cantidad = (int)reader["cantidad"]
+            };
+        }
 
     }
 }

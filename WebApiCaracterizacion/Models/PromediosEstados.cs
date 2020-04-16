@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace WebApiCaracterizacion.Models
 {
-    public class PromediosEscolaridad
+    public class PromediosEstados
     {
-        public string escolaridad { get; set; }
+        public string estado { get; set; }
         public int cantidad { get; set; }
         public string aspecto { get; set; }
         public string municipio { get; set; }

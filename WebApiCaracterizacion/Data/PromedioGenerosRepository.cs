@@ -19,14 +19,14 @@ namespace WebApiCaracterizacion.Data
 
 
         //Funcion asincrona que se usa para llamar el stored procedure para promedio de generos de agricultura
-        public async Task<List<PromediosGeneros>> GetPromedioAgricultura(string fechaInicio, string fechaFin)
+        public async Task<List<PromediosGeneros>> GetPromedio(string tipoConsulta, string fechaInicio, string fechaFin)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("GenerosAgro", sql))
+                using (SqlCommand cmd = new SqlCommand("PromediosGeneros", sql))
                 {
+                    cmd.Parameters.Add("@tipoConsulta", SqlDbType.VarChar).Value = (object)tipoConsulta ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaInicio", SqlDbType.VarChar).Value = (object)fechaInicio ?? DBNull.Value;
-
                     cmd.Parameters.Add("@fechaFin", SqlDbType.VarChar).Value = (object)fechaFin ?? DBNull.Value;
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     var response = new List<PromediosGeneros>();
@@ -36,7 +36,14 @@ namespace WebApiCaracterizacion.Data
                     {
                         while (await reader.ReadAsync())
                         {
-                            response.Add(MapToValueAgricultura(reader));
+                            if(tipoConsulta=="general")
+                            {
+                                response.Add(MapToValueGeneral(reader));
+                            }
+                            else
+                            {
+                                response.Add(MapToValue(reader));
+                            }
                         }
                     }
 
@@ -44,100 +51,26 @@ namespace WebApiCaracterizacion.Data
                 }
             }
         }
-        private PromediosGeneros MapToValueAgricultura(SqlDataReader reader)
+        private PromediosGeneros MapToValue(SqlDataReader reader)
         {
             return new PromediosGeneros()
             {
                 genero = (string)reader["genero"],
-                municipio = (string)reader["municipio"],
-                total = (int)reader["total"],
                 cantidad = (int)reader["cantidad"],
-
+                aspecto = (string)reader["aspecto"],
+                municipio = (string)reader["municipio"]
 
             };
         }
-        //Termina la funcion asincrona para agricultura
 
-        //Funcion asincrona que se usa para llamar el stored procedure para promedio de generos de ganaderia
-        public async Task<List<PromediosGeneros>> GetPromedioGanaderia(string fechaInicio, string fechaFin)
-        {
-            using (SqlConnection sql = new SqlConnection(_connectionString))
-            {
-                using (SqlCommand cmd = new SqlCommand("GenerosGanaderia", sql))
-                {
-                    cmd.Parameters.Add("@fechaInicio", SqlDbType.VarChar).Value =(object)fechaInicio?? DBNull.Value;
-        
-                    cmd.Parameters.Add("@fechaFin", SqlDbType.VarChar).Value =(object)fechaFin?? DBNull.Value;
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    var response = new List<PromediosGeneros>();
-                    await sql.OpenAsync();
-
-                    using (var reader = await cmd.ExecuteReaderAsync())
-                    {
-                        while (await reader.ReadAsync())
-                        {
-                            response.Add(MapToValueGanaderia(reader));
-                        }
-                    }
-
-                    return response;
-                }
-            }
-        }
-        private PromediosGeneros MapToValueGanaderia(SqlDataReader reader)
+        private PromediosGeneros MapToValueGeneral(SqlDataReader reader)
         {
             return new PromediosGeneros()
             {
                 genero = (string)reader["genero"],
-                municipio = (string)reader["municipio"],
-                total = (int)reader["total"],
-                cantidad = (int)reader["cantidad"],
-
-
+                cantidad = (int)reader["cantidad"]
             };
         }
-        //Termina la funcion asincrona para ganaderia
-
-
-        //Funcion asincrona que se usa para llamar el stored procedure para promedio de generos de transporte fluvial
-        public async Task<List<PromediosGeneros>> GetPromedioTransporte(string fechaInicio, string fechaFin)
-        {
-            using (SqlConnection sql = new SqlConnection(_connectionString))
-            {
-                using (SqlCommand cmd = new SqlCommand("GenerosTransporte", sql))
-                {
-                    cmd.Parameters.Add("@fechaInicio", SqlDbType.VarChar).Value = (object)fechaInicio ?? DBNull.Value;
-
-                    cmd.Parameters.Add("@fechaFin", SqlDbType.VarChar).Value = (object)fechaFin ?? DBNull.Value;
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    var response = new List<PromediosGeneros>();
-                    await sql.OpenAsync();
-
-                    using (var reader = await cmd.ExecuteReaderAsync())
-                    {
-                        while (await reader.ReadAsync())
-                        {
-                            response.Add(MapToValueTransporte(reader));
-                        }
-                    }
-
-                    return response;
-                }
-            }
-        }
-        private PromediosGeneros MapToValueTransporte(SqlDataReader reader)
-        {
-            return new PromediosGeneros()
-            {
-                genero = (string)reader["genero"],
-                municipio = (string)reader["municipio"],
-                total = (int)reader["total"],
-                cantidad = (int)reader["cantidad"],
-
-
-            };
-        }
-        //Termina la funcion asincrona para transporte fluvial
 
     }
 }
