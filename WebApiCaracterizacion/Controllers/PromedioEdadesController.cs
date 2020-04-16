@@ -12,19 +12,19 @@ namespace WebApiCaracterizacion.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PromedioViviendasController : ControllerBase
+    public class PromedioEdadesController : ControllerBase
     {
-        private readonly PromedioViviendasRepository _repository;
+        private readonly PromedioEdadesRepository _repository;
 
-        public PromedioViviendasController(PromedioViviendasRepository repository)
+        public PromedioEdadesController(PromedioEdadesRepository repository)
         {
             this._repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<PromediosViviendas>>> GetAgro([FromQuery]string tipoConsulta, [FromQuery]string fechaInicio, [FromQuery]string fechaFin)
+        public async Task<ActionResult<IEnumerable<PromediosEdades>>> GetAgro([FromQuery]string tipoConsulta, [FromQuery]string fechaInicio, [FromQuery]string fechaFin)
         {
-            return await _repository.GetPromedio(tipoConsulta,fechaInicio, fechaFin);
+            return await _repository.GetPromedio(tipoConsulta, fechaInicio, fechaFin);
         }
     }
 }

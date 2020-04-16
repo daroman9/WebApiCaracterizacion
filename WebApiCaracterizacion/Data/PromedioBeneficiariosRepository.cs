@@ -16,15 +16,15 @@ namespace WebApiCaracterizacion.Data
         {
             _connectionString = configuration.GetConnectionString("defaultConnection");
         }
-        //Funcion asincrona que se usa para llamar el stored procedure para promedio de generos de agro
-        public async Task<List<PromediosBeneficiarios>> GetPromedioAgricultura(string fechaInicio, string fechaFin)
+        //Funcion asincrona que se usa para llamar el stored procedure
+        public async Task<List<PromediosBeneficiarios>> GetPromedio(string tipoConsulta,string fechaInicio, string fechaFin)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("BeneficiariosAgro", sql))
+                using (SqlCommand cmd = new SqlCommand("PromediosBeneficiarios", sql))
                 {
+                    cmd.Parameters.Add("@tipoConsulta", SqlDbType.VarChar).Value = (object)tipoConsulta ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaInicio", SqlDbType.VarChar).Value = (object)fechaInicio ?? DBNull.Value;
-
                     cmd.Parameters.Add("@fechaFin", SqlDbType.VarChar).Value = (object)fechaFin ?? DBNull.Value;
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     var response = new List<PromediosBeneficiarios>();
@@ -34,7 +34,14 @@ namespace WebApiCaracterizacion.Data
                     {
                         while (await reader.ReadAsync())
                         {
-                            response.Add(MapToValueAgro(reader));
+                            if (tipoConsulta == "general")
+                            {
+                                response.Add(MapToValueGeneral(reader));
+                            }
+                            else
+                            {
+                                response.Add(MapToValue(reader));
+                            }
                         }
                     }
 
@@ -42,17 +49,25 @@ namespace WebApiCaracterizacion.Data
                 }
             }
         }
-        private PromediosBeneficiarios MapToValueAgro(SqlDataReader reader)
+        private PromediosBeneficiarios MapToValue(SqlDataReader reader)
         {
             return new PromediosBeneficiarios()
             {
                 beneficiarios = (int)reader["beneficiarios"],
+                aspecto = (string)reader["aspecto"],
                 municipio = (string)reader["municipio"],
-                total = (int)reader["total"],
-                cantidad = (int)reader["cantidad"],
+               
             };
         }
-        //Termina la funcion para agricultura
-      
+        private PromediosBeneficiarios MapToValueGeneral(SqlDataReader reader)
+        {
+            return new PromediosBeneficiarios()
+            {
+                beneficiarios = (int)reader["beneficiarios"],
+                cantidad = (int)reader["cantidad"]
+            };
+        }
+ 
+
     }
 }

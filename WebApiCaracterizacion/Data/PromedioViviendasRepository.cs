@@ -16,15 +16,15 @@ namespace WebApiCaracterizacion.Data
         {
             _connectionString = configuration.GetConnectionString("defaultConnection");
         }
-        //Funcion asincrona que se usa para llamar el stored procedure para promedio de generos de agro
-        public async Task<List<PromediosViviendas>> GetPromedioAgricultura(string fechaInicio, string fechaFin)
+       
+        public async Task<List<PromediosViviendas>> GetPromedio(string tipoConsulta, string fechaInicio, string fechaFin)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("ViviendasAgro", sql))
+                using (SqlCommand cmd = new SqlCommand("PromediosViviendas", sql))
                 {
+                    cmd.Parameters.Add("@tipoConsulta", SqlDbType.VarChar).Value = (object)tipoConsulta ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaInicio", SqlDbType.VarChar).Value = (object)fechaInicio ?? DBNull.Value;
-
                     cmd.Parameters.Add("@fechaFin", SqlDbType.VarChar).Value = (object)fechaFin ?? DBNull.Value;
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     var response = new List<PromediosViviendas>();
@@ -34,7 +34,14 @@ namespace WebApiCaracterizacion.Data
                     {
                         while (await reader.ReadAsync())
                         {
-                            response.Add(MapToValueAgro(reader));
+                            if (tipoConsulta == "general")
+                            {
+                                response.Add(MapToValueGeneral(reader));
+                            }
+                            else
+                            {
+                                response.Add(MapToValue(reader));
+                            }
                         }
                     }
 
@@ -42,17 +49,26 @@ namespace WebApiCaracterizacion.Data
                 }
             }
         }
-        private PromediosViviendas MapToValueAgro(SqlDataReader reader)
+        private PromediosViviendas MapToValue(SqlDataReader reader)
         {
             return new PromediosViviendas()
             {
-                tenencia = (string)reader["tenencia"],
-                municipio = (string)reader["municipio"],
-                total = (int)reader["total"],
+                vivienda = (string)reader["vivienda"],
+                cantidad = (int)reader["cantidad"],
+                aspecto = (string)reader["aspecto"],
+                municipio = (string)reader["municipio"]
+            };
+        }
+
+        private PromediosViviendas MapToValueGeneral(SqlDataReader reader)
+        {
+            return new PromediosViviendas()
+            {
+                vivienda = (string)reader["vivienda"],
                 cantidad = (int)reader["cantidad"],
             };
         }
-    
+
 
     }
 }

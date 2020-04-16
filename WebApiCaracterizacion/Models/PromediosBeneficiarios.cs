@@ -8,9 +8,11 @@ namespace WebApiCaracterizacion.Models
     public class PromediosBeneficiarios
     {
         public int beneficiarios { get; set; }
+        public string aspecto { get; set; }
         public string municipio { get; set; }
-        public int total { get; set; }
         public int cantidad { get; set; }
+
+
     }
 }
 

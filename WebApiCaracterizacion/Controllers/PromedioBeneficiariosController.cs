@@ -21,11 +21,11 @@ namespace WebApiCaracterizacion.Controllers
             this._repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
 
-        // Petición http para traer el promedio de generos de agricultura
-        [HttpGet("agricultura")]
-        public async Task<ActionResult<IEnumerable<PromediosBeneficiarios>>> GetAgro([FromQuery]string fechaInicio, [FromQuery]string fechaFin)
+  
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<PromediosBeneficiarios>>> GetAgro([FromQuery]string tipoConsulta,[FromQuery]string fechaInicio, [FromQuery]string fechaFin)
         {
-            return await _repository.GetPromedioAgricultura(fechaInicio, fechaFin);
+            return await _repository.GetPromedio(tipoConsulta, fechaInicio, fechaFin);
         }
     }
 }
