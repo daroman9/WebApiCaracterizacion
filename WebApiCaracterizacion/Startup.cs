@@ -30,6 +30,7 @@ namespace WebApiCaracterizacion
         {
            //Servicios para acceder a los controladores que ejecutan los procedimientos almacenados
             services.AddScoped<PromedioGenerosRepository>();
+            services.AddScoped<PromedioAntiguedadRepository>();
             services.AddScoped<PromedioEdadesRepository>();
             services.AddScoped<PromedioEstadosRespository>();
             services.AddScoped<PromedioEscolaridadRepository>();
