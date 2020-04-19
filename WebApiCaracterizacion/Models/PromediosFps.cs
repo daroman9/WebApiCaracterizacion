@@ -5,14 +5,11 @@ using System.Threading.Tasks;
 
 namespace WebApiCaracterizacion.Models
 {
-    public class PromediosBeneficiarios
+    public class PromediosFps
     {
-        public string beneficiario { get; set; }
+        public string fps { get; set; }
+        public int cantidad { get; set; }
         public string aspecto { get; set; }
         public string municipio { get; set; }
-        public int cantidad { get; set; }
-
-
     }
 }
-

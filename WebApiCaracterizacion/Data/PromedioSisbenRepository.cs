@@ -9,25 +9,27 @@ using WebApiCaracterizacion.Models;
 
 namespace WebApiCaracterizacion.Data
 {
-    public class PromedioBeneficiariosRepository
+    public class PromedioSisbenRepository
     {
         private readonly string _connectionString;
-        public PromedioBeneficiariosRepository(IConfiguration configuration)
+        public PromedioSisbenRepository(IConfiguration configuration)
         {
             _connectionString = configuration.GetConnectionString("defaultConnection");
         }
-        //Funcion asincrona que se usa para llamar el stored procedure
-        public async Task<List<PromediosBeneficiarios>> GetPromedio(string tipoConsulta,string fechaInicio, string fechaFin)
+
+
+        //Funcion asincrona que se usa para llamar el stored procedure para promedio de generos de agricultura
+        public async Task<List<PromediosSisben>> GetPromedio(string tipoConsulta, string fechaInicio, string fechaFin)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("PromediosBeneficiarios", sql))
+                using (SqlCommand cmd = new SqlCommand("PromediosSisben", sql))
                 {
                     cmd.Parameters.Add("@tipoConsulta", SqlDbType.VarChar).Value = (object)tipoConsulta ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaInicio", SqlDbType.VarChar).Value = (object)fechaInicio ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaFin", SqlDbType.VarChar).Value = (object)fechaFin ?? DBNull.Value;
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    var response = new List<PromediosBeneficiarios>();
+                    var response = new List<PromediosSisben>();
                     await sql.OpenAsync();
 
                     using (var reader = await cmd.ExecuteReaderAsync())
@@ -49,28 +51,26 @@ namespace WebApiCaracterizacion.Data
                 }
             }
         }
-        private PromediosBeneficiarios MapToValue(SqlDataReader reader)
+        private PromediosSisben MapToValue(SqlDataReader reader)
         {
-            return new PromediosBeneficiarios()
+            return new PromediosSisben()
             {
-  
-                beneficiario = (string)reader["beneficiario"],
+                sisben = (string)reader["sisben"],
                 cantidad = (int)reader["cantidad"],
                 aspecto = (string)reader["aspecto"],
-                municipio = (string)reader["municipio"],
-               
+                municipio = (string)reader["municipio"]
 
             };
         }
-        private PromediosBeneficiarios MapToValueGeneral(SqlDataReader reader)
+
+        private PromediosSisben MapToValueGeneral(SqlDataReader reader)
         {
-            return new PromediosBeneficiarios()
+            return new PromediosSisben()
             {
-                beneficiario = (string)reader["beneficiario"],
+                sisben = (string)reader["sisben"],
                 cantidad = (int)reader["cantidad"]
             };
         }
- 
 
     }
 }
