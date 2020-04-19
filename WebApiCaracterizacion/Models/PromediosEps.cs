@@ -5,11 +5,12 @@ using System.Threading.Tasks;
 
 namespace WebApiCaracterizacion.Models
 {
-    public class PromediosEdades
+    public class PromediosEps
     {
-        public int edad { get; set; }
-        public int  cantidad { get; set; }
+        public string eps { get; set; }
+        public int cantidad { get; set; }
         public string aspecto { get; set; }
         public string municipio { get; set; }
+
     }
 }

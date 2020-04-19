@@ -9,25 +9,26 @@ using WebApiCaracterizacion.Models;
 
 namespace WebApiCaracterizacion.Data
 {
-    public class PromedioEdadesRepository
+    public class PromedioArlRepository
     {
+
         private readonly string _connectionString;
-        public PromedioEdadesRepository(IConfiguration configuration)
+        public PromedioArlRepository(IConfiguration configuration)
         {
             _connectionString = configuration.GetConnectionString("defaultConnection");
         }
-        
-        public async Task<List<PromediosEdades>> GetPromedio(string tipoConsulta, string fechaInicio, string fechaFin)
+
+        public async Task<List<PromediosArl>> GetPromedio(string tipoConsulta, string fechaInicio, string fechaFin)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("PromediosEdades", sql))
+                using (SqlCommand cmd = new SqlCommand("PromediosArl", sql))
                 {
                     cmd.Parameters.Add("@tipoConsulta", SqlDbType.VarChar).Value = (object)tipoConsulta ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaInicio", SqlDbType.VarChar).Value = (object)fechaInicio ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaFin", SqlDbType.VarChar).Value = (object)fechaFin ?? DBNull.Value;
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    var response = new List<PromediosEdades>();
+                    var response = new List<PromediosArl>();
                     await sql.OpenAsync();
 
                     using (var reader = await cmd.ExecuteReaderAsync())
@@ -50,26 +51,23 @@ namespace WebApiCaracterizacion.Data
                 }
             }
         }
-        private PromediosEdades MapToValue(SqlDataReader reader)
+        private PromediosArl MapToValue(SqlDataReader reader)
         {
-            return new PromediosEdades()
+            return new PromediosArl()
             {
-                edad = (int)reader["edad"],
+                arl = (string)reader["arl"],
                 cantidad = (int)reader["cantidad"],
                 aspecto = (string)reader["aspecto"],
                 municipio = (string)reader["municipio"]
             };
         }
-        private PromediosEdades MapToValueGeneral(SqlDataReader reader)
+        private PromediosArl MapToValueGeneral(SqlDataReader reader)
         {
-            return new PromediosEdades()
+            return new PromediosArl()
             {
-                edad = (int)reader["edad"],
+                arl = (string)reader["arl"],
                 cantidad = (int)reader["cantidad"],
             };
         }
-
-
     }
 }
-

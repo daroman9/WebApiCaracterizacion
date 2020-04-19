@@ -36,6 +36,8 @@ namespace WebApiCaracterizacion
             services.AddScoped<PromedioEscolaridadRepository>();
             services.AddScoped<PromedioBeneficiariosRepository>();
             services.AddScoped<PromedioViviendasRepository>();
+            services.AddScoped<PromedioEpsRepository>();
+            services.AddScoped<PromedioArlRepository>();
 
 
             //Fin seccion controladores
