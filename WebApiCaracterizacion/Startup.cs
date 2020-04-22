@@ -40,6 +40,7 @@ namespace WebApiCaracterizacion
             services.AddScoped<PromedioArlRepository>();
             services.AddScoped<PromedioFpsRepository>();
             services.AddScoped<PromedioSisbenRepository>();
+            services.AddScoped<PromedioActividadRepository>();
 
 
             //Fin seccion controladores

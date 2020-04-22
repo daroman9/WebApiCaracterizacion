@@ -47,8 +47,11 @@ namespace caracterizacion.Models
         public int? id_selector { get; set; }
         [JsonIgnore]
         public Selector selector { get; set; }
-
-
+        //Clave foranea para relacionar la tabla registros con la tabla validaciones
+        [ForeignKey("Validacion")]
+        public int? id_validacion { get; set; }
+        [JsonIgnore]
+        public Validacion Validacion { get; set; }
 
     }
 }

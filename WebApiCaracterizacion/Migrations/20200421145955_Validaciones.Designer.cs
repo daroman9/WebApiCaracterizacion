@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApiCaracterizacion.Models;
 
 namespace WebApiCaracterizacion.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200421145955_Validaciones")]
+    partial class Validaciones
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,8 +46,6 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.Property<int?>("id_selector");
 
-                    b.Property<int?>("id_validacion");
-
                     b.Property<string>("nombre")
                         .HasMaxLength(250);
 
@@ -74,8 +74,6 @@ namespace WebApiCaracterizacion.Migrations
                     b.HasIndex("id_categoria");
 
                     b.HasIndex("id_plantilla");
-
-                    b.HasIndex("id_validacion");
 
                     b.HasIndex("selectorid");
 
@@ -374,6 +372,8 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.Property<string>("id_ficha");
 
+                    b.Property<string>("id_validacion");
+
                     b.Property<DateTime?>("valor_date");
 
                     b.Property<float?>("valor_float");
@@ -387,6 +387,8 @@ namespace WebApiCaracterizacion.Migrations
                     b.HasIndex("id_campo");
 
                     b.HasIndex("id_ficha");
+
+                    b.HasIndex("id_validacion");
 
                     b.ToTable("Registros");
                 });
@@ -407,6 +409,8 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.Property<string>("id_ficha");
 
+                    b.Property<string>("id_validacion");
+
                     b.Property<string>("row");
 
                     b.Property<DateTime?>("valor_date");
@@ -422,6 +426,8 @@ namespace WebApiCaracterizacion.Migrations
                     b.HasIndex("id_campo");
 
                     b.HasIndex("id_ficha");
+
+                    b.HasIndex("id_validacion");
 
                     b.ToTable("Registros_Tablas");
                 });
@@ -478,8 +484,6 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.Property<int?>("id_selector");
 
-                    b.Property<int?>("id_validacion");
-
                     b.Property<string>("nombre")
                         .HasMaxLength(250);
 
@@ -506,8 +510,6 @@ namespace WebApiCaracterizacion.Migrations
                     b.HasIndex("id_campo");
 
                     b.HasIndex("id_selector");
-
-                    b.HasIndex("id_validacion");
 
                     b.ToTable("Tablas_Campos");
                 });
@@ -538,10 +540,6 @@ namespace WebApiCaracterizacion.Migrations
                         .WithMany()
                         .HasForeignKey("id_plantilla")
                         .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("WebApiCaracterizacion.Models.Validacion", "Validacion")
-                        .WithMany()
-                        .HasForeignKey("id_validacion");
 
                     b.HasOne("WebApiCaracterizacion.Models.Selector", "selector")
                         .WithMany()
@@ -639,6 +637,10 @@ namespace WebApiCaracterizacion.Migrations
                     b.HasOne("WebApiCaracterizacion.Models.Ficha", "Ficha")
                         .WithMany()
                         .HasForeignKey("id_ficha");
+
+                    b.HasOne("WebApiCaracterizacion.Models.Ficha", "Validacion")
+                        .WithMany()
+                        .HasForeignKey("id_validacion");
                 });
 
             modelBuilder.Entity("WebApiCaracterizacion.Models.Registro_Tabla", b =>
@@ -651,6 +653,10 @@ namespace WebApiCaracterizacion.Migrations
                     b.HasOne("WebApiCaracterizacion.Models.Ficha", "Ficha")
                         .WithMany()
                         .HasForeignKey("id_ficha");
+
+                    b.HasOne("WebApiCaracterizacion.Models.Ficha", "Validacion")
+                        .WithMany()
+                        .HasForeignKey("id_validacion");
                 });
 
             modelBuilder.Entity("WebApiCaracterizacion.Models.Selector_Detail", b =>
@@ -671,10 +677,6 @@ namespace WebApiCaracterizacion.Migrations
                     b.HasOne("WebApiCaracterizacion.Models.Selector", "Selector")
                         .WithMany()
                         .HasForeignKey("id_selector");
-
-                    b.HasOne("WebApiCaracterizacion.Models.Validacion", "Validacion")
-                        .WithMany()
-                        .HasForeignKey("id_validacion");
                 });
 #pragma warning restore 612, 618
         }

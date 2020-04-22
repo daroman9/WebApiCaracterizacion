@@ -39,5 +39,10 @@ namespace WebApiCaracterizacion.Models
         public int? id_selector { get; set; }
         [JsonIgnore]
         public Selector Selector { get; set; }
+        //Clave foranea para relacionar la tabla registros con la tabla validaciones
+        [ForeignKey("Validacion")]
+        public int? id_validacion { get; set; }
+        [JsonIgnore]
+        public Validacion Validacion { get; set; }
     }
 }

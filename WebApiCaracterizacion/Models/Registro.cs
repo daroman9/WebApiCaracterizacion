@@ -29,6 +29,6 @@ namespace WebApiCaracterizacion.Models
         public string id_ficha { get; set; }
         [JsonIgnore]
         public Ficha Ficha { get; set; }
-
+     
     }
 }
