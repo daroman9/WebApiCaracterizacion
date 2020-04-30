@@ -23,7 +23,7 @@ namespace WebApiCaracterizacion.Controllers
 
   
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<PromediosBeneficiarios>>> GetAgro([FromQuery]string tipoConsulta,[FromQuery]string fechaInicio, [FromQuery]string fechaFin)
+        public async Task<ActionResult<IEnumerable<PromediosBeneficiarios>>> GetData([FromQuery]string tipoConsulta,[FromQuery]string fechaInicio, [FromQuery]string fechaFin)
         {
             return await _repository.GetPromedio(tipoConsulta, fechaInicio, fechaFin);
         }

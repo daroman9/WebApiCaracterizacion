@@ -23,7 +23,7 @@ namespace WebApiCaracterizacion.Controllers
 
         // Petición http para traer el promedio de escolaridades
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<PromediosEstados>>> GetAgro([FromQuery]string tipoConsulta, [FromQuery]string fechaInicio, [FromQuery]string fechaFin)
+        public async Task<ActionResult<IEnumerable<PromediosEstados>>> GetData([FromQuery]string tipoConsulta, [FromQuery]string fechaInicio, [FromQuery]string fechaFin)
         {
             return await _repository.GetPromedio(tipoConsulta, fechaInicio, fechaFin);
         }

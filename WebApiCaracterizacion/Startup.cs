@@ -25,7 +25,7 @@ namespace WebApiCaracterizacion
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+   
         public void ConfigureServices(IServiceCollection services)
         {
            //Servicios para acceder a los controladores que ejecutan los procedimientos almacenados
@@ -41,6 +41,25 @@ namespace WebApiCaracterizacion
             services.AddScoped<PromedioFpsRepository>();
             services.AddScoped<PromedioSisbenRepository>();
             services.AddScoped<PromedioActividadRepository>();
+            services.AddScoped<PromedioEpocasRepository>();
+            services.AddScoped<PromedioArraigoRepository>();
+            services.AddScoped<PromedioProductividadRepository>();
+            services.AddScoped<PromedioUnidadRepository>();
+            services.AddScoped<PromedioMesesMayorRepository>();
+            services.AddScoped<PromedioMesesMenorRepository>();
+            services.AddScoped<PromedioActLpRepository>();
+            services.AddScoped<PromedioNivelFormalizacionRepository>();
+            services.AddScoped<PromedioCapacidadCargaTFRepository>();
+            services.AddScoped<PromedioUnidadTFRepository>();
+            services.AddScoped<PromedioNivelSeguridadTFRepository>();
+            services.AddScoped<PromedioGeneroTFRepository>();
+            services.AddScoped<PromedioOriginarioTFRepository>();
+            services.AddScoped<PromediosEdadTFRepository>();
+            services.AddScoped<PromedioEscolaridadTFRepository>();
+            services.AddScoped<PromedioViviendaTFRepository>();
+            services.AddScoped<PromedioEstadoTFRepository>();
+            services.AddScoped<PromedioOtrasActividadesTFRepository>();
+            services.AddScoped<PromedioVariacionTFRepository>();
 
 
             //Fin seccion controladores
