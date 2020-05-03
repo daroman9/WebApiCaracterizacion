@@ -21,7 +21,7 @@ namespace WebApiCaracterizacion.Data
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("PromedioNivelFormalizacion", sql))
+                using (SqlCommand cmd = new SqlCommand("dw.ITF_NivelFormalizacion", sql))
                 {
                     cmd.Parameters.Add("@tipoConsulta", SqlDbType.VarChar).Value = (object)tipoConsulta ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaInicio", SqlDbType.VarChar).Value = (object)fechaInicio ?? DBNull.Value;
@@ -55,14 +55,16 @@ namespace WebApiCaracterizacion.Data
             return new PromediosNivelFormalizacion()
             {
                 municipio = (string)reader["municipio"],
-                porcentaje = (double)reader["porcentaje"]
+                porcentaje = (double)reader["porcentaje"],
+                etiqueta = (string)reader["etiqueta"]
             };
         }
         private PromediosNivelFormalizacion MapToValueGeneral(SqlDataReader reader)
         {
             return new PromediosNivelFormalizacion()
             {
-                porcentaje = (double)reader["porcentaje"]
+                porcentaje = (double)reader["porcentaje"],
+                etiqueta = (string)reader["etiqueta"]
             };
 
         }

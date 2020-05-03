@@ -60,6 +60,9 @@ namespace WebApiCaracterizacion
             services.AddScoped<PromedioEstadoTFRepository>();
             services.AddScoped<PromedioOtrasActividadesTFRepository>();
             services.AddScoped<PromedioVariacionTFRepository>();
+            services.AddScoped<PromedioUtilidadTFRepository>();
+            services.AddScoped<PromedioProductividadTFRepository>();
+            services.AddScoped<PromedioNoOriginarioTFRepository>();
 
 
             //Fin seccion controladores

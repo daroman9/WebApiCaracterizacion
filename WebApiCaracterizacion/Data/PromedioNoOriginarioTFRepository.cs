@@ -9,25 +9,25 @@ using WebApiCaracterizacion.Models;
 
 namespace WebApiCaracterizacion.Data
 {
-    public class PromedioUnidadTFRepository
+    public class PromedioNoOriginarioTFRepository
     {
         private readonly string _connectionString;
-        public PromedioUnidadTFRepository(IConfiguration configuration)
+        public PromedioNoOriginarioTFRepository(IConfiguration configuration)
         {
             _connectionString = configuration.GetConnectionString("defaultConnection");
         }
 
-        public async Task<List<PromediosUnidadTF>> GetPromedio(string tipoConsulta, string fechaInicio, string fechaFin)
+        public async Task<List<PromediosNoOriginariosTF>> GetPromedio(string tipoConsulta, string fechaInicio, string fechaFin)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("dw.ITF_TipoUnidades", sql))
+                using (SqlCommand cmd = new SqlCommand("dw.ITF_NivelSeguridad", sql))
                 {
                     cmd.Parameters.Add("@tipoConsulta", SqlDbType.VarChar).Value = (object)tipoConsulta ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaInicio", SqlDbType.VarChar).Value = (object)fechaInicio ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaFin", SqlDbType.VarChar).Value = (object)fechaFin ?? DBNull.Value;
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    var response = new List<PromediosUnidadTF>();
+                    var response = new List<PromediosNoOriginariosTF>();
                     await sql.OpenAsync();
 
                     using (var reader = await cmd.ExecuteReaderAsync())
@@ -52,26 +52,24 @@ namespace WebApiCaracterizacion.Data
                 }
             }
         }
-        private PromediosUnidadTF MapToValue(SqlDataReader reader)
+        private PromediosNoOriginariosTF MapToValue(SqlDataReader reader)
         {
-            return new PromediosUnidadTF()
+            return new PromediosNoOriginariosTF()
             {
                 municipio = (string)reader["municipio"],
-                dato = (string)reader["dato"],
-                cantidad = (int)reader["cantidad"],
                 porcentaje = (double)reader["porcentaje"]
 
             };
         }
-        private PromediosUnidadTF MapToValueGeneral(SqlDataReader reader)
+
+        private PromediosNoOriginariosTF MapToValueGeneral(SqlDataReader reader)
         {
-            return new PromediosUnidadTF()
+            return new PromediosNoOriginariosTF()
             {
-                dato = (string)reader["dato"],
-                cantidad = (int)reader["cantidad"],
                 porcentaje = (double)reader["porcentaje"]
             };
 
         }
+
     }
 }

@@ -21,7 +21,7 @@ namespace WebApiCaracterizacion.Data
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("PromedioEstadoTF", sql))
+                using (SqlCommand cmd = new SqlCommand("dw.ITF_EstadoCivil", sql))
                 {
                     cmd.Parameters.Add("@tipoConsulta", SqlDbType.VarChar).Value = (object)tipoConsulta ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaInicio", SqlDbType.VarChar).Value = (object)fechaInicio ?? DBNull.Value;
@@ -54,21 +54,92 @@ namespace WebApiCaracterizacion.Data
         }
         private PromediosEstadosTF MapToValue(SqlDataReader reader)
         {
+            string municipio;
+            string dato;
+            int cantidad;
+            double porcentaje;
+
+            if(reader["municipio"] == DBNull.Value)
+            {
+                municipio = "NA";
+            }
+            else
+            {
+                municipio = (string)reader["municipio"];
+            };
+
+            if (reader["dato"] == DBNull.Value)
+            {
+                dato = "NA";
+            }
+            else
+            {
+                dato = (string)reader["dato"];
+            };
+
+            if (reader["cantidad"] == DBNull.Value)
+            {
+                cantidad = 0;
+            }
+            else
+            {
+                cantidad = (int)reader["cantidad"];
+            };
+            if (reader["porcentaje"] == DBNull.Value)
+            {
+                porcentaje = 0;
+            }
+            else
+            {
+                porcentaje = (double)reader["porcentaje"];
+            };
+
+
             return new PromediosEstadosTF()
             {
-               municipio = (string) reader["municipio"],
-               dato = (string)reader["dato"],
-               cantidad = (int)reader["cantidad"],
-               porcentaje = (double)reader["porcentaje"]
+          
+               municipio = municipio,
+               dato = dato,
+               cantidad = cantidad,
+               porcentaje = porcentaje
             };
         }
         private PromediosEstadosTF MapToValueGeneral(SqlDataReader reader)
-        {
+        {      
+            string dato;
+            int cantidad;
+            double porcentaje;
+
+            if (reader["dato"] == DBNull.Value)
+            {
+                dato = "NA";
+            }
+            else
+            {
+                dato = (string)reader["dato"];
+            };
+
+            if (reader["cantidad"] == DBNull.Value)
+            {
+                cantidad = 0;
+            }
+            else
+            {
+                cantidad = (int)reader["cantidad"];
+            };
+            if (reader["porcentaje"] == DBNull.Value)
+            {
+                porcentaje = 0;
+            }
+            else
+            {
+                porcentaje = (double)reader["porcentaje"];
+            };
             return new PromediosEstadosTF()
             {
-                dato = (string)reader["dato"],
-                cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                dato = dato,
+                cantidad = cantidad,
+                porcentaje = porcentaje
             };
 
         }

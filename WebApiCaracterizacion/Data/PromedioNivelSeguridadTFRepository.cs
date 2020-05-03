@@ -21,7 +21,7 @@ namespace WebApiCaracterizacion.Data
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("PromedioNivelSeguridadTF", sql))
+                using (SqlCommand cmd = new SqlCommand("dw.ITF_NivelSeguridad", sql))
                 {
                     cmd.Parameters.Add("@tipoConsulta", SqlDbType.VarChar).Value = (object)tipoConsulta ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaInicio", SqlDbType.VarChar).Value = (object)fechaInicio ?? DBNull.Value;
@@ -57,8 +57,9 @@ namespace WebApiCaracterizacion.Data
             return new PromediosNivelSeguridadTF()
             {
                 municipio = (string)reader["municipio"],
-                porcentaje = (double)reader["porcentaje"]
-                
+                porcentaje = (double)reader["porcentaje"],
+                etiqueta = (string)reader["etiqueta"]
+
             };
         }
 
@@ -66,7 +67,9 @@ namespace WebApiCaracterizacion.Data
         {
             return new PromediosNivelSeguridadTF()
             {
-                porcentaje = (double)reader["porcentaje"]
+                porcentaje = (double)reader["porcentaje"],
+                etiqueta = (string)reader["etiqueta"]
+
             };
 
         }

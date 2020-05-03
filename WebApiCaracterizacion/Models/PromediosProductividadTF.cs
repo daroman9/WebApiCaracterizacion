@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace WebApiCaracterizacion.Models
 {
-    public class PromediosNivelSeguridadTF
+    public class PromediosProductividadTF
     {
         public string municipio { get; set; }
+        public string dato { get; set; }
         public double porcentaje { get; set; }
-        public string etiqueta { get; set; }
     }
 }
