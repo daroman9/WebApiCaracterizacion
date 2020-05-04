@@ -1,33 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using WebApiCaracterizacion.Models;
+using WebApiCaracterizacion.ModelsMineria;
 
-namespace WebApiCaracterizacion.Data
+namespace WebApiCaracterizacion.DataMineria
 {
-    public class PromedioNoOriginarioTFRepository
+    public class PromedioDistribucionGeneroORRepository
     {
         private readonly string _connectionString;
-        public PromedioNoOriginarioTFRepository(IConfiguration configuration)
+        public PromedioDistribucionGeneroORRepository(IConfiguration configuration)
         {
             _connectionString = configuration.GetConnectionString("defaultConnection");
         }
 
-        public async Task<List<PromediosNoOriginariosTF>> GetPromedio(string tipoConsulta, string fechaInicio, string fechaFin)
+        public async Task<List<PromediosDistribicionGenerosOR>> GetPromedio(string tipoConsulta, string fechaInicio, string fechaFin)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("dw.ITF_NoOriginarioRegion", sql))
+                using (SqlCommand cmd = new SqlCommand("dw.IMO_DistribucionGenero", sql))
                 {
                     cmd.Parameters.Add("@tipoConsulta", SqlDbType.VarChar).Value = (object)tipoConsulta ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaInicio", SqlDbType.VarChar).Value = (object)fechaInicio ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaFin", SqlDbType.VarChar).Value = (object)fechaFin ?? DBNull.Value;
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    var response = new List<PromediosNoOriginariosTF>();
+                    var response = new List<PromediosDistribicionGenerosOR>();
                     await sql.OpenAsync();
 
                     using (var reader = await cmd.ExecuteReaderAsync())
@@ -52,21 +51,27 @@ namespace WebApiCaracterizacion.Data
                 }
             }
         }
-        private PromediosNoOriginariosTF MapToValue(SqlDataReader reader)
+        private PromediosDistribicionGenerosOR MapToValue(SqlDataReader reader)
         {
-            return new PromediosNoOriginariosTF()
+            return new PromediosDistribicionGenerosOR()
             {
                 municipio = (string)reader["municipio"],
-                porcentaje = (double)reader["porcentaje"]
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"],
+              
 
             };
         }
 
-        private PromediosNoOriginariosTF MapToValueGeneral(SqlDataReader reader)
+        private PromediosDistribicionGenerosOR MapToValueGeneral(SqlDataReader reader)
         {
-            return new PromediosNoOriginariosTF()
+            return new PromediosDistribicionGenerosOR()
             {
-                porcentaje = (double)reader["porcentaje"]
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"],
+
             };
 
         }

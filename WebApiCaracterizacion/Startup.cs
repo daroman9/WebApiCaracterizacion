@@ -11,6 +11,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using WebApiCaracterizacion.Models;
 using WebApiCaracterizacion.Data;
+using WebApiCaracterizacion.DataMineria;
 
 namespace WebApiCaracterizacion
 {
@@ -63,6 +64,12 @@ namespace WebApiCaracterizacion
             services.AddScoped<PromedioUtilidadTFRepository>();
             services.AddScoped<PromedioProductividadTFRepository>();
             services.AddScoped<PromedioNoOriginarioTFRepository>();
+            services.AddScoped<PromedioVulnerabilidadORRepository>();
+            services.AddScoped<PromedioDistribucionGeneroORRepository>();
+
+
+
+
 
 
             //Fin seccion controladores

@@ -9,25 +9,25 @@ using WebApiCaracterizacion.Models;
 
 namespace WebApiCaracterizacion.Data
 {
-    public class PromedioNoOriginarioTFRepository
+    public class PromedioVulnerabilidadORRepository
     {
         private readonly string _connectionString;
-        public PromedioNoOriginarioTFRepository(IConfiguration configuration)
+        public PromedioVulnerabilidadORRepository(IConfiguration configuration)
         {
             _connectionString = configuration.GetConnectionString("defaultConnection");
         }
 
-        public async Task<List<PromediosNoOriginariosTF>> GetPromedio(string tipoConsulta, string fechaInicio, string fechaFin)
+        public async Task<List<PromediosVulnerabilidadOR>> GetPromedio(string tipoConsulta, string fechaInicio, string fechaFin)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("dw.ITF_NoOriginarioRegion", sql))
+                using (SqlCommand cmd = new SqlCommand("dw.IMO_VulnerabilidadSocioeconomica", sql))
                 {
                     cmd.Parameters.Add("@tipoConsulta", SqlDbType.VarChar).Value = (object)tipoConsulta ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaInicio", SqlDbType.VarChar).Value = (object)fechaInicio ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaFin", SqlDbType.VarChar).Value = (object)fechaFin ?? DBNull.Value;
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    var response = new List<PromediosNoOriginariosTF>();
+                    var response = new List<PromediosVulnerabilidadOR>();
                     await sql.OpenAsync();
 
                     using (var reader = await cmd.ExecuteReaderAsync())
@@ -52,21 +52,24 @@ namespace WebApiCaracterizacion.Data
                 }
             }
         }
-        private PromediosNoOriginariosTF MapToValue(SqlDataReader reader)
+        private PromediosVulnerabilidadOR MapToValue(SqlDataReader reader)
         {
-            return new PromediosNoOriginariosTF()
+            return new PromediosVulnerabilidadOR()
             {
                 municipio = (string)reader["municipio"],
-                porcentaje = (double)reader["porcentaje"]
+                porcentaje = (decimal)reader["porcentaje"],
+                etiqueta = (string)reader["etiqueta"]
 
             };
         }
 
-        private PromediosNoOriginariosTF MapToValueGeneral(SqlDataReader reader)
+        private PromediosVulnerabilidadOR MapToValueGeneral(SqlDataReader reader)
         {
-            return new PromediosNoOriginariosTF()
+            return new PromediosVulnerabilidadOR()
             {
-                porcentaje = (double)reader["porcentaje"]
+                porcentaje = (decimal)reader["porcentaje"],
+                etiqueta = (string)reader["etiqueta"]
+
             };
 
         }
