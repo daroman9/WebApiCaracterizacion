@@ -1,0 +1,28 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using WebApiCaracterizacion.DataMineria;
+using WebApiCaracterizacion.ModelsMineria;
+
+namespace WebApiCaracterizacion.ControllersMineria
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class PromedioBeneficioORController : ControllerBase
+    {
+        private readonly PromedioBeneficiosORRepository _repository;
+
+        public PromedioBeneficioORController(PromedioBeneficiosORRepository repository)
+        {
+            this._repository = repository ?? throw new ArgumentNullException(nameof(repository));
+        }
+
+        [HttpGet]
+
+        public async Task<ActionResult<IEnumerable<PromediosBeneficiosOR>>> GetData([FromQuery]string tipoConsulta, [FromQuery]string fechaInicio, [FromQuery]string fechaFin)
+        {
+            return await _repository.GetPromedio(tipoConsulta, fechaInicio, fechaFin);
+        }
+    }
+}

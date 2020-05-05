@@ -66,11 +66,12 @@ namespace WebApiCaracterizacion
             services.AddScoped<PromedioNoOriginarioTFRepository>();
             services.AddScoped<PromedioVulnerabilidadORRepository>();
             services.AddScoped<PromedioDistribucionGeneroORRepository>();
-
-
-
-
-
+            services.AddScoped<PromedioDependenciaActividadORRepository>();
+            services.AddScoped<PromediosEscolaridadORRepository>();
+            services.AddScoped<PromedioNivelIngresosORRepository>();
+            services.AddScoped<PromedioBeneficiosORRepository>();
+            services.AddScoped<PromedioTipoMineroORRepository>();
+            services.AddScoped<PromedioVariacionORRepository>();
 
             //Fin seccion controladores
             services.AddDbContext<ApplicationDbContext>(options =>

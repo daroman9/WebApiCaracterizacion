@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using WebApiCaracterizacion.Data;
 using WebApiCaracterizacion.Models;
 
@@ -21,7 +18,6 @@ namespace WebApiCaracterizacion.Controllers
             this._repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
 
-        // Petición http para traer el promedio de escolaridades
         [HttpGet]
         public async Task<ActionResult<IEnumerable<PromediosEscolaridad>>> GetData([FromQuery]string tipoConsulta, [FromQuery]string fechaInicio, [FromQuery]string fechaFin)
         {

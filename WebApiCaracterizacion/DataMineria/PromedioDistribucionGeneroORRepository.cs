@@ -58,7 +58,7 @@ namespace WebApiCaracterizacion.DataMineria
                 municipio = (string)reader["municipio"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"],
+                porcentaje = (double)reader["porcentaje"]
               
 
             };
@@ -70,7 +70,7 @@ namespace WebApiCaracterizacion.DataMineria
             {
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"],
+                porcentaje = (double)reader["porcentaje"]
 
             };
 
