@@ -56,7 +56,6 @@ namespace WebApiCaracterizacion.DataMineria
             return new PromediosVariacionOR()
             {
                 municipio = (string)reader["municipio"],
-                tipo = (string)reader["tipo"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
                 porcentaje = (double)reader["porcentaje"]
@@ -69,7 +68,6 @@ namespace WebApiCaracterizacion.DataMineria
         {
             return new PromediosVariacionOR()
             {
-                tipo = (string)reader["tipo"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
                 porcentaje = (double)reader["porcentaje"]

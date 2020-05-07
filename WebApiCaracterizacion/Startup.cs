@@ -12,6 +12,7 @@ using System.Text;
 using WebApiCaracterizacion.Models;
 using WebApiCaracterizacion.Data;
 using WebApiCaracterizacion.DataMineria;
+using WebApiCaracterizacion.DataTransporte;
 
 namespace WebApiCaracterizacion
 {
@@ -72,7 +73,16 @@ namespace WebApiCaracterizacion
             services.AddScoped<PromedioBeneficiosORRepository>();
             services.AddScoped<PromedioTipoMineroORRepository>();
             services.AddScoped<PromedioVariacionORRepository>();
+            services.AddScoped<PromedioArraigoORRepository>();
+            services.AddScoped<PromedioMesesORRepository>();
+            services.AddScoped<PromedioTecnificacionORRepository>();
+            services.AddScoped<PromedioGenerosUsuariosTFRepository>();
+            services.AddScoped<PromedioEdadUsuariosTFRepository>();
+            services.AddScoped<PromedioEscoloridadUsuariosTFRepository>();
+            services.AddScoped<PromedioActividadUsuariosTFRepository>();
 
+
+         
             //Fin seccion controladores
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
