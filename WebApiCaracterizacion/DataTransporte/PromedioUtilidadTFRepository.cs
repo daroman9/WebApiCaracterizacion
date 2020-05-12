@@ -55,16 +55,18 @@ namespace WebApiCaracterizacion.Data
             return new PromediosUtilidadTF()
             {
                 municipio = (string)reader["municipio"],
-                cantidad = (double)reader["cantidad"],
-                etiqueta = (string)reader["etiqueta"]
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
             };
         }
         private PromediosUtilidadTF MapToValueGeneral(SqlDataReader reader)
         {
             return new PromediosUtilidadTF()
             {
-                cantidad = (double)reader["cantidad"],
-                etiqueta = (string)reader["etiqueta"],
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
             };
         }
     }

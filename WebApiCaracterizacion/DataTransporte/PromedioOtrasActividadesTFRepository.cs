@@ -56,17 +56,19 @@ namespace WebApiCaracterizacion.Data
             return new PromediosOtrasActividadesTF()
             {
                 municipio = (string)reader["municipio"],
-                porcentaje = (double)reader["porcentaje"],
-                etiqueta = (string)reader["etiqueta"]
-
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
+             
             };
         }
         private PromediosOtrasActividadesTF MapToValueGeneral(SqlDataReader reader)
         {
             return new PromediosOtrasActividadesTF()
             {
-                porcentaje = (double)reader["porcentaje"],
-                etiqueta = (string)reader["etiqueta"]
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
 
             };
 

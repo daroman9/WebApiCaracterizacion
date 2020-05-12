@@ -20,7 +20,7 @@ namespace WebApiCaracterizacion.Data
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("dw.ITF_OriginarioRegion", sql))
+                using (SqlCommand cmd = new SqlCommand("dw.ITF_OrigenRegion", sql))
                 {
                     cmd.Parameters.Add("@tipoConsulta", SqlDbType.VarChar).Value = (object)tipoConsulta ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaInicio", SqlDbType.VarChar).Value = (object)fechaInicio ?? DBNull.Value;
@@ -56,7 +56,9 @@ namespace WebApiCaracterizacion.Data
             return new PromediosOriginariosTF()
             {
                 municipio = (string)reader["municipio"],
-                porcentaje = (double)reader["porcentaje"],
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
 
             };
         }
@@ -64,6 +66,8 @@ namespace WebApiCaracterizacion.Data
         {
             return new PromediosOriginariosTF()
             {
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
                 porcentaje = (double)reader["porcentaje"]
             };
 

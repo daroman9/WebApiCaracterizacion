@@ -3,7 +3,8 @@
     public class PromediosVulnerabilidadOR
     {
         public string municipio { get; set; }
-        public decimal porcentaje { get; set; }
-        public string etiqueta { get; set; }
+        public string dato { get; set; }
+        public int cantidad { get; set; }
+        public double porcentaje { get; set; }
     }
 }

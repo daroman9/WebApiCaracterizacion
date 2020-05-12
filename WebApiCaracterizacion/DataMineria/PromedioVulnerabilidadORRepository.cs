@@ -57,8 +57,9 @@ namespace WebApiCaracterizacion.Data
             return new PromediosVulnerabilidadOR()
             {
                 municipio = (string)reader["municipio"],
-                porcentaje = (decimal)reader["porcentaje"],
-                etiqueta = (string)reader["etiqueta"]
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
 
             };
         }
@@ -67,8 +68,9 @@ namespace WebApiCaracterizacion.Data
         {
             return new PromediosVulnerabilidadOR()
             {
-                porcentaje = (decimal)reader["porcentaje"],
-                etiqueta = (string)reader["etiqueta"]
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
 
             };
 

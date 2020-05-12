@@ -20,7 +20,7 @@ namespace WebApiCaracterizacion.DataMineria
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("dw.IMO_TrabajadoresPorTipoMinero", sql))
+                using (SqlCommand cmd = new SqlCommand("dw.IMO_DistribucionTipoMinero", sql))
                 {
                     cmd.Parameters.Add("@tipoConsulta", SqlDbType.VarChar).Value = (object)tipoConsulta ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaInicio", SqlDbType.VarChar).Value = (object)fechaInicio ?? DBNull.Value;

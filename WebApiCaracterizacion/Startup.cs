@@ -24,7 +24,7 @@ namespace WebApiCaracterizacion
         }
         readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
-
+            
         public IConfiguration Configuration { get; }
 
    
@@ -50,7 +50,7 @@ namespace WebApiCaracterizacion
             services.AddScoped<PromedioMesesMayorRepository>();
             services.AddScoped<PromedioMesesMenorRepository>();
             services.AddScoped<PromedioActLpRepository>();
-            services.AddScoped<PromedioNivelFormalizacionRepository>();
+            services.AddScoped<PromedioNivelFormalizacionTFRepository>();
             services.AddScoped<PromedioCapacidadCargaTFRepository>();
             services.AddScoped<PromedioUnidadTFRepository>();
             services.AddScoped<PromedioNivelSeguridadTFRepository>();
@@ -63,8 +63,7 @@ namespace WebApiCaracterizacion
             services.AddScoped<PromedioOtrasActividadesTFRepository>();
             services.AddScoped<PromedioVariacionTFRepository>();
             services.AddScoped<PromedioUtilidadTFRepository>();
-            services.AddScoped<PromedioProductividadTFRepository>();
-            services.AddScoped<PromedioNoOriginarioTFRepository>();
+            services.AddScoped<PromedioMasProductividadTFRepository>();
             services.AddScoped<PromedioVulnerabilidadORRepository>();
             services.AddScoped<PromedioDistribucionGeneroORRepository>();
             services.AddScoped<PromedioDependenciaActividadORRepository>();
@@ -80,9 +79,11 @@ namespace WebApiCaracterizacion
             services.AddScoped<PromedioEdadUsuariosTFRepository>();
             services.AddScoped<PromedioEscoloridadUsuariosTFRepository>();
             services.AddScoped<PromedioActividadUsuariosTFRepository>();
+            services.AddScoped<PromedioMenosProductividadTFRepository>();
+            services.AddScoped<PromedioVulnerabilidadTFRepository>();
 
+            
 
-         
             //Fin seccion controladores
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
@@ -140,7 +141,14 @@ namespace WebApiCaracterizacion
             {
                 app.UseHsts();
             }
-            app.UseCors(MyAllowSpecificOrigins);
+
+            app.UseCors(builder =>
+            {
+                builder.WithOrigins("http://localhost:8080");
+                builder.AllowAnyMethod();
+                builder.AllowAnyHeader();
+
+            }); 
             app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseMvc();

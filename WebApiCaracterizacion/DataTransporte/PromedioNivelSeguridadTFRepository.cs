@@ -56,9 +56,10 @@ namespace WebApiCaracterizacion.Data
             return new PromediosNivelSeguridadTF()
             {
                 municipio = (string)reader["municipio"],
-                porcentaje = (double)reader["porcentaje"],
-                etiqueta = (string)reader["etiqueta"]
-
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
+               
             };
         }
 
@@ -66,8 +67,9 @@ namespace WebApiCaracterizacion.Data
         {
             return new PromediosNivelSeguridadTF()
             {
-                porcentaje = (double)reader["porcentaje"],
-                etiqueta = (string)reader["etiqueta"]
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
 
             };
 
