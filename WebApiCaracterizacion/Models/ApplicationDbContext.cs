@@ -20,8 +20,9 @@ namespace WebApiCaracterizacion.Models
         public DbSet<Selector> Selectores { get; set; }
         public DbSet<Tablas_Campo> Tablas_Campos { get; set; }
         public DbSet<Ficha> Ficha { get; set; }
-        public DbSet<WebApiCaracterizacion.Models.Selector_Detail> Selector_Detail { get; set; }
-        public DbSet<WebApiCaracterizacion.Models.Validacion> Validacion { get; set; }
+        public DbSet<Roles> Roles { get; set; }
+        public DbSet<Selector_Detail> Selector_Detail { get; set; }
+        public DbSet<Validacion> Validacion { get; set; }
       
 
     }

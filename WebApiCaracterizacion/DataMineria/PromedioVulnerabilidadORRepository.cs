@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using System.Data;
@@ -17,12 +16,13 @@ namespace WebApiCaracterizacion.Data
             _connectionString = configuration.GetConnectionString("defaultConnection");
         }
 
-        public async Task<List<PromediosVulnerabilidadOR>> GetPromedio(string tipoConsulta, string fechaInicio, string fechaFin)
+        public async Task<List<PromediosVulnerabilidadOR>> GetPromedio(string plantilla, string tipoConsulta, string fechaInicio, string fechaFin)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("dw.IMO_VulnerabilidadSocioeconomica", sql))
+                using (SqlCommand cmd = new SqlCommand("dw.IM_VulnerabilidadSocioeconomica", sql))
                 {
+                    cmd.Parameters.Add("@plantilla", SqlDbType.VarChar).Value = (object)plantilla ?? DBNull.Value;
                     cmd.Parameters.Add("@tipoConsulta", SqlDbType.VarChar).Value = (object)tipoConsulta ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaInicio", SqlDbType.VarChar).Value = (object)fechaInicio ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaFin", SqlDbType.VarChar).Value = (object)fechaFin ?? DBNull.Value;
@@ -36,15 +36,38 @@ namespace WebApiCaracterizacion.Data
                         while (await reader.ReadAsync())
                         {
 
-                            if (tipoConsulta == "general")
+                            if (plantilla == null & tipoConsulta == "general")
                             {
-                                response.Add(MapToValueGeneral(reader));
+                                response.Add(MapToValueNullGeneral(reader));
                             }
-                            else
+                            else if (plantilla == null & tipoConsulta == "municipio")
                             {
-                                response.Add(MapToValue(reader));
+                                response.Add(MapToValueNullMunicipio(reader));
                             }
-
+                            else if (plantilla == "0" & tipoConsulta == "municipio")
+                            {
+                                response.Add(MapToValueCeroMunicipio(reader));
+                            }
+                            else if (plantilla == "0" & tipoConsulta == "general")
+                            {
+                                response.Add(MapToValueCeroGeneral(reader));
+                            }
+                            else if (plantilla == "4" & tipoConsulta == "municipio")
+                            {
+                                response.Add(MapToValueCeroMunicipio(reader));
+                            }
+                            else if (plantilla == "4" & tipoConsulta == "general")
+                            {
+                                response.Add(MapToValueCeroGeneral(reader));
+                            }
+                            else if (plantilla == "5" & tipoConsulta == "municipio")
+                            {
+                                response.Add(MapToValueCeroMunicipio(reader));
+                            }
+                            else if (plantilla == "5" & tipoConsulta == "general")
+                            {
+                                response.Add(MapToValueCeroGeneral(reader));
+                            }
                         }
                     }
 
@@ -52,7 +75,45 @@ namespace WebApiCaracterizacion.Data
                 }
             }
         }
-        private PromediosVulnerabilidadOR MapToValue(SqlDataReader reader)
+        private PromediosVulnerabilidadOR MapToValueCeroMunicipio(SqlDataReader reader)
+        {
+            return new PromediosVulnerabilidadOR()
+            {
+                tipo_plantilla = (string)reader["tipo_plantilla"],
+                municipio = (string)reader["municipio"],
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
+
+
+            };
+        }
+        private PromediosVulnerabilidadOR MapToValueCeroGeneral(SqlDataReader reader)
+        {
+            return new PromediosVulnerabilidadOR()
+            {
+                tipo_plantilla = (string)reader["tipo_plantilla"],
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
+
+
+            };
+        }
+        private PromediosVulnerabilidadOR MapToValueNullGeneral(SqlDataReader reader)
+        {
+            return new PromediosVulnerabilidadOR()
+            {
+
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
+
+
+            };
+        }
+
+        private PromediosVulnerabilidadOR MapToValueNullMunicipio(SqlDataReader reader)
         {
             return new PromediosVulnerabilidadOR()
             {
@@ -61,20 +122,8 @@ namespace WebApiCaracterizacion.Data
                 cantidad = (int)reader["cantidad"],
                 porcentaje = (double)reader["porcentaje"]
 
-            };
-        }
-
-        private PromediosVulnerabilidadOR MapToValueGeneral(SqlDataReader reader)
-        {
-            return new PromediosVulnerabilidadOR()
-            {
-                dato = (string)reader["dato"],
-                cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
 
             };
-
         }
-
     }
 }

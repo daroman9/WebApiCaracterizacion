@@ -16,12 +16,13 @@ namespace WebApiCaracterizacion.DataMineria
             _connectionString = configuration.GetConnectionString("defaultConnection");
         }
 
-        public async Task<List<PromediosTecnificacionOR>> GetPromedio(string tipoConsulta, string fechaInicio, string fechaFin)
+        public async Task<List<PromediosTecnificacionOR>> GetPromedio(string plantilla, string tipoConsulta, string fechaInicio, string fechaFin)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("dw.IMO_DistribucionTecnificacion", sql))
+                using (SqlCommand cmd = new SqlCommand("dw.IM_DistribucionTecnificacion", sql))
                 {
+                    cmd.Parameters.Add("@plantilla", SqlDbType.VarChar).Value = (object)plantilla ?? DBNull.Value;
                     cmd.Parameters.Add("@tipoConsulta", SqlDbType.VarChar).Value = (object)tipoConsulta ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaInicio", SqlDbType.VarChar).Value = (object)fechaInicio ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaFin", SqlDbType.VarChar).Value = (object)fechaFin ?? DBNull.Value;
@@ -35,15 +36,38 @@ namespace WebApiCaracterizacion.DataMineria
                         while (await reader.ReadAsync())
                         {
 
-                            if (tipoConsulta == "general")
+                            if (plantilla == null & tipoConsulta == "general")
                             {
-                                response.Add(MapToValueGeneral(reader));
+                                response.Add(MapToValueNullGeneral(reader));
                             }
-                            else
+                            else if (plantilla == null & tipoConsulta == "municipio")
                             {
-                                response.Add(MapToValue(reader));
+                                response.Add(MapToValueNullMunicipio(reader));
                             }
-
+                            else if (plantilla == "0" & tipoConsulta == "municipio")
+                            {
+                                response.Add(MapToValueCeroMunicipio(reader));
+                            }
+                            else if (plantilla == "0" & tipoConsulta == "general")
+                            {
+                                response.Add(MapToValueCeroGeneral(reader));
+                            }
+                            else if (plantilla == "4" & tipoConsulta == "municipio")
+                            {
+                                response.Add(MapToValueCeroMunicipio(reader));
+                            }
+                            else if (plantilla == "4" & tipoConsulta == "general")
+                            {
+                                response.Add(MapToValueCeroGeneral(reader));
+                            }
+                            else if (plantilla == "5" & tipoConsulta == "municipio")
+                            {
+                                response.Add(MapToValueCeroMunicipio(reader));
+                            }
+                            else if (plantilla == "5" & tipoConsulta == "general")
+                            {
+                                response.Add(MapToValueCeroGeneral(reader));
+                            }
                         }
                     }
 
@@ -51,30 +75,55 @@ namespace WebApiCaracterizacion.DataMineria
                 }
             }
         }
-        private PromediosTecnificacionOR MapToValue(SqlDataReader reader)
+        private PromediosTecnificacionOR MapToValueCeroMunicipio(SqlDataReader reader)
+        {
+            return new PromediosTecnificacionOR()
+            {
+                tipo_plantilla = (string)reader["tipo_plantilla"],
+                municipio = (string)reader["municipio"],
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
+
+
+            };
+        }
+        private PromediosTecnificacionOR MapToValueCeroGeneral(SqlDataReader reader)
+        {
+            return new PromediosTecnificacionOR()
+            {
+                tipo_plantilla = (string)reader["tipo_plantilla"],
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
+
+
+            };
+        }
+        private PromediosTecnificacionOR MapToValueNullGeneral(SqlDataReader reader)
+        {
+            return new PromediosTecnificacionOR()
+            {
+
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
+
+
+            };
+        }
+
+        private PromediosTecnificacionOR MapToValueNullMunicipio(SqlDataReader reader)
         {
             return new PromediosTecnificacionOR()
             {
                 municipio = (string)reader["municipio"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"],
-
-
-            };
-        }
-
-        private PromediosTecnificacionOR MapToValueGeneral(SqlDataReader reader)
-        {
-            return new PromediosTecnificacionOR()
-            {
-                dato = (string)reader["dato"],
-                cantidad = (int)reader["cantidad"],
                 porcentaje = (double)reader["porcentaje"]
 
+
             };
-
         }
-
     }
 }

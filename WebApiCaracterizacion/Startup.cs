@@ -81,8 +81,11 @@ namespace WebApiCaracterizacion
             services.AddScoped<PromedioActividadUsuariosTFRepository>();
             services.AddScoped<PromedioMenosProductividadTFRepository>();
             services.AddScoped<PromedioVulnerabilidadTFRepository>();
-
-            
+            services.AddScoped<PromedioMinimoOroORRepository>();
+            services.AddScoped<PromedioNivelSeguridadORRepository>();
+            services.AddScoped<PromedioIngresoPersonaORRepository>();
+            services.AddScoped<PromedioLegalidadORRepository>();
+            services.AddScoped<PromedioTipoMineriaORRepository>();
 
             //Fin seccion controladores
             services.AddDbContext<ApplicationDbContext>(options =>

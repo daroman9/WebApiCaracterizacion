@@ -518,6 +518,8 @@ namespace WebApiCaracterizacion.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("mensaje");
+
                     b.Property<string>("nombre");
 
                     b.Property<string>("validacion");
