@@ -5,29 +5,28 @@ using Microsoft.Extensions.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using WebApiCaracterizacion.ModelsMineria;
-
 namespace WebApiCaracterizacion.DataMineria
 {
-    public class PromedioArraigoORRepository
+    public class PromedioVolumenExtraccionORRespository
     {
         private readonly string _connectionString;
-        public PromedioArraigoORRepository(IConfiguration configuration)
+        public PromedioVolumenExtraccionORRespository(IConfiguration configuration)
         {
             _connectionString = configuration.GetConnectionString("defaultConnection");
         }
 
-        public async Task<List<PromediosArraigoOR>> GetPromedio(string plantilla, string tipoConsulta, string fechaInicio, string fechaFin)
+        public async Task<List<PromediosVolumenExtraccionOR>> GetPromedio(string plantilla, string tipoConsulta, string fechaInicio, string fechaFin)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("dw.IM_DistribucionArraigo", sql))
+                using (SqlCommand cmd = new SqlCommand("dw.IM_VolumenExtraccion", sql))
                 {
                     cmd.Parameters.Add("@plantilla", SqlDbType.VarChar).Value = (object)plantilla ?? DBNull.Value;
                     cmd.Parameters.Add("@tipoConsulta", SqlDbType.VarChar).Value = (object)tipoConsulta ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaInicio", SqlDbType.VarChar).Value = (object)fechaInicio ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaFin", SqlDbType.VarChar).Value = (object)fechaFin ?? DBNull.Value;
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    var response = new List<PromediosArraigoOR>();
+                    var response = new List<PromediosVolumenExtraccionOR>();
                     await sql.OpenAsync();
 
                     using (var reader = await cmd.ExecuteReaderAsync())
@@ -68,30 +67,6 @@ namespace WebApiCaracterizacion.DataMineria
                             {
                                 response.Add(MapToValueGeneral(reader));
                             }
-                            else if (plantilla == "4" & tipoConsulta == "municipio")
-                            {
-                                response.Add(MapToValueMunicipio(reader));
-                            }
-                            else if (plantilla == "4" & tipoConsulta == "general")
-                            {
-                                response.Add(MapToValueGeneral(reader));
-                            }
-                            else if (plantilla == "41" & tipoConsulta == "municipio")
-                            {
-                                response.Add(MapToValueMunicipio(reader));
-                            }
-                            else if (plantilla == "41" & tipoConsulta == "general")
-                            {
-                                response.Add(MapToValueGeneral(reader));
-                            }
-                            else if (plantilla == "42" & tipoConsulta == "municipio")
-                            {
-                                response.Add(MapToValueMunicipio(reader));
-                            }
-                            else if (plantilla == "42" & tipoConsulta == "general")
-                            {
-                                response.Add(MapToValueGeneral(reader));
-                            }
                             else if (plantilla == "5" & tipoConsulta == "municipio")
                             {
                                 response.Add(MapToValueMunicipio(reader));
@@ -108,52 +83,40 @@ namespace WebApiCaracterizacion.DataMineria
             }
         }
 
-        private PromediosArraigoOR MapToValueNullGeneral(SqlDataReader reader)
+        private PromediosVolumenExtraccionOR MapToValueNullGeneral(SqlDataReader reader)
         {
-            return new PromediosArraigoOR()
+            return new PromediosVolumenExtraccionOR()
             {
-
-                dato = (string)reader["dato"],
-                cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
-
-
+                promedio = (double)reader["promedio"]
             };
         }
-       
-        private PromediosArraigoOR MapToValueNullMunicipio(SqlDataReader reader)
+
+        private PromediosVolumenExtraccionOR MapToValueNullMunicipio(SqlDataReader reader)
         {
-            return new PromediosArraigoOR()
+            return new PromediosVolumenExtraccionOR()
             {
                 municipio = (string)reader["municipio"],
-                dato = (string)reader["dato"],
-                cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                promedio = (double)reader["promedio"]
             };
         }
 
-        private PromediosArraigoOR MapToValueMunicipio(SqlDataReader reader)
+        private PromediosVolumenExtraccionOR MapToValueMunicipio(SqlDataReader reader)
         {
-            return new PromediosArraigoOR()
+            return new PromediosVolumenExtraccionOR()
             {
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 municipio = (string)reader["municipio"],
-                dato = (string)reader["dato"],
-                cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                promedio = (double)reader["promedio"]
             };
         }
 
-        private PromediosArraigoOR MapToValueGeneral(SqlDataReader reader)
+        private PromediosVolumenExtraccionOR MapToValueGeneral(SqlDataReader reader)
         {
-            return new PromediosArraigoOR()
+            return new PromediosVolumenExtraccionOR()
             {
                 tipo_plantilla = (string)reader["tipo_plantilla"],
-                dato = (string)reader["dato"],
-                cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                promedio = (double)reader["promedio"]
             };
         }
-
     }
 }

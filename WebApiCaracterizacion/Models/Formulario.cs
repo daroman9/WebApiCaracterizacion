@@ -7,11 +7,16 @@ namespace caracterizacion.Models
 {
     public class Formulario
     {
-        //Campos que comforman la tabla
+  
         public int id { get; set; }
         public DateTime? fecha_inicio { get; set; }
         public DateTime? fecha_fin { get; set; }
         public string nombreCampaña { get; set;}
+        public string objetivo { get; set; }
+        public string descripcion { get; set; }
+        public string lider { get; set; }
+        public string emailLider { get; set; }
+        public string telefonoLider { get; set; }
 
         //Clave foranea para relacionar la tabla formularios con la tabla plantillas
         [ForeignKey("Plantilla")]

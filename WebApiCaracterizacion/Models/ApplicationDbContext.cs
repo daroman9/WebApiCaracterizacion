@@ -21,6 +21,11 @@ namespace WebApiCaracterizacion.Models
         public DbSet<Tablas_Campo> Tablas_Campos { get; set; }
         public DbSet<Ficha> Ficha { get; set; }
         public DbSet<Roles> Roles { get; set; }
+        public DbSet<PermisosRol> PermisosRol { get; set; }
+        public DbSet<EntidadesXCampana> EntidadesXCampana { get; set; }
+        public DbSet<Entidad> Entidad { get; set; }
+        public DbSet<Permisos> Permisos { get; set; }
+        public DbSet<Profesionales> Profesionales { get; set; }
         public DbSet<Selector_Detail> Selector_Detail { get; set; }
         public DbSet<Validacion> Validacion { get; set; }
       

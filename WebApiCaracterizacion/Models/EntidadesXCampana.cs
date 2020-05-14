@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace WebApiCaracterizacion.Models
 {
-    public class Roles
+    public class EntidadesXCampana
     {
         public int id { get; set; }
-        public string rol { get; set; }
+        public string contrato { get; set; }
     }
 }

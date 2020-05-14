@@ -44,29 +44,53 @@ namespace WebApiCaracterizacion.DataMineria
                             {
                                 response.Add(MapToValueNullMunicipio(reader));
                             }
-                            else if (plantilla == "0" & tipoConsulta == "municipio")
+                            else if (plantilla == "10" & tipoConsulta == "municipio")
                             {
-                                response.Add(MapToValueCeroMunicipio(reader));
+                                response.Add(MapToValueMunicipio(reader));
                             }
-                            else if (plantilla == "0" & tipoConsulta == "general")
+                            else if (plantilla == "10" & tipoConsulta == "general")
                             {
-                                response.Add(MapToValueCeroGeneral(reader));
+                                response.Add(MapToValueGeneral(reader));
+                            }
+                            else if (plantilla == "101" & tipoConsulta == "municipio")
+                            {
+                                response.Add(MapToValueMunicipio(reader));
+                            }
+                            else if (plantilla == "101" & tipoConsulta == "general")
+                            {
+                                response.Add(MapToValueGeneral(reader));
+                            }
+                            else if (plantilla == "102" & tipoConsulta == "municipio")
+                            {
+                                response.Add(MapToValueMunicipio(reader));
+                            }
+                            else if (plantilla == "102" & tipoConsulta == "general")
+                            {
+                                response.Add(MapToValueGeneral(reader));
                             }
                             else if (plantilla == "4" & tipoConsulta == "municipio")
                             {
-                                response.Add(MapToValueCeroMunicipio(reader));
+                                response.Add(MapToValueMunicipio(reader));
                             }
                             else if (plantilla == "4" & tipoConsulta == "general")
                             {
-                                response.Add(MapToValueCeroGeneral(reader));
+                                response.Add(MapToValueGeneral(reader));
                             }
-                            else if (plantilla == "5" & tipoConsulta == "municipio")
+                            else if (plantilla == "41" & tipoConsulta == "municipio")
                             {
-                                response.Add(MapToValueCeroMunicipio(reader));
+                                response.Add(MapToValueMunicipio(reader));
                             }
-                            else if (plantilla == "5" & tipoConsulta == "general")
+                            else if (plantilla == "41" & tipoConsulta == "general")
                             {
-                                response.Add(MapToValueCeroGeneral(reader));
+                                response.Add(MapToValueGeneral(reader));
+                            }
+                            else if (plantilla == "42" & tipoConsulta == "municipio")
+                            {
+                                response.Add(MapToValueMunicipio(reader));
+                            }
+                            else if (plantilla == "42" & tipoConsulta == "general")
+                            {
+                                response.Add(MapToValueGeneral(reader));
                             }
                         }
                     }
@@ -75,22 +99,7 @@ namespace WebApiCaracterizacion.DataMineria
                 }
             }
         }
-        private PromediosMinimoOroOR MapToValueCeroMunicipio(SqlDataReader reader)
-        {
-            return new PromediosMinimoOroOR()
-            {
-                tipo_plantilla = (string)reader["tipo_plantilla"],
-                municipio = (string)reader["municipio"],
-                promedio = (decimal)reader["promedio"]
-            };
-        }
-        private PromediosMinimoOroOR MapToValueCeroGeneral(SqlDataReader reader)
-        {
-            return new PromediosMinimoOroOR()
-            {
-                tipo_plantilla = (string)reader["tipo_plantilla"]
-            };
-        }
+
         private PromediosMinimoOroOR MapToValueNullGeneral(SqlDataReader reader)
         {
             return new PromediosMinimoOroOR()
@@ -107,5 +116,26 @@ namespace WebApiCaracterizacion.DataMineria
                 promedio = (decimal)reader["promedio"]
             };
         }
+
+        private PromediosMinimoOroOR MapToValueMunicipio(SqlDataReader reader)
+        {
+            return new PromediosMinimoOroOR()
+            {
+                tipo_plantilla = (string)reader["tipo_plantilla"],
+                municipio = (string)reader["municipio"],
+                promedio = (decimal)reader["promedio"]
+            };
+        }
+
+        private PromediosMinimoOroOR MapToValueGeneral(SqlDataReader reader)
+        {
+            return new PromediosMinimoOroOR()
+            {
+                tipo_plantilla = (string)reader["tipo_plantilla"],
+                promedio = (decimal)reader["promedio"]
+            };
+        }
+
     }
 }
+

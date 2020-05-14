@@ -36,37 +36,69 @@ namespace WebApiCaracterizacion.DataMineria
                         while (await reader.ReadAsync())
                         {
 
-                            if(plantilla == null & tipoConsulta == "general" )
+                            if (plantilla == null & tipoConsulta == "general")
                             {
                                 response.Add(MapToValueNullGeneral(reader));
                             }
-                            else if (plantilla == null & tipoConsulta =="municipio")
+                            else if (plantilla == null & tipoConsulta == "municipio")
                             {
                                 response.Add(MapToValueNullMunicipio(reader));
                             }
-                            else if(plantilla == "0" & tipoConsulta == "municipio")
+                            else if (plantilla == "10" & tipoConsulta == "municipio")
                             {
-                                response.Add(MapToValueCeroMunicipio(reader));
+                                response.Add(MapToValueMunicipio(reader));
                             }
-                            else if (plantilla=="0" & tipoConsulta=="general")
+                            else if (plantilla == "10" & tipoConsulta == "general")
                             {
-                                response.Add(MapToValueCeroGeneral(reader));
+                                response.Add(MapToValueGeneral(reader));
+                            }
+                            else if (plantilla == "101" & tipoConsulta == "municipio")
+                            {
+                                response.Add(MapToValueMunicipio(reader));
+                            }
+                            else if (plantilla == "101" & tipoConsulta == "general")
+                            {
+                                response.Add(MapToValueGeneral(reader));
+                            }
+                            else if (plantilla == "102" & tipoConsulta == "municipio")
+                            {
+                                response.Add(MapToValueMunicipio(reader));
+                            }
+                            else if (plantilla == "102" & tipoConsulta == "general")
+                            {
+                                response.Add(MapToValueGeneral(reader));
                             }
                             else if (plantilla == "4" & tipoConsulta == "municipio")
                             {
-                                response.Add(MapToValueCeroMunicipio(reader));
+                                response.Add(MapToValueMunicipio(reader));
                             }
                             else if (plantilla == "4" & tipoConsulta == "general")
                             {
-                                response.Add(MapToValueCeroGeneral(reader));
+                                response.Add(MapToValueGeneral(reader));
+                            }
+                            else if (plantilla == "41" & tipoConsulta == "municipio")
+                            {
+                                response.Add(MapToValueMunicipio(reader));
+                            }
+                            else if (plantilla == "41" & tipoConsulta == "general")
+                            {
+                                response.Add(MapToValueGeneral(reader));
+                            }
+                            else if (plantilla == "42" & tipoConsulta == "municipio")
+                            {
+                                response.Add(MapToValueMunicipio(reader));
+                            }
+                            else if (plantilla == "42" & tipoConsulta == "general")
+                            {
+                                response.Add(MapToValueGeneral(reader));
                             }
                             else if (plantilla == "5" & tipoConsulta == "municipio")
                             {
-                                response.Add(MapToValueCeroMunicipio(reader));
+                                response.Add(MapToValueMunicipio(reader));
                             }
                             else if (plantilla == "5" & tipoConsulta == "general")
                             {
-                                response.Add(MapToValueCeroGeneral(reader));
+                                response.Add(MapToValueGeneral(reader));
                             }
                         }
                     }
@@ -75,36 +107,12 @@ namespace WebApiCaracterizacion.DataMineria
                 }
             }
         }
-        private PromediosDistribicionGenerosOR MapToValueCeroMunicipio(SqlDataReader reader)
-        {
-            return new PromediosDistribicionGenerosOR()
-            {
-                tipo_plantilla = (string)reader["tipo_plantilla"],
-                municipio = (string)reader["municipio"],
-                dato = (string)reader["dato"],
-                cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
 
-
-            };
-        }
-        private PromediosDistribicionGenerosOR MapToValueCeroGeneral(SqlDataReader reader)
-        {
-            return new PromediosDistribicionGenerosOR()
-            {
-                tipo_plantilla = (string)reader["tipo_plantilla"],
-                dato = (string)reader["dato"],
-                cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
-
-
-            };
-        }
         private PromediosDistribicionGenerosOR MapToValueNullGeneral(SqlDataReader reader)
         {
             return new PromediosDistribicionGenerosOR()
             {
-         
+
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
                 porcentaje = (double)reader["porcentaje"]
@@ -112,7 +120,7 @@ namespace WebApiCaracterizacion.DataMineria
 
             };
         }
-      
+
         private PromediosDistribicionGenerosOR MapToValueNullMunicipio(SqlDataReader reader)
         {
             return new PromediosDistribicionGenerosOR()
@@ -121,9 +129,31 @@ namespace WebApiCaracterizacion.DataMineria
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
                 porcentaje = (double)reader["porcentaje"]
-              
-
             };
         }
+
+        private PromediosDistribicionGenerosOR MapToValueMunicipio(SqlDataReader reader)
+        {
+            return new PromediosDistribicionGenerosOR()
+            {
+                tipo_plantilla = (string)reader["tipo_plantilla"],
+                municipio = (string)reader["municipio"],
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
+            };
+        }
+
+        private PromediosDistribicionGenerosOR MapToValueGeneral(SqlDataReader reader)
+        {
+            return new PromediosDistribicionGenerosOR()
+            {
+                tipo_plantilla = (string)reader["tipo_plantilla"],
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
+            };
+        }
+
     }
 }

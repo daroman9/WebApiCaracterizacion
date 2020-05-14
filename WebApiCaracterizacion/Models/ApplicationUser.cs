@@ -14,10 +14,5 @@ namespace WebApiCaracterizacion.Models
         public int Documento { get; set; }
         public string Password { get; set; }
 
-        //Clave foranea para relacionar la tabla categorias con la tabla plantillas
-        [ForeignKey("Roles")]
-        public int id_rol { get; set; }
-        [JsonIgnore]
-        public Roles roles { get; set; }
     }
 }
