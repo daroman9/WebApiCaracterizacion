@@ -16,7 +16,7 @@ namespace WebApiCaracterizacion.Models
         [ForeignKey("ApplicationUser")]
         public string id_usuario { get; set; }
         [JsonIgnore]
-        public ApplicationUser applicationUser { get; set; }
+        public ApplicationUser ApplicationUser { get; set; }
         [ForeignKey("Formulario")]
         public int id_formulario { get; set; }
         [JsonIgnore]

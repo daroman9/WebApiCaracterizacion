@@ -21,6 +21,6 @@ namespace caracterizacion.Models
         [ForeignKey("Plantilla")]
         public int id_plantilla { get; set; }
         [JsonIgnore]
-        public Plantilla plantilla { get; set; }
+        public Plantilla Plantilla { get; set; }
     }
 }

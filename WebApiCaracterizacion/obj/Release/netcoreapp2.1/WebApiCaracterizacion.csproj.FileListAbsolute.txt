@@ -6,7 +6,6 @@ C:\Users\15cx0001\source\repos\WebApiCaracterizacion\WebApiCaracterizacion\bin\R
 C:\Users\15cx0001\source\repos\WebApiCaracterizacion\WebApiCaracterizacion\bin\Release\netcoreapp2.1\WebApiCaracterizacion.runtimeconfig.dev.json
 C:\Users\15cx0001\source\repos\WebApiCaracterizacion\WebApiCaracterizacion\bin\Release\netcoreapp2.1\WebApiCaracterizacion.dll
 C:\Users\15cx0001\source\repos\WebApiCaracterizacion\WebApiCaracterizacion\bin\Release\netcoreapp2.1\WebApiCaracterizacion.pdb
-C:\Users\15cx0001\source\repos\WebApiCaracterizacion\WebApiCaracterizacion\obj\Release\netcoreapp2.1\WebApiCaracterizacion.csprojAssemblyReference.cache
 C:\Users\15cx0001\source\repos\WebApiCaracterizacion\WebApiCaracterizacion\obj\Release\netcoreapp2.1\WebApiCaracterizacion.RazorAssemblyInfo.cache
 C:\Users\15cx0001\source\repos\WebApiCaracterizacion\WebApiCaracterizacion\obj\Release\netcoreapp2.1\WebApiCaracterizacion.RazorAssemblyInfo.cs
 C:\Users\15cx0001\source\repos\WebApiCaracterizacion\WebApiCaracterizacion\obj\Release\netcoreapp2.1\WebApiCaracterizacion.AssemblyInfoInputs.cache

@@ -26,7 +26,7 @@ namespace WebApiCaracterizacion.Controllers
         [HttpGet]
         public IEnumerable<Formulario> GetFormularios()
         {
-            return _context.Formularios;
+            return _context.Formulario;
         }
 
         // GET: api/Formularios/5
@@ -38,7 +38,7 @@ namespace WebApiCaracterizacion.Controllers
                 return BadRequest(ModelState);
             }
 
-            var formulario = await _context.Formularios.FindAsync(id);
+            var formulario = await _context.Formulario.FindAsync(id);
 
             if (formulario == null)
             {
@@ -55,7 +55,7 @@ namespace WebApiCaracterizacion.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var formulario = _context.Formularios.Where(x => x.id_usuario == id_usuario).ToList();
+            var formulario = _context.Formulario.Where(x => x.id_usuario == id_usuario).ToList();
             if (formulario == null)
             {
                 return NotFound();
@@ -71,7 +71,7 @@ namespace WebApiCaracterizacion.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var formulario = _context.Formularios.Where(x => x.id_plantilla == id_plantilla).ToList();
+            var formulario = _context.Formulario.Where(x => x.id_plantilla == id_plantilla).ToList();
             if (formulario == null)
             {
                 return NotFound();
@@ -102,7 +102,7 @@ namespace WebApiCaracterizacion.Controllers
                 return BadRequest(ModelState);
             }
 
-            _context.Formularios.Add(formulario);
+            _context.Formulario.Add(formulario);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetFormulario", new { id = formulario.id }, formulario);
@@ -117,13 +117,13 @@ namespace WebApiCaracterizacion.Controllers
                 return BadRequest(ModelState);
             }
 
-            var formulario = await _context.Formularios.FindAsync(id);
+            var formulario = await _context.Formulario.FindAsync(id);
             if (formulario == null)
             {
                 return NotFound();
             }
 
-            _context.Formularios.Remove(formulario);
+            _context.Formulario.Remove(formulario);
             await _context.SaveChangesAsync();
 
             return Ok(formulario);
@@ -131,7 +131,7 @@ namespace WebApiCaracterizacion.Controllers
 
         private bool FormularioExists(int id)
         {
-            return _context.Formularios.Any(e => e.id == id);
+            return _context.Formulario.Any(e => e.id == id);
         }
     }
 }

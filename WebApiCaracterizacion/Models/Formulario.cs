@@ -27,6 +27,6 @@ namespace caracterizacion.Models
         [ForeignKey("ApplicationUser")]
         public string id_usuario { get; set; }
         [JsonIgnore]
-        public ApplicationUser applicationUser { get; set; }
+        public ApplicationUser ApplicationUser { get; set; }
     }
 }
