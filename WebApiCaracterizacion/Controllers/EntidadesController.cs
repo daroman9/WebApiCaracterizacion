@@ -11,11 +11,11 @@ namespace WebApiCaracterizacion.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EntidadsController : ControllerBase
+    public class EntidadesController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
 
-        public EntidadsController(ApplicationDbContext context)
+        public EntidadesController(ApplicationDbContext context)
         {
             _context = context;
         }

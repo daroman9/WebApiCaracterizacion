@@ -27,7 +27,7 @@ namespace WebApiCaracterizacion.Controllers
         [HttpGet]
         public IEnumerable<Plantilla> GetPlantillas()
         {
-            return _context.Plantilla;
+            return _context.Plantillas;
         }
 
         // GET: api/Plantillas/5
@@ -39,7 +39,7 @@ namespace WebApiCaracterizacion.Controllers
                 return BadRequest(ModelState);
             }
 
-            var plantilla = await _context.Plantilla.FindAsync(id);
+            var plantilla = await _context.Plantillas.FindAsync(id);
 
             if (plantilla == null)
             {
@@ -71,7 +71,7 @@ namespace WebApiCaracterizacion.Controllers
                 return BadRequest(ModelState);
             }
 
-            _context.Plantilla.Add(plantilla);
+            _context.Plantillas.Add(plantilla);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetPlantilla", new { id = plantilla.id }, plantilla);
@@ -86,13 +86,13 @@ namespace WebApiCaracterizacion.Controllers
                 return BadRequest(ModelState);
             }
 
-            var plantilla = await _context.Plantilla.FindAsync(id);
+            var plantilla = await _context.Plantillas.FindAsync(id);
             if (plantilla == null)
             {
                 return NotFound();
             }
 
-            _context.Plantilla.Remove(plantilla);
+            _context.Plantillas.Remove(plantilla);
             await _context.SaveChangesAsync();
 
             return Ok(plantilla);
@@ -100,7 +100,7 @@ namespace WebApiCaracterizacion.Controllers
 
         private bool PlantillaExists(int id)
         {
-            return _context.Plantilla.Any(e => e.id == id);
+            return _context.Plantillas.Any(e => e.id == id);
         }
     }
 }

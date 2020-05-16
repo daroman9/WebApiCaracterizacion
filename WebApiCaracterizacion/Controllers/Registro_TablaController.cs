@@ -25,7 +25,7 @@ namespace WebApiCaracterizacion.Controllers
         [HttpGet]
         public IEnumerable<Registro_Tabla> GetRegistros_Tablas()
         {
-            return _context.Registros_Tabla;
+            return _context.Registros_Tablas;
         }
 
         // GET: api/Registro_Tabla/5
@@ -37,7 +37,7 @@ namespace WebApiCaracterizacion.Controllers
                 return BadRequest(ModelState);
             }
 
-            var registro_Tabla = await _context.Registros_Tabla.FindAsync(id);
+            var registro_Tabla = await _context.Registros_Tablas.FindAsync(id);
 
             if (registro_Tabla == null)
             {
@@ -67,7 +67,7 @@ namespace WebApiCaracterizacion.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var registro = _context.Registros_Tabla.Where(x => x.id_ficha == id_ficha).ToList();
+            var registro = _context.Registros_Tablas.Where(x => x.id_ficha == id_ficha).ToList();
             if (registro == null)
             {
                 return NotFound();
@@ -84,7 +84,7 @@ namespace WebApiCaracterizacion.Controllers
                 return BadRequest(ModelState);
             }
 
-            _context.Registros_Tabla.Add(registro_Tabla);
+            _context.Registros_Tablas.Add(registro_Tabla);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetRegistro_Tabla", new { id = registro_Tabla.id }, registro_Tabla);
@@ -99,13 +99,13 @@ namespace WebApiCaracterizacion.Controllers
                 return BadRequest(ModelState);
             }
 
-            var registro_Tabla = await _context.Registros_Tabla.FindAsync(id);
+            var registro_Tabla = await _context.Registros_Tablas.FindAsync(id);
             if (registro_Tabla == null)
             {
                 return NotFound();
             }
 
-            _context.Registros_Tabla.Remove(registro_Tabla);
+            _context.Registros_Tablas.Remove(registro_Tabla);
             await _context.SaveChangesAsync();
 
             return Ok(registro_Tabla);
@@ -113,7 +113,7 @@ namespace WebApiCaracterizacion.Controllers
 
         private bool Registro_TablaExists(int id)
         {
-            return _context.Registros_Tabla.Any(e => e.id == id);
+            return _context.Registros_Tablas.Any(e => e.id == id);
         }
     }
 }

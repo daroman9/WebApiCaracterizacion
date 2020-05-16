@@ -26,7 +26,7 @@ namespace WebApiCaracterizacion.Controllers
         [HttpGet]
         public IEnumerable<Categoria> GetCategorias()
         {
-            return _context.Categoria;
+            return _context.Categorias;
         }
 
         // GET: api/Categorias/5
@@ -38,7 +38,7 @@ namespace WebApiCaracterizacion.Controllers
                 return BadRequest(ModelState);
             }
 
-            var categoria = await _context.Categoria.FindAsync(id);
+            var categoria = await _context.Categorias.FindAsync(id);
 
             if (categoria == null)
             {
@@ -56,7 +56,7 @@ namespace WebApiCaracterizacion.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var categoria = _context.Categoria.Where(x => x.id_plantilla == id_plantilla).ToList();
+            var categoria = _context.Categorias.Where(x => x.id_plantilla == id_plantilla).ToList();
             if (categoria == null)
             {
                 return NotFound();
@@ -85,7 +85,7 @@ namespace WebApiCaracterizacion.Controllers
                 return BadRequest(ModelState);
             }
 
-            _context.Categoria.Add(categoria);
+            _context.Categorias.Add(categoria);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetCategoria", new { id = categoria.id }, categoria);
@@ -100,13 +100,13 @@ namespace WebApiCaracterizacion.Controllers
                 return BadRequest(ModelState);
             }
 
-            var categoria = await _context.Categoria.FindAsync(id);
+            var categoria = await _context.Categorias.FindAsync(id);
             if (categoria == null)
             {
                 return NotFound();
             }
 
-            _context.Categoria.Remove(categoria);
+            _context.Categorias.Remove(categoria);
             await _context.SaveChangesAsync();
 
             return Ok(categoria);
@@ -114,7 +114,7 @@ namespace WebApiCaracterizacion.Controllers
 
         private bool CategoriaExists(int id)
         {
-            return _context.Categoria.Any(e => e.id == id);
+            return _context.Categorias.Any(e => e.id == id);
         }
     }
 }

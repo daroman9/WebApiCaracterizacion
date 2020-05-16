@@ -11,14 +11,14 @@ namespace WebApiCaracterizacion.Models
         {
 
         }
-        public DbSet<Categoria> Categoria { get; set; }
-        public DbSet<Campo> Campo { get; set; }
-        public DbSet<Formulario> Formulario { get; set; }
-        public DbSet<Plantilla> Plantilla { get; set; }
-        public DbSet<Registro> Registro { get; set; }
-        public DbSet<Registro_Tabla> Registros_Tabla { get; set; }
-        public DbSet<Selector> Selector { get; set; }
-        public DbSet<Tablas_Campo> Tablas_Campo { get; set; }
+        public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Campo> Campos { get; set; }
+        public DbSet<Formulario> Formularios { get; set; }
+        public DbSet<Plantilla> Plantillas { get; set; }
+        public DbSet<Registro> Registros { get; set; }
+        public DbSet<Registro_Tabla> Registros_Tablas { get; set; }
+        public DbSet<Selector> Selectores { get; set; }
+        public DbSet<Tablas_Campo> Tablas_Campos { get; set; }
         public DbSet<Ficha> Ficha { get; set; }
         public DbSet<EntidadesXCampana> EntidadesXCampana { get; set; }
         public DbSet<Entidad> Entidad { get; set; }

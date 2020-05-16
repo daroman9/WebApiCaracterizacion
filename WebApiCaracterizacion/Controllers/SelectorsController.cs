@@ -25,7 +25,7 @@ namespace WebApiCaracterizacion.Controllers
         [HttpGet]
         public IEnumerable<Selector> GetSelectores()
         {
-            return _context.Selector;
+            return _context.Selectores;
         }
 
         // GET: api/Selectors/5
@@ -37,7 +37,7 @@ namespace WebApiCaracterizacion.Controllers
                 return BadRequest(ModelState);
             }
 
-            var selector = await _context.Selector.FindAsync(id);
+            var selector = await _context.Selectores.FindAsync(id);
 
             if (selector == null)
             {
@@ -69,7 +69,7 @@ namespace WebApiCaracterizacion.Controllers
                 return BadRequest(ModelState);
             }
 
-            _context.Selector.Add(selector);
+            _context.Selectores.Add(selector);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetSelector", new { id = selector.id }, selector);
@@ -84,13 +84,13 @@ namespace WebApiCaracterizacion.Controllers
                 return BadRequest(ModelState);
             }
 
-            var selector = await _context.Selector.FindAsync(id);
+            var selector = await _context.Selectores.FindAsync(id);
             if (selector == null)
             {
                 return NotFound();
             }
 
-            _context.Selector.Remove(selector);
+            _context.Selectores.Remove(selector);
             await _context.SaveChangesAsync();
 
             return Ok(selector);
@@ -98,7 +98,7 @@ namespace WebApiCaracterizacion.Controllers
 
         private bool SelectorExists(int id)
         {
-            return _context.Selector.Any(e => e.id == id);
+            return _context.Selectores.Any(e => e.id == id);
         }
     }
 }

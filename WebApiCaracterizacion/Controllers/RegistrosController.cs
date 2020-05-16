@@ -25,7 +25,7 @@ namespace WebApiCaracterizacion.Controllers
         [HttpGet]
         public IEnumerable<Registro> GetRegistros()
         {
-            return _context.Registro;
+            return _context.Registros;
         }
 
         // GET: api/Registros/5
@@ -37,7 +37,7 @@ namespace WebApiCaracterizacion.Controllers
                 return BadRequest(ModelState);
             }
 
-            var registro = await _context.Registro.FindAsync(id);
+            var registro = await _context.Registros.FindAsync(id);
 
             if (registro == null)
             {
@@ -54,7 +54,7 @@ namespace WebApiCaracterizacion.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var registro = _context.Registro.Where(x => x.id_ficha == id_ficha).ToList();
+            var registro = _context.Registros.Where(x => x.id_ficha == id_ficha).ToList();
             if (registro == null)
             {
                 return NotFound();
@@ -85,7 +85,7 @@ namespace WebApiCaracterizacion.Controllers
                 return BadRequest(ModelState);
             }
 
-            _context.Registro.Add(registro);
+            _context.Registros.Add(registro);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetRegistro", new { id = registro.id }, registro);
@@ -100,13 +100,13 @@ namespace WebApiCaracterizacion.Controllers
                 return BadRequest(ModelState);
             }
 
-            var registro = await _context.Registro.FindAsync(id);
+            var registro = await _context.Registros.FindAsync(id);
             if (registro == null)
             {
                 return NotFound();
             }
 
-            _context.Registro.Remove(registro);
+            _context.Registros.Remove(registro);
             await _context.SaveChangesAsync();
 
             return Ok(registro);
@@ -114,7 +114,7 @@ namespace WebApiCaracterizacion.Controllers
 
         private bool RegistroExists(int id)
         {
-            return _context.Registro.Any(e => e.id == id);
+            return _context.Registros.Any(e => e.id == id);
         }
     }
 }

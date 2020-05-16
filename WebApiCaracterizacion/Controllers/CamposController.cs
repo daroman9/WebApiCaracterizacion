@@ -26,7 +26,7 @@ namespace WebApiCaracterizacion.Controllers
         [HttpGet]
         public IEnumerable<Campo> GetCampos()
         {
-            return _context.Campo;
+            return _context.Campos;
         }
 
         // GET: api/Campos/5
@@ -38,7 +38,7 @@ namespace WebApiCaracterizacion.Controllers
                 return BadRequest(ModelState);
             }
 
-            var campo = await _context.Campo.FindAsync(id);
+            var campo = await _context.Campos.FindAsync(id);
 
             if (campo == null)
             {
@@ -56,7 +56,7 @@ namespace WebApiCaracterizacion.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var campo = _context.Campo.Where(x => x.id_plantilla == id_plantilla).ToList();
+            var campo = _context.Campos.Where(x => x.id_plantilla == id_plantilla).ToList();
             if (campo == null)
             {
                 return NotFound();
@@ -85,7 +85,7 @@ namespace WebApiCaracterizacion.Controllers
                 return BadRequest(ModelState);
             }
 
-            _context.Campo.Add(campo);
+            _context.Campos.Add(campo);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetCampo", new { id = campo.id }, campo);
@@ -100,13 +100,13 @@ namespace WebApiCaracterizacion.Controllers
                 return BadRequest(ModelState);
             }
 
-            var campo = await _context.Campo.FindAsync(id);
+            var campo = await _context.Campos.FindAsync(id);
             if (campo == null)
             {
                 return NotFound();
             }
 
-            _context.Campo.Remove(campo);
+            _context.Campos.Remove(campo);
             await _context.SaveChangesAsync();
 
             return Ok(campo);
@@ -114,7 +114,7 @@ namespace WebApiCaracterizacion.Controllers
 
         private bool CampoExists(int id)
         {
-            return _context.Campo.Any(e => e.id == id);
+            return _context.Campos.Any(e => e.id == id);
         }
     }
 }

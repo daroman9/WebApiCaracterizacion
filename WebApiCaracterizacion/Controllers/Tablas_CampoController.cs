@@ -25,7 +25,7 @@ namespace WebApiCaracterizacion.Controllers
         [HttpGet]
         public IEnumerable<Tablas_Campo> GetTablas_Campos()
         {
-            return _context.Tablas_Campo;
+            return _context.Tablas_Campos;
         }
 
         // GET: api/Tablas_Campo/5
@@ -37,7 +37,7 @@ namespace WebApiCaracterizacion.Controllers
                 return BadRequest(ModelState);
             }
 
-            var tablas_Campo = await _context.Tablas_Campo.FindAsync(id);
+            var tablas_Campo = await _context.Tablas_Campos.FindAsync(id);
 
             if (tablas_Campo == null)
             {
@@ -69,7 +69,7 @@ namespace WebApiCaracterizacion.Controllers
                 return BadRequest(ModelState);
             }
 
-            _context.Tablas_Campo.Add(tablas_Campo);
+            _context.Tablas_Campos.Add(tablas_Campo);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetTablas_Campo", new { id = tablas_Campo.id }, tablas_Campo);
@@ -84,13 +84,13 @@ namespace WebApiCaracterizacion.Controllers
                 return BadRequest(ModelState);
             }
 
-            var tablas_Campo = await _context.Tablas_Campo.FindAsync(id);
+            var tablas_Campo = await _context.Tablas_Campos.FindAsync(id);
             if (tablas_Campo == null)
             {
                 return NotFound();
             }
 
-            _context.Tablas_Campo.Remove(tablas_Campo);
+            _context.Tablas_Campos.Remove(tablas_Campo);
             await _context.SaveChangesAsync();
 
             return Ok(tablas_Campo);
@@ -98,7 +98,7 @@ namespace WebApiCaracterizacion.Controllers
 
         private bool Tablas_CampoExists(int id)
         {
-            return _context.Tablas_Campo.Any(e => e.id == id);
+            return _context.Tablas_Campos.Any(e => e.id == id);
         }
     }
 }
