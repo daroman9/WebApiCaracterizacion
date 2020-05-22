@@ -1,0 +1,1353 @@
+{
+"Categorias": [
+	{
+		"id" : 1,
+		"id_padre" : null,
+		"nombre" : "Información espacial",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 1
+	},
+	{
+		"id" : 2,
+		"id_padre" : null,
+		"nombre" : "Información del ocupante",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 1
+	},
+	{
+		"id" : 3,
+		"id_padre" : null,
+		"nombre" : "Información predio",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 1
+	},
+	{
+		"id" : 4,
+		"id_padre" : null,
+		"nombre" : "Información cultivo principal",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 1
+	},
+	{
+		"id" : 5,
+		"id_padre" : null,
+		"nombre" : "Caracterización del mercado",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 1
+	},
+	{
+		"id" : 6,
+		"id_padre" : null,
+		"nombre" : "Información complementaria de costos de producción",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 1
+	},
+	{
+		"id" : 7,
+		"id_padre" : 4,
+		"nombre" : "Cultivo",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 1
+	},
+	{
+		"id" : 8,
+		"id_padre" : 4,
+		"nombre" : "Preparación del terreno y siembra",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 1
+	},
+	{
+		"id" : 9,
+		"id_padre" : 4,
+		"nombre" : "Nutrición de cultivos",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 1
+	},
+	{
+		"id" : 10,
+		"id_padre" : 9,
+		"nombre" : "Diagnóstico",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 1
+	},
+	{
+		"id" : 11,
+		"id_padre" : 9,
+		"nombre" : "Enmiendas",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 1
+	},
+	{
+		"id" : 12,
+		"id_padre" : 9,
+		"nombre" : "Fertilizantes",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 1
+	},
+	{
+		"id" : 13,
+		"id_padre" : 4,
+		"nombre" : "Manejo cultural",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 1
+	},
+	{
+		"id" : 14,
+		"id_padre" : 13,
+		"nombre" : "Deshierba",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 1
+	},
+	{
+		"id" : 15,
+		"id_padre" : 14,
+		"nombre" : "Herbicidas",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 1
+	},
+	{
+		"id" : 16,
+		"id_padre" : 14,
+		"nombre" : "Manual",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 1
+	},
+	{
+		"id" : 17,
+		"id_padre" : 14,
+		"nombre" : "Mecánica",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 1
+	},
+	{
+		"id" : 18,
+		"id_padre" : 13,
+		"nombre" : "Otras labores",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 1
+	},
+	{
+		"id" : 19,
+		"id_padre" : 4,
+		"nombre" : "Manejo fitosanitario",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 1
+	},
+	{
+		"id" : 20,
+		"id_padre" : 19,
+		"nombre" : "Plagas",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 1
+	},
+	{
+		"id" : 21,
+		"id_padre" : 19,
+		"nombre" : "Enfermedades",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 1
+	},
+	{
+		"id" : 22,
+		"id_padre" : 4,
+		"nombre" : "Cosecha",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 1
+	},
+	{
+		"id" : 23,
+		"id_padre" : 6,
+		"nombre" : "Caracterización de costos",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 1
+	},
+	{
+		"id" : 24,
+		"id_padre" : 23,
+		"nombre" : "Maquinaria",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 1
+	},
+	{
+		"id" : 25,
+		"id_padre" : 23,
+		"nombre" : "Mano de obra",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 1
+	},
+	{
+		"id" : 26,
+		"id_padre" : null,
+		"nombre" : "Información espacial",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 27,
+		"id_padre" : null,
+		"nombre" : "Información del ocupante",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 28,
+		"id_padre" : null,
+		"nombre" : "Información del predio",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 29,
+		"id_padre" : null,
+		"nombre" : "Actividad económica ganadera",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 30,
+		"id_padre" : null,
+		"nombre" : "Información complementaria de costos de producción",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 31,
+		"id_padre" : 29,
+		"nombre" : "Aspectos Generales",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 32,
+		"id_padre" : 29,
+		"nombre" : "Caracterización de hatos",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 33,
+		"id_padre" : 29,
+		"nombre" : "Condición de los pastos",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 34,
+		"id_padre" : 29,
+		"nombre" : "Caracterización del mercado",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 35,
+		"id_padre" : 32,
+		"nombre" : "Condición animal",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 36,
+		"id_padre" : 35,
+		"nombre" : "Vacas paridas",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 37,
+		"id_padre" : 35,
+		"nombre" : "Vacas horras",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 38,
+		"id_padre" : 35,
+		"nombre" : "Novillas de vientre",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 39,
+		"id_padre" : 35,
+		"nombre" : "Novillos de ceba",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 40,
+		"id_padre" : 35,
+		"nombre" : "Terneros predestete",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 41,
+		"id_padre" : 35,
+		"nombre" : "Terneros de levante",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 42,
+		"id_padre" : 35,
+		"nombre" : "Toros",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 43,
+		"id_padre" : 32,
+		"nombre" : "Parámetros productivos",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 44,
+		"id_padre" : 32,
+		"nombre" : "Parámetros reproductivos",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 45,
+		"id_padre" : 32,
+		"nombre" : "Aspectos sanitarios",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 46,
+		"id_padre" : 45,
+		"nombre" : "Enfermedades",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 47,
+		"id_padre" : 45,
+		"nombre" : "Insectos plagas",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 48,
+		"id_padre" : 45,
+		"nombre" : "Mortalidad",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 49,
+		"id_padre" : 33,
+		"nombre" : "Preparación de terreno y siembra",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 50,
+		"id_padre" : 33,
+		"nombre" : "Nutrición de los pastos",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 51,
+		"id_padre" : 50,
+		"nombre" : "Diagnóstico",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 52,
+		"id_padre" : 50,
+		"nombre" : "Enmiendas",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 53,
+		"id_padre" : 50,
+		"nombre" : "Fertilizantes",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 54,
+		"id_padre" : 33,
+		"nombre" : "Manejo cultural",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 55,
+		"id_padre" : 54,
+		"nombre" : "Deshierba",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 56,
+		"id_padre" : 55,
+		"nombre" : "Herbicidas",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 57,
+		"id_padre" : 55,
+		"nombre" : "Manual",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 58,
+		"id_padre" : 55,
+		"nombre" : "Mecánica",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 59,
+		"id_padre" : 54,
+		"nombre" : "Otras labores",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 60,
+		"id_padre" : 33,
+		"nombre" : "Manejo fitosanitario",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 61,
+		"id_padre" : 60,
+		"nombre" : "Plagas",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 62,
+		"id_padre" : 60,
+		"nombre" : "Enfermedades",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 63,
+		"id_padre" : 34,
+		"nombre" : "Leche",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 64,
+		"id_padre" : 34,
+		"nombre" : "Carne",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 65,
+		"id_padre" : 30,
+		"nombre" : "Caracterización de costos",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 66,
+		"id_padre" : 65,
+		"nombre" : "Maquinaria",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 67,
+		"id_padre" : 65,
+		"nombre" : "Mano de obra",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 2
+	},
+	{
+		"id" : 68,
+		"id_padre" : null,
+		"nombre" : "Ficha caracterización",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : 69,
+		"id_padre" : null,
+		"nombre" : "Datos unidad",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : 70,
+		"id_padre" : null,
+		"nombre" : "Datos transportador",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : 71,
+		"id_padre" : null,
+		"nombre" : "Datos actividad económica",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : 72,
+		"id_padre" : null,
+		"nombre" : "Datos cliente",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : 73,
+		"id_padre" : 69,
+		"nombre" : "Identificación unidad",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : 74,
+		"id_padre" : 69,
+		"nombre" : "Capacidad unidad",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : 75,
+		"id_padre" : 69,
+		"nombre" : "Dimensión unidad",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : 76,
+		"id_padre" : 69,
+		"nombre" : "Seguridad fluvial",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : 77,
+		"id_padre" : 70,
+		"nombre" : "Identificación transportador",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : 78,
+		"id_padre" : 70,
+		"nombre" : "Datos demográficos",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : 79,
+		"id_padre" : 70,
+		"nombre" : "Actividad laboral",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : 80,
+		"id_padre" : 79,
+		"nombre" : "Seguridad social",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : 81,
+		"id_padre" : 71,
+		"nombre" : "Ruta muestreada",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : 82,
+		"id_padre" : 71,
+		"nombre" : "Mercado",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : 83,
+		"id_padre" : 71,
+		"nombre" : "Otras rutas",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : 84,
+		"id_padre" : null,
+		"nombre" : "Ficha caracterización",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 4
+	},
+	{
+		"id" : 85,
+		"id_padre" : null,
+		"nombre" : "Aspectos generales",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 4
+	},
+	{
+		"id" : 86,
+		"id_padre" : null,
+		"nombre" : "Aspectos mineros",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 4
+	},
+	{
+		"id" : 87,
+		"id_padre" : null,
+		"nombre" : "Aspectos ocupacionales",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 4
+	},
+	{
+		"id" : 88,
+		"id_padre" : null,
+		"nombre" : "Aspectos socioeconómicos",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 4
+	},
+	{
+		"id" : 89,
+		"id_padre" : null,
+		"nombre" : "Observaciones",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 4
+	},
+	{
+		"id" : 90,
+		"id_padre" : 85,
+		"nombre" : "Localización",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 4
+	},
+	{
+		"id" : 91,
+		"id_padre" : 85,
+		"nombre" : "Tipo de minero",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 4
+	},
+	{
+		"id" : 92,
+		"id_padre" : 86,
+		"nombre" : "Preparación del terreno",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 4
+	},
+	{
+		"id" : 93,
+		"id_padre" : 86,
+		"nombre" : "Lugar de explotación",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 4
+	},
+	{
+		"id" : 94,
+		"id_padre" : 86,
+		"nombre" : "Herramientas empleadas",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 4
+	},
+	{
+		"id" : 95,
+		"id_padre" : 86,
+		"nombre" : "Beneficio",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 4
+	},
+	{
+		"id" : 96,
+		"id_padre" : 86,
+		"nombre" : "Monitores-Motobombas",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 4
+	},
+	{
+		"id" : 97,
+		"id_padre" : 86,
+		"nombre" : "Minidragas-Canoas o botes",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 4
+	},
+	{
+		"id" : 98,
+		"id_padre" : 86,
+		"nombre" : "Producción",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 4
+	},
+	{
+		"id" : 99,
+		"id_padre" : 98,
+		"nombre" : "Información de producción",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 4
+	},
+	{
+		"id" : 100,
+		"id_padre" : 98,
+		"nombre" : "Volumen de explotación",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 4
+	},
+	{
+		"id" : 101,
+		"id_padre" : 98,
+		"nombre" : "Costos producción",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 4
+	},
+	{
+		"id" : 102,
+		"id_padre" : 98,
+		"nombre" : "Turnos laborales",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 4
+	},
+	{
+		"id" : 103,
+		"id_padre" : 98,
+		"nombre" : "Personas por función",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 4
+	},
+	{
+		"id" : 104,
+		"id_padre" : 87,
+		"nombre" : "Accidentalidad",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 4
+	},
+	{
+		"id" : 105,
+		"id_padre" : 87,
+		"nombre" : "Riesgos",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 4
+	},
+	{
+		"id" : 106,
+		"id_padre" : 87,
+		"nombre" : "Uso de EPP´S",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 4
+	},
+	{
+		"id" : 107,
+		"id_padre" : 87,
+		"nombre" : "Enfermedades",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 4
+	},
+	{
+		"id" : 108,
+		"id_padre" : 88,
+		"nombre" : "Consentimiento",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 4
+	},
+	{
+		"id" : 109,
+		"id_padre" : 88,
+		"nombre" : "Datos Personales",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 4
+	},
+	{
+		"id" : 110,
+		"id_padre" : null,
+		"nombre" : "Ficha Caracterizacion",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 5
+	},
+	{
+		"id" : 111,
+		"id_padre" : null,
+		"nombre" : "Localización",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 5
+	},
+	{
+		"id" : 112,
+		"id_padre" : null,
+		"nombre" : "Aspectos mineros",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 5
+	},
+	{
+		"id" : 113,
+		"id_padre" : null,
+		"nombre" : "Producción Minera",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 5
+	},
+	{
+		"id" : 114,
+		"id_padre" : null,
+		"nombre" : "Aspectos Ocupacionales",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 5
+	},
+	{
+		"id" : 115,
+		"id_padre" : null,
+		"nombre" : "Aspectos  Socioeconómicos",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 5
+	},
+	{
+		"id" : 116,
+		"id_padre" : null,
+		"nombre" : "Observaciones",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 5
+	},
+	{
+		"id" : 117,
+		"id_padre" : 112,
+		"nombre" : "Preparación del terreno",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 5
+	},
+	{
+		"id" : 118,
+		"id_padre" : 112,
+		"nombre" : "Lugar de explotación",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 5
+	},
+	{
+		"id" : 119,
+		"id_padre" : 112,
+		"nombre" : "Herramientas Empleadas",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 5
+	},
+	{
+		"id" : 120,
+		"id_padre" : 113,
+		"nombre" : "Modalidad",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 5
+	},
+	{
+		"id" : 121,
+		"id_padre" : 113,
+		"nombre" : "Turnos Laborales",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 5
+	},
+	{
+		"id" : 122,
+		"id_padre" : 120,
+		"nombre" : "Extracción Mecanizada",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 5
+	},
+	{
+		"id" : 123,
+		"id_padre" : 120,
+		"nombre" : "Extracción Manual",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 5
+	},
+	{
+		"id" : 124,
+		"id_padre" : 120,
+		"nombre" : "Cargue y Descargue",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 5
+	},
+	{
+		"id" : 125,
+		"id_padre" : 120,
+		"nombre" : "Volqueta",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 5
+	},
+	{
+		"id" : 126,
+		"id_padre" : 124,
+		"nombre" : "Acopio",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 5
+	},
+	{
+		"id" : 127,
+		"id_padre" : 124,
+		"nombre" : "Paleros descargue de bote",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 5
+	},
+	{
+		"id" : 128,
+		"id_padre" : 124,
+		"nombre" : "Paleros Cargue de Volquetas",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 5
+	},
+	{
+		"id" : 129,
+		"id_padre" : 114,
+		"nombre" : "Accidentalidad",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 5
+	},
+	{
+		"id" : 130,
+		"id_padre" : 114,
+		"nombre" : "Riesgos",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 5
+	},
+	{
+		"id" : 131,
+		"id_padre" : 114,
+		"nombre" : "Uso de EPP´s",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 5
+	},
+	{
+		"id" : 132,
+		"id_padre" : 114,
+		"nombre" : "Enfermedades",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 5
+	},
+	{
+		"id" : 133,
+		"id_padre" : 115,
+		"nombre" : "Consentimiento",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 5
+	},
+	{
+		"id" : 134,
+		"id_padre" : 115,
+		"nombre" : "Datos Personales",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 5
+	},
+	{
+		"id" : 135,
+		"id_padre" : null,
+		"nombre" : "Observaciones",
+		"orden" : null,
+		"visible" : null,
+		"color" : null,
+		"image" : null,
+		"id_plantilla" : 3
+	}
+]}

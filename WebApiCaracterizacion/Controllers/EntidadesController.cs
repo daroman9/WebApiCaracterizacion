@@ -46,41 +46,18 @@ namespace WebApiCaracterizacion.Controllers
             return Ok(entidad);
         }
 
-        // PUT: api/Entidads/5
+        // PUT: api/Selectors/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutEntidad([FromRoute] int id, [FromBody] Entidad entidad)
+        public async Task<IActionResult> Put([FromBody] Entidad entidad, int id)
         {
-            if (!ModelState.IsValid)
+            if (entidad.id != id)
             {
-                return BadRequest(ModelState);
+                return BadRequest("Ocurrio un error al modificar");
             }
-
-            if (id != entidad.id)
-            {
-                return BadRequest();
-            }
-
             _context.Entry(entidad).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!EntidadExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
+           await _context.SaveChangesAsync();
+            return Ok();
         }
-
         // POST: api/Entidads
         [HttpPost]
         public async Task<IActionResult> PostEntidad([FromBody] Entidad entidad)

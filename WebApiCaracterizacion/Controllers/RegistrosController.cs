@@ -85,8 +85,20 @@ namespace WebApiCaracterizacion.Controllers
                 return BadRequest(ModelState);
             }
 
-            _context.Registros.Add(registro);
-            await _context.SaveChangesAsync();
+            var verificar = _context.Registros.AsNoTracking().Where(x => x.id_campo == registro.id_campo).FirstOrDefault();
+           
+            if (verificar == null)
+            {
+                _context.Registros.Add(registro);
+                await _context.SaveChangesAsync();
+            }
+            else
+            {
+                var _id = verificar.id;
+                registro.id = _id;
+                _context.Update(registro);
+                await _context.SaveChangesAsync();
+            }
 
             return CreatedAtAction("GetRegistro", new { id = registro.id }, registro);
         }

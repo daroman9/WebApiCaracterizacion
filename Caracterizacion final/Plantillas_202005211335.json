@@ -1,0 +1,33 @@
+{
+"Plantillas": [
+	{
+		"id" : 1,
+		"nombre" : "Agricultura",
+		"ImageUrl" : "agricultura.png",
+		"color" : null
+	},
+	{
+		"id" : 2,
+		"nombre" : "Ganadería",
+		"ImageUrl" : "reino-animal.png",
+		"color" : null
+	},
+	{
+		"id" : 3,
+		"nombre" : "Transporte Fluvial",
+		"ImageUrl" : "canoa.png",
+		"color" : null
+	},
+	{
+		"id" : 4,
+		"nombre" : "Minería Oro",
+		"ImageUrl" : "minero.png",
+		"color" : null
+	},
+	{
+		"id" : 5,
+		"nombre" : "Minería de Agregados",
+		"ImageUrl" : "minero.png",
+		"color" : null
+	}
+]}

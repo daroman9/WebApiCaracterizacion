@@ -83,9 +83,23 @@ namespace WebApiCaracterizacion.Controllers
             {
                 return BadRequest(ModelState);
             }
-
-            _context.Registros_Tablas.Add(registro_Tabla);
-            await _context.SaveChangesAsync();
+            var verificar = _context.Registros_Tablas.AsNoTracking()
+                .Where(x => x.id_campo == registro_Tabla.id_campo 
+                && x.id_column==registro_Tabla.id_column 
+                && x.row == registro_Tabla.row && x.id_ficha== registro_Tabla.id_ficha).FirstOrDefault();
+            
+            if (verificar == null)
+            {
+                _context.Registros_Tablas.Add(registro_Tabla);
+                await _context.SaveChangesAsync();
+            }
+            else
+            {
+                var _id = verificar.id;
+                registro_Tabla.id = _id;
+                _context.Update(registro_Tabla);
+                await _context.SaveChangesAsync();
+            }
 
             return CreatedAtAction("GetRegistro_Tabla", new { id = registro_Tabla.id }, registro_Tabla);
         }

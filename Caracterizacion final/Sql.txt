@@ -1,0 +1,276 @@
+(6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60)
+
+
+
+
+select Genero.Valor_string as Genero, NombreMun.nombre, (select COUNT(id_plantilla) From Ficha WHERE id_plantilla =1) as Total , count(Genero.id_campo) as Cantidad
+from Registros as Genero
+INNER JOIN Registros as Municipio on (Municipio.id_campo in (6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60) AND Municipio.valor_integer = 1 AND Genero.id_ficha= Municipio.id_ficha)
+INNER JOIN Campos as NombreMun on (NombreMun.id = Municipio.id_campo)
+where Genero.id_campo = 65
+GROUP BY NombreMun.nombre, Genero.Valor_string
+
+
+
+
+
+
+
+
+SELECT Genero.Valor_string as Genero, NombreMun.nombre, (SELECT COUNT(reg.id_campo) From Registros as reg INNER JOIN Ficha as fic on (reg.id_ficha = fic.id AND fic.id_plantilla=1)  WHERE reg.id_campo=65) as Total , count(Genero.id_campo) as Cantidad
+FROM Registros as Genero
+INNER JOIN Registros as Municipio on (Municipio.id_campo in (6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60) AND Municipio.valor_integer = 1 AND Genero.id_ficha= Municipio.id_ficha)
+INNER JOIN Campos as NombreMun on (NombreMun.id = Municipio.id_campo)
+where Genero.id_campo = 65
+GROUP BY NombreMun.nombre, Genero.Valor_string
+
+
+
+214,216,218,220,222,224,226,228,230,232,234,236,238,240,242,244,246,248,250,252,254,256,258,260,262,264,266,268,
+
+
+
+
+
+CREATE PROCEDURE dbo.GenerosGanaderia
+AS 
+DECLARE
+@fechaInicio AS VARCHAR(10), @fechaFin AS VARCHAR(10);
+
+BEGIN
+	
+SET @fechaInicio= '2020-01-01';
+SET @fechaFin = '2020-12-01';
+
+SELECT Genero.Valor_string as Genero, NombreMun.nombre, (SELECT COUNT(reg.id_campo) From Registros as reg INNER JOIN Ficha as fic on (reg.id_ficha = fic.id AND fic.id_plantilla=2)  WHERE reg.id_campo=273) as Total , count(Genero.id_campo) as Cantidad
+FROM Registros as Genero
+INNER JOIN Registros as Municipio on (Municipio.id_campo in (214,216,218,220,222,224,226,228,230,232,234,236,238,240,242,244,246,248,250,252,254,256,258,260,262,264,266,268) AND Municipio.valor_integer = 1 AND Genero.id_ficha= Municipio.id_ficha)
+INNER JOIN Campos as NombreMun on (NombreMun.id = Municipio.id_campo)
+WHERE Genero.id_campo = 273  AND Genero.fecha BETWEEN @fechaInicio AND @fechaFin
+GROUP BY NombreMun.nombre, Genero.Valor_string
+
+END;
+
+
+(553,555,557,559,561,563,565,567,569,571,573,575,577,579,581,583,585,587,589,591,593,595,597,599,601,603,605,607)
+
+
+
+
+CREATE PROCEDURE dbo.GenerosAgro  @tipoConsulta as NVARCHAR(50), @fechaInicio AS VARCHAR(10), @fechaFin AS VARCHAR(10), @consultaAgro as NVARCHAR(1000) OUT
+AS 
+
+DECLARE
+@select AS NVARCHAR(100), @from AS NVARCHAR (500), @where AS NVARCHAR(150), @groupby AS NVARCHAR(150), @outerSelect AS NVARCHAR(100); 
+
+BEGIN
+
+SET @outerSelect = ' genero, count(genero) as cantidad ';
+SET @select = ' reg.valor_string as genero ';
+SET @from = ' registros as reg '
+SET @where = ' reg.id_campo = 65 '
+SET @groupBy = NULL;
+
+IF @tipoConsulta = 'general' BEGIN
+  SET @groupBy = ' reg.valor_string ';
+
+END ELSE BEGIN
+  SET @outerSelect = @outerSelect + ' , municipio, aspecto ';
+  SET @select = @select + ' , mun.nombre as municipio, ''Agricultura'' as aspecto  ';
+  SET @from = @from + ' INNER JOIN Registros as regMun on (regMun.id_campo in '
+      + '(6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60) '
+      + ' AND regMun.valor_integer = 1 AND reg.id_ficha = regMun.id_ficha) '
+      + ' INNER JOIN Campos as mun on (mun.id = regMun.id_campo) ' ;
+
+  IF @tipoConsulta = 'municipio' BEGIN
+    SET @groupBy = ' municipio, genero, aspecto ';
+
+  END ELSE BEGIN
+    SET @groupBy = ' aspecto, genero, municipio ';
+
+  END
+END
+
+IF @fechaInicio IS NOT NULL AND @fechaFin IS NOT NULL
+SET @where = @where + ' AND reg.fecha BETWEEN ''' + @fechaInicio + ''' AND ''' + @fechaFin +'''';
+
+SET @consultaAgro = 'SELECT ' + @outerSelect + ' FROM (SELECT ' + @select
+      + ' FROM ' + @from 
+      + ' WHERE ' + @where + ') as results'
+      + ' GROUP BY ' + @groupBy;
+    
+  END;  
+ 
+
+
+CREATE PROCEDURE dbo.GenerosAgro  @tipoConsulta as NVARCHAR(50), @fechaInicio AS VARCHAR(10), @fechaFin AS VARCHAR(10), @consultaAgro as NVARCHAR(1000) OUT
+AS 
+
+DECLARE
+@select AS NVARCHAR(100), @from AS NVARCHAR (500), @where AS NVARCHAR(150), @groupby AS NVARCHAR(150), @outerSelect AS NVARCHAR(100); 
+
+BEGIN
+
+SET @outerSelect = ' genero, count(genero) as cantidad, aspecto ';
+SET @select = ' reg.valor_string as genero, ''Agricultura'' as aspecto ';
+SET @from = ' registros as reg '
+SET @where = ' reg.id_campo = 65 '
+SET @groupBy = NULL;
+
+IF @tipoConsulta = 'general' BEGIN
+  SET @groupBy = ' aspecto, genero ';
+  
+
+END ELSE BEGIN
+  SET @outerSelect = @outerSelect + ' , municipio, aspecto ';
+  SET @select = @select + ' , mun.nombre as municipio  ';
+  SET @from = @from + ' INNER JOIN Registros as regMun on (regMun.id_campo in '
+      + '(6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60) '
+      + ' AND regMun.valor_integer = 1 AND reg.id_ficha = regMun.id_ficha) '
+      + ' INNER JOIN Campos as mun on (mun.id = regMun.id_campo) ' ;
+
+  IF @tipoConsulta = 'municipio' BEGIN
+    SET @groupBy = ' municipio, genero, aspecto ';
+
+  END ELSE BEGIN
+    SET @groupBy = ' aspecto, genero, municipio ';
+
+  END
+END
+
+IF @fechaInicio IS NOT NULL AND @fechaFin IS NOT NULL
+SET @where = @where + ' AND reg.fecha BETWEEN ''' + @fechaInicio + ''' AND ''' + @fechaFin +'''';
+
+SET @consultaAgro = 'SELECT ' + @outerSelect + ' FROM (SELECT ' + @select
+      + ' FROM ' + @from 
+      + ' WHERE ' + @where + ') as results'
+      + ' GROUP BY ' + @groupBy;
+    
+  END;  
+ 
+EXEC GenerosAgroMunicipio
+
+
+SELECT * FROM Registros WHERE id_ficha = 'U8a4b6394-0a7d-4ec6-90a8-393dbccb0548F3D1586882578565' AND id_campo=609
+
+
+select Valor_string as Escolaridad, (select COUNT(id_plantilla) From Ficha WHERE id_plantilla =1) as TotalPersonas , count(id_campo) as Cantidad
+from Registros 
+where id_campo = 72
+GROUP BY Valor_string
+
+
+
+SELECT Genero.Valor_string as Genero, NombreMun.nombre, (SELECT COUNT(reg.id_campo) From Registros as reg INNER JOIN Ficha as fic on (reg.id_ficha = fic.id AND fic.id_plantilla=2)  WHERE reg.id_campo=273) as Total , count(Genero.id_campo) as Cantidad
+FROM Registros as Genero
+INNER JOIN Registros as Municipio on (Municipio.id_campo in (214,216,218,220,222,224,226,228,230,232,234,236,238,240,242,244,246,248,250,252,254,256,258,260,262,264,266,268) AND Municipio.valor_integer = 1 AND Genero.id_ficha= Municipio.id_ficha)
+INNER JOIN Campos as NombreMun on (NombreMun.id = Municipio.id_campo)
+where Genero.id_campo = 273
+GROUP BY NombreMun.nombre, Genero.Valor_string
+
+
+
+
+SELECT Genero.Valor_string as Genero, NombreMun.nombre, (SELECT COUNT(reg.id_campo) From Registros as reg INNER JOIN Ficha as fic on (reg.id_ficha = fic.id AND fic.id_plantilla=2)  WHERE reg.id_campo=273) as Total , count(Genero.id_campo) as Cantidad
+FROM Registros as Genero
+INNER JOIN Registros as Municipio on (Municipio.id_campo in (214,216,218,220,222,224,226,228,230,232,234,236,238,240,242,244,246,248,250,252,254,256,258,260,262,264,266,268) AND Municipio.valor_integer = 1 AND Genero.id_ficha= Municipio.id_ficha)
+INNER JOIN Campos as NombreMun on (NombreMun.id = Municipio.id_campo)
+WHERE Genero.id_campo = 273 AND fecha BETWEEN @fechaInicio AND @fechaFin
+GROUP BY NombreMun.nombre, Genero.Valor_string
+
+SET @fechaInicio= '2020-01-01';
+SET @fechaFin = '2020-12-01'
+
+
+
+
+
+  general, aspecto, municipio
+
+
+
+SELECT COUNT(reg.id_campo) From Registros as reg
+INNER JOIN Ficha as fic on (reg.id_ficha = fic.id AND fic.id_plantilla=1) 
+WHERE reg.id_campo=65
+
+
+IF (SELECT Valor_integer FROM Registros WHERE id_campo=60)=1
+SELECT * FROM Registros WHERE id_campo=65
+
+
+SELECT Valor_string, id_campo =
+CASE id_campo
+	WHEN 65 THEN 'Hombre' 
+	END
+FROM Registros	
+
+Select id from campos where (id % 2)=0 AND id <=60 AND id >=6
+
+
+
+
+
+SELECT * FROM Registros WHERE id_ficha='U3b407ee9-40d2-4be1-9757-31467a2c749bF11D1586409111953' AND id_campo = 533
+
+
+ 
+SELECT * FROM Registros_Tablas WHERE id_ficha='U3b407ee9-40d2-4be1-9757-31467a2c749bF11D1586409111953' AND id_campo= 148
+
+SELECT * FROM Registros_Tablas WHERE id_ficha='Uc4a4b0fe-cf3f-4037-b72f-c4d01436d89bF6D1586567795271'   Pendiente el genero de esta ficha
+
+
+SELECT * FROM Registros_Tablas WHERE id_ficha='U3b407ee9-40d2-4be1-9757-31467a2c749bF13D1586643257625'
+
+
+
+
+ 25.63
+ 69.32
+
+CREATE PROCEDURE dbo.AntiguedadAgro @fechaInicio AS VARCHAR(10), @fechaFin AS VARCHAR(10)
+
+AS 
+
+DECLARE
+@consulta AS NVARCHAR(4000), @condicion AS NVARCHAR (1000), @agrupacion AS NVARCHAR (1000);
+
+BEGIN
+SET @agrupacion = ' NombreMun.nombre, Antiguedad.Valor_float';
+SET @condicion = ' Antiguedad.id_campo = 99';
+SET @consulta = N'SELECT Antiguedad.Valor_float as Antiguedad, NombreMun.nombre as Municipio, (SELECT COUNT(reg.id_campo) From Registros as reg INNER JOIN Ficha as fic on (reg.id_ficha = fic.id AND fic.id_plantilla=1)  WHERE reg.id_campo=96) as Total , count(Antiguedad.id_campo) as Cantidad FROM Registros as Antiguedad ' +
+'INNER JOIN Registros as Municipio on (Municipio.id_campo in (6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60) AND Municipio.valor_integer = 1 AND Antiguedad.id_ficha= Municipio.id_ficha) ' +
+'INNER JOIN Campos as NombreMun on (NombreMun.id = Municipio.id_campo) '
+
+IF @fechaInicio IS NOT NULL AND @fechaFin IS NOT NULL
+SET @condicion = @condicion + ' AND Antiguedad.fecha BETWEEN ''' + @fechaInicio + ''' AND ''' + @fechaFin +'''';
+SET @consulta = @consulta + ' WHERE ' + @condicion + ' GROUP BY' + @agrupacion;
+
+PRINT @consulta
+EXEC sp_executesql @consulta
+
+END;
+
+
+ 
+SELECT Genero.Valor_string as Genero, NombreMun.nombre, (SELECT COUNT(reg.id_campo) From Registros as reg INNER JOIN Ficha as fic on (reg.id_ficha = fic.id AND fic.id_plantilla=1)  WHERE reg.id_campo=65) as Total , count(Genero.id_campo) as Cantidad
+FROM Registros as Genero
+INNER JOIN Registros as Municipio on (Municipio.id_campo in (6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60) AND Municipio.valor_integer = 1 AND Genero.id_ficha= Municipio.id_ficha)
+INNER JOIN Campos as NombreMun on (NombreMun.id = Municipio.id_campo)
+where Genero.id_campo = 65
+GROUP BY NombreMun.nombre, Genero.Valor_string
+
+
+SELECT * FROM Registros WHERE id_campo= 280
+
+EXEC PromediosEstados @tipoConsulta= 'general', @fechaInicio= '2020-04-10', @fechaFin = '2020-12-10'
+
+
+
+colombia@4life.com
+
+
+Martha Olivia Correa Uribe
+CC: 32532200
+Cel: 3185025906
+Orden: 44965720
+Codigo: 9250297

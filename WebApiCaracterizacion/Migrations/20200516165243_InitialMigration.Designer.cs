@@ -10,8 +10,8 @@ using WebApiCaracterizacion.Models;
 namespace WebApiCaracterizacion.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200514193211_ForeignProfesionales")]
-    partial class ForeignProfesionales
+    [Migration("20200516165243_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -79,7 +79,7 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.HasIndex("id_validacion");
 
-                    b.ToTable("Campo");
+                    b.ToTable("Campos");
                 });
 
             modelBuilder.Entity("caracterizacion.Models.Categoria", b =>
@@ -108,7 +108,7 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.HasIndex("id_plantilla");
 
-                    b.ToTable("Categoria");
+                    b.ToTable("Categorias");
                 });
 
             modelBuilder.Entity("caracterizacion.Models.Formulario", b =>
@@ -143,7 +143,7 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.HasIndex("id_usuario");
 
-                    b.ToTable("Formulario");
+                    b.ToTable("Formularios");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -409,7 +409,7 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("Plantilla");
+                    b.ToTable("Plantillas");
                 });
 
             modelBuilder.Entity("WebApiCaracterizacion.Models.Profesionales", b =>
@@ -484,7 +484,7 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.HasIndex("id_ficha");
 
-                    b.ToTable("Registro");
+                    b.ToTable("Registros");
                 });
 
             modelBuilder.Entity("WebApiCaracterizacion.Models.Registro_Tabla", b =>
@@ -519,7 +519,7 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.HasIndex("id_ficha");
 
-                    b.ToTable("Registros_Tabla");
+                    b.ToTable("Registros_Tablas");
                 });
 
             modelBuilder.Entity("WebApiCaracterizacion.Models.Selector", b =>
@@ -532,7 +532,7 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("Selector");
+                    b.ToTable("Selectores");
                 });
 
             modelBuilder.Entity("WebApiCaracterizacion.Models.Selector_Detail", b =>
@@ -605,7 +605,7 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.HasIndex("id_validacion");
 
-                    b.ToTable("Tablas_Campo");
+                    b.ToTable("Tablas_Campos");
                 });
 
             modelBuilder.Entity("WebApiCaracterizacion.Models.Validacion", b =>
