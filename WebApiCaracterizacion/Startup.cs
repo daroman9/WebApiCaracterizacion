@@ -13,6 +13,7 @@ using WebApiCaracterizacion.Models;
 using WebApiCaracterizacion.Data;
 using WebApiCaracterizacion.DataMineria;
 using WebApiCaracterizacion.DataTransporte;
+using WebApiCaracterizacion.DataGanaderia;
 
 namespace WebApiCaracterizacion
 {
@@ -94,8 +95,33 @@ namespace WebApiCaracterizacion
             services.AddScoped<PromedioCausaVariacionORRepository>();
             services.AddScoped<PromedioVolumenProduccionORRepository>();
             services.AddScoped<PromedioProduccionORRepository>();
+            services.AddScoped<PromedioActividadPrimariaPredioGNRepository>();
+            services.AddScoped<PromedioActividadSecundariaPredioGNRepository>();
+            services.AddScoped<PromedioAsociacionGNRepository>();
+            services.AddScoped<PromedioBeneficiosGNRepository>();
+            services.AddScoped<PromedioActividadPrincipalOcupanteGNRepository>();
+            services.AddScoped<PromedioDiscapacitadosGNRepository>();
+            services.AddScoped<PromedioEtniaGNRepository>();
+            services.AddScoped<PromedioGenerosGNRepository>();
+            services.AddScoped<PromedioGradoEscolaridadGNRepository>();
+            services.AddScoped<PromedioMujeresGNRepository>();
+            services.AddScoped<PromedioNivelAgremiacionGNRepository>();
+            services.AddScoped<PromedioNombreAsociacionGNRepository>();
+            services.AddScoped<PromedioNombreEtniaGNRepository>();
+            services.AddScoped<PromedioOcupanteDepdendeActividadGNRepository>();
+            services.AddScoped<PromedioOrginarioRegionGNRepository>();
+            services.AddScoped<PromedioOtraActividadOcupanteGNRepository>();
+            services.AddScoped<PromedioDependenciaActividadGNRepository>();
+            services.AddScoped<PromedioPromedioAreaGNRepository>();
+            services.AddScoped<PromedioTenenciaGNRepository>();
+            services.AddScoped<PromedioTipoBeneficioGNRepository>();
+            services.AddScoped<PromedioTipoHatoGNRepository>();
+            services.AddScoped<PromedioTipoRegionGNRepository>();
+
+
 
             
+
 
 
             //Fin seccion controladores
