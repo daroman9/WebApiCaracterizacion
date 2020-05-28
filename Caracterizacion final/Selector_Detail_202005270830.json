@@ -209,16 +209,8 @@
 		"id_selector" : 3
 	},
 	{
-		"id" : 27,
-		"valor" : "2",
-		"etiqueta" : "DIVORCIADO",
-		"parent_value" : null,
-		"parent_selector" : null,
-		"id_selector" : 3
-	},
-	{
 		"id" : 28,
-		"valor" : "3",
+		"valor" : "2",
 		"etiqueta" : "SEPARADO",
 		"parent_value" : null,
 		"parent_selector" : null,
@@ -226,7 +218,7 @@
 	},
 	{
 		"id" : 29,
-		"valor" : "4",
+		"valor" : "3",
 		"etiqueta" : "SOLTERO",
 		"parent_value" : null,
 		"parent_selector" : null,
@@ -234,7 +226,7 @@
 	},
 	{
 		"id" : 30,
-		"valor" : "5",
+		"valor" : "4",
 		"etiqueta" : "UNIÓN LIBRE",
 		"parent_value" : null,
 		"parent_selector" : null,
@@ -299,7 +291,7 @@
 	{
 		"id" : 38,
 		"valor" : "4",
-		"etiqueta" : "PROFESIONAL",
+		"etiqueta" : "SECUNDARIA",
 		"parent_value" : null,
 		"parent_selector" : null,
 		"id_selector" : 5
@@ -307,7 +299,7 @@
 	{
 		"id" : 39,
 		"valor" : "5",
-		"etiqueta" : "SECUNDARIA",
+		"etiqueta" : "PROFESIONAL",
 		"parent_value" : null,
 		"parent_selector" : null,
 		"id_selector" : 5
@@ -867,7 +859,7 @@
 	{
 		"id" : 109,
 		"valor" : "6",
-		"etiqueta" : "CONTRATO DE OBRA O LABOR",
+		"etiqueta" : "CONTRATO JORNAL",
 		"parent_value" : null,
 		"parent_selector" : null,
 		"id_selector" : 11
@@ -875,7 +867,7 @@
 	{
 		"id" : 110,
 		"valor" : "7",
-		"etiqueta" : "CONTRATO JORNAL",
+		"etiqueta" : "CONTRATO OCASIONAL DE TRABAJO",
 		"parent_value" : null,
 		"parent_selector" : null,
 		"id_selector" : 11
@@ -883,7 +875,7 @@
 	{
 		"id" : 111,
 		"valor" : "8",
-		"etiqueta" : "CONTRATO OCASIONAL DE TRABAJO",
+		"etiqueta" : "NS\/NR",
 		"parent_value" : null,
 		"parent_selector" : null,
 		"id_selector" : 11
@@ -12218,7 +12210,7 @@
 	},
 	{
 		"id" : 1529,
-		"valor" : "7",
+		"valor" : "5",
 		"etiqueta" : "VIUDO",
 		"parent_value" : null,
 		"parent_selector" : null,
@@ -12495,14 +12487,6 @@
 		"parent_value" : null,
 		"parent_selector" : null,
 		"id_selector" : 4
-	},
-	{
-		"id" : 1564,
-		"valor" : "9",
-		"etiqueta" : "NS\/NR",
-		"parent_value" : null,
-		"parent_selector" : null,
-		"id_selector" : 11
 	},
 	{
 		"id" : 1565,

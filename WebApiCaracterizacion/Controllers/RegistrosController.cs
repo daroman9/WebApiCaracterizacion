@@ -11,7 +11,7 @@ namespace WebApiCaracterizacion.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class RegistrosController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -47,6 +47,8 @@ namespace WebApiCaracterizacion.Controllers
             return Ok(registro);
         }
 
+
+
         [HttpGet("byFicha/{id_ficha}")]
         public IActionResult GetRegistrosByPlantilla([FromRoute] string id_ficha)
         {
@@ -60,6 +62,53 @@ namespace WebApiCaracterizacion.Controllers
                 return NotFound();
             }
 
+            return Ok(registro);
+        }
+
+
+        [HttpGet("byCampo/{id_campo}")]
+        public IActionResult GetRegistrosByPlantilla([FromRoute] int id_campo)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var registro = _context.Registros.Where(x => x.id_campo == id_campo).ToList();
+            if (registro == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(registro);
+        }
+
+        [HttpGet("byCampoFicha/{id_campo}/{id_ficha}")]
+        public IActionResult GetRegistrosByPlantillaFicha([FromRoute] int id_campo, string id_ficha)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var res = _context.Registros.Where(x => x.id_campo== id_campo && x.id_ficha == id_ficha).ToList();
+            if (res == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(res);
+        }
+
+
+        // PUT: api/Registros/5
+        [HttpPut("{id_campo}/{id_ficha}")]
+        public IActionResult PutRegistro([FromBody] Registro registro, int id_campo, string id_ficha)
+        {
+            if (registro.id_campo != id_campo && registro.id_ficha!= id_ficha)
+            {
+                return BadRequest("Ocurrio un error al modificar");
+            }
+            _context.Entry(registro).State = EntityState.Modified;
+            _context.SaveChanges();
             return Ok(registro);
         }
 
@@ -85,7 +134,7 @@ namespace WebApiCaracterizacion.Controllers
                 return BadRequest(ModelState);
             }
 
-            var verificar = _context.Registros.AsNoTracking().Where(x => x.id_campo == registro.id_campo).FirstOrDefault();
+            var verificar = _context.Registros.AsNoTracking().Where(x => x.id_campo == registro.id_campo && x.id_ficha == registro.id_ficha).FirstOrDefault();
            
             if (verificar == null)
             {

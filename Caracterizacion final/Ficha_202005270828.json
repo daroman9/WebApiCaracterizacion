@@ -1,0 +1,192 @@
+{
+"Ficha": [
+	{
+		"id" : "U78ebff69-0bbd-489c-8244-57d94234453cF68D1590285303333",
+		"latitud" : "6.208369",
+		"longitud" : "-75.5876735",
+		"date" : "2020-05-24T06:55:03Z",
+		"id_usuario" : "78ebff69-0bbd-489c-8244-57d94234453c",
+		"id_formulario" : 68,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : "U78ebff69-0bbd-489c-8244-57d94234453cF68D1590289445740",
+		"latitud" : "6.2083815",
+		"longitud" : "-75.5876238",
+		"date" : "2020-05-24T08:04:05Z",
+		"id_usuario" : "78ebff69-0bbd-489c-8244-57d94234453c",
+		"id_formulario" : 68,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : "U78ebff69-0bbd-489c-8244-57d94234453cF68D1590290632940",
+		"latitud" : "6.2083789",
+		"longitud" : "-75.5876354",
+		"date" : "2020-05-24T08:23:52Z",
+		"id_usuario" : "78ebff69-0bbd-489c-8244-57d94234453c",
+		"id_formulario" : 68,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : "U78ebff69-0bbd-489c-8244-57d94234453cF68D1590291887961",
+		"latitud" : "6.2083629",
+		"longitud" : "-75.587678",
+		"date" : "2020-05-24T08:44:47Z",
+		"id_usuario" : "78ebff69-0bbd-489c-8244-57d94234453c",
+		"id_formulario" : 68,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : "U78ebff69-0bbd-489c-8244-57d94234453cF68D1590292495434",
+		"latitud" : "6.2083809",
+		"longitud" : "-75.587654",
+		"date" : "2020-05-24T08:54:55Z",
+		"id_usuario" : "78ebff69-0bbd-489c-8244-57d94234453c",
+		"id_formulario" : 68,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : "U78ebff69-0bbd-489c-8244-57d94234453cF68D1590329226875",
+		"latitud" : "6.2083648",
+		"longitud" : "-75.5876767",
+		"date" : "2020-05-24T19:07:06Z",
+		"id_usuario" : "78ebff69-0bbd-489c-8244-57d94234453c",
+		"id_formulario" : 68,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : "U78ebff69-0bbd-489c-8244-57d94234453cF68D1590329869585",
+		"latitud" : "6.2083682",
+		"longitud" : "-75.5876735",
+		"date" : "2020-05-24T19:17:49Z",
+		"id_usuario" : "78ebff69-0bbd-489c-8244-57d94234453c",
+		"id_formulario" : 68,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : "U78ebff69-0bbd-489c-8244-57d94234453cF68D1590330466692",
+		"latitud" : "6.2083694",
+		"longitud" : "-75.5876777",
+		"date" : "2020-05-24T19:27:46Z",
+		"id_usuario" : "78ebff69-0bbd-489c-8244-57d94234453c",
+		"id_formulario" : 68,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : "U78ebff69-0bbd-489c-8244-57d94234453cF68D1590331059855",
+		"latitud" : "6.2083723",
+		"longitud" : "-75.5876715",
+		"date" : "2020-05-24T19:37:39Z",
+		"id_usuario" : "78ebff69-0bbd-489c-8244-57d94234453c",
+		"id_formulario" : 68,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : "U78ebff69-0bbd-489c-8244-57d94234453cF68D1590331640076",
+		"latitud" : "6.2083663",
+		"longitud" : "-75.5876722",
+		"date" : "2020-05-24T19:47:20Z",
+		"id_usuario" : "78ebff69-0bbd-489c-8244-57d94234453c",
+		"id_formulario" : 68,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : "Uf23722e9-5d25-43c4-a296-5cbde6a950eaF69D1590285738994",
+		"latitud" : "6.3393195",
+		"longitud" : "-75.5669553",
+		"date" : "2020-05-24T07:02:18Z",
+		"id_usuario" : "f23722e9-5d25-43c4-a296-5cbde6a950ea",
+		"id_formulario" : 69,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : "Uf23722e9-5d25-43c4-a296-5cbde6a950eaF69D1590287606194",
+		"latitud" : "6.3393446",
+		"longitud" : "-75.5669709",
+		"date" : "2020-05-24T07:33:26Z",
+		"id_usuario" : "f23722e9-5d25-43c4-a296-5cbde6a950ea",
+		"id_formulario" : 69,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : "Uf23722e9-5d25-43c4-a296-5cbde6a950eaF69D1590295539629",
+		"latitud" : "6.3393154",
+		"longitud" : "-75.5669434",
+		"date" : "2020-05-24T09:45:39Z",
+		"id_usuario" : "f23722e9-5d25-43c4-a296-5cbde6a950ea",
+		"id_formulario" : 69,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : "Uf23722e9-5d25-43c4-a296-5cbde6a950eaF69D1590296800551",
+		"latitud" : "6.3393127",
+		"longitud" : "-75.5669474",
+		"date" : "2020-05-24T10:06:40Z",
+		"id_usuario" : "f23722e9-5d25-43c4-a296-5cbde6a950ea",
+		"id_formulario" : 69,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : "Uf23722e9-5d25-43c4-a296-5cbde6a950eaF69D1590297750452",
+		"latitud" : "6.3393369",
+		"longitud" : "-75.5669741",
+		"date" : "2020-05-24T10:22:30Z",
+		"id_usuario" : "f23722e9-5d25-43c4-a296-5cbde6a950ea",
+		"id_formulario" : 69,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : "Uf23722e9-5d25-43c4-a296-5cbde6a950eaF69D1590298642337",
+		"latitud" : "6.33934",
+		"longitud" : "-75.5669709",
+		"date" : "2020-05-24T10:37:22Z",
+		"id_usuario" : "f23722e9-5d25-43c4-a296-5cbde6a950ea",
+		"id_formulario" : 69,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : "Uf23722e9-5d25-43c4-a296-5cbde6a950eaF69D1590299220825",
+		"latitud" : "6.3393207",
+		"longitud" : "-75.5669544",
+		"date" : "2020-05-24T10:47:00Z",
+		"id_usuario" : "f23722e9-5d25-43c4-a296-5cbde6a950ea",
+		"id_formulario" : 69,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : "Uf23722e9-5d25-43c4-a296-5cbde6a950eaF69D1590299737256",
+		"latitud" : "6.3393187",
+		"longitud" : "-75.5669603",
+		"date" : "2020-05-24T10:55:37Z",
+		"id_usuario" : "f23722e9-5d25-43c4-a296-5cbde6a950ea",
+		"id_formulario" : 69,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : "Uf23722e9-5d25-43c4-a296-5cbde6a950eaF69D1590300735377",
+		"latitud" : "6.3393482",
+		"longitud" : "-75.5669779",
+		"date" : "2020-05-24T11:12:15Z",
+		"id_usuario" : "f23722e9-5d25-43c4-a296-5cbde6a950ea",
+		"id_formulario" : 69,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : "Uf23722e9-5d25-43c4-a296-5cbde6a950eaF69D1590301717735",
+		"latitud" : "6.3393252",
+		"longitud" : "-75.5669584",
+		"date" : "2020-05-24T11:28:37Z",
+		"id_usuario" : "f23722e9-5d25-43c4-a296-5cbde6a950ea",
+		"id_formulario" : 69,
+		"id_plantilla" : 3
+	},
+	{
+		"id" : "Uf2bf5cb7-a860-4a20-8c71-f051f3d7b3c5F16D1590442075599",
+		"latitud" : "6.2192643",
+		"longitud" : "-75.5691501",
+		"date" : "2020-05-26T02:27:55Z",
+		"id_usuario" : "f2bf5cb7-a860-4a20-8c71-f051f3d7b3c5",
+		"id_formulario" : 16,
+		"id_plantilla" : 2
+	}
+]}

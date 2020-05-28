@@ -1233,7 +1233,7 @@
 	{
 		"id" : 124,
 		"id_padre" : 120,
-		"nombre" : "Cargue y Descargue",
+		"nombre" : "Descargue o Cargue",
 		"orden" : null,
 		"visible" : null,
 		"color" : null,
@@ -1263,7 +1263,7 @@
 	{
 		"id" : 127,
 		"id_padre" : 124,
-		"nombre" : "Paleros descargue de bote",
+		"nombre" : "Paleros Descargue de bote",
 		"orden" : null,
 		"visible" : null,
 		"color" : null,

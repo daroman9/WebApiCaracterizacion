@@ -46,6 +46,25 @@ namespace WebApiCaracterizacion.Controllers
             return Ok(ficha);
         }
 
+
+        // GET: api/Fichas/3 filtrar por identificador de plantilla
+        [HttpGet("byIdPlantilla/{id_plantilla}")]
+        public IActionResult GetFichaByPlantilla([FromRoute] int id_plantilla)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var ficha = _context.Ficha.Where(x => x.id_plantilla == id_plantilla).ToList();
+            if (ficha == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(ficha);
+        }
+
+
         // PUT: api/Fichas/5
         [HttpPut("{id}")]
         public IActionResult Put([FromBody] Ficha ficha, string id)

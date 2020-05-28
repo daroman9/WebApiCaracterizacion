@@ -66,7 +66,7 @@ namespace WebApiCaracterizacion.Controllers
 
         //Obtener un usuario por su id
         [HttpGet("byId/{id}")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public IActionResult GetUsuarioById([FromRoute] string id)
         {
             if (!ModelState.IsValid)

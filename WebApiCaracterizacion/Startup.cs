@@ -87,6 +87,16 @@ namespace WebApiCaracterizacion
             services.AddScoped<PromedioLegalidadORRepository>();
             services.AddScoped<PromedioTipoMineriaORRepository>();
             services.AddScoped<PromedioVolumenExtraccionORRespository>();
+            services.AddScoped<PromedioCausasVariacionRepositoryTF>();
+            services.AddScoped<PromedioViablilidadExplotacionORRespository>();
+            services.AddScoped<PromedioLugarExplotacionORRepository>();
+            services.AddScoped<PromedioDistribucionIngresoORRepository>();
+            services.AddScoped<PromedioCausaVariacionORRepository>();
+            services.AddScoped<PromedioVolumenProduccionORRepository>();
+            services.AddScoped<PromedioProduccionORRepository>();
+
+            
+
 
             //Fin seccion controladores
             services.AddDbContext<ApplicationDbContext>(options =>
