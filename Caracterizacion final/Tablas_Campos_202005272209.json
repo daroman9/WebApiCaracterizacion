@@ -308,7 +308,7 @@
 	},
 	{
 		"id" : 18,
-		"nombre" : "Si usa otra maquinaria especifique cual",
+		"nombre" : "Si usa otra maquinaria especifique cuál",
 		"tipo" : "string",
 		"valor_maximo" : 0,
 		"valor_minimo" : 0,
@@ -812,7 +812,7 @@
 	},
 	{
 		"id" : 46,
-		"nombre" : "Si usa otro método especifique cual",
+		"nombre" : "Si usa otro método especifique cuál",
 		"tipo" : "string",
 		"valor_maximo" : 0,
 		"valor_minimo" : 0,
@@ -1280,7 +1280,7 @@
 	},
 	{
 		"id" : 72,
-		"nombre" : "Que herramienta o equipo manual usa",
+		"nombre" : "¿Qué herramienta o equipo manual usa?",
 		"tipo" : "select",
 		"valor_maximo" : 0,
 		"valor_minimo" : 0,
@@ -2450,7 +2450,7 @@
 	},
 	{
 		"id" : 137,
-		"nombre" : "Donde compra la enmienda",
+		"nombre" : "Dónde compra la enmienda",
 		"tipo" : "string",
 		"valor_maximo" : 0,
 		"valor_minimo" : 0,
@@ -2594,7 +2594,7 @@
 	},
 	{
 		"id" : 145,
-		"nombre" : "Donde compra el fertilizante",
+		"nombre" : "Dónde compra el fertilizante",
 		"tipo" : "string",
 		"valor_maximo" : 0,
 		"valor_minimo" : 0,
@@ -4430,7 +4430,7 @@
 	},
 	{
 		"id" : 247,
-		"nombre" : "¿Cuantas de ellas trabajan?",
+		"nombre" : "¿Cuántas de ellas trabajan?",
 		"tipo" : "integer",
 		"valor_maximo" : 0,
 		"valor_minimo" : 0,
@@ -5006,7 +5006,7 @@
 	},
 	{
 		"id" : 279,
-		"nombre" : "¿Cuantas de ellas trabajan?",
+		"nombre" : "¿Cuántas de ellas trabajan?",
 		"tipo" : "integer",
 		"valor_maximo" : 0,
 		"valor_minimo" : 0,

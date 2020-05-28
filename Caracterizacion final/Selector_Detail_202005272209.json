@@ -787,7 +787,7 @@
 	{
 		"id" : 100,
 		"valor" : "4",
-		"etiqueta" : "GANADERIA",
+		"etiqueta" : "GANADERÍA",
 		"parent_value" : null,
 		"parent_selector" : null,
 		"id_selector" : 10
@@ -795,7 +795,7 @@
 	{
 		"id" : 101,
 		"valor" : "5",
-		"etiqueta" : "JORNALEO",
+		"etiqueta" : "JORNALERO",
 		"parent_value" : null,
 		"parent_selector" : null,
 		"id_selector" : 10
@@ -827,7 +827,7 @@
 	{
 		"id" : 105,
 		"valor" : "2",
-		"etiqueta" : "CONTRATO A TERMINO FIJO",
+		"etiqueta" : "CONTRATO A TÉRMINO FIJO",
 		"parent_value" : null,
 		"parent_selector" : null,
 		"id_selector" : 11
@@ -835,7 +835,7 @@
 	{
 		"id" : 106,
 		"valor" : "3",
-		"etiqueta" : "CONTRATO A TERMINO INDEFINIDO",
+		"etiqueta" : "CONTRATO A TÉRMINO INDEFINIDO",
 		"parent_value" : null,
 		"parent_selector" : null,
 		"id_selector" : 11
@@ -883,7 +883,7 @@
 	{
 		"id" : 112,
 		"valor" : "1",
-		"etiqueta" : "APARCERIA",
+		"etiqueta" : "APARCERÍA",
 		"parent_value" : null,
 		"parent_selector" : null,
 		"id_selector" : 12
@@ -1035,7 +1035,7 @@
 	{
 		"id" : 131,
 		"valor" : "7",
-		"etiqueta" : "RIÓ",
+		"etiqueta" : "RÍO",
 		"parent_value" : null,
 		"parent_selector" : null,
 		"id_selector" : 15
@@ -11899,7 +11899,7 @@
 	{
 		"id" : 1489,
 		"valor" : "2",
-		"etiqueta" : "CARGA MERCANCIA",
+		"etiqueta" : "CARGA MERCANCÍA",
 		"parent_value" : null,
 		"parent_selector" : null,
 		"id_selector" : 114
@@ -12099,7 +12099,7 @@
 	{
 		"id" : 1515,
 		"valor" : "5",
-		"etiqueta" : "INUNDACIÓN POR AUMENTO NIVEL DEL RIÓ",
+		"etiqueta" : "INUNDACIÓN POR AUMENTO NIVEL DEL RÍO",
 		"parent_value" : null,
 		"parent_selector" : null,
 		"id_selector" : 119
@@ -12131,7 +12131,7 @@
 	{
 		"id" : 1519,
 		"valor" : "9",
-		"etiqueta" : "SEQUÍA BAJO NIVEL DEL RIÓ",
+		"etiqueta" : "SEQUÍA BAJO NIVEL DEL RÍO",
 		"parent_value" : null,
 		"parent_selector" : null,
 		"id_selector" : 119
@@ -12315,7 +12315,7 @@
 	{
 		"id" : 1542,
 		"valor" : "3",
-		"etiqueta" : "CLOSITRIDIOSIS",
+		"etiqueta" : "CLOSTRIDIOSIS",
 		"parent_value" : null,
 		"parent_selector" : null,
 		"id_selector" : 121
@@ -13131,7 +13131,7 @@
 	{
 		"id" : 1646,
 		"valor" : "4",
-		"etiqueta" : "GANADERIA",
+		"etiqueta" : "GANADERÍA",
 		"parent_value" : null,
 		"parent_selector" : null,
 		"id_selector" : 123
@@ -13139,7 +13139,7 @@
 	{
 		"id" : 1647,
 		"valor" : "5",
-		"etiqueta" : "JORNALEO",
+		"etiqueta" : "JORNALERO",
 		"parent_value" : null,
 		"parent_selector" : null,
 		"id_selector" : 123
