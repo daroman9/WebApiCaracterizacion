@@ -4233,7 +4233,7 @@
 	{
 		"id" : 236,
 		"nombre" : "Teléfono",
-		"tipo" : "integer",
+		"tipo" : "string",
 		"valor_maximo" : 0,
 		"valor_minimo" : 0,
 		"valor_defecto" : 0,
@@ -4827,7 +4827,7 @@
 	{
 		"id" : 269,
 		"nombre" : "Teléfono",
-		"tipo" : "integer",
+		"tipo" : "string",
 		"valor_maximo" : 0,
 		"valor_minimo" : 0,
 		"valor_defecto" : 0,

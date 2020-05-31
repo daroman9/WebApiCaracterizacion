@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApiCaracterizacion.Models;
 
 namespace WebApiCaracterizacion.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200531182235_Fusion")]
+    partial class Fusion
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -274,8 +276,6 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.Property<bool>("EmailConfirmed");
 
-                    b.Property<string>("Foto");
-
                     b.Property<bool>("LockoutEnabled");
 
                     b.Property<DateTimeOffset?>("LockoutEnd");
@@ -298,8 +298,6 @@ namespace WebApiCaracterizacion.Migrations
                     b.Property<bool>("PhoneNumberConfirmed");
 
                     b.Property<string>("SecurityStamp");
-
-                    b.Property<string>("Telefono");
 
                     b.Property<bool>("TwoFactorEnabled");
 
@@ -410,6 +408,31 @@ namespace WebApiCaracterizacion.Migrations
                     b.ToTable("Plantillas");
                 });
 
+            modelBuilder.Entity("WebApiCaracterizacion.Models.Profesionales", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("apellido");
+
+                    b.Property<string>("email");
+
+                    b.Property<string>("foto");
+
+                    b.Property<int>("identificacion");
+
+                    b.Property<string>("nombre");
+
+                    b.Property<string>("profesion");
+
+                    b.Property<string>("telefono");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Profesionales");
+                });
+
             modelBuilder.Entity("WebApiCaracterizacion.Models.ProfesionalesXCampana", b =>
                 {
                     b.Property<int>("id")
@@ -418,13 +441,13 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.Property<int>("id_entidad");
 
-                    b.Property<string>("id_usuario");
+                    b.Property<int>("id_profesional");
 
                     b.HasKey("id");
 
                     b.HasIndex("id_entidad");
 
-                    b.HasIndex("id_usuario");
+                    b.HasIndex("id_profesional");
 
                     b.ToTable("ProfesionalesXCampana");
                 });
@@ -721,9 +744,10 @@ namespace WebApiCaracterizacion.Migrations
                         .HasForeignKey("id_entidad")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("WebApiCaracterizacion.Models.ApplicationUser", "ApplicationUser")
+                    b.HasOne("WebApiCaracterizacion.Models.Profesionales", "Profesionales")
                         .WithMany()
-                        .HasForeignKey("id_usuario");
+                        .HasForeignKey("id_profesional")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("WebApiCaracterizacion.Models.Registro", b =>

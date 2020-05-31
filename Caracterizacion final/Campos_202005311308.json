@@ -18663,7 +18663,7 @@
 		"rangos" : null,
 		"orden" : 6,
 		"visible" : 0,
-		"tipo" : "integer",
+		"tipo" : "float",
 		"required" : 0,
 		"unidad" : "Horas",
 		"disabled" : null,
@@ -18674,7 +18674,7 @@
 		"id_categoria" : 95,
 		"id_plantilla" : 4,
 		"id_selector" : null,
-		"id_validacion" : 1
+		"id_validacion" : 2
 	},
 	{
 		"id" : 813,
@@ -18870,7 +18870,7 @@
 		"rangos" : null,
 		"orden" : 1,
 		"visible" : 1,
-		"tipo" : "integer",
+		"tipo" : "float",
 		"required" : 0,
 		"unidad" : "NA",
 		"disabled" : null,
@@ -18881,7 +18881,7 @@
 		"id_categoria" : 99,
 		"id_plantilla" : 4,
 		"id_selector" : null,
-		"id_validacion" : 1
+		"id_validacion" : 2
 	},
 	{
 		"id" : 822,

@@ -13,12 +13,7 @@ namespace WebApiCaracterizacion.Models
         public string Apellido { get; set; }
         public int Documento { get; set; }
         public string Password { get; set; }
-
-      
-        [ForeignKey("Profesionales")]
-        public int id_profesional { get; set; }
-        [JsonIgnore]
-        public Profesionales Profesionales { get; set; }
-
+        public string Telefono { get; set; }
+        public string Foto { get; set; }
     }
 }

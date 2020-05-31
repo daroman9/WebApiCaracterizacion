@@ -16,12 +16,11 @@ namespace WebApiCaracterizacion.Models
         public int id_entidad { get; set; }
         [JsonIgnore]
         public EntidadesXCampana EntidadesXCampana { get; set; }
-
-        //Clave foranea para relacionar la ProfesionalesXCamapana con la tabla Profesionales
-        [ForeignKey("Profesionales")]
-        public int id_profesional { get; set; }
+        //Clave foranea para relacionar la tabla ProfesionalesXCamapana con la tabla usuarios
+        [ForeignKey("ApplicationUser")]
+        public string id_usuario { get; set; }
         [JsonIgnore]
-        public Profesionales Profesionales { get; set; }
+        public ApplicationUser ApplicationUser { get; set; }
 
     }
 }

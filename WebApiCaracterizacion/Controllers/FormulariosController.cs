@@ -63,6 +63,28 @@ namespace WebApiCaracterizacion.Controllers
 
             return Ok(formulario);
         }
+
+        //Obtener datos de los formularios y de los usuarios usando Join
+        [HttpGet("byUsuario/{id_usuario}")]
+        public IActionResult GetUserFormularioByUsuario([FromRoute] string id_usuario)
+        {
+           
+            
+            
+            
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var formulario = _context.Formularios.Where(x => x.id_usuario == id_usuario).ToList();
+            if (formulario == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(formulario);
+        }
+
         // GET: api/Formularios/byUsuario/5 obtener los formularios por el id usuario
         [HttpGet("byPlantilla/{id_plantilla}")]
         public IActionResult GetFormularioByPlantilla([FromRoute] int id_plantilla)

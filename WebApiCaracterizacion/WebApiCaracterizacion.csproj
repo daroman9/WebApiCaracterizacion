@@ -18,6 +18,10 @@
   <ItemGroup>
     <Compile Include="Migrations\20200516165243_InitialMigration.cs" />
     <Compile Include="Migrations\20200516165243_InitialMigration.Designer.cs" />
+    <Compile Include="Migrations\20200531182235_Fusion.cs" />
+    <Compile Include="Migrations\20200531182235_Fusion.Designer.cs" />
+    <Compile Include="Migrations\20200531182845_FusionProfesionales.cs" />
+    <Compile Include="Migrations\20200531182845_FusionProfesionales.Designer.cs" />
     <Compile Include="Migrations\ApplicationDbContextModelSnapshot.cs" />
   </ItemGroup>
 

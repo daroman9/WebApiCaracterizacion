@@ -22,7 +22,6 @@ namespace WebApiCaracterizacion.Models
         public DbSet<Ficha> Ficha { get; set; }
         public DbSet<EntidadesXCampana> EntidadesXCampana { get; set; }
         public DbSet<Entidad> Entidad { get; set; }
-        public DbSet<Profesionales> Profesionales { get; set; }
         public DbSet<Selector_Detail> Selector_Detail { get; set; }
         public DbSet<Validacion> Validacion { get; set; }
         public DbSet<ProfesionalesXCampana> ProfesionalesXCampana { get; set; }
