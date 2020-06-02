@@ -1,0 +1,5 @@
+INSERT INTO Plantillas(nombre,ImageUrl,color) VALUES ('Agricultura','agricultura.png',NULL);
+INSERT INTO Plantillas(nombre,ImageUrl,color) VALUES ('Ganadería','reino-animal.png',NULL);
+INSERT INTO Plantillas(nombre,ImageUrl,color) VALUES ('Transporte Fluvial','canoa.png',NULL);
+INSERT INTO Plantillas(nombre,ImageUrl,color) VALUES ('Minería Oro','minero.png',NULL);
+INSERT INTO Plantillas(nombre,ImageUrl,color) VALUES ('Minería de Agregados','minero.png',NULL);

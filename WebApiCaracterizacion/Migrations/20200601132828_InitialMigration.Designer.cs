@@ -10,8 +10,8 @@ using WebApiCaracterizacion.Models;
 namespace WebApiCaracterizacion.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200531182845_FusionProfesionales")]
-    partial class FusionProfesionales
+    [Migration("20200601132828_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -256,6 +256,35 @@ namespace WebApiCaracterizacion.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("WebApiCaracterizacion.Models.Anla", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("car");
+
+                    b.Property<string>("codigo");
+
+                    b.Property<string>("contrato");
+
+                    b.Property<double>("coor_este");
+
+                    b.Property<double>("coor_norte");
+
+                    b.Property<string>("expediente");
+
+                    b.Property<string>("observacion");
+
+                    b.Property<string>("operador");
+
+                    b.Property<string>("proyecto");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Anla");
+                });
+
             modelBuilder.Entity("WebApiCaracterizacion.Models.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
@@ -319,6 +348,23 @@ namespace WebApiCaracterizacion.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
+                });
+
+            modelBuilder.Entity("WebApiCaracterizacion.Models.Car", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("car");
+
+                    b.Property<string>("departamento");
+
+                    b.Property<string>("municipio");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Car");
                 });
 
             modelBuilder.Entity("WebApiCaracterizacion.Models.Entidad", b =>

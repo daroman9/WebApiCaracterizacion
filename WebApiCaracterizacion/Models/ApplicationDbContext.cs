@@ -1,6 +1,7 @@
 ﻿using caracterizacion.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using WebApiCaracterizacion.Models;
 
 namespace WebApiCaracterizacion.Models
 {
@@ -25,6 +26,8 @@ namespace WebApiCaracterizacion.Models
         public DbSet<Selector_Detail> Selector_Detail { get; set; }
         public DbSet<Validacion> Validacion { get; set; }
         public DbSet<ProfesionalesXCampana> ProfesionalesXCampana { get; set; }
+        public DbSet<Anla> Anla { get; set; }
+        public DbSet<Car> Car { get; set; }
 
     }
 }

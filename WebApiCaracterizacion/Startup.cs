@@ -117,10 +117,17 @@ namespace WebApiCaracterizacion
             services.AddScoped<PromedioTipoBeneficioGNRepository>();
             services.AddScoped<PromedioTipoHatoGNRepository>();
             services.AddScoped<PromedioTipoRegionGNRepository>();
-
+            services.AddScoped<PromedioRandoEdadGNRepository>();
+            services.AddScoped<PromedioVariacionProductividadGNRepository>();
+            services.AddScoped<PromedioCausaVariacionProductividadGNRepository>();
+            services.AddScoped<PromedioPercepcionVariacionProductividadGNRepository>();
+            services.AddScoped<PromedioMesesActividadGNRepository>();
 
 
             
+
+
+
 
 
 

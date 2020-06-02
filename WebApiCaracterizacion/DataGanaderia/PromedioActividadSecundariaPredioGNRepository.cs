@@ -19,7 +19,7 @@ namespace WebApiCaracterizacion.DataGanaderia
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("dw.IG_ActividadSecundariaPredio", sql))
+                using (SqlCommand cmd = new SqlCommand("dw.IAG_ActividadSecundariaPredio", sql))
                 {
                     cmd.Parameters.Add("@plantilla", SqlDbType.VarChar).Value = (object)plantilla ?? DBNull.Value;
                     cmd.Parameters.Add("@tipoConsulta", SqlDbType.VarChar).Value = (object)tipoConsulta ?? DBNull.Value;
