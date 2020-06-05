@@ -104,7 +104,7 @@ namespace WebApiCaracterizacion.DataMineria
         {
             return new PromediosMinimoOroOR()
             {
-                promedio = (decimal)reader["promedio"]
+                promedio = (double)reader["promedio"]
             };
         }
 
@@ -113,7 +113,7 @@ namespace WebApiCaracterizacion.DataMineria
             return new PromediosMinimoOroOR()
             {
                 municipio = (string)reader["municipio"],
-                promedio = (decimal)reader["promedio"]
+                promedio = (double)reader["promedio"]
             };
         }
 
@@ -123,7 +123,7 @@ namespace WebApiCaracterizacion.DataMineria
             {
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 municipio = (string)reader["municipio"],
-                promedio = (decimal)reader["promedio"]
+                promedio = (double)reader["promedio"]
             };
         }
 
@@ -132,7 +132,7 @@ namespace WebApiCaracterizacion.DataMineria
             return new PromediosMinimoOroOR()
             {
                 tipo_plantilla = (string)reader["tipo_plantilla"],
-                promedio = (decimal)reader["promedio"]
+                promedio = (double)reader["promedio"]
             };
         }
 

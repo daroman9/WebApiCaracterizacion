@@ -122,13 +122,7 @@ namespace WebApiCaracterizacion
             services.AddScoped<PromedioCausaVariacionProductividadGNRepository>();
             services.AddScoped<PromedioPercepcionVariacionProductividadGNRepository>();
             services.AddScoped<PromedioMesesActividadGNRepository>();
-
-
-            
-
-
-
-
+            services.AddScoped<PromedioActividadPrincipalTransportadorTFRepository>();
 
 
             //Fin seccion controladores
