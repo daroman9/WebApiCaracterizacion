@@ -14,6 +14,7 @@ using WebApiCaracterizacion.Data;
 using WebApiCaracterizacion.DataMineria;
 using WebApiCaracterizacion.DataTransporte;
 using WebApiCaracterizacion.DataGanaderia;
+using WebApiCaracterizacion.DataConsultasGenerales;
 
 namespace WebApiCaracterizacion
 {
@@ -25,13 +26,13 @@ namespace WebApiCaracterizacion
         }
         readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
-            
+
         public IConfiguration Configuration { get; }
 
-   
+
         public void ConfigureServices(IServiceCollection services)
         {
-           //Servicios para acceder a los controladores que ejecutan los procedimientos almacenados
+            //Servicios para acceder a los controladores que ejecutan los procedimientos almacenados
             services.AddScoped<PromedioGenerosRepository>();
             services.AddScoped<PromedioAntiguedadRepository>();
             services.AddScoped<PromedioEdadesRepository>();
@@ -123,18 +124,35 @@ namespace WebApiCaracterizacion
             services.AddScoped<PromedioPercepcionVariacionProductividadGNRepository>();
             services.AddScoped<PromedioMesesActividadGNRepository>();
             services.AddScoped<PromedioActividadPrincipalTransportadorTFRepository>();
+            services.AddScoped<PromedioEstadoCivilGNRepository>();
+            services.AddScoped<PromedioNivelSocioeconomicoGNRepository>();
+
+            
+
+
+
+
+
+
+
+            services.AddScoped<FiltrarFichasRepository>();
+
+
+
+
+            
 
 
             //Fin seccion controladores
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
             services.AddIdentity<ApplicationUser, IdentityRole>(
-                option =>
+                options =>
                 {
-                    option.Password.RequireDigit = false;
-                    option.Password.RequireNonAlphanumeric = false;
-                    option.Password.RequireUppercase = false;
-                    option.Password.RequireLowercase = false;
+                    options.Password.RequireDigit = false;
+                    options.Password.RequireNonAlphanumeric = false;
+                    options.Password.RequireUppercase = false;
+                    options.Password.RequireLowercase = false;
                 }
                 )
                 .AddEntityFrameworkStores<ApplicationDbContext>()
@@ -190,7 +208,7 @@ namespace WebApiCaracterizacion
                 builder.AllowAnyMethod();
                 builder.AllowAnyHeader();
 
-            }); 
+            });
             app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseMvc();

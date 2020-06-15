@@ -15,5 +15,6 @@ namespace WebApiCaracterizacion.Models
         public string Password { get; set; }
         public string Telefono { get; set; }
         public string Foto { get; set; }
+        public int Rol { get; set; }
     }
 }

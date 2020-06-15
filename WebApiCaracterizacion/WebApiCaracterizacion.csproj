@@ -9,6 +9,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20200601132828_InitialMigration.cs" />
+    <Compile Remove="Migrations\20200601132828_InitialMigration.Designer.cs" />
+    <Compile Remove="Migrations\20200611163738_AddRoles.cs" />
+    <Compile Remove="Migrations\20200611163738_AddRoles.Designer.cs" />
+    <Compile Remove="Migrations\20200611163922_RemoveRoles.cs" />
+    <Compile Remove="Migrations\20200611163922_RemoveRoles.Designer.cs" />
+    <Compile Remove="Migrations\20200611163947_AddingRoles.cs" />
+    <Compile Remove="Migrations\20200611163947_AddingRoles.Designer.cs" />
+    <Compile Remove="Migrations\20200611164046_Update-Database.cs" />
+    <Compile Remove="Migrations\20200611164046_Update-Database.Designer.cs" />
+    <Compile Remove="Migrations\20200611164258_Update-Database.cs" />
+    <Compile Remove="Migrations\20200611164258_Update-Database.Designer.cs" />
+    <Compile Remove="Migrations\20200611164352_AddingRole.cs" />
+    <Compile Remove="Migrations\20200611164352_AddingRole.Designer.cs" />
+    <Compile Remove="Migrations\20200613135903_Borrar.cs" />
+    <Compile Remove="Migrations\20200613135903_Borrar.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

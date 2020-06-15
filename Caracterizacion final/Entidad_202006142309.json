@@ -1,0 +1,23 @@
+{
+"Entidad": [
+	{
+		"id" : 2,
+		"identificacion" : 3,
+		"nombre" : "Prueba 2",
+		"direccion" : "Nueva dirección",
+		"contacto" : "¿Aquí iría un nombre?",
+		"telContacto" : "3225773872",
+		"emailContacto" : "falta validación correo",
+		"grupoInvestigacion" : "GE-PRUEBA"
+	},
+	{
+		"id" : 3,
+		"identificacion" : 12,
+		"nombre" : "Universidad Nacional",
+		"direccion" : "Calle 10 con la 3",
+		"contacto" : "Osvaldo Ordoñez",
+		"telContacto" : "2301645",
+		"emailContacto" : "osvalde@gmail.com",
+		"grupoInvestigacion" : "GEMMA"
+	}
+]}

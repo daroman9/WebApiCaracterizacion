@@ -54,7 +54,7 @@ namespace WebApiCaracterizacion.DataGanaderia
         {
             return new PromediosMesesActividadGN()
             {
-                tipo_plantilla = (string)reader["tipo_plantilla"],
+               
                 municipio = (string)reader["municipio"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
@@ -65,7 +65,7 @@ namespace WebApiCaracterizacion.DataGanaderia
         {
             return new PromediosMesesActividadGN()
             {
-                tipo_plantilla = (string)reader["tipo_plantilla"],
+               
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
                 porcentaje = (double)reader["porcentaje"]

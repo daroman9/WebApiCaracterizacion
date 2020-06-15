@@ -44,6 +44,14 @@ namespace WebApiCaracterizacion.DataMineria
                             {
                                 response.Add(MapToValueNullMunicipio(reader));
                             }
+                            else if (plantilla == "9" & tipoConsulta == "municipio")
+                            {
+                                response.Add(MapToValueMunicipio(reader));
+                            }
+                            else if (plantilla == "9" & tipoConsulta == "general")
+                            {
+                                response.Add(MapToValueGeneral(reader));
+                            }
                             else if (plantilla == "10" & tipoConsulta == "municipio")
                             {
                                 response.Add(MapToValueMunicipio(reader));
@@ -121,7 +129,7 @@ namespace WebApiCaracterizacion.DataMineria
         {
             return new PromediosMinimoOroOR()
             {
-                tipo_plantilla = (string)reader["tipo_plantilla"],
+               
                 municipio = (string)reader["municipio"],
                 promedio = (double)reader["promedio"]
             };
@@ -131,7 +139,7 @@ namespace WebApiCaracterizacion.DataMineria
         {
             return new PromediosMinimoOroOR()
             {
-                tipo_plantilla = (string)reader["tipo_plantilla"],
+              
                 promedio = (double)reader["promedio"]
             };
         }

@@ -7,6 +7,8 @@ using WebApiCaracterizacion.Models;
 using caracterizacion.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore.Internal;
 
 namespace WebApiCaracterizacion.Controllers
 {
@@ -16,6 +18,8 @@ namespace WebApiCaracterizacion.Controllers
     public class FormulariosController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
+
+       
 
         public FormulariosController(ApplicationDbContext context)
         {
@@ -28,6 +32,7 @@ namespace WebApiCaracterizacion.Controllers
         {
             return _context.Formularios;
         }
+
 
         // GET: api/Formularios/5
         [HttpGet("{id}")]

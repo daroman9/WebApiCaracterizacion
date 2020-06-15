@@ -47,6 +47,23 @@ namespace WebApiCaracterizacion.Controllers
             return Ok(tablas_Campo);
         }
 
+        // GET: api/Tablas_Campo/5 filtrar por identificador de plantilla
+        [HttpGet("byIdCampo/{id_campo}")]
+        public IActionResult GetCamposByIdCampo([FromRoute] int id_campo)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var campo = _context.Tablas_Campos.Where(x => x.id_campo == id_campo).ToList();
+            if (campo == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(campo);
+        }
+
         // PUT: api/Tablas_Campo/5
         [HttpPut("{id}")]
         public IActionResult Put([FromBody] Tablas_Campo tablas_Campo, int id)

@@ -75,6 +75,23 @@ namespace WebApiCaracterizacion.Controllers
 
             return Ok(registro);
         }
+
+        [HttpGet("byCampoFicha/{id_campo}/{id_ficha}")]
+        public IActionResult GetRegistrosByCampoFicha([FromRoute] int id_campo, string id_ficha)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var res = _context.Registros_Tablas.Where(x => x.id_campo == id_campo && x.id_ficha == id_ficha).ToList();
+            if (res == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(res);
+        }
+
         // POST: api/Registro_Tabla
         [HttpPost]
         public async Task<IActionResult> PostRegistro_Tabla([FromBody] Registro_Tabla registro_Tabla)

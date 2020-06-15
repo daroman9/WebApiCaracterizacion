@@ -12,17 +12,17 @@ namespace WebApiCaracterizacion.Models
         public string nombre { get; set; }
         [StringLength(100)]
         public string tipo { get; set; }
-        public int valor_maximo { get; set; }
-        public int valor_minimo { get; set; }
-        public int valor_defecto { get; set; }
+        public int? valor_maximo { get; set; }
+        public int? valor_minimo { get; set; }
+        public int? valor_defecto { get; set; }
         [StringLength(250)]
         public string rangos { get; set; }
-        public int orden { get; set; }
-        public bool visible { get; set; }
+        public int? orden { get; set; }
+        public bool? visible { get; set; }
         public string unidad { get; set; }
         public string enableFields { get; set; }
         public string disableFields { get; set; }
-        public bool disabled { get; set; }
+        public bool? disabled { get; set; }
 
         //Clave foranea para relacionar la tabla Campo con la tabla Tablas_Campo
         [ForeignKey("Campo")]

@@ -44,6 +44,14 @@ namespace WebApiCaracterizacion.Data
                             {
                                 response.Add(MapToValueNullMunicipio(reader));
                             }
+                            else if (plantilla == "9" & tipoConsulta == "municipio")
+                            {
+                                response.Add(MapToValueMunicipio(reader));
+                            }
+                            else if (plantilla == "9" & tipoConsulta == "general")
+                            {
+                                response.Add(MapToValueGeneral(reader));
+                            }
                             else if (plantilla == "10" & tipoConsulta == "municipio")
                             {
                                 response.Add(MapToValueMunicipio(reader));
@@ -136,7 +144,7 @@ namespace WebApiCaracterizacion.Data
         {
             return new PromediosVulnerabilidadOR()
             {
-                tipo_plantilla = (string)reader["tipo_plantilla"],
+              
                 municipio = (string)reader["municipio"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
@@ -148,7 +156,7 @@ namespace WebApiCaracterizacion.Data
         {
             return new PromediosVulnerabilidadOR()
             {
-                tipo_plantilla = (string)reader["tipo_plantilla"],
+              
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
                 porcentaje = (double)reader["porcentaje"]

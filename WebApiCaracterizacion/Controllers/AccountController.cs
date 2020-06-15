@@ -20,7 +20,7 @@ namespace WebApiCaracterizacion.Controllers
 {
     [Produces("application/json")]
     [Route("api/Account")]
-    
+
     public class AccountController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
@@ -34,6 +34,7 @@ namespace WebApiCaracterizacion.Controllers
         {
             _userManager = userManager;
             _signInManager = signInManager;
+
             this._configuration = configuration;
         }
 
@@ -89,7 +90,7 @@ namespace WebApiCaracterizacion.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Nombre = model.Nombre, Apellido = model.Apellido, Documento = model.Documento};
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Nombre = model.Nombre, Apellido = model.Apellido, Documento = model.Documento };
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -109,7 +110,7 @@ namespace WebApiCaracterizacion.Controllers
 
         //Login de los usuarios registrados, esta funcion devuelve el token para la autenticacion
         [HttpPost]
-        
+
         [Route("Login")]
 
         public async Task<IActionResult> Login([FromBody] ApplicationUser userInfo)
@@ -122,8 +123,16 @@ namespace WebApiCaracterizacion.Controllers
                 var result = await _signInManager.PasswordSignInAsync(userInfo.Email, userInfo.Password, isPersistent: false, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
+                    if (datos.Rol != 0)
+                    {
 
-                    return BuildToken(userInfo, datos.Nombre, datos.Apellido, datos.Id);
+                        return BuildToken(userInfo, datos.Nombre, datos.Apellido, datos.Id, datos.Rol);
+                    }
+                    else
+                    {
+                        return Unauthorized();
+                    }
+
                 }
                 else
                 {
@@ -139,12 +148,43 @@ namespace WebApiCaracterizacion.Controllers
         }
 
         //Funcion que crea el token
-        private IActionResult BuildToken(ApplicationUser userInfo, string Nombre, string Apellido, string Id)
+
+        private IActionResult BuildToken(ApplicationUser userInfo, string Nombre, string Apellido, string Id, int Rol)
         {
+
+            if (Rol == 1)
+            {
+                var Token = AddAdminClaim(userInfo, Nombre, Apellido, Id, Rol);
+                return (Token);
+
+            }
+            else if (Rol == 2)
+            {
+                var Token = AddUserClaim(userInfo, Nombre, Apellido, Id, Rol);
+                return (Token);
+            }
+            else if (Rol == 3)
+            {
+                var Token = AddAnalistaClaim(userInfo, Nombre, Apellido, Id, Rol);
+                return (Token);
+            }
+            else
+            {
+                var Token = AddDeshabilitadoClaim(userInfo, Nombre, Apellido, Id, Rol);
+                return (Token);
+            }
+
+        }
+
+
+        //Funcion para añadir el claim de adminisitrador
+        private IActionResult AddAdminClaim(ApplicationUser userInfo, string Nombre, string Apellido, string Id, int Rol)
+        {
+
             var claims = new[]
             {
                 new Claim(JwtRegisteredClaimNames.UniqueName, userInfo.Email),
-                new Claim("miValor", "Lo que yo quiera"),
+                new Claim("Rol", "Admin"),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
 
@@ -167,11 +207,125 @@ namespace WebApiCaracterizacion.Controllers
                 nombre = Nombre,
                 apellido = Apellido,
                 email = userInfo.Email,
-                id_user = Id
+                id_user = Id,
+                rol = Rol
 
             });
 
         }
+
+        //Funcion para añadir el claim de usuario
+        private IActionResult AddUserClaim(ApplicationUser userInfo, string Nombre, string Apellido, string Id, int Rol)
+        {
+
+            var claims = new[]
+            {
+                new Claim(JwtRegisteredClaimNames.UniqueName, userInfo.Email),
+                new Claim("Rol", "Usuario"),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+            };
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:SigningKey"]));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var expiration = DateTime.UtcNow.AddYears(10);
+
+            JwtSecurityToken token = new JwtSecurityToken(
+               issuer: "yourdomain.com",
+               audience: "yourdomain.com",
+               claims: claims,
+               expires: expiration,
+               signingCredentials: creds);
+
+            return Ok(new
+            {
+                token = new JwtSecurityTokenHandler().WriteToken(token),
+                expiration = expiration,
+                nombre = Nombre,
+                apellido = Apellido,
+                email = userInfo.Email,
+                id_user = Id,
+                rol = Rol
+
+            });
+
+        }
+
+        //Funcion para añadir el claim de Analista
+        private IActionResult AddAnalistaClaim(ApplicationUser userInfo, string Nombre, string Apellido, string Id, int Rol)
+        {
+
+            var claims = new[]
+            {
+                new Claim(JwtRegisteredClaimNames.UniqueName, userInfo.Email),
+                new Claim("Rol", "Analista"),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+            };
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:SigningKey"]));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var expiration = DateTime.UtcNow.AddYears(10);
+
+            JwtSecurityToken token = new JwtSecurityToken(
+               issuer: "yourdomain.com",
+               audience: "yourdomain.com",
+               claims: claims,
+               expires: expiration,
+               signingCredentials: creds);
+
+            return Ok(new
+            {
+                token = new JwtSecurityTokenHandler().WriteToken(token),
+                expiration = expiration,
+                nombre = Nombre,
+                apellido = Apellido,
+                email = userInfo.Email,
+                id_user = Id,
+                rol = Rol
+
+            });
+
+        }
+
+        //Funcion para añadir el claim de deshabilitado
+        private IActionResult AddDeshabilitadoClaim(ApplicationUser userInfo, string Nombre, string Apellido, string Id, int Rol)
+        {
+
+            var claims = new[]
+            {
+                new Claim(JwtRegisteredClaimNames.UniqueName, userInfo.Email),
+                new Claim("Rol", "Deshabilitado"),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+            };
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:SigningKey"]));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var expiration = DateTime.UtcNow.AddYears(10);
+
+            JwtSecurityToken token = new JwtSecurityToken(
+               issuer: "yourdomain.com",
+               audience: "yourdomain.com",
+               claims: claims,
+               expires: expiration,
+               signingCredentials: creds);
+
+            return Ok(new
+            {
+                token = new JwtSecurityTokenHandler().WriteToken(token),
+                expiration = expiration,
+                nombre = Nombre,
+                apellido = Apellido,
+                email = userInfo.Email,
+                id_user = Id,
+                rol = Rol
+
+            });
+
+        }
+
+
         //Funcion para modificar los datos del usuario.
 
         [HttpPut("updateUser")]
@@ -199,7 +353,7 @@ namespace WebApiCaracterizacion.Controllers
             }
 
         }
-      
+
         //Funcion para el cambio de password
         [HttpPut("changePassword")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]

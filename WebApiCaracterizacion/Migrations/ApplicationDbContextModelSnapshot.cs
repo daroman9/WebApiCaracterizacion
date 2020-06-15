@@ -326,6 +326,8 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.Property<bool>("PhoneNumberConfirmed");
 
+                    b.Property<int>("Rol");
+
                     b.Property<string>("SecurityStamp");
 
                     b.Property<string>("Telefono");
@@ -526,9 +528,9 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.Property<DateTime?>("valor_date");
 
-                    b.Property<float>("valor_float");
+                    b.Property<float?>("valor_float");
 
-                    b.Property<int>("valor_integer");
+                    b.Property<int?>("valor_integer");
 
                     b.Property<string>("valor_string");
 
@@ -585,7 +587,7 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.Property<string>("disableFields");
 
-                    b.Property<bool>("disabled");
+                    b.Property<bool?>("disabled");
 
                     b.Property<string>("enableFields");
 
@@ -598,7 +600,7 @@ namespace WebApiCaracterizacion.Migrations
                     b.Property<string>("nombre")
                         .HasMaxLength(250);
 
-                    b.Property<int>("orden");
+                    b.Property<int?>("orden");
 
                     b.Property<string>("rangos")
                         .HasMaxLength(250);
@@ -608,13 +610,13 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.Property<string>("unidad");
 
-                    b.Property<int>("valor_defecto");
+                    b.Property<int?>("valor_defecto");
 
-                    b.Property<int>("valor_maximo");
+                    b.Property<int?>("valor_maximo");
 
-                    b.Property<int>("valor_minimo");
+                    b.Property<int?>("valor_minimo");
 
-                    b.Property<bool>("visible");
+                    b.Property<bool?>("visible");
 
                     b.HasKey("id");
 

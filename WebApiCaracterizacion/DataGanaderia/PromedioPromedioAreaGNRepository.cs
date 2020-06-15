@@ -54,6 +54,7 @@ namespace WebApiCaracterizacion.DataGanaderia
         {
             return new PromediosPromedioAreaGN()
             {
+               
                 municipio = (string)reader["municipio"],
                 promedio = (double)reader["promedio"]
             };
@@ -62,6 +63,7 @@ namespace WebApiCaracterizacion.DataGanaderia
         {
             return new PromediosPromedioAreaGN()
             {
+              
                 promedio = (double)reader["promedio"]
             };
         }

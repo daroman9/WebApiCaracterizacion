@@ -50,7 +50,7 @@ namespace WebApiCaracterizacion.Controllers
 
         // GET: api/Campos/5 filtrar por identificador de plantilla
         [HttpGet("byPlantilla/{id_plantilla}")]
-        public IActionResult GetCategoriaByPlantilla([FromRoute] int id_plantilla)
+        public IActionResult GetCamposByPlantilla([FromRoute] int id_plantilla)
         {
             if (!ModelState.IsValid)
             {
@@ -64,6 +64,42 @@ namespace WebApiCaracterizacion.Controllers
 
             return Ok(campo);
         }
+
+        // GET: api/Campos/5 filtrar por id de la categoria
+        [HttpGet("byCategoria/{id_categoria}")]
+        public IActionResult GetCamposByCategoria([FromRoute] int id_categoria)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var campo = _context.Campos.Where(x => x.id_categoria == id_categoria).ToList();
+            if (campo == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(campo);
+        }
+
+        // GET: api/Campos/5 filtrar por id de la categoria
+        [HttpGet("byCategoriaFicha/{id_categoria}/{id_plantilla}")]
+        public IActionResult GetCamposByCategoriaFicha([FromRoute] int id_categoria, int id_plantilla)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var campo = _context.Campos.Where(x => x.id_categoria == id_categoria && x.id_plantilla==id_plantilla).ToList();
+            if (campo == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(campo);
+        }
+
+
         // PUT: api/Campos/5
         [HttpPut("{id}")]
         public IActionResult Put([FromBody] Campo campo, int id)
