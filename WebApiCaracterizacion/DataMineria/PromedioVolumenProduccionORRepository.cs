@@ -112,7 +112,7 @@ namespace WebApiCaracterizacion.DataMineria
         {
             return new PromediosVolumenProduccionOR()
             {
-                promedio = (decimal)reader["promedio"]
+                promedio = (double)reader["promedio"]
             };
         }
 
@@ -121,7 +121,7 @@ namespace WebApiCaracterizacion.DataMineria
             return new PromediosVolumenProduccionOR()
             {
                 municipio = (string)reader["municipio"],
-                promedio = (decimal)reader["promedio"]
+                promedio = (double)reader["promedio"]
             };
         }
 
@@ -131,7 +131,7 @@ namespace WebApiCaracterizacion.DataMineria
             {
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 municipio = (string)reader["municipio"],
-                promedio = (decimal)reader["promedio"]
+                promedio = (double)reader["promedio"]
             };
         }
 
@@ -140,7 +140,7 @@ namespace WebApiCaracterizacion.DataMineria
             return new PromediosVolumenProduccionOR()
             {
                 tipo_plantilla = (string)reader["tipo_plantilla"],
-                promedio = (decimal)reader["promedio"]
+                promedio = (double)reader["promedio"]
             };
         }
 

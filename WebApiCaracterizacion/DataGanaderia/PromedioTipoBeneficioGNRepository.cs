@@ -35,11 +35,19 @@ namespace WebApiCaracterizacion.DataGanaderia
 
                         while (await reader.ReadAsync())
                         {
-                            if (tipoConsulta == "general")
+                            if (plantilla == null & tipoConsulta == "general")
+                            {
+                                response.Add(MapToValueNullGeneral(reader));
+                            }
+                            else if (plantilla == null & tipoConsulta == "municipio")
+                            {
+                                response.Add(MapToValueNullMunicipio(reader));
+                            }
+                            else if (plantilla != null & tipoConsulta == "general")
                             {
                                 response.Add(MapToValueGeneral(reader));
                             }
-                            else
+                            else if (plantilla != null & tipoConsulta == "municipio")
                             {
                                 response.Add(MapToValue(reader));
                             }
@@ -54,6 +62,18 @@ namespace WebApiCaracterizacion.DataGanaderia
         {
             return new PromediosTipoBeneficioGN()
             {
+                tipo_plantilla = (string)reader["tipo_plantilla"],
+                municipio = (string)reader["municipio"],
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
+            };
+        }
+        private PromediosTipoBeneficioGN MapToValueNullMunicipio(SqlDataReader reader)
+        {
+            return new PromediosTipoBeneficioGN()
+            {
+
                 municipio = (string)reader["municipio"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
@@ -61,6 +81,16 @@ namespace WebApiCaracterizacion.DataGanaderia
             };
         }
         private PromediosTipoBeneficioGN MapToValueGeneral(SqlDataReader reader)
+        {
+            return new PromediosTipoBeneficioGN()
+            {
+                tipo_plantilla = (string)reader["tipo_plantilla"],
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
+            };
+        }
+        private PromediosTipoBeneficioGN MapToValueNullGeneral(SqlDataReader reader)
         {
             return new PromediosTipoBeneficioGN()
             {

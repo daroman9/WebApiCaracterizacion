@@ -8,26 +8,26 @@ using WebApiCaracterizacion.ModelsGanaderia;
 
 namespace WebApiCaracterizacion.DataGanaderia
 {
-    public class PromedioTipoRegionGNRepository
+    public class PromedioMesesCarneGNRepository
     {
         private readonly string _connectionString;
-        public PromedioTipoRegionGNRepository(IConfiguration configuration)
+        public PromedioMesesCarneGNRepository(IConfiguration configuration)
         {
             _connectionString = configuration.GetConnectionString("defaultConnection");
         }
 
-        public async Task<List<PromediosTipoPregioGN>> GetPromedio(string plantilla, string tipoConsulta, string fechaInicio, string fechaFin)
+        public async Task<List<PromediosMesesCarneGN>> GetPromedio(string plantilla, string tipoConsulta, string fechaInicio, string fechaFin)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("dw.IG_TipoPredio", sql))
+                using (SqlCommand cmd = new SqlCommand("dw.IAG_Mesescarne", sql))
                 {
                     cmd.Parameters.Add("@plantilla", SqlDbType.VarChar).Value = (object)plantilla ?? DBNull.Value;
                     cmd.Parameters.Add("@tipoConsulta", SqlDbType.VarChar).Value = (object)tipoConsulta ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaInicio", SqlDbType.VarChar).Value = (object)fechaInicio ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaFin", SqlDbType.VarChar).Value = (object)fechaFin ?? DBNull.Value;
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    var response = new List<PromediosTipoPregioGN>();
+                    var response = new List<PromediosMesesCarneGN>();
                     await sql.OpenAsync();
 
                     using (var reader = await cmd.ExecuteReaderAsync())
@@ -50,20 +50,22 @@ namespace WebApiCaracterizacion.DataGanaderia
                 }
             }
         }
-        private PromediosTipoPregioGN MapToValue(SqlDataReader reader)
+        private PromediosMesesCarneGN MapToValue(SqlDataReader reader)
         {
-            return new PromediosTipoPregioGN()
+            return new PromediosMesesCarneGN()
             {
+                tipo_plantilla = (string)reader["tipo_plantilla"],
                 municipio = (string)reader["municipio"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
                 porcentaje = (double)reader["porcentaje"]
             };
         }
-        private PromediosTipoPregioGN MapToValueGeneral(SqlDataReader reader)
+        private PromediosMesesCarneGN MapToValueGeneral(SqlDataReader reader)
         {
-            return new PromediosTipoPregioGN()
+            return new PromediosMesesCarneGN()
             {
+                tipo_plantilla = (string)reader["tipo_plantilla"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
                 porcentaje = (double)reader["porcentaje"]

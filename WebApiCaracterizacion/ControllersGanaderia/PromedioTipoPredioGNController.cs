@@ -9,18 +9,18 @@ namespace WebApiCaracterizacion.ControllersGanaderia
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PromedioTipoRegionGNController : ControllerBase
+    public class PromedioTipoPredioGNController : ControllerBase
     {
-        private readonly PromedioTipoRegionGNRepository _repository;
+        private readonly PromedioTipoPredioGNRepository _repository;
 
-        public PromedioTipoRegionGNController(PromedioTipoRegionGNRepository repository)
+        public PromedioTipoPredioGNController(PromedioTipoPredioGNRepository repository)
         {
             this._repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
 
         [HttpGet]
 
-        public async Task<ActionResult<IEnumerable<PromediosTipoPregioGN>>> GetData([FromQuery]string plantilla, [FromQuery]string tipoConsulta, [FromQuery]string fechaInicio, [FromQuery]string fechaFin)
+        public async Task<ActionResult<IEnumerable<PromediosTipoPredioGN>>> GetData([FromQuery]string plantilla, [FromQuery]string tipoConsulta, [FromQuery]string fechaInicio, [FromQuery]string fechaFin)
         {
             return await _repository.GetPromedio(plantilla, tipoConsulta, fechaInicio, fechaFin);
         }

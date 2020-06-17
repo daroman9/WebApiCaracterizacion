@@ -117,7 +117,7 @@ namespace WebApiCaracterizacion
             services.AddScoped<PromedioTenenciaGNRepository>();
             services.AddScoped<PromedioTipoBeneficioGNRepository>();
             services.AddScoped<PromedioTipoHatoGNRepository>();
-            services.AddScoped<PromedioTipoRegionGNRepository>();
+            services.AddScoped<PromedioTipoPredioGNRepository>();
             services.AddScoped<PromedioRandoEdadGNRepository>();
             services.AddScoped<PromedioVariacionProductividadGNRepository>();
             services.AddScoped<PromedioCausaVariacionProductividadGNRepository>();
@@ -126,12 +126,26 @@ namespace WebApiCaracterizacion
             services.AddScoped<PromedioActividadPrincipalTransportadorTFRepository>();
             services.AddScoped<PromedioEstadoCivilGNRepository>();
             services.AddScoped<PromedioNivelSocioeconomicoGNRepository>();
+            services.AddScoped<PromedioVolumenDiarioAgregadosORRepository>();
+            services.AddScoped<PromedioNivelPoblacionVulnerableGNRepository>();
+            services.AddScoped<PromedioAreaSiembraGNRepository>();
+            services.AddScoped<PromedioAreaPotrerosGNRepository>();
+            services.AddScoped<PromedioProduccionArrozGNRepository>();
+            services.AddScoped<PromedioProduccionPlatanoGNRepository>();
+            services.AddScoped<PromedioNivelDependeActividadGNRepository>();
+            services.AddScoped<PromedioOtraActividadPredioGNRepository>();
+            services.AddScoped<PromedioMesesCosechaGNRepository>();
+            services.AddScoped<PromedioMesesLecheGNRepository>();
+            services.AddScoped<PromedioMesesCarneGNRepository>();
+            services.AddScoped<PromedioPorcentajeAreaGNRepository>();
+            services.AddScoped<PromedioDensidadCultivoGNRepository>();
+            services.AddScoped<PromedioNivelIngresoGNRepository>();
+
+
+
+
 
             
-
-
-
-
 
 
 

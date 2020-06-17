@@ -54,6 +54,7 @@ namespace WebApiCaracterizacion.DataGanaderia
         {
             return new PromediosCausaVariacionProductividadGN()
             {
+               
                 municipio = (string)reader["municipio"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
@@ -64,6 +65,7 @@ namespace WebApiCaracterizacion.DataGanaderia
         {
             return new PromediosCausaVariacionProductividadGN()
             {
+                
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
                 porcentaje = (double)reader["porcentaje"]

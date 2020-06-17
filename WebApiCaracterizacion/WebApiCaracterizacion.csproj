@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="DataGanaderia\PromedioNivelPoblacionVulnerableGNController.cs" />
     <Compile Remove="Migrations\20200601132828_InitialMigration.cs" />
     <Compile Remove="Migrations\20200601132828_InitialMigration.Designer.cs" />
     <Compile Remove="Migrations\20200611163738_AddRoles.cs" />

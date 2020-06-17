@@ -36,11 +36,19 @@ namespace WebApiCaracterizacion.DataGanaderia
 
                         while (await reader.ReadAsync())
                         {
-                            if (tipoConsulta == "general")
+                            if (plantilla == null & tipoConsulta == "general")
+                            {
+                                response.Add(MapToValueNullGeneral(reader));
+                            }
+                            else if (plantilla == null & tipoConsulta == "municipio")
+                            {
+                                response.Add(MapToValueNullMunicipio(reader));
+                            }
+                            else if (plantilla != null & tipoConsulta == "general")
                             {
                                 response.Add(MapToValueGeneral(reader));
                             }
-                            else
+                            else if (plantilla != null & tipoConsulta == "municipio")
                             {
                                 response.Add(MapToValue(reader));
                             }
@@ -55,6 +63,18 @@ namespace WebApiCaracterizacion.DataGanaderia
         {
             return new PromediosMujeresGN()
             {
+                tipo_plantilla = (string)reader["tipo_plantilla"],
+                municipio = (string)reader["municipio"],
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
+            };
+        }
+        private PromediosMujeresGN MapToValueNullMunicipio(SqlDataReader reader)
+        {
+            return new PromediosMujeresGN()
+            {
+
                 municipio = (string)reader["municipio"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
@@ -62,6 +82,16 @@ namespace WebApiCaracterizacion.DataGanaderia
             };
         }
         private PromediosMujeresGN MapToValueGeneral(SqlDataReader reader)
+        {
+            return new PromediosMujeresGN()
+            {
+                tipo_plantilla = (string)reader["tipo_plantilla"],
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
+            };
+        }
+        private PromediosMujeresGN MapToValueNullGeneral(SqlDataReader reader)
         {
             return new PromediosMujeresGN()
             {
