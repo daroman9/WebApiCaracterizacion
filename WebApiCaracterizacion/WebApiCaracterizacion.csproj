@@ -26,6 +26,16 @@
     <Compile Remove="Migrations\20200611164352_AddingRole.Designer.cs" />
     <Compile Remove="Migrations\20200613135903_Borrar.cs" />
     <Compile Remove="Migrations\20200613135903_Borrar.Designer.cs" />
+    <Compile Remove="Migrations\20200623214812_Log.cs" />
+    <Compile Remove="Migrations\20200623214812_Log.Designer.cs" />
+    <Compile Remove="Migrations\20200623221531_LogCorregido.cs" />
+    <Compile Remove="Migrations\20200623221531_LogCorregido.Designer.cs" />
+    <Compile Remove="Migrations\20200623222036_LogDelete.cs" />
+    <Compile Remove="Migrations\20200623222036_LogDelete.Designer.cs" />
+    <Compile Remove="Migrations\20200623222813_LogInitial.cs" />
+    <Compile Remove="Migrations\20200623222813_LogInitial.Designer.cs" />
+    <Compile Remove="Migrations\20200623223801_Prueba.cs" />
+    <Compile Remove="Migrations\20200623223801_Prueba.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -11,7 +11,7 @@ namespace WebApiCaracterizacion.Models
         public string valor_string { get; set; }
         public float? valor_float { get; set; }
         public int? valor_integer { get; set; }
-        public int? estado { get; set; }
+       
         public DateTime? valor_date { get; set; }
         public DateTime? fecha { get; set; }
 

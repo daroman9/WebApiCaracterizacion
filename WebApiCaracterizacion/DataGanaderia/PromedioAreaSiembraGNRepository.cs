@@ -20,7 +20,7 @@ namespace WebApiCaracterizacion.DataGanaderia
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("dw.IAG_AreaSiembra", sql))
+                using (SqlCommand cmd = new SqlCommand("dw.IAG_AreaCultivo", sql))
                 {
                     cmd.Parameters.Add("@plantilla", SqlDbType.VarChar).Value = (object)plantilla ?? DBNull.Value;
                     cmd.Parameters.Add("@tipoConsulta", SqlDbType.VarChar).Value = (object)tipoConsulta ?? DBNull.Value;
@@ -35,13 +35,21 @@ namespace WebApiCaracterizacion.DataGanaderia
 
                         while (await reader.ReadAsync())
                         {
-                            if (tipoConsulta == "general")
+                            if (plantilla == null & tipoConsulta == "municipio")
                             {
-                                response.Add(MapToValueGeneral(reader));
+                                response.Add(Case1(reader));
                             }
-                            else
+                            else if (plantilla == null & tipoConsulta == "general")
                             {
-                                response.Add(MapToValue(reader));
+                                response.Add(Case2(reader));
+                            }
+                            else if (plantilla != null & tipoConsulta == "municipio")
+                            {
+                                response.Add(Case3(reader));
+                            }
+                            else if (plantilla != null & tipoConsulta == "general")
+                            {
+                                response.Add(Case4(reader));
                             }
                         }
                     }
@@ -50,23 +58,43 @@ namespace WebApiCaracterizacion.DataGanaderia
                 }
             }
         }
-        private PromediosAreaSiembraGN MapToValue(SqlDataReader reader)
+
+        private PromediosAreaSiembraGN Case1(SqlDataReader reader)
+        {
+            return new PromediosAreaSiembraGN()
+            {
+
+                municipio = (string)reader["municipio"],
+                dato = (string)reader["dato"],
+                suma = (double)reader["suma"]
+            };
+        }
+        private PromediosAreaSiembraGN Case2(SqlDataReader reader)
+        {
+            return new PromediosAreaSiembraGN()
+            {
+                dato = (string)reader["dato"],
+                suma = (double)reader["suma"]
+            };
+        }
+        private PromediosAreaSiembraGN Case3(SqlDataReader reader)
         {
             return new PromediosAreaSiembraGN()
             {
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 municipio = (string)reader["municipio"],
-               
-                promedio = (double)reader["promedio"]
+                dato = (string)reader["dato"],
+                suma = (double)reader["suma"]
             };
         }
-        private PromediosAreaSiembraGN MapToValueGeneral(SqlDataReader reader)
+
+        private PromediosAreaSiembraGN Case4(SqlDataReader reader)
         {
             return new PromediosAreaSiembraGN()
             {
                 tipo_plantilla = (string)reader["tipo_plantilla"],
-
-                promedio = (double)reader["promedio"]
+                dato = (string)reader["dato"],
+                suma = (double)reader["suma"]
             };
         }
     }

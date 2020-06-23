@@ -16,7 +16,7 @@ namespace WebApiCaracterizacion.DataGanaderia
             _connectionString = configuration.GetConnectionString("defaultConnection");
         }
 
-        public async Task<List<PromediosDensidadCultivoGN>> GetPromedio(string plantilla, string tipoConsulta, string fechaInicio, string fechaFin)
+        public async Task<List<PromediosDensidadCultivoGN>> GetPromedio(string plantilla, string tipoConsulta, string incluyeCultivo, string fechaInicio, string fechaFin)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
@@ -24,6 +24,7 @@ namespace WebApiCaracterizacion.DataGanaderia
                 {
                     cmd.Parameters.Add("@plantilla", SqlDbType.VarChar).Value = (object)plantilla ?? DBNull.Value;
                     cmd.Parameters.Add("@tipoConsulta", SqlDbType.VarChar).Value = (object)tipoConsulta ?? DBNull.Value;
+                    cmd.Parameters.Add("@incluyeCultivo", SqlDbType.VarChar).Value = (object)incluyeCultivo ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaInicio", SqlDbType.VarChar).Value = (object)fechaInicio ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaFin", SqlDbType.VarChar).Value = (object)fechaFin ?? DBNull.Value;
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
@@ -35,13 +36,37 @@ namespace WebApiCaracterizacion.DataGanaderia
 
                         while (await reader.ReadAsync())
                         {
-                            if (tipoConsulta == "general")
+                            if (plantilla == null & tipoConsulta == "municipio" & incluyeCultivo == "s")
                             {
-                                response.Add(MapToValueGeneral(reader));
+                                response.Add(Case1(reader));
                             }
-                            else
+                            else if (plantilla == null & tipoConsulta == "municipio" & incluyeCultivo == null)
                             {
-                                response.Add(MapToValue(reader));
+                                response.Add(Case2(reader));
+                            }
+                            else if (plantilla == null & tipoConsulta == "general" & incluyeCultivo == "s")
+                            {
+                                response.Add(Case3(reader));
+                            }
+                            else if (plantilla == null & tipoConsulta == "general" & incluyeCultivo == null)
+                            {
+                                response.Add(Case4(reader));
+                            }
+                            else if (plantilla != null & tipoConsulta == "municipio" & incluyeCultivo == "s")
+                            {
+                                response.Add(Case5(reader));
+                            }
+                            else if (plantilla != null & tipoConsulta == "municipio" & incluyeCultivo == null)
+                            {
+                                response.Add(Case6(reader));
+                            }
+                            else if (plantilla != null & tipoConsulta == "general" & incluyeCultivo == "s")
+                            {
+                                response.Add(Case7(reader));
+                            }
+                            else if (plantilla != null & tipoConsulta == "general" & incluyeCultivo == null)
+                            {
+                                response.Add(Case8(reader));
                             }
                         }
                     }
@@ -50,24 +75,94 @@ namespace WebApiCaracterizacion.DataGanaderia
                 }
             }
         }
-        private PromediosDensidadCultivoGN MapToValue(SqlDataReader reader)
+
+
+        private PromediosDensidadCultivoGN Case1(SqlDataReader reader)
+        {
+            return new PromediosDensidadCultivoGN()
+            {
+                municipio = (string)reader["municipio"],
+                cultivo_agropecuario = (string)reader["cultivo_agropecuario"],
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
+            };
+        }
+
+        private PromediosDensidadCultivoGN Case2(SqlDataReader reader)
+        {
+            return new PromediosDensidadCultivoGN()
+            {
+                municipio = (string)reader["municipio"],
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
+            };
+        }
+
+        private PromediosDensidadCultivoGN Case3(SqlDataReader reader)
+        {
+            return new PromediosDensidadCultivoGN()
+            {
+                cultivo_agropecuario = (string)reader["cultivo_agropecuario"],
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
+            };
+        }
+        private PromediosDensidadCultivoGN Case4(SqlDataReader reader)
+        {
+            return new PromediosDensidadCultivoGN()
+            {
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
+            };
+        }
+        private PromediosDensidadCultivoGN Case5(SqlDataReader reader)
+        {
+            return new PromediosDensidadCultivoGN()
+            {
+                tipo_plantilla = (string)reader["tipo_plantilla"],
+                municipio = (string)reader["municipio"],
+                cultivo_agropecuario = (string)reader["cultivo_agropecuario"],
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
+            };
+        }
+        private PromediosDensidadCultivoGN Case6(SqlDataReader reader)
         {
             return new PromediosDensidadCultivoGN()
             {
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 municipio = (string)reader["municipio"],
                 dato = (string)reader["dato"],
-                promedio = (double)reader["promedio"]
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
             };
         }
-        private PromediosDensidadCultivoGN MapToValueGeneral(SqlDataReader reader)
+        private PromediosDensidadCultivoGN Case7(SqlDataReader reader)
+        {
+            return new PromediosDensidadCultivoGN()
+            {
+                tipo_plantilla = (string)reader["tipo_plantilla"],
+                cultivo_agropecuario = (string)reader["cultivo_agropecuario"],
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
+            };
+        }
+        private PromediosDensidadCultivoGN Case8(SqlDataReader reader)
         {
             return new PromediosDensidadCultivoGN()
             {
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 dato = (string)reader["dato"],
-                promedio = (double)reader["promedio"]
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
             };
         }
+
     }
 }

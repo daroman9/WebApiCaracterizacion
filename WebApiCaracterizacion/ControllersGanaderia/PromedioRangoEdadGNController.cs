@@ -11,9 +11,9 @@ namespace WebApiCaracterizacion.ControllersGanaderia
     [ApiController]
     public class PromedioRangoEdadGNController : ControllerBase
     {
-        private readonly PromedioRandoEdadGNRepository _repository;
+        private readonly PromedioRangoEdadGNRepository _repository;
 
-        public PromedioRangoEdadGNController(PromedioRandoEdadGNRepository repository)
+        public PromedioRangoEdadGNController(PromedioRangoEdadGNRepository repository)
         {
             this._repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }

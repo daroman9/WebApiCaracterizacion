@@ -59,7 +59,8 @@ namespace WebApiCaracterizacion.DataConsultasGenerales
                 apellido = (string)reader["apellido"],
                 email = (string)reader["email"],
                 nombre_campana = (string)reader["nombre_campana"],
-                id_ficha = (string)reader["id_ficha"]
+                id_ficha = (string)reader["id_ficha"],
+                estado = (int)reader["estado"]
             };
         }
   

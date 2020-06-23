@@ -15,6 +15,7 @@ namespace WebApiCaracterizacion.ModelsConsultasGenerales
         public string email { get; set; }   
         public string nombre_campana { get; set; }
         public string id_ficha { get; set; }
+        public int estado { get; set; }
 
     }
 }

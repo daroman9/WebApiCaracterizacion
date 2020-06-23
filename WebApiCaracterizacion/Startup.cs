@@ -118,7 +118,7 @@ namespace WebApiCaracterizacion
             services.AddScoped<PromedioTipoBeneficioGNRepository>();
             services.AddScoped<PromedioTipoHatoGNRepository>();
             services.AddScoped<PromedioTipoPredioGNRepository>();
-            services.AddScoped<PromedioRandoEdadGNRepository>();
+            services.AddScoped<PromedioRangoEdadGNRepository>();
             services.AddScoped<PromedioVariacionProductividadGNRepository>();
             services.AddScoped<PromedioCausaVariacionProductividadGNRepository>();
             services.AddScoped<PromedioPercepcionVariacionProductividadGNRepository>();
@@ -140,21 +140,16 @@ namespace WebApiCaracterizacion
             services.AddScoped<PromedioPorcentajeAreaGNRepository>();
             services.AddScoped<PromedioDensidadCultivoGNRepository>();
             services.AddScoped<PromedioNivelIngresoGNRepository>();
-
-
-
-
-
+            services.AddScoped<PromedioPorcentajeCultivoGNRepository>();
+            services.AddScoped<PromedioPorcentajeDiscapacitadosGNRepository>();
+            services.AddScoped<PromedioArraigoActividadGNRepository>();
+            services.AddScoped<PromedioDensidadSiembraGNRepository>();
+            services.AddScoped<PromedioOtraActividadMineroORRepository>();
+            services.AddScoped<PromedioProduccionMinidragasORRepository>();
             
-
 
 
             services.AddScoped<FiltrarFichasRepository>();
-
-
-
-
-            
 
 
             //Fin seccion controladores

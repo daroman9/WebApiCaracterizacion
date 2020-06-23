@@ -8,26 +8,26 @@ using WebApiCaracterizacion.ModelsGanaderia;
 
 namespace WebApiCaracterizacion.DataGanaderia
 {
-    public class PromedioRandoEdadGNRepository
+    public class PromedioArraigoActividadGNRepository
     {
         private readonly string _connectionString;
-        public PromedioRandoEdadGNRepository(IConfiguration configuration)
+        public PromedioArraigoActividadGNRepository(IConfiguration configuration)
         {
             _connectionString = configuration.GetConnectionString("defaultConnection");
         }
 
-        public async Task<List<PromediosRangoEdadGN>> GetPromedio(string plantilla, string tipoConsulta, string fechaInicio, string fechaFin)
+        public async Task<List<PromediosArraigoActividadGN>> GetPromedio(string plantilla, string tipoConsulta, string fechaInicio, string fechaFin)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("dw.IAG_RangoEdad", sql))
+                using (SqlCommand cmd = new SqlCommand("dw.IAG_ArraigoActividad", sql))
                 {
                     cmd.Parameters.Add("@plantilla", SqlDbType.VarChar).Value = (object)plantilla ?? DBNull.Value;
                     cmd.Parameters.Add("@tipoConsulta", SqlDbType.VarChar).Value = (object)tipoConsulta ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaInicio", SqlDbType.VarChar).Value = (object)fechaInicio ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaFin", SqlDbType.VarChar).Value = (object)fechaFin ?? DBNull.Value;
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    var response = new List<PromediosRangoEdadGN>();
+                    var response = new List<PromediosArraigoActividadGN>();
                     await sql.OpenAsync();
 
                     using (var reader = await cmd.ExecuteReaderAsync())
@@ -35,21 +35,21 @@ namespace WebApiCaracterizacion.DataGanaderia
 
                         while (await reader.ReadAsync())
                         {
-                            if (plantilla == null & tipoConsulta == "general")
+                            if (plantilla == null & tipoConsulta == "municipio")
                             {
-                                response.Add(MapToValueNullGeneral(reader));
+                                response.Add(Case1(reader));
                             }
-                            else if (plantilla == null & tipoConsulta == "municipio")
+                            else if (plantilla == null & tipoConsulta == "general")
                             {
-                                response.Add(MapToValueNullMunicipio(reader));
-                            }
-                            else if (plantilla != null & tipoConsulta == "general")
-                            {
-                                response.Add(MapToValueGeneral(reader));
+                                response.Add(Case2(reader));
                             }
                             else if (plantilla != null & tipoConsulta == "municipio")
                             {
-                                response.Add(MapToValue(reader));
+                                response.Add(Case3(reader));
+                            }
+                            else if (plantilla != null & tipoConsulta == "general")
+                            {
+                                response.Add(Case4(reader));
                             }
                         }
                     }
@@ -58,20 +58,10 @@ namespace WebApiCaracterizacion.DataGanaderia
                 }
             }
         }
-        private PromediosRangoEdadGN MapToValue(SqlDataReader reader)
+
+        private PromediosArraigoActividadGN Case1(SqlDataReader reader)
         {
-            return new PromediosRangoEdadGN()
-            {
-                tipo_plantilla = (string)reader["tipo_plantilla"],
-                municipio = (string)reader["municipio"],
-                dato = (string)reader["dato"],
-                cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
-            };
-        }
-        private PromediosRangoEdadGN MapToValueNullMunicipio(SqlDataReader reader)
-        {
-            return new PromediosRangoEdadGN()
+            return new PromediosArraigoActividadGN()
             {
 
                 municipio = (string)reader["municipio"],
@@ -80,20 +70,32 @@ namespace WebApiCaracterizacion.DataGanaderia
                 porcentaje = (double)reader["porcentaje"]
             };
         }
-        private PromediosRangoEdadGN MapToValueGeneral(SqlDataReader reader)
+        private PromediosArraigoActividadGN Case2(SqlDataReader reader)
         {
-            return new PromediosRangoEdadGN()
+            return new PromediosArraigoActividadGN()
             {
-                tipo_plantilla = (string)reader["tipo_plantilla"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
                 porcentaje = (double)reader["porcentaje"]
             };
         }
-        private PromediosRangoEdadGN MapToValueNullGeneral(SqlDataReader reader)
+        private PromediosArraigoActividadGN Case3(SqlDataReader reader)
         {
-            return new PromediosRangoEdadGN()
+            return new PromediosArraigoActividadGN()
             {
+                tipo_plantilla = (string)reader["tipo_plantilla"],
+                municipio = (string)reader["municipio"],
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
+            };
+        }
+
+        private PromediosArraigoActividadGN Case4(SqlDataReader reader)
+        {
+            return new PromediosArraigoActividadGN()
+            {
+                tipo_plantilla = (string)reader["tipo_plantilla"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
                 porcentaje = (double)reader["porcentaje"]

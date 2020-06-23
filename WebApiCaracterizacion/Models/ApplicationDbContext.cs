@@ -28,6 +28,8 @@ namespace WebApiCaracterizacion.Models
         public DbSet<ProfesionalesXCampana> ProfesionalesXCampana { get; set; }
         public DbSet<Anla> Anla { get; set; }
         public DbSet<Car> Car { get; set; }
+        public DbSet<Log> Log { get; set; }
+
 
     }
 }

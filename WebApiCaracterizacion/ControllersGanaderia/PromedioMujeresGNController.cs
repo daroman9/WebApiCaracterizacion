@@ -20,9 +20,9 @@ namespace WebApiCaracterizacion.ControllersGanaderia
 
         [HttpGet]
 
-        public async Task<ActionResult<IEnumerable<PromediosMujeresGN>>> GetData([FromQuery]string plantilla, [FromQuery]string tipoConsulta, [FromQuery]string fechaInicio, [FromQuery]string fechaFin)
+        public async Task<ActionResult<IEnumerable<PromediosMujeresGN>>> GetData([FromQuery]string plantilla, [FromQuery]string tipoConsulta, [FromQuery]string incluyeCultivo, [FromQuery]string fechaInicio, [FromQuery]string fechaFin)
         {
-            return await _repository.GetPromedio(plantilla, tipoConsulta, fechaInicio, fechaFin);
+            return await _repository.GetPromedio(plantilla, tipoConsulta, incluyeCultivo, fechaInicio, fechaFin);
         }
     }
 }

@@ -35,13 +35,21 @@ namespace WebApiCaracterizacion.DataGanaderia
 
                         while (await reader.ReadAsync())
                         {
-                            if (tipoConsulta == "general")
+                            if (plantilla == null & tipoConsulta == "municipio")
                             {
-                                response.Add(MapToValueGeneral(reader));
+                                response.Add(Case1(reader));
                             }
-                            else
+                            else if (plantilla == null & tipoConsulta == "general")
                             {
-                                response.Add(MapToValue(reader));
+                                response.Add(Case2(reader));
+                            }
+                            else  if (plantilla != null & tipoConsulta == "municipio")
+                            {
+                                response.Add(Case3(reader));
+                            }
+                            else if (plantilla !=null & tipoConsulta =="general")
+                            {
+                                response.Add(Case4(reader));
                             }
                         }
                     }
@@ -50,7 +58,28 @@ namespace WebApiCaracterizacion.DataGanaderia
                 }
             }
         }
-        private PromediosActividadPrincipalOcupanteGN MapToValue(SqlDataReader reader)
+
+        private PromediosActividadPrincipalOcupanteGN Case1(SqlDataReader reader)
+        {
+            return new PromediosActividadPrincipalOcupanteGN()
+            {
+              
+                municipio = (string)reader["municipio"],
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
+            };
+        }
+        private PromediosActividadPrincipalOcupanteGN Case2(SqlDataReader reader)
+        {
+            return new PromediosActividadPrincipalOcupanteGN()
+            {
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
+            };
+        }
+        private PromediosActividadPrincipalOcupanteGN Case3(SqlDataReader reader)
         {
             return new PromediosActividadPrincipalOcupanteGN()
             {
@@ -61,7 +90,8 @@ namespace WebApiCaracterizacion.DataGanaderia
                 porcentaje = (double)reader["porcentaje"]
             };
         }
-        private PromediosActividadPrincipalOcupanteGN MapToValueGeneral(SqlDataReader reader)
+
+        private PromediosActividadPrincipalOcupanteGN Case4(SqlDataReader reader)
         {
             return new PromediosActividadPrincipalOcupanteGN()
             {

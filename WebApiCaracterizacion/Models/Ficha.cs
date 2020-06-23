@@ -26,5 +26,7 @@ namespace WebApiCaracterizacion.Models
         [JsonIgnore]
         public Plantilla Plantilla { get; set; }
 
+        public int estado { get; set; }
+
     }
 }

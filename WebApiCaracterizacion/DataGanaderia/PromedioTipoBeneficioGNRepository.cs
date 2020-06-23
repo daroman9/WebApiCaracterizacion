@@ -35,21 +35,21 @@ namespace WebApiCaracterizacion.DataGanaderia
 
                         while (await reader.ReadAsync())
                         {
-                            if (plantilla == null & tipoConsulta == "general")
+                            if (plantilla == null & tipoConsulta == "municipio")
                             {
-                                response.Add(MapToValueNullGeneral(reader));
+                                response.Add(Case1(reader));
                             }
-                            else if (plantilla == null & tipoConsulta == "municipio")
+                            else if (plantilla == null & tipoConsulta == "general")
                             {
-                                response.Add(MapToValueNullMunicipio(reader));
-                            }
-                            else if (plantilla != null & tipoConsulta == "general")
-                            {
-                                response.Add(MapToValueGeneral(reader));
+                                response.Add(Case2(reader));
                             }
                             else if (plantilla != null & tipoConsulta == "municipio")
                             {
-                                response.Add(MapToValue(reader));
+                                response.Add(Case3(reader));
+                            }
+                            else if (plantilla != null & tipoConsulta == "general")
+                            {
+                                response.Add(Case4(reader));
                             }
                         }
                     }
@@ -58,18 +58,8 @@ namespace WebApiCaracterizacion.DataGanaderia
                 }
             }
         }
-        private PromediosTipoBeneficioGN MapToValue(SqlDataReader reader)
-        {
-            return new PromediosTipoBeneficioGN()
-            {
-                tipo_plantilla = (string)reader["tipo_plantilla"],
-                municipio = (string)reader["municipio"],
-                dato = (string)reader["dato"],
-                cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
-            };
-        }
-        private PromediosTipoBeneficioGN MapToValueNullMunicipio(SqlDataReader reader)
+
+        private PromediosTipoBeneficioGN Case1(SqlDataReader reader)
         {
             return new PromediosTipoBeneficioGN()
             {
@@ -80,20 +70,32 @@ namespace WebApiCaracterizacion.DataGanaderia
                 porcentaje = (double)reader["porcentaje"]
             };
         }
-        private PromediosTipoBeneficioGN MapToValueGeneral(SqlDataReader reader)
+        private PromediosTipoBeneficioGN Case2(SqlDataReader reader)
         {
             return new PromediosTipoBeneficioGN()
             {
-                tipo_plantilla = (string)reader["tipo_plantilla"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
                 porcentaje = (double)reader["porcentaje"]
             };
         }
-        private PromediosTipoBeneficioGN MapToValueNullGeneral(SqlDataReader reader)
+        private PromediosTipoBeneficioGN Case3(SqlDataReader reader)
         {
             return new PromediosTipoBeneficioGN()
             {
+                tipo_plantilla = (string)reader["tipo_plantilla"],
+                municipio = (string)reader["municipio"],
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
+            };
+        }
+
+        private PromediosTipoBeneficioGN Case4(SqlDataReader reader)
+        {
+            return new PromediosTipoBeneficioGN()
+            {
+                tipo_plantilla = (string)reader["tipo_plantilla"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
                 porcentaje = (double)reader["porcentaje"]

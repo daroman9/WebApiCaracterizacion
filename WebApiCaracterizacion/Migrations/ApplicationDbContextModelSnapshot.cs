@@ -420,6 +420,8 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.Property<DateTime?>("date");
 
+                    b.Property<int>("estado");
+
                     b.Property<int>("id_formulario");
 
                     b.Property<int>("id_plantilla");
@@ -439,6 +441,39 @@ namespace WebApiCaracterizacion.Migrations
                     b.HasIndex("id_usuario");
 
                     b.ToTable("Ficha");
+                });
+
+            modelBuilder.Entity("WebApiCaracterizacion.Models.Log", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("camposCambiado");
+
+                    b.Property<DateTime?>("date");
+
+                    b.Property<string>("estadoFinal");
+
+                    b.Property<string>("estadoInicial");
+
+                    b.Property<string>("id_ficha");
+
+                    b.Property<string>("id_usuario");
+
+                    b.Property<int>("noConformidades");
+
+                    b.Property<string>("valorAnterior");
+
+                    b.Property<string>("valorNuevo");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("id_ficha");
+
+                    b.HasIndex("id_usuario");
+
+                    b.ToTable("Log");
                 });
 
             modelBuilder.Entity("WebApiCaracterizacion.Models.Plantilla", b =>
@@ -483,8 +518,6 @@ namespace WebApiCaracterizacion.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("estado");
-
                     b.Property<DateTime?>("fecha");
 
                     b.Property<int>("id_campo");
@@ -513,8 +546,6 @@ namespace WebApiCaracterizacion.Migrations
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int?>("estado");
 
                     b.Property<DateTime?>("fecha");
 
@@ -756,6 +787,17 @@ namespace WebApiCaracterizacion.Migrations
                         .WithMany()
                         .HasForeignKey("id_plantilla")
                         .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("WebApiCaracterizacion.Models.ApplicationUser", "ApplicationUser")
+                        .WithMany()
+                        .HasForeignKey("id_usuario");
+                });
+
+            modelBuilder.Entity("WebApiCaracterizacion.Models.Log", b =>
+                {
+                    b.HasOne("WebApiCaracterizacion.Models.Ficha", "Ficha")
+                        .WithMany()
+                        .HasForeignKey("id_ficha");
 
                     b.HasOne("WebApiCaracterizacion.Models.ApplicationUser", "ApplicationUser")
                         .WithMany()

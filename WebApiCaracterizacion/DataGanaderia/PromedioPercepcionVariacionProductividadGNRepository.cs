@@ -35,13 +35,21 @@ namespace WebApiCaracterizacion.DataGanaderia
 
                         while (await reader.ReadAsync())
                         {
-                            if (tipoConsulta == "general")
+                            if (plantilla == null & tipoConsulta == "municipio")
                             {
-                                response.Add(MapToValueGeneral(reader));
+                                response.Add(Case1(reader));
                             }
-                            else
+                            else if (plantilla == null & tipoConsulta == "general")
                             {
-                                response.Add(MapToValue(reader));
+                                response.Add(Case2(reader));
+                            }
+                            else if (plantilla != null & tipoConsulta == "municipio")
+                            {
+                                response.Add(Case3(reader));
+                            }
+                            else if (plantilla != null & tipoConsulta == "general")
+                            {
+                                response.Add(Case4(reader));
                             }
                         }
                     }
@@ -50,20 +58,44 @@ namespace WebApiCaracterizacion.DataGanaderia
                 }
             }
         }
-        private PromediosPercepcionVariacionProductividadGN MapToValue(SqlDataReader reader)
+
+        private PromediosPercepcionVariacionProductividadGN Case1(SqlDataReader reader)
         {
             return new PromediosPercepcionVariacionProductividadGN()
             {
+
                 municipio = (string)reader["municipio"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
                 porcentaje = (double)reader["porcentaje"]
             };
         }
-        private PromediosPercepcionVariacionProductividadGN MapToValueGeneral(SqlDataReader reader)
+        private PromediosPercepcionVariacionProductividadGN Case2(SqlDataReader reader)
         {
             return new PromediosPercepcionVariacionProductividadGN()
             {
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
+            };
+        }
+        private PromediosPercepcionVariacionProductividadGN Case3(SqlDataReader reader)
+        {
+            return new PromediosPercepcionVariacionProductividadGN()
+            {
+                tipo_plantilla = (string)reader["tipo_plantilla"],
+                municipio = (string)reader["municipio"],
+                dato = (string)reader["dato"],
+                cantidad = (int)reader["cantidad"],
+                porcentaje = (double)reader["porcentaje"]
+            };
+        }
+
+        private PromediosPercepcionVariacionProductividadGN Case4(SqlDataReader reader)
+        {
+            return new PromediosPercepcionVariacionProductividadGN()
+            {
+                tipo_plantilla = (string)reader["tipo_plantilla"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
                 porcentaje = (double)reader["porcentaje"]

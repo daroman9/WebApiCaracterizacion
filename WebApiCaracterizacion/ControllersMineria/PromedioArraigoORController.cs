@@ -28,7 +28,5 @@ namespace WebApiCaracterizacion.ControllersMineria
                 return await _repository.GetPromedio(plantilla, tipoConsulta, fechaInicio, fechaFin);
            
         }
-
-
     }
 }
