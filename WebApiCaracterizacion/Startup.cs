@@ -146,6 +146,11 @@ namespace WebApiCaracterizacion
             services.AddScoped<PromedioDensidadSiembraGNRepository>();
             services.AddScoped<PromedioOtraActividadMineroORRepository>();
             services.AddScoped<PromedioProduccionMinidragasORRepository>();
+            services.AddScoped<PromedioEstadoCivilORRepository>();
+            services.AddScoped<PromedioRandoEdadORRepository>();
+            services.AddScoped<PromedioTenenciaORRepository>();
+
+
             
 
 

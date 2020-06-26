@@ -8,26 +8,26 @@ using WebApiCaracterizacion.ModelsMineria;
 
 namespace WebApiCaracterizacion.DataMineria
 {
-    public class PromedioTecnificacionORRepository
+    public class PromedioRandoEdadORRepository
     {
         private readonly string _connectionString;
-        public PromedioTecnificacionORRepository(IConfiguration configuration)
+        public PromedioRandoEdadORRepository(IConfiguration configuration)
         {
             _connectionString = configuration.GetConnectionString("defaultConnection");
         }
 
-        public async Task<List<PromediosTecnificacionOR>> GetPromedio(string plantilla, string tipoConsulta, string fechaInicio, string fechaFin)
+        public async Task<List<PromediosRangoEdadOR>> GetPromedio(string plantilla, string tipoConsulta, string fechaInicio, string fechaFin)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("dw.IM_TipoExtraccion", sql))
+                using (SqlCommand cmd = new SqlCommand("dw.IM_RangoEdad", sql))
                 {
                     cmd.Parameters.Add("@plantilla", SqlDbType.VarChar).Value = (object)plantilla ?? DBNull.Value;
                     cmd.Parameters.Add("@tipoConsulta", SqlDbType.VarChar).Value = (object)tipoConsulta ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaInicio", SqlDbType.VarChar).Value = (object)fechaInicio ?? DBNull.Value;
                     cmd.Parameters.Add("@fechaFin", SqlDbType.VarChar).Value = (object)fechaFin ?? DBNull.Value;
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    var response = new List<PromediosTecnificacionOR>();
+                    var response = new List<PromediosRangoEdadOR>();
                     await sql.OpenAsync();
 
                     using (var reader = await cmd.ExecuteReaderAsync())
@@ -43,6 +43,14 @@ namespace WebApiCaracterizacion.DataMineria
                             else if (plantilla == null & tipoConsulta == "municipio")
                             {
                                 response.Add(MapToValueNullMunicipio(reader));
+                            }
+                            else if (plantilla == "9" & tipoConsulta == "municipio")
+                            {
+                                response.Add(MapToValueMunicipio(reader));
+                            }
+                            else if (plantilla == "9" & tipoConsulta == "general")
+                            {
+                                response.Add(MapToValueGeneral(reader));
                             }
                             else if (plantilla == "10" & tipoConsulta == "municipio")
                             {
@@ -108,9 +116,9 @@ namespace WebApiCaracterizacion.DataMineria
             }
         }
 
-        private PromediosTecnificacionOR MapToValueNullGeneral(SqlDataReader reader)
+        private PromediosRangoEdadOR MapToValueNullGeneral(SqlDataReader reader)
         {
-            return new PromediosTecnificacionOR()
+            return new PromediosRangoEdadOR()
             {
 
                 dato = (string)reader["dato"],
@@ -121,9 +129,9 @@ namespace WebApiCaracterizacion.DataMineria
             };
         }
 
-        private PromediosTecnificacionOR MapToValueNullMunicipio(SqlDataReader reader)
+        private PromediosRangoEdadOR MapToValueNullMunicipio(SqlDataReader reader)
         {
-            return new PromediosTecnificacionOR()
+            return new PromediosRangoEdadOR()
             {
                 municipio = (string)reader["municipio"],
                 dato = (string)reader["dato"],
@@ -132,11 +140,11 @@ namespace WebApiCaracterizacion.DataMineria
             };
         }
 
-        private PromediosTecnificacionOR MapToValueMunicipio(SqlDataReader reader)
+        private PromediosRangoEdadOR MapToValueMunicipio(SqlDataReader reader)
         {
-            return new PromediosTecnificacionOR()
+            return new PromediosRangoEdadOR()
             {
-                tipo_plantilla = (string)reader["tipo_plantilla"],
+
                 municipio = (string)reader["municipio"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
@@ -144,11 +152,11 @@ namespace WebApiCaracterizacion.DataMineria
             };
         }
 
-        private PromediosTecnificacionOR MapToValueGeneral(SqlDataReader reader)
+        private PromediosRangoEdadOR MapToValueGeneral(SqlDataReader reader)
         {
-            return new PromediosTecnificacionOR()
+            return new PromediosRangoEdadOR()
             {
-                tipo_plantilla = (string)reader["tipo_plantilla"],
+
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
                 porcentaje = (double)reader["porcentaje"]

@@ -64,6 +64,23 @@ namespace WebApiCaracterizacion.Controllers
             return Ok(campo);
         }
 
+        // GET: api/Campos/5 filtrar por id de la categoria
+        [HttpGet("byCategoria/{id_categoria}")]
+        public IActionResult GetCamposByCategoria([FromRoute] int id_categoria)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var campo = _context.Campos.Where(x => x.id_categoria == id_categoria && x.tipo=="table").ToList();
+            if (campo == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(campo);
+        }
+
         // PUT: api/Tablas_Campo/5
         [HttpPut("{id}")]
         public IActionResult Put([FromBody] Tablas_Campo tablas_Campo, int id)

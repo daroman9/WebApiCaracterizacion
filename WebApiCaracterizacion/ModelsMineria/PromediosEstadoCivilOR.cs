@@ -1,6 +1,6 @@
 ﻿namespace WebApiCaracterizacion.ModelsMineria
 {
-    public class PromediosArraigoOR
+    public class PromediosEstadoCivilOR
     {
         public string municipio { get; set; }
         public string dato { get; set; }
