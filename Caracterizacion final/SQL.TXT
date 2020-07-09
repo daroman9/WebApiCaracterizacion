@@ -1,3 +1,0 @@
-SET IDENTITY_INSERT dbo.Tablas_Campos OFF;
-
-SET IDENTITY_INSERT dbo.Tablas_Campos ON; INSERT INTO Tablas_Campos(id, nombre,tipo,valor_maximo,valor_minimo,valor_defecto,rangos,orden,visible,unidad,enableFields,disableFields,disabled,id_campo,id_selector,id_validacion) VALUES (298, 'Observación','string',0,0,0,0,1,1,'NA',NULL,NULL,0,1140,NULL,NULL);

@@ -1,0 +1,43 @@
+{
+"__EFMigrationsHistory": [
+	{
+		"MigrationId" : "20200516165243_InitialMigration",
+		"ProductVersion" : "2.1.14-servicing-32113"
+	},
+	{
+		"MigrationId" : "20200531182235_Fusion",
+		"ProductVersion" : "2.1.14-servicing-32113"
+	},
+	{
+		"MigrationId" : "20200531182845_FusionProfesionales",
+		"ProductVersion" : "2.1.14-servicing-32113"
+	},
+	{
+		"MigrationId" : "20200531185358_AnlaCar",
+		"ProductVersion" : "2.1.14-servicing-32113"
+	},
+	{
+		"MigrationId" : "20200611163947_AddingRoles",
+		"ProductVersion" : "2.1.14-servicing-32113"
+	},
+	{
+		"MigrationId" : "20200613140031_Interrogacion",
+		"ProductVersion" : "2.1.14-servicing-32113"
+	},
+	{
+		"MigrationId" : "20200622182842_Estados",
+		"ProductVersion" : "2.1.14-servicing-32113"
+	},
+	{
+		"MigrationId" : "20200623214812_Log",
+		"ProductVersion" : "2.1.14-servicing-32113"
+	},
+	{
+		"MigrationId" : "20200623230012_probar",
+		"ProductVersion" : "2.1.14-servicing-32113"
+	},
+	{
+		"MigrationId" : "20200623230225_LogInitial",
+		"ProductVersion" : "2.1.14-servicing-32113"
+	}
+]}

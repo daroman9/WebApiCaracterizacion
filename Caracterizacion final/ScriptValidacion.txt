@@ -1,2 +1,0 @@
-INSERT INTO Validacion(nombre,validacion,mensaje) VALUES ('Número entero positivo opcional','^\d*$','Puede ingresar un número entero positivo');
-INSERT INTO Validacion(nombre,validacion,mensaje) VALUES ('Número decimal positivo opcional','^(\d+(\.\d+))$','Puede ingresar un número decímal positivo, el separarador debe ser un punto');

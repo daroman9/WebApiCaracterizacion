@@ -1,0 +1,527 @@
+{
+"Selectores": [
+	{
+		"id" : 1,
+		"nombre" : "PuntoTransepto"
+	},
+	{
+		"id" : 2,
+		"nombre" : "Género"
+	},
+	{
+		"id" : 3,
+		"nombre" : "Estado Civil"
+	},
+	{
+		"id" : 4,
+		"nombre" : "Tipos de IDs de personas"
+	},
+	{
+		"id" : 5,
+		"nombre" : "Escolaridad"
+	},
+	{
+		"id" : 6,
+		"nombre" : "Eps"
+	},
+	{
+		"id" : 7,
+		"nombre" : "Arl"
+	},
+	{
+		"id" : 8,
+		"nombre" : "Afp"
+	},
+	{
+		"id" : 9,
+		"nombre" : "Grupos étnicos"
+	},
+	{
+		"id" : 10,
+		"nombre" : "Actividades Primarias"
+	},
+	{
+		"id" : 11,
+		"nombre" : "Tipos de contratación"
+	},
+	{
+		"id" : 12,
+		"nombre" : "AgroTenencia"
+	},
+	{
+		"id" : 13,
+		"nombre" : "AgroInfraestructura"
+	},
+	{
+		"id" : 14,
+		"nombre" : "Actividades predio"
+	},
+	{
+		"id" : 15,
+		"nombre" : "FuentesHidricas"
+	},
+	{
+		"id" : 16,
+		"nombre" : "Cultivos principales"
+	},
+	{
+		"id" : 17,
+		"nombre" : "OrigenSemilla"
+	},
+	{
+		"id" : 18,
+		"nombre" : "TipoSemilla"
+	},
+	{
+		"id" : 19,
+		"nombre" : "MetodoDeLaSiembra"
+	},
+	{
+		"id" : 20,
+		"nombre" : "TipoDeAsistencia"
+	},
+	{
+		"id" : 21,
+		"nombre" : "MetodoAplicacionEnmienda"
+	},
+	{
+		"id" : 22,
+		"nombre" : "MetodoAplicacionFertilizante"
+	},
+	{
+		"id" : 23,
+		"nombre" : "MetodoAplicacionHerbicida"
+	},
+	{
+		"id" : 24,
+		"nombre" : "EquipoAspercionHerbicida"
+	},
+	{
+		"id" : 25,
+		"nombre" : "Herramientas Manuales"
+	},
+	{
+		"id" : 26,
+		"nombre" : "Otra labor cultural"
+	},
+	{
+		"id" : 27,
+		"nombre" : "Herramienta otra labor"
+	},
+	{
+		"id" : 28,
+		"nombre" : "Aplicacion Enfermedades polvo"
+	},
+	{
+		"id" : 29,
+		"nombre" : "TipoDeCosecha"
+	},
+	{
+		"id" : 30,
+		"nombre" : "DestinaciónCosecha"
+	},
+	{
+		"id" : 31,
+		"nombre" : "Tipo de Venta"
+	},
+	{
+		"id" : 32,
+		"nombre" : "Transporte para la cosecha"
+	},
+	{
+		"id" : 33,
+		"nombre" : "Responsable transporte cosecha"
+	},
+	{
+		"id" : 34,
+		"nombre" : "Tenencia Maquinaria"
+	},
+	{
+		"id" : 35,
+		"nombre" : "Centros de costos"
+	},
+	{
+		"id" : 36,
+		"nombre" : "Tipos de fuente de agua"
+	},
+	{
+		"id" : 37,
+		"nombre" : "Tipo comercializadora de animales"
+	},
+	{
+		"id" : 38,
+		"nombre" : "Tipo de asistencia técnica"
+	},
+	{
+		"id" : 39,
+		"nombre" : "Métodos de concepción"
+	},
+	{
+		"id" : 40,
+		"nombre" : "Aforo 0.25"
+	},
+	{
+		"id" : 41,
+		"nombre" : "Metodo de aplicacion fertilizantes"
+	},
+	{
+		"id" : 42,
+		"nombre" : "Metodo de aplicacion herbicidas"
+	},
+	{
+		"id" : 43,
+		"nombre" : "Equipos de aspersion polvo"
+	},
+	{
+		"id" : 44,
+		"nombre" : "Otras labores culturales"
+	},
+	{
+		"id" : 45,
+		"nombre" : "Tipo comercialización de la leche"
+	},
+	{
+		"id" : 46,
+		"nombre" : "Destinacion producto lacteo"
+	},
+	{
+		"id" : 47,
+		"nombre" : "Tipo de venta del producto"
+	},
+	{
+		"id" : 48,
+		"nombre" : "Tipo transporte para el producto"
+	},
+	{
+		"id" : 49,
+		"nombre" : "Responsable costo del transporte"
+	},
+	{
+		"id" : 50,
+		"nombre" : "Tipo de comercialización de animales"
+	},
+	{
+		"id" : 51,
+		"nombre" : "Destinación producto carnico"
+	},
+	{
+		"id" : 52,
+		"nombre" : "Tipo de minero de oro"
+	},
+	{
+		"id" : 53,
+		"nombre" : "Legalidad"
+	},
+	{
+		"id" : 54,
+		"nombre" : "Tramo"
+	},
+	{
+		"id" : 55,
+		"nombre" : "Combustibles"
+	},
+	{
+		"id" : 56,
+		"nombre" : "Unidad produccion oro"
+	},
+	{
+		"id" : 57,
+		"nombre" : "Tipo unidad transporte fluvial"
+	},
+	{
+		"id" : 58,
+		"nombre" : "Material de la unidad transporte fluvial"
+	},
+	{
+		"id" : 59,
+		"nombre" : "Tipo servicio unidad transporte fluvial"
+	},
+	{
+		"id" : 60,
+		"nombre" : "Municipios"
+	},
+	{
+		"id" : 61,
+		"nombre" : "Toneladas o Kg"
+	},
+	{
+		"id" : 62,
+		"nombre" : "Tipo de vivienda"
+	},
+	{
+		"id" : 63,
+		"nombre" : "Nivel sisbén"
+	},
+	{
+		"id" : 64,
+		"nombre" : "Tipo de minero de oro"
+	},
+	{
+		"id" : 65,
+		"nombre" : "Beneficios del gobierno"
+	},
+	{
+		"id" : 66,
+		"nombre" : "Tipo de permisos"
+	},
+	{
+		"id" : 67,
+		"nombre" : "Frecuencia de pagos"
+	},
+	{
+		"id" : 68,
+		"nombre" : "Alimentacion operarios"
+	},
+	{
+		"id" : 69,
+		"nombre" : "Veredas de Achí"
+	},
+	{
+		"id" : 70,
+		"nombre" : "Veredas de Ayapel"
+	},
+	{
+		"id" : 71,
+		"nombre" : "Veredas de Caimito"
+	},
+	{
+		"id" : 72,
+		"nombre" : "Veredas de Caucasia"
+	},
+	{
+		"id" : 73,
+		"nombre" : "Veredas de Cáceres"
+	},
+	{
+		"id" : 74,
+		"nombre" : "Veredas de Guaranda"
+	},
+	{
+		"id" : 75,
+		"nombre" : "Veredas de Magangué"
+	},
+	{
+		"id" : 76,
+		"nombre" : "Veredas de Majagual"
+	},
+	{
+		"id" : 77,
+		"nombre" : "Veredas de Montecristo"
+	},
+	{
+		"id" : 78,
+		"nombre" : "Veredas de Nechí"
+	},
+	{
+		"id" : 79,
+		"nombre" : "Veredas de Pinillos"
+	},
+	{
+		"id" : 80,
+		"nombre" : "Veredas de San Jacinto Del Cauca"
+	},
+	{
+		"id" : 81,
+		"nombre" : "Veredas de San Marcos"
+	},
+	{
+		"id" : 82,
+		"nombre" : "Veredas de Sucre"
+	},
+	{
+		"id" : 83,
+		"nombre" : "Veredas de Sucre - Santander"
+	},
+	{
+		"id" : 84,
+		"nombre" : "Veredas de Tarazá"
+	},
+	{
+		"id" : 85,
+		"nombre" : "Veredas de Valdivia"
+	},
+	{
+		"id" : 86,
+		"nombre" : "Metodo de aplicacion para plagas"
+	},
+	{
+		"id" : 87,
+		"nombre" : "Unidad aplicacion enmienda edáfica"
+	},
+	{
+		"id" : 88,
+		"nombre" : "Unidad aplicacion fertilizante edáfico"
+	},
+	{
+		"id" : 89,
+		"nombre" : "Unidad aplicación herbicida edáfica"
+	},
+	{
+		"id" : 90,
+		"nombre" : "Aplicacion por ha enmienda"
+	},
+	{
+		"id" : 91,
+		"nombre" : "Aplicacion por ha fertilizante"
+	},
+	{
+		"id" : 92,
+		"nombre" : "Aplicacion por ha herbicida"
+	},
+	{
+		"id" : 93,
+		"nombre" : "Unidades costo otra labor"
+	},
+	{
+		"id" : 94,
+		"nombre" : "Unidad aplicación plaguicidas polvo"
+	},
+	{
+		"id" : 95,
+		"nombre" : "Aplicacion por ha plagas"
+	},
+	{
+		"id" : 96,
+		"nombre" : "Unidades costo maquinaria cosecha"
+	},
+	{
+		"id" : 97,
+		"nombre" : "Unidades precio de venta cosecha"
+	},
+	{
+		"id" : 98,
+		"nombre" : "Unidad costo de transporte cosecha"
+	},
+	{
+		"id" : 99,
+		"nombre" : "Unidad costo de maquinaria"
+	},
+	{
+		"id" : 100,
+		"nombre" : "Unida de venta de animales"
+	},
+	{
+		"id" : 101,
+		"nombre" : "Unidades leche"
+	},
+	{
+		"id" : 102,
+		"nombre" : "Veredas de Briceño"
+	},
+	{
+		"id" : 103,
+		"nombre" : "Veredas de Buriticá"
+	},
+	{
+		"id" : 104,
+		"nombre" : "Veredas de Ituango"
+	},
+	{
+		"id" : 105,
+		"nombre" : "Veredas de Liborina"
+	},
+	{
+		"id" : 106,
+		"nombre" : "Veredas de Olaya"
+	},
+	{
+		"id" : 107,
+		"nombre" : "Veredas de Peque"
+	},
+	{
+		"id" : 108,
+		"nombre" : "Veredas de Sabanalarga"
+	},
+	{
+		"id" : 109,
+		"nombre" : "Veredas de San Andrés De Cuerquía"
+	},
+	{
+		"id" : 110,
+		"nombre" : "Veredas de San Benito Abad"
+	},
+	{
+		"id" : 111,
+		"nombre" : "Veredas de Santa Fé De Antioquia"
+	},
+	{
+		"id" : 112,
+		"nombre" : "Veredas de Toledo"
+	},
+	{
+		"id" : 113,
+		"nombre" : "Veredas de Yarumal"
+	},
+	{
+		"id" : 114,
+		"nombre" : "Transporte asociado a:"
+	},
+	{
+		"id" : 115,
+		"nombre" : "Unidad de carga"
+	},
+	{
+		"id" : 116,
+		"nombre" : "Sistema Recaudo"
+	},
+	{
+		"id" : 117,
+		"nombre" : "Desarrollo actividad"
+	},
+	{
+		"id" : 118,
+		"nombre" : "Variación productividad"
+	},
+	{
+		"id" : 119,
+		"nombre" : "¿Por qué ha variado la productividad Agro\/Gan?"
+	},
+	{
+		"id" : 120,
+		"nombre" : "¿Por qué ha variado la productividad Mineria?"
+	},
+	{
+		"id" : 121,
+		"nombre" : "Enfermedades Ganadería"
+	},
+	{
+		"id" : 122,
+		"nombre" : "¿Por qué ha variado la productividad Transporte?"
+	},
+	{
+		"id" : 123,
+		"nombre" : "Actividad Principal Dos"
+	},
+	{
+		"id" : 124,
+		"nombre" : "Veredas de Cicuco"
+	},
+	{
+		"id" : 125,
+		"nombre" : "Unidad aplicacion enmienda foliar"
+	},
+	{
+		"id" : 126,
+		"nombre" : "Unidad aplicacion fertilizante foliar"
+	},
+	{
+		"id" : 127,
+		"nombre" : "Unidad aplicación herbicida foliar"
+	},
+	{
+		"id" : 128,
+		"nombre" : "Equipos de aspersion solución"
+	},
+	{
+		"id" : 129,
+		"nombre" : "Unidad aplicación plaguicidas solución"
+	},
+	{
+		"id" : 130,
+		"nombre" : "Aplicacion Enfermedades solución"
+	},
+	{
+		"id" : 131,
+		"nombre" : "Veredas de Santa Cruz Mompox"
+	}
+]}

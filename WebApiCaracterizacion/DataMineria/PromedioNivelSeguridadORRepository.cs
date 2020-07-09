@@ -20,7 +20,7 @@ namespace WebApiCaracterizacion.DataMineria
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("dw.IM_NivelSeguridad", sql))
+                using (SqlCommand cmd = new SqlCommand("dw.IM_NivelRiesgo", sql))
                 {
                     cmd.Parameters.Add("@plantilla", SqlDbType.VarChar).Value = (object)plantilla ?? DBNull.Value;
                     cmd.Parameters.Add("@tipoConsulta", SqlDbType.VarChar).Value = (object)tipoConsulta ?? DBNull.Value;

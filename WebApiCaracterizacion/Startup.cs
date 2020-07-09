@@ -149,9 +149,19 @@ namespace WebApiCaracterizacion
             services.AddScoped<PromedioEstadoCivilORRepository>();
             services.AddScoped<PromedioRandoEdadORRepository>();
             services.AddScoped<PromedioTenenciaORRepository>();
+            services.AddScoped<PromedioCantidadDiscapacitadosGNRepository>();
+            services.AddScoped<PromedioCantidadMujeresGNRepository>();
+            services.AddScoped<PromedioCosechaEstimadaGNRepository>();
+            services.AddScoped<PromedioIngresoMensualGNRepository>();
+            services.AddScoped<PromedioNivelProduccionGNRepository>();
+            services.AddScoped<PromedioVulnerabilidadSocioeconomicaGNReposritory>();
+            services.AddScoped<PromedioIngresoMineroORRepository>();
+            services.AddScoped<PromedioArraigoActividadTFRepository>();
+            services.AddScoped<PromedioDistribucionAfpGNRepository>();
+            services.AddScoped<PromedioMesesActividadTFRepository>();
+            services.AddScoped<PromedioTipoBeneficioORRepository>();
+            services.AddScoped<PromedioDependenciaActividadTFRepository>();
 
-
-            
 
 
             services.AddScoped<FiltrarFichasRepository>();

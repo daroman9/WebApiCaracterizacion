@@ -85,7 +85,7 @@ namespace WebApiCaracterizacion.Controllers
         //Crear usuarios nuevos
         [Route("Create")]
         [HttpPost]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+       // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> CreateUser([FromBody] ApplicationUser model)
         {
             if (ModelState.IsValid)

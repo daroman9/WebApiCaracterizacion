@@ -443,13 +443,11 @@ namespace WebApiCaracterizacion.Migrations
                     b.ToTable("Ficha");
                 });
 
-            modelBuilder.Entity("WebApiCaracterizacion.Models.Log", b =>
+            modelBuilder.Entity("WebApiCaracterizacion.Models.Log_Auditoria", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("camposCambiado");
 
                     b.Property<DateTime?>("date");
 
@@ -461,19 +459,13 @@ namespace WebApiCaracterizacion.Migrations
 
                     b.Property<string>("id_usuario");
 
-                    b.Property<int>("noConformidades");
-
-                    b.Property<string>("valorAnterior");
-
-                    b.Property<string>("valorNuevo");
-
                     b.HasKey("id");
 
                     b.HasIndex("id_ficha");
 
                     b.HasIndex("id_usuario");
 
-                    b.ToTable("Log");
+                    b.ToTable("Log_Auditoria");
                 });
 
             modelBuilder.Entity("WebApiCaracterizacion.Models.Plantilla", b =>
@@ -510,6 +502,31 @@ namespace WebApiCaracterizacion.Migrations
                     b.HasIndex("id_usuario");
 
                     b.ToTable("ProfesionalesXCampana");
+                });
+
+            modelBuilder.Entity("WebApiCaracterizacion.Models.Rastro", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime?>("date");
+
+                    b.Property<string>("estadoFinal");
+
+                    b.Property<string>("estadoInicial");
+
+                    b.Property<string>("id_ficha");
+
+                    b.Property<string>("id_usuario");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("id_ficha");
+
+                    b.HasIndex("id_usuario");
+
+                    b.ToTable("Rastro");
                 });
 
             modelBuilder.Entity("WebApiCaracterizacion.Models.Registro", b =>
@@ -572,6 +589,31 @@ namespace WebApiCaracterizacion.Migrations
                     b.HasIndex("id_ficha");
 
                     b.ToTable("Registros_Tablas");
+                });
+
+            modelBuilder.Entity("WebApiCaracterizacion.Models.Revision_Ajuste", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime?>("date");
+
+                    b.Property<string>("estadoFinal");
+
+                    b.Property<string>("estadoInicial");
+
+                    b.Property<string>("id_ficha");
+
+                    b.Property<string>("id_usuario");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("id_ficha");
+
+                    b.HasIndex("id_usuario");
+
+                    b.ToTable("Revision_Ajuste");
                 });
 
             modelBuilder.Entity("WebApiCaracterizacion.Models.Selector", b =>
@@ -793,7 +835,7 @@ namespace WebApiCaracterizacion.Migrations
                         .HasForeignKey("id_usuario");
                 });
 
-            modelBuilder.Entity("WebApiCaracterizacion.Models.Log", b =>
+            modelBuilder.Entity("WebApiCaracterizacion.Models.Log_Auditoria", b =>
                 {
                     b.HasOne("WebApiCaracterizacion.Models.Ficha", "Ficha")
                         .WithMany()
@@ -810,6 +852,17 @@ namespace WebApiCaracterizacion.Migrations
                         .WithMany()
                         .HasForeignKey("id_entidad")
                         .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("WebApiCaracterizacion.Models.ApplicationUser", "ApplicationUser")
+                        .WithMany()
+                        .HasForeignKey("id_usuario");
+                });
+
+            modelBuilder.Entity("WebApiCaracterizacion.Models.Rastro", b =>
+                {
+                    b.HasOne("WebApiCaracterizacion.Models.Ficha", "Ficha")
+                        .WithMany()
+                        .HasForeignKey("id_ficha");
 
                     b.HasOne("WebApiCaracterizacion.Models.ApplicationUser", "ApplicationUser")
                         .WithMany()
@@ -838,6 +891,17 @@ namespace WebApiCaracterizacion.Migrations
                     b.HasOne("WebApiCaracterizacion.Models.Ficha", "Ficha")
                         .WithMany()
                         .HasForeignKey("id_ficha");
+                });
+
+            modelBuilder.Entity("WebApiCaracterizacion.Models.Revision_Ajuste", b =>
+                {
+                    b.HasOne("WebApiCaracterizacion.Models.Ficha", "Ficha")
+                        .WithMany()
+                        .HasForeignKey("id_ficha");
+
+                    b.HasOne("WebApiCaracterizacion.Models.ApplicationUser", "ApplicationUser")
+                        .WithMany()
+                        .HasForeignKey("id_usuario");
                 });
 
             modelBuilder.Entity("WebApiCaracterizacion.Models.Selector_Detail", b =>

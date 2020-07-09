@@ -20,7 +20,7 @@ namespace WebApiCaracterizacion.DataMineria
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("dw.IM_NivelIngresoPersona", sql))
+                using (SqlCommand cmd = new SqlCommand("dw.IM_IngresoPersona", sql))
                 {
                     cmd.Parameters.Add("@plantilla", SqlDbType.VarChar).Value = (object)plantilla ?? DBNull.Value;
                     cmd.Parameters.Add("@tipoConsulta", SqlDbType.VarChar).Value = (object)tipoConsulta ?? DBNull.Value;
@@ -144,7 +144,7 @@ namespace WebApiCaracterizacion.DataMineria
         {
             return new PromediosIngresoPersonaOR()
             {
-               
+                tipo_plantilla= (string)reader["tipo_plantilla"],
                 municipio = (string)reader["municipio"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
@@ -156,7 +156,7 @@ namespace WebApiCaracterizacion.DataMineria
         {
             return new PromediosIngresoPersonaOR()
             {
-               
+                tipo_plantilla = (string)reader["tipo_plantilla"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
                 porcentaje = (double)reader["porcentaje"]

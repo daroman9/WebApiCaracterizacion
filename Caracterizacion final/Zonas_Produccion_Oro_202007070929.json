@@ -1,0 +1,93 @@
+{
+"Zonas_Produccion_Oro": [
+	{
+		"id" : 1,
+		"nombre" : "Briceño",
+		"longitud_este_min" : -75.6918,
+		"longitud_este_max" : -75.4703,
+		"latitud_norte_min" : 7.1156,
+		"latitud_norte_max" : 7.2312,
+		"orden" : 10
+	},
+	{
+		"id" : 2,
+		"nombre" : "Puerto Valdivia",
+		"longitud_este_min" : -75.4703,
+		"longitud_este_max" : -75.2927,
+		"latitud_norte_min" : 7.2096,
+		"latitud_norte_max" : 7.3832,
+		"orden" : 20
+	},
+	{
+		"id" : 3,
+		"nombre" : "Puerto Antioquia",
+		"longitud_este_min" : -75.3806,
+		"longitud_este_max" : -75.2799,
+		"latitud_norte_min" : 7.3832,
+		"latitud_norte_max" : 7.557,
+		"orden" : 30
+	},
+	{
+		"id" : 4,
+		"nombre" : "Cáceres Cabecera",
+		"longitud_este_min" : -75.3759,
+		"longitud_este_max" : -75.3066,
+		"latitud_norte_min" : 7.557,
+		"latitud_norte_max" : 7.6059,
+		"orden" : 40
+	},
+	{
+		"id" : 5,
+		"nombre" : "Puerto Bélgica",
+		"longitud_este_min" : -75.3517,
+		"longitud_este_max" : -75.2583,
+		"latitud_norte_min" : 7.6059,
+		"latitud_norte_max" : 7.6895,
+		"orden" : 50
+	},
+	{
+		"id" : 6,
+		"nombre" : "Jardín",
+		"longitud_este_min" : -75.2993,
+		"longitud_este_max" : -75.177,
+		"latitud_norte_min" : 7.6895,
+		"latitud_norte_max" : 7.7689,
+		"orden" : 60
+	},
+	{
+		"id" : 7,
+		"nombre" : "Guarumo",
+		"longitud_este_min" : -75.2441,
+		"longitud_este_max" : -75.145,
+		"latitud_norte_min" : 7.7689,
+		"latitud_norte_max" : 7.9225,
+		"orden" : 70
+	},
+	{
+		"id" : 8,
+		"nombre" : "Caucasia",
+		"longitud_este_min" : -75.2323,
+		"longitud_este_max" : -74.8692,
+		"latitud_norte_min" : 7.9225,
+		"latitud_norte_max" : 8.0807,
+		"orden" : 80
+	},
+	{
+		"id" : 9,
+		"nombre" : "Nechí",
+		"longitud_este_min" : -74.8692,
+		"longitud_este_max" : -74.713,
+		"latitud_norte_min" : 8.0039,
+		"latitud_norte_max" : 8.1379,
+		"orden" : 90
+	},
+	{
+		"id" : 10,
+		"nombre" : "La Mojana",
+		"longitud_este_min" : -74.8543,
+		"longitud_este_max" : -74.3304,
+		"latitud_norte_min" : 8.1379,
+		"latitud_norte_max" : 9.3692,
+		"orden" : 100
+	}
+]}

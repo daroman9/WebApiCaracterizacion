@@ -1,0 +1,68 @@
+{
+"Zonas_Municipios": [
+	{
+		"id" : 1,
+		"nombre_zona" : "La Mojana",
+		"nombre_municipio" : "Nechí"
+	},
+	{
+		"id" : 2,
+		"nombre_zona" : "La Mojana",
+		"nombre_municipio" : "Magangué"
+	},
+	{
+		"id" : 3,
+		"nombre_zona" : "La Mojana",
+		"nombre_municipio" : "Achí"
+	},
+	{
+		"id" : 4,
+		"nombre_zona" : "La Mojana",
+		"nombre_municipio" : "San Jacinto del Cauca"
+	},
+	{
+		"id" : 5,
+		"nombre_zona" : "La Mojana",
+		"nombre_municipio" : "Ayapel"
+	},
+	{
+		"id" : 6,
+		"nombre_zona" : "La Mojana",
+		"nombre_municipio" : "San Marcos"
+	},
+	{
+		"id" : 7,
+		"nombre_zona" : "La Mojana",
+		"nombre_municipio" : "Guaranda"
+	},
+	{
+		"id" : 8,
+		"nombre_zona" : "La Mojana",
+		"nombre_municipio" : "Majagual"
+	},
+	{
+		"id" : 9,
+		"nombre_zona" : "La Mojana",
+		"nombre_municipio" : "Sucre"
+	},
+	{
+		"id" : 10,
+		"nombre_zona" : "La Mojana",
+		"nombre_municipio" : "Caimito"
+	},
+	{
+		"id" : 11,
+		"nombre_zona" : "La Mojana",
+		"nombre_municipio" : "San Benito Abad"
+	},
+	{
+		"id" : 12,
+		"nombre_zona" : "Caucasia",
+		"nombre_municipio" : "Caucasia"
+	},
+	{
+		"id" : 13,
+		"nombre_zona" : "Puerto Valdivia",
+		"nombre_municipio" : "Valdivia"
+	}
+]}
