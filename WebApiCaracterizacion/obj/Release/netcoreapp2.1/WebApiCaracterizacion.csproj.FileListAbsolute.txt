@@ -14,3 +14,4 @@ C:\Users\15cx0001\source\repos\WebApiCaracterizacion\WebApiCaracterizacion\obj\R
 C:\Users\15cx0001\source\repos\WebApiCaracterizacion\WebApiCaracterizacion\obj\Release\netcoreapp2.1\WebApiCaracterizacion.dll
 C:\Users\15cx0001\source\repos\WebApiCaracterizacion\WebApiCaracterizacion\obj\Release\netcoreapp2.1\WebApiCaracterizacion.pdb
 C:\Users\15cx0001\source\repos\WebApiCaracterizacion\WebApiCaracterizacion\obj\Release\netcoreapp2.1\WebApiCaracterizacion.csprojAssemblyReference.cache
+C:\Users\15cx0001\source\repos\WebApiCaracterizacion\WebApiCaracterizacion\bin\Release\netcoreapp2.1\aws-beanstalk-tools-defaults.json

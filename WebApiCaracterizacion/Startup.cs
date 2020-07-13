@@ -33,25 +33,7 @@ namespace WebApiCaracterizacion
         public void ConfigureServices(IServiceCollection services)
         {
             //Servicios para acceder a los controladores que ejecutan los procedimientos almacenados
-            services.AddScoped<PromedioGenerosRepository>();
-            services.AddScoped<PromedioAntiguedadRepository>();
-            services.AddScoped<PromedioEdadesRepository>();
-            services.AddScoped<PromedioEstadosRespository>();
-            services.AddScoped<PromedioEscolaridadRepository>();
-            services.AddScoped<PromedioBeneficiariosRepository>();
-            services.AddScoped<PromedioViviendasRepository>();
-            services.AddScoped<PromedioEpsRepository>();
-            services.AddScoped<PromedioArlRepository>();
-            services.AddScoped<PromedioFpsRepository>();
-            services.AddScoped<PromedioSisbenRepository>();
-            services.AddScoped<PromedioActividadRepository>();
-            services.AddScoped<PromedioEpocasRepository>();
-            services.AddScoped<PromedioArraigoRepository>();
-            services.AddScoped<PromedioProductividadRepository>();
-            services.AddScoped<PromedioUnidadRepository>();
-            services.AddScoped<PromedioMesesMayorRepository>();
-            services.AddScoped<PromedioMesesMenorRepository>();
-            services.AddScoped<PromedioActLpRepository>();
+ 
             services.AddScoped<PromedioNivelFormalizacionTFRepository>();
             services.AddScoped<PromedioCapacidadCargaTFRepository>();
             services.AddScoped<PromedioUnidadTFRepository>();
@@ -161,10 +143,12 @@ namespace WebApiCaracterizacion
             services.AddScoped<PromedioMesesActividadTFRepository>();
             services.AddScoped<PromedioTipoBeneficioORRepository>();
             services.AddScoped<PromedioDependenciaActividadTFRepository>();
+           
 
-
+           
 
             services.AddScoped<FiltrarFichasRepository>();
+            services.AddScoped<FiltrarRegistrosExcelRepository>();
 
 
             //Fin seccion controladores
@@ -196,11 +180,15 @@ namespace WebApiCaracterizacion
                     Encoding.UTF8.GetBytes(Configuration["Jwt:SigningKey"])),
                     ClockSkew = TimeSpan.Zero
                 });
+
+            //Enable Cors
             services.AddCors(options =>
             {
-                options.AddPolicy("AllowOrigin",
+                options.AddPolicy("EnableCORS", builder =>
+                {
+                    builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().AllowCredentials().Build();
 
-               builder => builder.AllowAnyOrigin());
+                });
 
             });
 
@@ -225,14 +213,7 @@ namespace WebApiCaracterizacion
                 app.UseHsts();
             }
 
-            app.UseCors(builder =>
-            {
-                builder.WithOrigins("http://localhost:8080");
-                builder.WithOrigins("http://localhost:8080/login");
-                builder.AllowAnyMethod();
-                builder.AllowAnyHeader();
-
-            });
+            app.UseCors("EnableCORS");
             app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseMvc();
