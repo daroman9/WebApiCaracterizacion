@@ -86,7 +86,10 @@ namespace WebApiCaracterizacion.DataGanaderia
                 cultivo_agropecuario = (string)reader["cultivo_agropecuario"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                porcentaje = (double)reader["porcentaje"],
+                orden = (double)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
 
@@ -98,7 +101,10 @@ namespace WebApiCaracterizacion.DataGanaderia
                 municipio = (string)reader["municipio"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                porcentaje = (double)reader["porcentaje"],
+                orden = (double)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
 
@@ -110,7 +116,10 @@ namespace WebApiCaracterizacion.DataGanaderia
                 cultivo_agropecuario = (string)reader["cultivo_agropecuario"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                porcentaje = (double)reader["porcentaje"],
+                orden = (double)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
         private PromediosPorcentajeCultivoGN Case4(SqlDataReader reader)
@@ -120,7 +129,10 @@ namespace WebApiCaracterizacion.DataGanaderia
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                porcentaje = (double)reader["porcentaje"],
+                orden = (double)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
         private PromediosPorcentajeCultivoGN Case5(SqlDataReader reader)
@@ -132,7 +144,10 @@ namespace WebApiCaracterizacion.DataGanaderia
                 cultivo_agropecuario = (string)reader["cultivo_agropecuario"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                porcentaje = (double)reader["porcentaje"],
+                orden = (double)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
         private PromediosPorcentajeCultivoGN Case6(SqlDataReader reader)
@@ -143,7 +158,10 @@ namespace WebApiCaracterizacion.DataGanaderia
                 municipio = (string)reader["municipio"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                porcentaje = (double)reader["porcentaje"],
+                orden = (double)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
         private PromediosPorcentajeCultivoGN Case7(SqlDataReader reader)
@@ -154,7 +172,10 @@ namespace WebApiCaracterizacion.DataGanaderia
                 cultivo_agropecuario = (string)reader["cultivo_agropecuario"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                porcentaje = (double)reader["porcentaje"],
+                orden = (double)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
         private PromediosPorcentajeCultivoGN Case8(SqlDataReader reader)
@@ -164,7 +185,10 @@ namespace WebApiCaracterizacion.DataGanaderia
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                porcentaje = (double)reader["porcentaje"],
+                orden = (double)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
 

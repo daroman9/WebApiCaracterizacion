@@ -143,12 +143,14 @@ namespace WebApiCaracterizacion
             services.AddScoped<PromedioMesesActividadTFRepository>();
             services.AddScoped<PromedioTipoBeneficioORRepository>();
             services.AddScoped<PromedioDependenciaActividadTFRepository>();
-           
 
-           
+
+            
 
             services.AddScoped<FiltrarFichasRepository>();
             services.AddScoped<FiltrarRegistrosExcelRepository>();
+            services.AddScoped<FiltrarTablasExcelRepository>();
+
 
 
             //Fin seccion controladores

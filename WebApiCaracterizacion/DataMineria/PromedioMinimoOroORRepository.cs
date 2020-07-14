@@ -115,7 +115,7 @@ namespace WebApiCaracterizacion.DataMineria
                
                 promedio = (double)reader["promedio"],
                 orden = (int)reader["orden"],
-                color = (int)reader["color"],
+                color = (string)reader["color"],
                 nombre_campana = (string)reader["nombre_campana"]
             };
         }
@@ -127,7 +127,7 @@ namespace WebApiCaracterizacion.DataMineria
                 municipio = (string)reader["municipio"],
                 promedio = (double)reader["promedio"],
                 orden = (int)reader["orden"],
-                color = (int)reader["color"],
+                color = (string)reader["color"],
                 nombre_campana = (string)reader["nombre_campana"]
             };
         }
@@ -140,7 +140,7 @@ namespace WebApiCaracterizacion.DataMineria
                 municipio = (string)reader["municipio"],
                 promedio = (double)reader["promedio"],
                 orden = (int)reader["orden"],
-                color = (int)reader["color"],
+                color = (string)reader["color"],
                 nombre_campana = (string)reader["nombre_campana"]
             };
         }
@@ -152,7 +152,7 @@ namespace WebApiCaracterizacion.DataMineria
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 promedio = (double)reader["promedio"],
                 orden = (int)reader["orden"],
-                color = (int)reader["color"],
+                color = (string)reader["color"],
                 nombre_campana = (string)reader["nombre_campana"]
             };
         }

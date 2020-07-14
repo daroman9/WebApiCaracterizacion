@@ -41,6 +41,10 @@ namespace WebApiCaracterizacion.DataMineria
                             {
                                 response.Add(MapToValueMunicipio(reader));
                             }
+                             else if (plantilla == "5" & tipoConsulta == "municipio")
+                            {
+
+                            }
                             else if (plantilla == "5" & tipoConsulta == "general")
                             {
                                 response.Add(MapToValueGeneral(reader));
@@ -58,7 +62,10 @@ namespace WebApiCaracterizacion.DataMineria
             {
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 municipio = (string)reader["municipio"],
-                promedio = (double)reader["promedio"]
+                promedio = (double)reader["promedio"],
+                orden = (int)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
 
@@ -67,7 +74,10 @@ namespace WebApiCaracterizacion.DataMineria
             return new PromediosVolumenDiarioAgregadosOR()
             {
                 tipo_plantilla = (string)reader["tipo_plantilla"],
-                promedio = (double)reader["promedio"]
+                promedio = (double)reader["promedio"],
+                orden = (int)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
 

@@ -85,8 +85,13 @@ namespace WebApiCaracterizacion.DataGanaderia
                 municipio = (string)reader["municipio"],
                 cultivo_principal = (string)reader["cultivo_principal"],
                 dato = (string)reader["dato"],
-                cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                cantidad_si = (int)reader["cantidad_si"],
+                porcentaje_si = (double)reader["porcentaje_si"],
+                cantidad_no = (int)reader["cantidad_no"],
+                porcentaje_no = (double)reader["porcentaje_no"],
+                orden = (int)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
 
@@ -97,8 +102,13 @@ namespace WebApiCaracterizacion.DataGanaderia
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 municipio = (string)reader["municipio"],
                 dato = (string)reader["dato"],
-                cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                cantidad_si = (int)reader["cantidad_si"],
+                porcentaje_si = (double)reader["porcentaje_si"],
+                cantidad_no = (int)reader["cantidad_no"],
+                porcentaje_no = (double)reader["porcentaje_no"],
+                orden = (int)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
 
@@ -109,8 +119,13 @@ namespace WebApiCaracterizacion.DataGanaderia
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 cultivo_principal = (string)reader["cultivo_principal"],
                 dato = (string)reader["dato"],
-                cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                cantidad_si = (int)reader["cantidad_si"],
+                porcentaje_si = (double)reader["porcentaje_si"],
+                cantidad_no = (int)reader["cantidad_no"],
+                porcentaje_no = (double)reader["porcentaje_no"],
+                orden = (int)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
         private PromediosMesesCosechaGN Case4(SqlDataReader reader)
@@ -119,8 +134,13 @@ namespace WebApiCaracterizacion.DataGanaderia
             {
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 dato = (string)reader["dato"],
-                cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                cantidad_si = (int)reader["cantidad_si"],
+                porcentaje_si = (double)reader["porcentaje_si"],
+                cantidad_no = (int)reader["cantidad_no"],
+                porcentaje_no = (double)reader["porcentaje_no"],
+                orden = (int)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
         private PromediosMesesCosechaGN Case5(SqlDataReader reader)
@@ -131,8 +151,13 @@ namespace WebApiCaracterizacion.DataGanaderia
                 municipio = (string)reader["municipio"],
                 cultivo_principal = (string)reader["cultivo_principal"],
                 dato = (string)reader["dato"],
-                cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                cantidad_si = (int)reader["cantidad_si"],
+                porcentaje_si = (double)reader["porcentaje_si"],
+                cantidad_no = (int)reader["cantidad_no"],
+                porcentaje_no = (double)reader["porcentaje_no"],
+                orden = (int)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
         private PromediosMesesCosechaGN Case6(SqlDataReader reader)
@@ -142,8 +167,13 @@ namespace WebApiCaracterizacion.DataGanaderia
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 municipio = (string)reader["municipio"],
                 dato = (string)reader["dato"],
-                cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                cantidad_si = (int)reader["cantidad_si"],
+                porcentaje_si = (double)reader["porcentaje_si"],
+                cantidad_no = (int)reader["cantidad_no"],
+                porcentaje_no = (double)reader["porcentaje_no"],
+                orden = (int)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
         private PromediosMesesCosechaGN Case7(SqlDataReader reader)
@@ -153,8 +183,13 @@ namespace WebApiCaracterizacion.DataGanaderia
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 cultivo_principal = (string)reader["cultivo_principal"],
                 dato = (string)reader["dato"],
-                cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                cantidad_si = (int)reader["cantidad_si"],
+                porcentaje_si = (double)reader["porcentaje_si"],
+                cantidad_no = (int)reader["cantidad_no"],
+                porcentaje_no = (double)reader["porcentaje_no"],
+                orden = (int)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
         private PromediosMesesCosechaGN Case8(SqlDataReader reader)
@@ -163,8 +198,13 @@ namespace WebApiCaracterizacion.DataGanaderia
             {
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 dato = (string)reader["dato"],
-                cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                cantidad_si = (int)reader["cantidad_si"],
+                porcentaje_si = (double)reader["porcentaje_si"],
+                cantidad_no = (int)reader["cantidad_no"],
+                porcentaje_no = (double)reader["porcentaje_no"],
+                orden = (int)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
 

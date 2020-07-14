@@ -67,7 +67,10 @@ namespace WebApiCaracterizacion.DataGanaderia
                 municipio = (string)reader["municipio"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                porcentaje = (double)reader["porcentaje"],
+                orden = (double)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
         private PromediosTipoHatoGN Case2(SqlDataReader reader)
@@ -76,7 +79,10 @@ namespace WebApiCaracterizacion.DataGanaderia
             {
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                porcentaje = (double)reader["porcentaje"],
+                orden = (double)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
         private PromediosTipoHatoGN Case3(SqlDataReader reader)
@@ -87,7 +93,10 @@ namespace WebApiCaracterizacion.DataGanaderia
                 municipio = (string)reader["municipio"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                porcentaje = (double)reader["porcentaje"],
+                orden = (double)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
 
@@ -98,7 +107,10 @@ namespace WebApiCaracterizacion.DataGanaderia
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                porcentaje = (double)reader["porcentaje"],
+                orden = (double)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
     }

@@ -11,7 +11,7 @@ namespace WebApiCaracterizacion.ModelsMineria
         public string municipio { get; set; }
         public double promedio { get; set; }
         public int orden { get; set; }
-        public int color { get; set; }
+        public string color { get; set; }
         public string nombre_campana { get; set; }
     }
 }

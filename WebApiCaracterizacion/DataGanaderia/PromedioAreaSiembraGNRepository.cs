@@ -66,7 +66,10 @@ namespace WebApiCaracterizacion.DataGanaderia
 
                 municipio = (string)reader["municipio"],
                 dato = (string)reader["dato"],
-                suma = (double)reader["suma"]
+                suma = (double)reader["suma"],
+                orden = (double)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
         private PromediosAreaSiembraGN Case2(SqlDataReader reader)
@@ -74,7 +77,10 @@ namespace WebApiCaracterizacion.DataGanaderia
             return new PromediosAreaSiembraGN()
             {
                 dato = (string)reader["dato"],
-                suma = (double)reader["suma"]
+                suma = (double)reader["suma"],
+                orden = (double)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
         private PromediosAreaSiembraGN Case3(SqlDataReader reader)
@@ -84,7 +90,10 @@ namespace WebApiCaracterizacion.DataGanaderia
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 municipio = (string)reader["municipio"],
                 dato = (string)reader["dato"],
-                suma = (double)reader["suma"]
+                suma = (double)reader["suma"],
+                orden = (double)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
 
@@ -94,7 +103,10 @@ namespace WebApiCaracterizacion.DataGanaderia
             {
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 dato = (string)reader["dato"],
-                suma = (double)reader["suma"]
+                suma = (double)reader["suma"],
+                orden = (double)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
     }

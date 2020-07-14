@@ -57,8 +57,13 @@ namespace WebApiCaracterizacion.DataGanaderia
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 municipio = (string)reader["municipio"],
                 dato = (string)reader["dato"],
-                cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                cantidad_si = (int)reader["cantidad_si"],
+                porcentaje_si = (double)reader["porcentaje_si"],
+                cantidad_no = (int)reader["cantidad_no"],
+                porcentaje_no = (double)reader["porcentaje_no"],
+                orden = (int)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
         private PromediosMesesLecheGN MapToValueGeneral(SqlDataReader reader)
@@ -67,8 +72,13 @@ namespace WebApiCaracterizacion.DataGanaderia
             {
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 dato = (string)reader["dato"],
-                cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                cantidad_si = (int)reader["cantidad_si"],
+                porcentaje_si = (double)reader["porcentaje_si"],
+                cantidad_no = (int)reader["cantidad_no"],
+                porcentaje_no = (double)reader["porcentaje_no"],
+                orden = (int)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
     }
