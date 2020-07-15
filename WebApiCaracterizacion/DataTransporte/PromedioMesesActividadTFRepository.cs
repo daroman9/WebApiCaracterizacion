@@ -55,8 +55,13 @@ namespace WebApiCaracterizacion.DataTransporte
             {
                 municipio = (string)reader["municipio"],
                 dato = (string)reader["dato"],
-                cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                cantidad_si = (int)reader["cantidad_si"],
+                porcentaje_si = (double)reader["porcentaje_si"],
+                cantidad_no = (int)reader["cantidad_no"],
+                porcentaje_no = (double)reader["porcentaje_no"],
+                orden = (int)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
         private PromediosMesesActividadGN MapToValueGeneral(SqlDataReader reader)
@@ -64,8 +69,13 @@ namespace WebApiCaracterizacion.DataTransporte
             return new PromediosMesesActividadGN()
             {
                 dato = (string)reader["dato"],
-                cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                cantidad_si = (int)reader["cantidad_si"],
+                porcentaje_si = (double)reader["porcentaje_si"],
+                cantidad_no = (int)reader["cantidad_no"],
+                porcentaje_no = (double)reader["porcentaje_no"],
+                orden = (int)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
     }

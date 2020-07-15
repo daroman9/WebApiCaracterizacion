@@ -43,7 +43,7 @@ namespace WebApiCaracterizacion.DataMineria
                             }
                              else if (plantilla == "5" & tipoConsulta == "municipio")
                             {
-
+                                response.Add(MapToValueMunicipio(reader));
                             }
                             else if (plantilla == "5" & tipoConsulta == "general")
                             {

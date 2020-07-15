@@ -58,8 +58,11 @@ namespace WebApiCaracterizacion.Data
                 municipio = (string)reader["municipio"],
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
-               
+                porcentaje = (double)reader["porcentaje"],
+                orden = (double)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
+
             };
         }
 
@@ -69,7 +72,10 @@ namespace WebApiCaracterizacion.Data
             {
                 dato = (string)reader["dato"],
                 cantidad = (int)reader["cantidad"],
-                porcentaje = (double)reader["porcentaje"]
+                porcentaje = (double)reader["porcentaje"],
+                orden = (double)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
 
             };
 

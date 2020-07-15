@@ -122,7 +122,10 @@ namespace WebApiCaracterizacion.DataMineria
             {
 
                 tipo_plantilla = (string)reader["tipo_plantilla"],
-                promedio = (double)reader["promedio"]
+                promedio = (double)reader["promedio"],
+                orden = (int)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
 
 
             };
@@ -134,7 +137,10 @@ namespace WebApiCaracterizacion.DataMineria
             {
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 municipio = (string)reader["municipio"],
-                promedio = (double)reader["promedio"]
+                promedio = (double)reader["promedio"],
+                orden = (int)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
 
@@ -144,7 +150,10 @@ namespace WebApiCaracterizacion.DataMineria
             {
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 municipio = (string)reader["municipio"],
-                promedio = (double)reader["promedio"]
+                promedio = (double)reader["promedio"],
+                orden = (int)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
 
@@ -153,7 +162,10 @@ namespace WebApiCaracterizacion.DataMineria
             return new PromediosProduccionMinidragasOR()
             {
                 tipo_plantilla = (string)reader["tipo_plantilla"],
-                promedio = (double)reader["promedio"]
+                promedio = (double)reader["promedio"],
+                orden = (int)reader["orden"],
+                color = (string)reader["color"],
+                nombre_campana = (string)reader["nombre_campana"]
             };
         }
 
