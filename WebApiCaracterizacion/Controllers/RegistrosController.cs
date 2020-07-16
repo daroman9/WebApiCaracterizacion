@@ -89,7 +89,7 @@ namespace WebApiCaracterizacion.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var res = _context.Registros.Where(x => x.id_campo== id_campo && x.id_ficha == id_ficha).ToList();
+            var res = _context.Registros.Where(x => x.id_campo == id_campo && x.id_ficha == id_ficha).ToList();
             if (res == null)
             {
                 return NotFound();
@@ -98,12 +98,47 @@ namespace WebApiCaracterizacion.Controllers
             return Ok(res);
         }
 
+        //Metodo para sixto
+        [HttpPut("update")]
+        public IActionResult PutRegistroUpdate([FromBody] List<Registro> registro)
+        {
+            try
+            {
+
+                using (var transaction = _context.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        foreach (var item in registro)
+                        {
+                            _context.Entry(item).State = EntityState.Modified;
+                            _context.SaveChanges();
+                        }
+                        transaction.Commit();
+                    }
+                    catch (System.Exception ex)
+                    {
+                        transaction.Rollback();
+                        return BadRequest("Ocurrio un error al actualizar los registros " + ex.Message);
+                    }
+
+                }
+
+                return Ok(registro);
+
+            }
+            catch (System.Exception ex)
+            {
+                return BadRequest("Ocurrio un error al actualizar los registros " + ex.Message);
+            }
+
+        }
 
         // PUT: api/Registros/5
         [HttpPut("{id_campo}/{id_ficha}")]
         public IActionResult PutRegistro([FromBody] Registro registro, int id_campo, string id_ficha)
         {
-            if (registro.id_campo != id_campo && registro.id_ficha!= id_ficha)
+            if (registro.id_campo != id_campo && registro.id_ficha != id_ficha)
             {
                 return BadRequest("Ocurrio un error al modificar");
             }
@@ -135,7 +170,7 @@ namespace WebApiCaracterizacion.Controllers
             }
 
             var verificar = _context.Registros.AsNoTracking().Where(x => x.id_campo == registro.id_campo && x.id_ficha == registro.id_ficha).FirstOrDefault();
-           
+
             if (verificar == null)
             {
                 _context.Registros.Add(registro);

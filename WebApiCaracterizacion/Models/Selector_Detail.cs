@@ -15,5 +15,7 @@ namespace WebApiCaracterizacion.Models
         public int id_selector { get; set; }
         [JsonIgnore]
         public Selector Selector { get; set; }
+        public double? orden { get; set; }
+        public double? color { get; set; }
     }
 }

@@ -635,9 +635,13 @@ namespace WebApiCaracterizacion.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<double?>("color");
+
                     b.Property<string>("etiqueta");
 
                     b.Property<int>("id_selector");
+
+                    b.Property<double?>("orden");
 
                     b.Property<int?>("parent_selector");
 

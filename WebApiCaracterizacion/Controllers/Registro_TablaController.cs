@@ -47,6 +47,47 @@ namespace WebApiCaracterizacion.Controllers
             return Ok(registro_Tabla);
         }
 
+
+        //Metodo para sixto
+        [HttpPut("update")]
+        public IActionResult PutRegistroUpdate([FromBody] List<Registro_Tabla> registro_Tabla)
+        {
+            try
+            {
+
+                using (var transaction = _context.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        foreach (var item in registro_Tabla)
+                        {
+                            _context.Entry(item).State = EntityState.Modified;
+                            _context.SaveChanges();
+                        }
+                        transaction.Commit();
+                    }
+                    catch (System.Exception ex)
+                    {
+                        transaction.Rollback();
+                        return BadRequest("Ocurrio un error al actualizar los registros " + ex.Message);
+                    }
+
+                }
+
+                return Ok(registro_Tabla);
+
+            }
+            catch (System.Exception ex)
+            {
+                return BadRequest("Ocurrio un error al actualizar los registros " + ex.Message);
+            }
+
+        }
+
+
+
+
+
         // PUT: api/Registro_Tabla/5
         [HttpPut("{id}")]
         public IActionResult Put([FromBody] Registro_Tabla registro_Tabla, int id)
