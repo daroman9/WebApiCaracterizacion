@@ -42,6 +42,14 @@
       "frameworks": {
         "netcoreapp2.1": {
           "dependencies": {
+            "AWSSDK.Extensions.NETCORE.Setup": {
+              "target": "Package",
+              "version": "[3.3.101, )"
+            },
+            "AWSSDK.S3": {
+              "target": "Package",
+              "version": "[3.3.111.26, )"
+            },
             "DataAnnotationsExtensions": {
               "target": "Package",
               "version": "[5.0.1.27, )"

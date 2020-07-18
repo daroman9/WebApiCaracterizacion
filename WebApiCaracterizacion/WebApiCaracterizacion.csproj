@@ -43,6 +43,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AWSSDK.Extensions.NETCORE.Setup" Version="3.3.101" />
+    <PackageReference Include="AWSSDK.S3" Version="3.3.111.26" />
     <PackageReference Include="DataAnnotationsExtensions" Version="5.0.1.27" />
     <PackageReference Include="EntityFramework" Version="6.4.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />

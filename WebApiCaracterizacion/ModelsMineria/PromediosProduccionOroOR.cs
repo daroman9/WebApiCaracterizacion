@@ -6,5 +6,7 @@
         public string tipo_grafica { get; set; }
         public string dato { get; set; }
         public double cantidad { get; set; }
+        public double orden { get; set; }
+        public string color { get; set; }
     }
 }

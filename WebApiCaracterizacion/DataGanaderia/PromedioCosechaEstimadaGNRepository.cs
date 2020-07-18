@@ -64,10 +64,12 @@ namespace WebApiCaracterizacion.DataGanaderia
             {
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 municipio = (string)reader["municipio"],
-                promedio = (decimal)reader["promedio"],
+                dato = (string)reader["dato"],
+                valor = (double)reader["valor"],
                 orden = (double)reader["orden"],
                 color = (string)reader["color"],
-                nombre_campana = (string)reader["nombre_campana"]
+                nombre_campana = (string)reader["nombre_campana"],
+                tipo_grafica = (string)reader["tipo_grafica"]
             };
         }
         private PromediosCosechaEstimadaGN MapToValueNullMunicipio(SqlDataReader reader)
@@ -75,11 +77,14 @@ namespace WebApiCaracterizacion.DataGanaderia
             return new PromediosCosechaEstimadaGN()
             {
 
+                tipo_plantilla = (string)reader["tipo_plantilla"],
                 municipio = (string)reader["municipio"],
-                promedio = (decimal)reader["promedio"],
+                dato = (string)reader["dato"],
+                valor = (double)reader["valor"],
                 orden = (double)reader["orden"],
                 color = (string)reader["color"],
-                nombre_campana = (string)reader["nombre_campana"]
+                nombre_campana = (string)reader["nombre_campana"],
+                tipo_grafica = (string)reader["tipo_grafica"]
             };
         }
         private PromediosCosechaEstimadaGN MapToValueGeneral(SqlDataReader reader)
@@ -87,10 +92,12 @@ namespace WebApiCaracterizacion.DataGanaderia
             return new PromediosCosechaEstimadaGN()
             {
                 tipo_plantilla = (string)reader["tipo_plantilla"],
-                promedio = (decimal)reader["promedio"],
+                dato = (string)reader["dato"],
+                valor = (double)reader["valor"],
                 orden = (double)reader["orden"],
                 color = (string)reader["color"],
-                nombre_campana = (string)reader["nombre_campana"]
+                nombre_campana = (string)reader["nombre_campana"],
+                tipo_grafica = (string)reader["tipo_grafica"]
             };
         }
         private PromediosCosechaEstimadaGN MapToValueNullGeneral(SqlDataReader reader)
@@ -98,10 +105,12 @@ namespace WebApiCaracterizacion.DataGanaderia
             return new PromediosCosechaEstimadaGN()
             {
                 tipo_plantilla = (string)reader["tipo_plantilla"],
-                promedio = (decimal)reader["promedio"],
+                dato = (string)reader["dato"],
+                valor = (double)reader["valor"],
                 orden = (double)reader["orden"],
                 color = (string)reader["color"],
-                nombre_campana = (string)reader["nombre_campana"]
+                nombre_campana = (string)reader["nombre_campana"],
+                tipo_grafica = (string)reader["tipo_grafica"]
             };
         }
     }

@@ -15,6 +15,10 @@ using WebApiCaracterizacion.DataMineria;
 using WebApiCaracterizacion.DataTransporte;
 using WebApiCaracterizacion.DataGanaderia;
 using WebApiCaracterizacion.DataConsultasGenerales;
+using Amazon;
+using Amazon.Extensions.NETCore.Setup;
+using Amazon.S3;
+using AwsFiles.Services;
 
 namespace WebApiCaracterizacion
 {
@@ -150,6 +154,16 @@ namespace WebApiCaracterizacion
             services.AddScoped<FiltrarFichasRepository>();
             services.AddScoped<FiltrarRegistrosExcelRepository>();
             services.AddScoped<FiltrarTablasExcelRepository>();
+
+
+            //Servicio para procesamiento de archivos en S3 de amazon
+            services.AddDefaultAWSOptions(
+            new AWSOptions
+            {
+                Region = RegionEndpoint.GetBySystemName("us-east-1")
+            });
+            services.AddSingleton<IS3Service, S3Service>();
+            services.AddAWSService<IAmazonS3>();
 
 
 

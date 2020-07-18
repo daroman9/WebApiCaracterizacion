@@ -51,7 +51,10 @@ namespace WebApiCaracterizacion.DataMineria
                 nombre_zona = (string)reader["nombre_zona"],
                 tipo_grafica = (string)reader["tipo_grafica"],
                 dato = (string)reader["dato"],
-                cantidad = (double)reader["cantidad"]
+                cantidad = (double)reader["cantidad"],
+                orden = (double)reader["orden"],
+                color = (string)reader["color"]
+
             };
         }
 

@@ -62,10 +62,11 @@ namespace WebApiCaracterizacion.DataMineria
             {
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 municipio = (string)reader["municipio"],
-                promedio = (double)reader["promedio"],
-                orden = (int)reader["orden"],
+                valor = (double)reader["valor"],
+                orden = (double)reader["orden"],
                 color = (string)reader["color"],
-                nombre_campana = (string)reader["nombre_campana"]
+                nombre_campana = (string)reader["nombre_campana"],
+                tipo_grafica = (string)reader["tipo_grafica"]
             };
         }
 
@@ -74,10 +75,11 @@ namespace WebApiCaracterizacion.DataMineria
             return new PromediosVolumenDiarioAgregadosOR()
             {
                 tipo_plantilla = (string)reader["tipo_plantilla"],
-                promedio = (double)reader["promedio"],
-                orden = (int)reader["orden"],
+                valor = (double)reader["valor"],
+                orden = (double)reader["orden"],
                 color = (string)reader["color"],
-                nombre_campana = (string)reader["nombre_campana"]
+                nombre_campana = (string)reader["nombre_campana"],
+                tipo_grafica = (string)reader["tipo_grafica"]
             };
         }
 

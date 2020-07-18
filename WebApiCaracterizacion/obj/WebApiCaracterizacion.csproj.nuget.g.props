@@ -27,5 +27,7 @@
     <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Users\15cx0001\.nuget\packages\microsoft.entityframeworkcore.tools\2.1.1</PkgMicrosoft_EntityFrameworkCore_Tools>
     <PkgMicrosoft_AspNetCore_Razor_Design Condition=" '$(PkgMicrosoft_AspNetCore_Razor_Design)' == '' ">C:\Users\15cx0001\.nuget\packages\microsoft.aspnetcore.razor.design\2.1.2</PkgMicrosoft_AspNetCore_Razor_Design>
     <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">C:\Users\15cx0001\.nuget\packages\entityframework\6.4.0</PkgEntityFramework>
+    <PkgAWSSDK_Core Condition=" '$(PkgAWSSDK_Core)' == '' ">C:\Users\15cx0001\.nuget\packages\awssdk.core\3.3.107.25</PkgAWSSDK_Core>
+    <PkgAWSSDK_S3 Condition=" '$(PkgAWSSDK_S3)' == '' ">C:\Users\15cx0001\.nuget\packages\awssdk.s3\3.3.111.26</PkgAWSSDK_S3>
   </PropertyGroup>
 </Project>
