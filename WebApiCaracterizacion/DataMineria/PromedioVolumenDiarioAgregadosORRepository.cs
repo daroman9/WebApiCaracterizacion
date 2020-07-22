@@ -60,6 +60,7 @@ namespace WebApiCaracterizacion.DataMineria
         {
             return new PromediosVolumenDiarioAgregadosOR()
             {
+                dato = (string)reader["dato"],
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 municipio = (string)reader["municipio"],
                 valor = (double)reader["valor"],
@@ -74,6 +75,7 @@ namespace WebApiCaracterizacion.DataMineria
         {
             return new PromediosVolumenDiarioAgregadosOR()
             {
+                dato = (string)reader["dato"],
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 valor = (double)reader["valor"],
                 orden = (double)reader["orden"],

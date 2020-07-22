@@ -2,6 +2,7 @@
 {
     public class PromediosVolumenDiarioAgregadosOR
     {
+        public string dato { get; set; }
         public string tipo_plantilla { get; set; }
         public string municipio { get; set; }
         public double valor { get; set; }

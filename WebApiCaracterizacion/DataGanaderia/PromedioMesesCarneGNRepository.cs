@@ -56,12 +56,13 @@ namespace WebApiCaracterizacion.DataGanaderia
             {
                 tipo_plantilla = (string)reader["tipo_plantilla"],
                 municipio = (string)reader["municipio"],
+                detalle = (string)reader["detalle"],
                 dato = (string)reader["dato"],
                 cantidad_si = (int)reader["cantidad_si"],
                 porcentaje_si = (double)reader["porcentaje_si"],
                 cantidad_no = (int)reader["cantidad_no"],
                 porcentaje_no = (double)reader["porcentaje_no"],
-                orden = (int)reader["orden"],
+                orden = (double)reader["orden"],
                 color = (string)reader["color"],
                 nombre_campana = (string)reader["nombre_campana"]
             };
@@ -71,12 +72,13 @@ namespace WebApiCaracterizacion.DataGanaderia
             return new PromediosMesesCarneGN()
             {
                 tipo_plantilla = (string)reader["tipo_plantilla"],
+                detalle = (string)reader["detalle"],
                 dato = (string)reader["dato"],
                 cantidad_si = (int)reader["cantidad_si"],
                 porcentaje_si = (double)reader["porcentaje_si"],
                 cantidad_no = (int)reader["cantidad_no"],
                 porcentaje_no = (double)reader["porcentaje_no"],
-                orden = (int)reader["orden"],
+                orden = (double)reader["orden"],
                 color = (string)reader["color"],
                 nombre_campana = (string)reader["nombre_campana"]
             };
