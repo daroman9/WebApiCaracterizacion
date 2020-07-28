@@ -40,5 +40,6 @@ namespace WebApiCaracterizacion.Models
         public int? id_validacion { get; set; }
         [JsonIgnore]
         public Validacion Validacion { get; set; }
+        public int tipo_teclado { get; set; }
     }
 }

@@ -52,7 +52,7 @@ namespace WebApiCaracterizacion.Controllers
 
             return Ok(formulario);
         }
-        // GET: api/Formularios/byUsuario/5 obtener los formularios por el id usuario
+        // GET: api/Formularios/byUsuario/ obtener los formularios por el id usuario
         [HttpGet("byUsuario/{id_usuario}")]
         public IActionResult GetFormularioByUsuario([FromRoute] string id_usuario)
         {
@@ -74,9 +74,6 @@ namespace WebApiCaracterizacion.Controllers
         public IActionResult GetUserFormularioByUsuario([FromRoute] string id_usuario)
         {
            
-            
-            
-            
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);

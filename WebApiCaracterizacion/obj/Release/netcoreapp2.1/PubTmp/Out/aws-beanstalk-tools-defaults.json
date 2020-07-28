@@ -7,5 +7,13 @@
     "environment" : "caracterizacion-dev",
     "iis-website" : "Default Web Site",
     "app-path"    : "/",
-    "enable-xray" : false
+    "enable-xray" : false,
+    "cname"       : "demonaranjo-prod",
+    "solution-stack" : "64bit Windows Server 2016 v2.5.7 running IIS 10.0",
+    "environment-type" : "SingleInstance",
+    "instance-profile" : "aws-elasticbeanstalk-ec2-role",
+    "service-role"     : "aws-elasticbeanstalk-service-role",
+    "health-check-url" : "/",
+    "instance-type"    : "t3a.medium",
+    "key-pair"         : "prosectokey"
 }

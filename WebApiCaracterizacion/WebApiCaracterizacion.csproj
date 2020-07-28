@@ -9,33 +9,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\**" />
+    <Content Remove="Migrations\**" />
+    <EmbeddedResource Remove="Migrations\**" />
+    <None Remove="Migrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="DataGanaderia\PromedioNivelPoblacionVulnerableGNController.cs" />
-    <Compile Remove="Migrations\20200601132828_InitialMigration.cs" />
-    <Compile Remove="Migrations\20200601132828_InitialMigration.Designer.cs" />
-    <Compile Remove="Migrations\20200611163738_AddRoles.cs" />
-    <Compile Remove="Migrations\20200611163738_AddRoles.Designer.cs" />
-    <Compile Remove="Migrations\20200611163922_RemoveRoles.cs" />
-    <Compile Remove="Migrations\20200611163922_RemoveRoles.Designer.cs" />
-    <Compile Remove="Migrations\20200611163947_AddingRoles.cs" />
-    <Compile Remove="Migrations\20200611163947_AddingRoles.Designer.cs" />
-    <Compile Remove="Migrations\20200611164046_Update-Database.cs" />
-    <Compile Remove="Migrations\20200611164046_Update-Database.Designer.cs" />
-    <Compile Remove="Migrations\20200611164258_Update-Database.cs" />
-    <Compile Remove="Migrations\20200611164258_Update-Database.Designer.cs" />
-    <Compile Remove="Migrations\20200611164352_AddingRole.cs" />
-    <Compile Remove="Migrations\20200611164352_AddingRole.Designer.cs" />
-    <Compile Remove="Migrations\20200613135903_Borrar.cs" />
-    <Compile Remove="Migrations\20200613135903_Borrar.Designer.cs" />
-    <Compile Remove="Migrations\20200623214812_Log.cs" />
-    <Compile Remove="Migrations\20200623214812_Log.Designer.cs" />
-    <Compile Remove="Migrations\20200623221531_LogCorregido.cs" />
-    <Compile Remove="Migrations\20200623221531_LogCorregido.Designer.cs" />
-    <Compile Remove="Migrations\20200623222036_LogDelete.cs" />
-    <Compile Remove="Migrations\20200623222036_LogDelete.Designer.cs" />
-    <Compile Remove="Migrations\20200623222813_LogInitial.cs" />
-    <Compile Remove="Migrations\20200623222813_LogInitial.Designer.cs" />
-    <Compile Remove="Migrations\20200623223801_Prueba.cs" />
-    <Compile Remove="Migrations\20200623223801_Prueba.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Migrations\20200727232307_tipo_teclado.cs" />
+    <Compile Include="Migrations\20200727232307_tipo_teclado.Designer.cs" />
+    <Compile Include="Migrations\ApplicationDbContextModelSnapshot.cs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -61,8 +61,17 @@ namespace WebApiCaracterizacion.Controllers
                     {
                         foreach (var item in registro_Tabla)
                         {
-                            _context.Entry(item).State = EntityState.Modified;
-                            _context.SaveChanges();
+                            if (item.id != 0)
+                            {
+                                _context.Entry(item).State = EntityState.Modified;
+                                _context.SaveChanges();
+                            }
+                            else
+                            {
+                                _context.Add(item);
+                                _context.SaveChanges();
+
+                            }
                         }
                         transaction.Commit();
                     }

@@ -40,7 +40,7 @@ namespace WebApiCaracterizacion.Controllers
 
         //Obtener todos los usuarios
         [HttpGet]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+       // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public IEnumerable<ApplicationUser> ListUsers()
         {
 
@@ -49,7 +49,7 @@ namespace WebApiCaracterizacion.Controllers
 
         //Obtener un usuario por su documento
         [HttpGet("byDocumento/{documento}")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+       // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public IActionResult GetUsuario([FromRoute] int documento)
         {
             if (!ModelState.IsValid)
