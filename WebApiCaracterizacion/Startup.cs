@@ -28,7 +28,7 @@ namespace WebApiCaracterizacion
         {
             Configuration = configuration;
         }
-        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+       // readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 
         public IConfiguration Configuration { get; }
@@ -154,6 +154,7 @@ namespace WebApiCaracterizacion
             services.AddScoped<FiltrarFichasRepository>();
             services.AddScoped<FiltrarRegistrosExcelRepository>();
             services.AddScoped<FiltrarTablasExcelRepository>();
+            services.AddScoped<UsersAndFormsRepostitory>();
 
 
             //Servicio para procesamiento de archivos en S3 de amazon

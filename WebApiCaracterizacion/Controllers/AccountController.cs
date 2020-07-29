@@ -40,7 +40,7 @@ namespace WebApiCaracterizacion.Controllers
 
         //Obtener todos los usuarios
         [HttpGet]
-       // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public IEnumerable<ApplicationUser> ListUsers()
         {
 
@@ -49,7 +49,7 @@ namespace WebApiCaracterizacion.Controllers
 
         //Obtener un usuario por su documento
         [HttpGet("byDocumento/{documento}")]
-       // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public IActionResult GetUsuario([FromRoute] int documento)
         {
             if (!ModelState.IsValid)
@@ -57,6 +57,42 @@ namespace WebApiCaracterizacion.Controllers
                 return BadRequest(ModelState);
             }
             var usuario = _userManager.Users.Where(x => x.Documento == documento).ToList();
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(usuario);
+        }
+
+        //Obtener un usuario por su documento y por rol
+        [HttpGet("byDocumentoAndRol/{documento}/{rol}")]
+        // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public IActionResult GetUsuariobyDocumentoAndRol([FromRoute] int documento, int rol)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var usuario = _userManager.Users.Where(x => x.Documento == documento && x.Rol == rol).ToList();
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(usuario);
+        }
+
+        //Obtener un usuario por su documento y por rol
+        [HttpGet("byRol/{rol}")]
+        // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public IActionResult GetUsuariobyRol([FromRoute] int rol)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var usuario = _userManager.Users.Where(x => x.Rol == rol).ToList();
             if (usuario == null)
             {
                 return NotFound();
@@ -82,6 +118,8 @@ namespace WebApiCaracterizacion.Controllers
 
             return Ok(usuario);
         }
+
+ 
         //Crear usuarios nuevos
         [Route("Create")]
         [HttpPost]
@@ -326,10 +364,10 @@ namespace WebApiCaracterizacion.Controllers
         }
 
 
-        //Funcion para modificar los datos del usuario.
+        //Funcion para modificar los datos del usuario haciendo busqueda por el email
 
         [HttpPut("updateUser")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+       // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> updateUser([FromBody] ApplicationUser model)
         {
             try
@@ -339,6 +377,38 @@ namespace WebApiCaracterizacion.Controllers
                 user.Apellido = model.Apellido;
                 user.Documento = model.Documento;
                 user.Email = model.Email;
+                var code = model.Password;
+                var newPass = HashPassword(code);
+                user.PasswordHash = newPass;
+                var result = await _userManager.UpdateAsync(user);
+
+                return Ok("Los datos del usuario se han modificado con exito");
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+
+        }
+
+        //Funcion para modificar los datos del usuario haciendo busqueda por el documento
+        [HttpPut("updateUserByDocument/{documento}")]
+       // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<IActionResult> updateUserByDocument([FromBody] ApplicationUser model, [FromRoute] int documento)
+        {
+            try
+            {
+
+                var user =  _userManager.Users.FirstOrDefault(x => x.Documento == documento);
+
+                //var user;
+               // var user = await _userManager.FindByEmailAsync(model.Email);
+                user.Nombre = model.Nombre;
+                user.Apellido = model.Apellido;
+                user.Documento = model.Documento;
+                user.Email = model.Email;
+                user.Rol = model.Rol;
                 var code = model.Password;
                 var newPass = HashPassword(code);
                 user.PasswordHash = newPass;
