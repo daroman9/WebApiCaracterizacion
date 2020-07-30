@@ -9,20 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\**" />
-    <Content Remove="Migrations\**" />
-    <EmbeddedResource Remove="Migrations\**" />
-    <None Remove="Migrations\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Remove="DataGanaderia\PromedioNivelPoblacionVulnerableGNController.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="Migrations\20200727232307_tipo_teclado.cs" />
-    <Compile Include="Migrations\20200727232307_tipo_teclado.Designer.cs" />
-    <Compile Include="Migrations\ApplicationDbContextModelSnapshot.cs" />
+    <Compile Remove="Migrations\20200729224317_initial.cs" />
+    <Compile Remove="Migrations\20200729224317_initial.Designer.cs" />
+    <Compile Remove="Migrations\20200729224741_initialCampaign.cs" />
+    <Compile Remove="Migrations\20200729224741_initialCampaign.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

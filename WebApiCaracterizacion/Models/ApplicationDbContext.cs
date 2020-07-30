@@ -31,7 +31,7 @@ namespace WebApiCaracterizacion.Models
         public DbSet<Log_Auditoria> Log_Auditoria { get; set; }
         public DbSet<Rastro> Rastro { get; set; }
         public DbSet<Revision_Ajuste> Revision_Ajuste { get; set; }
-
+        public DbSet<Campaign> Campaign { get; set; }
 
     }
 }

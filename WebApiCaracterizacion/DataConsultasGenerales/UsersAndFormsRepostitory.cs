@@ -53,7 +53,7 @@ namespace WebApiCaracterizacion.DataConsultasGenerales
                 rol = (int)reader["rol"],
                 fecha_inicio = (DateTime)reader["fecha_inicio"],
                 fecha_fin = (DateTime)reader["fecha_fin"],
-                nombreCampaña = (string)reader["nombreCampaña"],
+                nombreCampana = (string)reader["nombreCampana"],
                 id_plantilla = (int)reader["id_plantilla"],
                 id_usuario = (string)reader["id_usuario"]
             };

@@ -128,7 +128,7 @@ namespace WebApiCaracterizacion.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Nombre = model.Nombre, Apellido = model.Apellido, Documento = model.Documento };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Nombre = model.Nombre, Apellido = model.Apellido, Documento = model.Documento, Rol = model.Rol };
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -409,9 +409,9 @@ namespace WebApiCaracterizacion.Controllers
                 user.Documento = model.Documento;
                 user.Email = model.Email;
                 user.Rol = model.Rol;
-                var code = model.Password;
-                var newPass = HashPassword(code);
-                user.PasswordHash = newPass;
+                //var code = model.Password;
+                //var newPass = HashPassword(code);
+                //user.PasswordHash = newPass;
                 var result = await _userManager.UpdateAsync(user);
 
                 return Ok("Los datos del usuario se han modificado con exito");

@@ -14,7 +14,7 @@ namespace WebApiCaracterizacion.ModelsConsultasGenerales
         public int rol { get; set; }
         public DateTime fecha_inicio { get; set; }
         public DateTime fecha_fin { get; set; }
-        public string nombreCampaña { get; set; }
+        public string nombreCampana { get; set; }
         public int id_plantilla { get; set; }
         public string id_usuario { get; set; }
     }

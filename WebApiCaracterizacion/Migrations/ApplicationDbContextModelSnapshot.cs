@@ -117,27 +117,19 @@ namespace WebApiCaracterizacion.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("descripcion");
-
-                    b.Property<string>("emailLider");
-
                     b.Property<DateTime?>("fecha_fin");
 
                     b.Property<DateTime?>("fecha_inicio");
+
+                    b.Property<int>("id_campaign");
 
                     b.Property<int>("id_plantilla");
 
                     b.Property<string>("id_usuario");
 
-                    b.Property<string>("lider");
-
-                    b.Property<string>("nombreCampaña");
-
-                    b.Property<string>("objetivo");
-
-                    b.Property<string>("telefonoLider");
-
                     b.HasKey("id");
+
+                    b.HasIndex("id_campaign");
 
                     b.HasIndex("id_plantilla");
 
@@ -350,6 +342,29 @@ namespace WebApiCaracterizacion.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
+                });
+
+            modelBuilder.Entity("WebApiCaracterizacion.Models.Campaign", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("descripcion");
+
+                    b.Property<string>("email_lider");
+
+                    b.Property<string>("lider");
+
+                    b.Property<string>("nombre");
+
+                    b.Property<string>("objetivo");
+
+                    b.Property<string>("tel_lider");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Campaign");
                 });
 
             modelBuilder.Entity("WebApiCaracterizacion.Models.Car", b =>
@@ -758,6 +773,11 @@ namespace WebApiCaracterizacion.Migrations
 
             modelBuilder.Entity("caracterizacion.Models.Formulario", b =>
                 {
+                    b.HasOne("WebApiCaracterizacion.Models.Campaign", "Campaign")
+                        .WithMany()
+                        .HasForeignKey("id_campaign")
+                        .OnDelete(DeleteBehavior.Cascade);
+
                     b.HasOne("WebApiCaracterizacion.Models.Plantilla", "Plantilla")
                         .WithMany()
                         .HasForeignKey("id_plantilla")
