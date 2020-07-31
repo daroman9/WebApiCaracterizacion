@@ -119,16 +119,16 @@ namespace WebApiCaracterizacion.Controllers
             return Ok(usuario);
         }
 
- 
+
         //Crear usuarios nuevos
         [Route("Create")]
         [HttpPost]
-       // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> CreateUser([FromBody] ApplicationUser model)
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Nombre = model.Nombre, Apellido = model.Apellido, Documento = model.Documento, Rol = model.Rol };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Nombre = model.Nombre, Apellido = model.Apellido, Documento = model.Documento, Telefono = model.Telefono, Rol = model.Rol };
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -367,7 +367,7 @@ namespace WebApiCaracterizacion.Controllers
         //Funcion para modificar los datos del usuario haciendo busqueda por el email
 
         [HttpPut("updateUser")]
-       // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> updateUser([FromBody] ApplicationUser model)
         {
             try
@@ -394,24 +394,20 @@ namespace WebApiCaracterizacion.Controllers
 
         //Funcion para modificar los datos del usuario haciendo busqueda por el documento
         [HttpPut("updateUserByDocument/{documento}")]
-       // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> updateUserByDocument([FromBody] ApplicationUser model, [FromRoute] int documento)
         {
             try
             {
 
-                var user =  _userManager.Users.FirstOrDefault(x => x.Documento == documento);
+                var user = _userManager.Users.FirstOrDefault(x => x.Documento == documento);
 
-                //var user;
-               // var user = await _userManager.FindByEmailAsync(model.Email);
                 user.Nombre = model.Nombre;
                 user.Apellido = model.Apellido;
                 user.Documento = model.Documento;
                 user.Email = model.Email;
+                user.Telefono = model.Telefono;
                 user.Rol = model.Rol;
-                //var code = model.Password;
-                //var newPass = HashPassword(code);
-                //user.PasswordHash = newPass;
                 var result = await _userManager.UpdateAsync(user);
 
                 return Ok("Los datos del usuario se han modificado con exito");
@@ -426,15 +422,17 @@ namespace WebApiCaracterizacion.Controllers
 
         //Funcion para el cambio de password
         [HttpPut("changePassword")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+       // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> changePassword([FromBody] ApplicationUser model)
         {
             try
             {
-                var user = await _userManager.FindByEmailAsync(model.Email);
+                var user = _userManager.Users.FirstOrDefault(x => x.Email == model.Email && x.codRecovery == model.codRecovery);
+               // var user = await _userManager.FindByEmailAsync(model.Email);
                 var code = model.Password;
                 var newPass = HashPassword(code);
                 user.PasswordHash = newPass;
+                user.codRecovery = "";
                 var result = await _userManager.UpdateAsync(user);
 
 
@@ -442,8 +440,26 @@ namespace WebApiCaracterizacion.Controllers
             }
             catch (Exception ex)
             {
-
+                return BadRequest("No se pudo cambiar el password");
                 throw new Exception(ex.Message);
+            }
+
+        }
+
+        // Funcion para eliminar un usuario que no tiene asociado un formulario
+        [HttpDelete("deleteUser/{documento}")]
+        public async Task<ActionResult> DeleteUser([FromRoute] int documento)
+        {
+            try
+            {
+                var user = _userManager.Users.FirstOrDefault(x => x.Documento == documento);
+                await _userManager.DeleteAsync(user);
+                return Ok("Usuario eliminado correctamente");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("El usuario no puede ser eliminado: ");
+               
             }
 
         }
@@ -457,13 +473,14 @@ namespace WebApiCaracterizacion.Controllers
                 var user = await _userManager.FindByEmailAsync(model.Email);
                 var emailRec = model.Email;
                 var code = GenerateCode();
-                var newPass = HashPassword(code);
-                user.PasswordHash = newPass;
+                user.codRecovery = code;
+               // var newPass = HashPassword(code);
+               // user.PasswordHash = newPass;
                 SendEmail(emailRec, code);
                 var result = await _userManager.UpdateAsync(user);
 
 
-                return Ok("La contraseña se ha cambiado correctamente");
+                return Ok("Se ha enviado el correo exitosamente");
             }
             catch (Exception ex)
             {
@@ -479,10 +496,14 @@ namespace WebApiCaracterizacion.Controllers
             string EmailOrigen = "desarrolloprosecto@gmail.com";
             string Pass = "cangr3j0pr0s3ctus";
 
+
+            //string EmailOrigen = "daroman9@gmail.com";
+            //string Pass = "daroman94621361";
+
             MailMessage oMailMessage = new MailMessage(EmailOrigen, EmailDestino, "Recuperación de contraseña",
                "<p>Hola,</p><br>" +
                "<p>Hemos procesado tu solicitud de cambio de clave.</p><br>" +
-               "<p>La nueva contrase&ntilde;</p>" + newPass);
+               "<p>Código de validación</p>" + newPass);
 
             oMailMessage.IsBodyHtml = true;
 

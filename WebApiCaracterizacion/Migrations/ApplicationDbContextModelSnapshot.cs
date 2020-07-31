@@ -331,6 +331,8 @@ namespace WebApiCaracterizacion.Migrations
                     b.Property<string>("UserName")
                         .HasMaxLength(256);
 
+                    b.Property<string>("codRecovery");
+
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedEmail")
@@ -353,6 +355,10 @@ namespace WebApiCaracterizacion.Migrations
                     b.Property<string>("descripcion");
 
                     b.Property<string>("email_lider");
+
+                    b.Property<DateTime?>("fecha_fin");
+
+                    b.Property<DateTime?>("fecha_inicio");
 
                     b.Property<string>("lider");
 
