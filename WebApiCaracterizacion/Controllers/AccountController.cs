@@ -446,6 +446,36 @@ namespace WebApiCaracterizacion.Controllers
 
         }
 
+        //Funcion para la recuperacion de la contraseña
+        [HttpPost("recordar")]
+        public async Task<IActionResult> recovery([FromBody] ApplicationUser model)
+        {
+            try
+            {
+                var user = await _userManager.FindByEmailAsync(model.Email);
+                var emailRec = model.Email;
+                var code = GenerateCode();
+                user.codRecovery = code;
+                SendEmail(emailRec, code);
+                var result = await _userManager.UpdateAsync(user);
+
+
+                return Ok("Se ha enviado el correo exitosamente ");
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+
+        }
+
+
+
+
+
+
+
         // Funcion para eliminar un usuario que no tiene asociado un formulario
         [HttpDelete("deleteUser/{documento}")]
         public async Task<ActionResult> DeleteUser([FromRoute] int documento)
@@ -495,10 +525,6 @@ namespace WebApiCaracterizacion.Controllers
         {
             string EmailOrigen = "desarrolloprosecto@gmail.com";
             string Pass = "cangr3j0pr0s3ctus";
-
-
-            //string EmailOrigen = "daroman9@gmail.com";
-            //string Pass = "daroman94621361";
 
             MailMessage oMailMessage = new MailMessage(EmailOrigen, EmailDestino, "Recuperación de contraseña",
                "<p>Hola,</p><br>" +

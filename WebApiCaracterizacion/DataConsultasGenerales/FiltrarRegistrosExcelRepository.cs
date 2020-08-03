@@ -54,6 +54,8 @@ namespace WebApiCaracterizacion.DataConsultasGenerales
             string dato_float;
             string dato_integer;
             string dato_date;
+            string fechaNula;
+            DateTime dato_fecha;
     
 
             if (reader["valor_string"] == DBNull.Value)
@@ -93,6 +95,20 @@ namespace WebApiCaracterizacion.DataConsultasGenerales
                 dato_date = Convert.ToString(reader["valor_date"]);
             };
 
+            if (reader["fecha"] == DBNull.Value)
+            {
+
+                fechaNula = null;
+
+                dato_fecha = Convert.ToDateTime(fechaNula);
+
+            }
+            else
+            {
+                dato_fecha = Convert.ToDateTime(reader["fecha"]);
+            };
+
+
 
             return new FiltrarRegistrosExcel()
             {
@@ -101,7 +117,7 @@ namespace WebApiCaracterizacion.DataConsultasGenerales
              valor_float = dato_float,
              valor_integer = dato_integer,
              valor_date = dato_date,
-             fecha = (DateTime)reader["fecha"],
+             fecha = dato_fecha,
              id_campo = (int)reader["id_campo"],
              id_ficha = (string)reader["id_ficha"]
                
