@@ -25,15 +25,18 @@ namespace WebApiCaracterizacion.Controllers
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly GooglereCaptchaService _GooglereCaptchaService;
         private readonly IConfiguration _configuration;
 
         public AccountController(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
+           GooglereCaptchaService _googlereCaptchaService,
             IConfiguration configuration)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _GooglereCaptchaService = _googlereCaptchaService;
 
             this._configuration = configuration;
         }
@@ -126,23 +129,85 @@ namespace WebApiCaracterizacion.Controllers
         // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> CreateUser([FromBody] ApplicationUser model)
         {
-            if (ModelState.IsValid)
+
+            var searchUser = _userManager.Users.FirstOrDefault(x => x.Documento == model.Documento);
+
+            if (searchUser ==null)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Nombre = model.Nombre, Apellido = model.Apellido, Documento = model.Documento, Telefono = model.Telefono, Rol = model.Rol };
-                var result = await _userManager.CreateAsync(user, model.Password);
-                if (result.Succeeded)
+                if (ModelState.IsValid)
                 {
-                    return Ok("Usuario creado correctamente");
+                    var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Nombre = model.Nombre, Apellido = model.Apellido, Documento = model.Documento, Telefono = model.Telefono, Rol = model.Rol };
+                    var result = await _userManager.CreateAsync(user, model.Password);
+                    if (result.Succeeded)
+                    {
+                        return Ok("Usuario creado correctamente");
+                    }
+                    else
+                    {
+                        return BadRequest("Ocurrio un error, email o password invalidos");
+                    }
                 }
                 else
                 {
-                    return BadRequest("Ocurrio un error, email o password invalidos");
+                    return BadRequest(ModelState);
                 }
             }
             else
             {
-                return BadRequest(ModelState);
+                return BadRequest("El usuario ya se encuentra creado");
             }
+
+        }
+
+
+        //Login con captcha para el aplicativo web
+        [HttpPost]
+
+        [Route("LoginCaptcha")]
+
+        public async Task<IActionResult> LoginCaptcha([FromBody] ApplicationUser userInfo)
+        {
+            //Google Recaptcha
+            string secretKey = "6LewE7oZAAAAANDxTioB90mzHdh2ozP9rtMqcd5U";
+            var _GoogleReCaptcha = _GooglereCaptchaService.VerifyCaptcha(userInfo.recaptcha, secretKey);
+
+            if (!_GoogleReCaptcha.Result.success)
+            {
+                return BadRequest("Captcha incorrecto");
+            }else
+            {
+                if (ModelState.IsValid)
+                {
+
+                    var datos = await _userManager.FindByEmailAsync(userInfo.Email);
+
+                    var result = await _signInManager.PasswordSignInAsync(userInfo.Email, userInfo.Password, isPersistent: false, lockoutOnFailure: false);
+                    if (result.Succeeded)
+                    {
+                        if (datos.Rol != 0)
+                        {
+
+                            return BuildToken(userInfo, datos.Nombre, datos.Apellido, datos.Id, datos.Rol);
+                        }
+                        else
+                        {
+                            return Unauthorized();
+                        }
+
+                    }
+                    else
+                    {
+                        ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                        return BadRequest(ModelState);
+                    }
+                }
+                else
+                {
+                    return BadRequest(ModelState);
+                }
+            }
+            
+            
 
         }
 

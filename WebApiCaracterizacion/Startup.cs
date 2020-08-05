@@ -157,6 +157,9 @@ namespace WebApiCaracterizacion
             services.AddScoped<UsersAndFormsRepostitory>();
 
 
+            //Fin seccion controladores
+
+
             //Servicio para procesamiento de archivos en S3 de amazon
             services.AddDefaultAWSOptions(
             new AWSOptions
@@ -166,9 +169,8 @@ namespace WebApiCaracterizacion
             services.AddSingleton<IS3Service, S3Service>();
             services.AddAWSService<IAmazonS3>();
 
-
-
-            //Fin seccion controladores
+            //Servicio para el logueo con captcha
+            services.AddTransient<GooglereCaptchaService>();
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
             services.AddIdentity<ApplicationUser, IdentityRole>(
