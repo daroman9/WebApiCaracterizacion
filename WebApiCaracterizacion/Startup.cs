@@ -173,8 +173,7 @@ namespace WebApiCaracterizacion
             services.AddAWSService<IAmazonS3>();
             //Servicio para el envio de correos
             services.AddTransient<IMailService, MailService>();
-            services.AddTransient<Microsoft.AspNetCore.Identity.UI.Services.IEmailSender, EmailSender>();
-            //services.AddTransient<EmailSender>();
+         
             services.Configure<EmailSenderOptions>(Configuration.GetSection("EmailSenderOptions"));
             //Servicio para el logueo con captcha
             services.AddTransient<GooglereCaptchaService>();

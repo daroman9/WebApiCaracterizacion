@@ -32,7 +32,6 @@ namespace WebApiCaracterizacion.Controllers
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly GooglereCaptchaService _GooglereCaptchaService;
         private readonly IConfiguration _configuration;
-        private readonly IEmailSender _emailSender;
         private readonly IMailService _mailService;
 
 
@@ -40,14 +39,12 @@ namespace WebApiCaracterizacion.Controllers
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             GooglereCaptchaService _googlereCaptchaService,
-            IEmailSender emailSender,
             IMailService mailService,
             IConfiguration configuration)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _GooglereCaptchaService = _googlereCaptchaService;
-            _emailSender = emailSender;
             _mailService = mailService;
 
             this._configuration = configuration;
@@ -610,17 +607,7 @@ namespace WebApiCaracterizacion.Controllers
         }
 
 
-        //Funcion que envia correo nuevo
-        public async Task<IActionResult> EnviarCorreo(string EmailDestino, string newPass)
-        {
-            await _emailSender
-                .SendEmailAsync(EmailDestino, "Recuperación de contraseña", "<p>Hola,</p><br>" +
-               "<p>Hemos procesado tu solicitud de cambio de clave.</p><br>" +
-               "<p>Código de validación</p>" + newPass)
-                .ConfigureAwait(false);
-
-            return View();
-        }
+      
 
         //Funcion para enviar el correo, para recuperar contraseña
        // private void SendEmail(string EmailDestino, string newPass)
