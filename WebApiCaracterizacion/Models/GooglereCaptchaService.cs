@@ -13,6 +13,7 @@ namespace WebApiCaracterizacion.Models
     
         public virtual async Task<GoogleRespo> VerifyCaptcha(string _Token, string _SecretKey)
         {
+
             GooglereCaptchaData _MyData = new GooglereCaptchaData
             {
                 response = _Token,
@@ -21,14 +22,15 @@ namespace WebApiCaracterizacion.Models
 
             HttpClient client = new HttpClient();
 
-            var response = await client.GetStringAsync($"https://www.google.com/recaptcha/api/siteverify?=secret{_MyData.secret}&response={_MyData.response}");
-
-            var capresp = JsonConvert.DeserializeObject<GoogleRespo>(response);
+            var response = await client.PostAsync($"https://www.google.com/recaptcha/api/siteverify?secret={_MyData.secret}&response={_MyData.response}", null);
+            
+            var capresp = JsonConvert.DeserializeObject<GoogleRespo>( await response.Content.ReadAsStringAsync());
 
             return capresp;
 
         }
     }
+
 
     public class GooglereCaptchaData
     {

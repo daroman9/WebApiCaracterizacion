@@ -14,7 +14,12 @@ using System.Security.Cryptography;
 using System.Net.Mail;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using WebApiCaracterizacion.Services;
 
+
+
+//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
 
 namespace WebApiCaracterizacion.Controllers
 {
@@ -27,16 +32,23 @@ namespace WebApiCaracterizacion.Controllers
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly GooglereCaptchaService _GooglereCaptchaService;
         private readonly IConfiguration _configuration;
+        private readonly IEmailSender _emailSender;
+        private readonly IMailService _mailService;
+
 
         public AccountController(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
-           GooglereCaptchaService _googlereCaptchaService,
+            GooglereCaptchaService _googlereCaptchaService,
+            IEmailSender emailSender,
+            IMailService mailService,
             IConfiguration configuration)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _GooglereCaptchaService = _googlereCaptchaService;
+            _emailSender = emailSender;
+            _mailService = mailService;
 
             this._configuration = configuration;
         }
@@ -160,54 +172,54 @@ namespace WebApiCaracterizacion.Controllers
         }
 
 
+
         //Login con captcha para el aplicativo web
-        [HttpPost]
+         [HttpPost]
 
-        [Route("LoginCaptcha")]
+         [Route("LoginCaptcha")]
 
-        public async Task<IActionResult> LoginCaptcha([FromBody] ApplicationUser userInfo)
-        {
+        public async Task<IActionResult> LoginCaptcha([FromBody] ApplicationUser userInfo, [FromQuery] string recaptcha)
+         {
             //Google Recaptcha
-            string secretKey = "6LewE7oZAAAAANDxTioB90mzHdh2ozP9rtMqcd5U";
-            var _GoogleReCaptcha = _GooglereCaptchaService.VerifyCaptcha(userInfo.recaptcha, secretKey);
+            string secretKey = "6Lfc17sZAAAAAM2LDvzo7674prtyB0eTc-n4DKoh";
+            var _GoogleReCaptcha = _GooglereCaptchaService.VerifyCaptcha(recaptcha, secretKey);
 
             if (!_GoogleReCaptcha.Result.success)
-            {
-                return BadRequest("Captcha incorrecto");
-            }else
-            {
-                if (ModelState.IsValid)
+             {
+                 return BadRequest("Captcha incorrecto");
+             }else
+             {
+             if (ModelState.IsValid)
+             {
+               var datos = await _userManager.FindByEmailAsync(userInfo.Email);
+
+               var result = await _signInManager.PasswordSignInAsync(userInfo.Email, userInfo.Password, isPersistent: false, lockoutOnFailure: false);
+               if (result.Succeeded)
+                {
+               if (datos.Rol != 0)
                 {
 
-                    var datos = await _userManager.FindByEmailAsync(userInfo.Email);
+                   return BuildToken(datos, datos.Nombre, datos.Apellido, datos.Id, datos.Rol);
+               }
+               else
+               {
+                 return Unauthorized();
+               }
 
-                    var result = await _signInManager.PasswordSignInAsync(userInfo.Email, userInfo.Password, isPersistent: false, lockoutOnFailure: false);
-                    if (result.Succeeded)
-                    {
-                        if (datos.Rol != 0)
-                        {
+          }
+          else
+          {
+           ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+           return BadRequest(ModelState);
+          }
+          }
+          else
+         {
+           return BadRequest(ModelState);
+          }
+          }
 
-                            return BuildToken(userInfo, datos.Nombre, datos.Apellido, datos.Id, datos.Rol);
-                        }
-                        else
-                        {
-                            return Unauthorized();
-                        }
 
-                    }
-                    else
-                    {
-                        ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                        return BadRequest(ModelState);
-                    }
-                }
-                else
-                {
-                    return BadRequest(ModelState);
-                }
-            }
-            
-            
 
         }
 
@@ -551,7 +563,7 @@ namespace WebApiCaracterizacion.Controllers
                 await _userManager.DeleteAsync(user);
                 return Ok("Usuario eliminado correctamente");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return BadRequest("El usuario no puede ser eliminado: ");
                
@@ -569,9 +581,9 @@ namespace WebApiCaracterizacion.Controllers
                 var emailRec = model.Email;
                 var code = GenerateCode();
                 user.codRecovery = code;
-               // var newPass = HashPassword(code);
-               // user.PasswordHash = newPass;
-                SendEmail(emailRec, code);
+                // var newPass = HashPassword(code);
+                // user.PasswordHash = newPass;
+                await SendEmail(emailRec, code);
                 var result = await _userManager.UpdateAsync(user);
 
 
@@ -585,31 +597,58 @@ namespace WebApiCaracterizacion.Controllers
 
         }
 
-        //Funcion para enviar el correo, para recuperar contraseña
-        private void SendEmail(string EmailDestino, string newPass)
+        //Enviar correo con sendgrid
+        private async Task<IActionResult> SendEmail(string EmailDestino, string newPass)
         {
-            string EmailOrigen = "desarrolloprosecto@gmail.com";
-            string Pass = "cangr3j0pr0s3ctus";
 
-            MailMessage oMailMessage = new MailMessage(EmailOrigen, EmailDestino, "Recuperación de contraseña",
+          await  _mailService.SendEmail(EmailDestino, "Recuperación de contraseña",
                "<p>Hola,</p><br>" +
                "<p>Hemos procesado tu solicitud de cambio de clave.</p><br>" +
                "<p>Código de validación</p>" + newPass);
 
-            oMailMessage.IsBodyHtml = true;
-
-            SmtpClient osmtpClient = new SmtpClient("smtp.gmail.com");
-            osmtpClient.EnableSsl = true;
-            osmtpClient.UseDefaultCredentials = false;
-
-            osmtpClient.Port = 587;
-            osmtpClient.Credentials = new System.Net.NetworkCredential(EmailOrigen, Pass);
-
-            osmtpClient.Send(oMailMessage);
-
-            osmtpClient.Dispose();
-
+            return Ok("Se ha enviado el correo exitosamete");
         }
+
+
+        //Funcion que envia correo nuevo
+        public async Task<IActionResult> EnviarCorreo(string EmailDestino, string newPass)
+        {
+            await _emailSender
+                .SendEmailAsync(EmailDestino, "Recuperación de contraseña", "<p>Hola,</p><br>" +
+               "<p>Hemos procesado tu solicitud de cambio de clave.</p><br>" +
+               "<p>Código de validación</p>" + newPass)
+                .ConfigureAwait(false);
+
+            return View();
+        }
+
+        //Funcion para enviar el correo, para recuperar contraseña
+       // private void SendEmail(string EmailDestino, string newPass)
+       // {
+         //   string EmailOrigen = "daroman9@gmail.com";
+           // string Pass = "daroman94621361";
+            //  string Pass = "cangr3j0pr0s3ctus";
+
+          //  MailMessage oMailMessage = new MailMessage(EmailOrigen, EmailDestino, "Recuperación de contraseña",
+             //  "<p>Hola,</p><br>" +
+             //  "<p>Hemos procesado tu solicitud de cambio de clave.</p><br>" +
+             //  "<p>Código de validación</p>" + newPass);
+
+           // oMailMessage.IsBodyHtml = true;
+
+           // SmtpClient osmtpClient = new SmtpClient("smtp.gmail.com");
+          //  osmtpClient.EnableSsl = true;
+           // osmtpClient.UseDefaultCredentials = false;
+          //  osmtpClient.Host = "smtp.gmail.com";
+
+           // osmtpClient.Port = 587;
+          //  osmtpClient.Credentials = new System.Net.NetworkCredential(EmailOrigen, Pass);
+
+          //  osmtpClient.Send(oMailMessage);
+
+          //  osmtpClient.Dispose();
+
+      //  }
         public static string HashPassword(string password)
         {
             byte[] salt;

@@ -19,6 +19,9 @@ using Amazon;
 using Amazon.Extensions.NETCore.Setup;
 using Amazon.S3;
 using AwsFiles.Services;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using WebApiCaracterizacion.Services;
+using WebApiCaracterizacion.Interfaces;
 
 namespace WebApiCaracterizacion
 {
@@ -168,7 +171,11 @@ namespace WebApiCaracterizacion
             });
             services.AddSingleton<IS3Service, S3Service>();
             services.AddAWSService<IAmazonS3>();
-
+            //Servicio para el envio de correos
+            services.AddTransient<IMailService, MailService>();
+            services.AddTransient<Microsoft.AspNetCore.Identity.UI.Services.IEmailSender, EmailSender>();
+            //services.AddTransient<EmailSender>();
+            services.Configure<EmailSenderOptions>(Configuration.GetSection("EmailSenderOptions"));
             //Servicio para el logueo con captcha
             services.AddTransient<GooglereCaptchaService>();
             services.AddDbContext<ApplicationDbContext>(options =>
