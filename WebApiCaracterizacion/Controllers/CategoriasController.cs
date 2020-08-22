@@ -49,6 +49,22 @@ namespace WebApiCaracterizacion.Controllers
         }
 
         // GET: api/Categorias/5 Filtrar por id de plantilla
+        [HttpGet("byCategoria/{id_padre}")]
+        public IActionResult GetCategoriaByCategoria([FromRoute] int id_padre)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var categoria = _context.Categorias.Where(x => x.id_padre == id_padre).ToList();
+            if (categoria == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(categoria);
+        }
+        // GET: api/Categorias/5 Filtrar por id de plantilla
         [HttpGet("byPlantilla/{id_plantilla}")]
         public IActionResult GetCategoriaByPlantilla([FromRoute] int id_plantilla)
         {

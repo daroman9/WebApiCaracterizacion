@@ -18,9 +18,6 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using WebApiCaracterizacion.Services;
 
 
-
-//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
-
 namespace WebApiCaracterizacion.Controllers
 {
     [Produces("application/json")]
@@ -177,11 +174,14 @@ namespace WebApiCaracterizacion.Controllers
 
         public async Task<IActionResult> LoginCaptcha([FromBody] ApplicationUser userInfo, [FromQuery] string recaptcha)
          {
-            //Google Recaptcha
-            string secretKey = "6Lfc17sZAAAAAM2LDvzo7674prtyB0eTc-n4DKoh";
-            var _GoogleReCaptcha = _GooglereCaptchaService.VerifyCaptcha(recaptcha, secretKey);
+            //Google Recaptcha para seguridad sanitaria
+           //string secretKey = "6LewE7oZAAAAANDxTioB90mzHdh2ozP9rtMqcd5U";
 
-            if (!_GoogleReCaptcha.Result.success)
+            //Google Recaptcha para sociapp
+             string secretKey = "6Lfc17sZAAAAAM2LDvzo7674prtyB0eTc-n4DKoh";
+              var _GoogleReCaptcha = _GooglereCaptchaService.VerifyCaptcha(recaptcha, secretKey);
+
+              if (!_GoogleReCaptcha.Result.success)
              {
                  return BadRequest("Captcha incorrecto");
              }else
@@ -195,8 +195,8 @@ namespace WebApiCaracterizacion.Controllers
                 {
                if (datos.Rol != 0)
                 {
-
-                   return BuildToken(datos, datos.Nombre, datos.Apellido, datos.Id, datos.Rol);
+                   string fuente = "web";
+                   return BuildToken(datos, datos.Nombre, datos.Apellido, datos.Id, datos.Rol, fuente);
                }
                else
                {
@@ -237,8 +237,8 @@ namespace WebApiCaracterizacion.Controllers
                 {
                     if (datos.Rol != 0)
                     {
-
-                        return BuildToken(userInfo, datos.Nombre, datos.Apellido, datos.Id, datos.Rol);
+                        string fuente = "movil";
+                        return BuildToken(userInfo, datos.Nombre, datos.Apellido, datos.Id, datos.Rol, fuente);
                     }
                     else
                     {
@@ -261,28 +261,28 @@ namespace WebApiCaracterizacion.Controllers
 
         //Funcion que crea el token
 
-        private IActionResult BuildToken(ApplicationUser userInfo, string Nombre, string Apellido, string Id, int Rol)
+        private IActionResult BuildToken(ApplicationUser userInfo, string Nombre, string Apellido, string Id, int Rol, string fuente)
         {
 
             if (Rol == 1)
             {
-                var Token = AddAdminClaim(userInfo, Nombre, Apellido, Id, Rol);
+                var Token = AddAdminClaim(userInfo, Nombre, Apellido, Id, Rol, fuente);
                 return (Token);
 
             }
             else if (Rol == 2)
             {
-                var Token = AddUserClaim(userInfo, Nombre, Apellido, Id, Rol);
+                var Token = AddUserClaim(userInfo, Nombre, Apellido, Id, Rol, fuente);
                 return (Token);
             }
             else if (Rol == 3)
             {
-                var Token = AddAnalistaClaim(userInfo, Nombre, Apellido, Id, Rol);
+                var Token = AddAnalistaClaim(userInfo, Nombre, Apellido, Id, Rol, fuente);
                 return (Token);
             }
             else
             {
-                var Token = AddDeshabilitadoClaim(userInfo, Nombre, Apellido, Id, Rol);
+                var Token = AddDeshabilitadoClaim(userInfo, Nombre, Apellido, Id, Rol, fuente);
                 return (Token);
             }
 
@@ -290,7 +290,7 @@ namespace WebApiCaracterizacion.Controllers
 
 
         //Funcion para añadir el claim de adminisitrador
-        private IActionResult AddAdminClaim(ApplicationUser userInfo, string Nombre, string Apellido, string Id, int Rol)
+        private IActionResult AddAdminClaim(ApplicationUser userInfo, string Nombre, string Apellido, string Id, int Rol, string fuente)
         {
 
             var claims = new[]
@@ -302,9 +302,11 @@ namespace WebApiCaracterizacion.Controllers
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:SigningKey"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
-            var expiration = DateTime.UtcNow.AddYears(10);
-
+            var expiration = DateTime.UtcNow.AddDays(1);
+            if (fuente == "movil")
+            {
+                 expiration = DateTime.UtcNow.AddDays(90);
+            }
             JwtSecurityToken token = new JwtSecurityToken(
                issuer: "yourdomain.com",
                audience: "yourdomain.com",
@@ -327,7 +329,7 @@ namespace WebApiCaracterizacion.Controllers
         }
 
         //Funcion para añadir el claim de usuario
-        private IActionResult AddUserClaim(ApplicationUser userInfo, string Nombre, string Apellido, string Id, int Rol)
+        private IActionResult AddUserClaim(ApplicationUser userInfo, string Nombre, string Apellido, string Id, int Rol, string fuente)
         {
 
             var claims = new[]
@@ -340,7 +342,11 @@ namespace WebApiCaracterizacion.Controllers
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:SigningKey"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-            var expiration = DateTime.UtcNow.AddYears(10);
+            var expiration = DateTime.UtcNow.AddDays(1);
+            if (fuente == "movil")
+            {
+                expiration = DateTime.UtcNow.AddDays(90);
+            }
 
             JwtSecurityToken token = new JwtSecurityToken(
                issuer: "yourdomain.com",
@@ -364,7 +370,7 @@ namespace WebApiCaracterizacion.Controllers
         }
 
         //Funcion para añadir el claim de Analista
-        private IActionResult AddAnalistaClaim(ApplicationUser userInfo, string Nombre, string Apellido, string Id, int Rol)
+        private IActionResult AddAnalistaClaim(ApplicationUser userInfo, string Nombre, string Apellido, string Id, int Rol, string fuente)
         {
 
             var claims = new[]
@@ -377,7 +383,11 @@ namespace WebApiCaracterizacion.Controllers
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:SigningKey"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-            var expiration = DateTime.UtcNow.AddYears(10);
+            var expiration = DateTime.UtcNow.AddDays(1);
+            if (fuente == "movil")
+            {
+                expiration = DateTime.UtcNow.AddDays(90);
+            }
 
             JwtSecurityToken token = new JwtSecurityToken(
                issuer: "yourdomain.com",
@@ -401,7 +411,7 @@ namespace WebApiCaracterizacion.Controllers
         }
 
         //Funcion para añadir el claim de deshabilitado
-        private IActionResult AddDeshabilitadoClaim(ApplicationUser userInfo, string Nombre, string Apellido, string Id, int Rol)
+        private IActionResult AddDeshabilitadoClaim(ApplicationUser userInfo, string Nombre, string Apellido, string Id, int Rol, string fuente)
         {
 
             var claims = new[]
@@ -414,7 +424,11 @@ namespace WebApiCaracterizacion.Controllers
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:SigningKey"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-            var expiration = DateTime.UtcNow.AddYears(10);
+            var expiration = DateTime.UtcNow.AddDays(1);
+            if (fuente == "movil")
+            {
+                expiration = DateTime.UtcNow.AddDays(90);
+            }
 
             JwtSecurityToken token = new JwtSecurityToken(
                issuer: "yourdomain.com",
