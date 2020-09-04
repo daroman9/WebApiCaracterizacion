@@ -16,13 +16,15 @@ namespace WebApiCaracterizacion.DataConsultasGenerales
             _connectionString = configuration.GetConnectionString("defaultConnection");
         }
 
-        public async Task<List<FiltrarFichas>> GetPromedio(string tipoFiltro, string aspecto,
+        public async Task<List<FiltrarFichas>> GetPromedio(int rol, string idUser, string tipoFiltro, string aspecto,
             string codigo, string fechaInicio, string fechaFin, string email)
         {
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
                 using (SqlCommand cmd = new SqlCommand("dbo.FiltroFichas", sql))
                 {
+                    cmd.Parameters.Add("@rol", SqlDbType.VarChar).Value = (object)rol ?? DBNull.Value;
+                    cmd.Parameters.Add("@idUser", SqlDbType.VarChar).Value = (object)idUser ?? DBNull.Value;
                     cmd.Parameters.Add("@tipoFiltro", SqlDbType.VarChar).Value = (object)tipoFiltro ?? DBNull.Value;
                     cmd.Parameters.Add("@aspecto", SqlDbType.VarChar).Value = (object)aspecto ?? DBNull.Value;
                     cmd.Parameters.Add("@codigo", SqlDbType.VarChar).Value = (object)codigo ?? DBNull.Value;

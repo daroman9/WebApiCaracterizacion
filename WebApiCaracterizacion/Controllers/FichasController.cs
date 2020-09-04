@@ -66,16 +66,18 @@ namespace WebApiCaracterizacion.Controllers
 
 
         // PUT: api/Fichas/5
-        [HttpPut("{id}")]
-        public IActionResult Put([FromBody] Ficha ficha, string id)
+        [HttpPut("{id}/{estado}")]
+        public IActionResult Put([FromRoute] string id, int estado)
         {
-            if (ficha.id != id)
+            var ficha = _context.Ficha.Where(x => x.id == id).FirstOrDefault();
+            if (ficha == null)
             {
-                return BadRequest("Ocurrio un error al modificar");
+                return BadRequest(false);
             }
+            ficha.estado = estado;
             _context.Entry(ficha).State = EntityState.Modified;
             _context.SaveChanges();
-            return Ok();
+            return Ok(true);
         }
         // POST: api/Fichas
         [HttpPost]

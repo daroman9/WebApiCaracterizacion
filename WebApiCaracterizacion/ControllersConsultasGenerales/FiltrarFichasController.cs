@@ -19,10 +19,10 @@ namespace WebApiCaracterizacion.ControllersConsultasGenerales
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<FiltrarFichas>>> GetData([FromQuery]string tipoFiltro,string aspecto,
+        public async Task<ActionResult<IEnumerable<FiltrarFichas>>> GetData([FromQuery]int rol, string idUser, string tipoFiltro,string aspecto,
             string codigo, string fechaInicio, string fechaFin, string email)
         {
-            return await _repository.GetPromedio(tipoFiltro, aspecto,
+            return await _repository.GetPromedio(rol, idUser, tipoFiltro, aspecto,
             codigo, fechaInicio, fechaFin, email);
         }
     }

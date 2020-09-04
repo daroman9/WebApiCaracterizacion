@@ -94,9 +94,6 @@ namespace WebApiCaracterizacion.Controllers
         }
 
 
-
-
-
         // PUT: api/Registro_Tabla/5
         [HttpPut("{id}")]
         public IActionResult Put([FromBody] Registro_Tabla registro_Tabla, int id)
